@@ -200,14 +200,9 @@ add **ls-** selector for landscape orientation.
 
 ###Visibility
 
-For landscape use selector
+For *hide* and *visible* for landscape orientation use landscape selector
 
-- **Disappearing**
-	- **Top:** disappear-top
-	- **Bottom:** disappear-bottom
-	- **Left:** disappear-left 
-	- **Right:** disappear-right
-- **Hiding**
+- **Hide**
 	- **Mobile:** hidden
 	- **Extra small device:** xs-hidden
 	- **Small device:** s-hidden
