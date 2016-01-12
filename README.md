@@ -8,13 +8,9 @@
 	* [Ordering](#ordering)
 * Extra
 	* [Sizes](#sizes)
-	* [Positioning](#positioning)
 	* [Display types](#display-types)
 	* [Visibility](#visibility)
 	* [Text formatting](#text-formatting)
-	* [Scrollbar and overflow](#scrollbar-and-overflow)
-	* [Background formatting](#background-formatting)
-	* [Element radius](#element-radius)
 	* [Clearfix](#clearfix)
 
 ##Grid system
@@ -38,7 +34,7 @@
 	- suffix - **c**
 
 ###Landscape orientation
-Is available for Mobile, Extra small, Small and Medium devices and all you need to do is
+Is available for Default, Extra small, Small and Medium devices and all you need to do is
 add **ls-** selector for landscape orientation.
 
 ###Examples
@@ -79,12 +75,17 @@ add **ls-** selector for landscape orientation.
 	- **Right:** content-clear-right
 	- **Both:** content-clear-both
 - **Justify content**
+	- Use prefixes for devices and for landscape. Portrait orientation affects the landscape orientation.
+	- Example: 
+		- xs-content-left // Extra small, content left, portrait
+		- xs-ls-content-left // Extra small, content left, landscape
 	- **Left:** content-left
 	- **Right:** content-right
 	- **Centered:** content-centered
 	- **Space around:** content-wrapped
 	- **Space between:** content-apart
 - **Direction and orientation**
+	- Use prefixes for devices.
 	- **Row:** row
 	- **Reversed row:** reversed-row
 	- **Columns:** columns
@@ -141,62 +142,17 @@ add **ls-** selector for landscape orientation.
 	- **50%:** vw-50
 	- **25%:** vw-25
 
-
-###Normal
-
-- **Total size**
-	- **100%:** size-10
-	- **90%:** size-9
-	- **80%:** size-8
-	- **70%:** size-7
-	- **60%:** size-6
-	- **50%:** size-5
-	- **40%:** size-4
-	- **30%:** size-3
-	- **20%:** size-2
-	- **10%:** size-1
-- **Only height**
-	- **100%:** h-100
-	- **95%:** h-95
-	- **95%:** h-90
-	- ...
-	- **10%:** h-10
-	- **5%:** h-5
-- **Only width**
-	- **100%:** w-100
-	- **95%:** w-95
-	- **95%:** w-90
-	- ...
-	- **10%:** w-10
-	- **5%:** w-5
-
-
 ##Extra
-###Positioning
-
-- **Types**
-	- **Static:** static-position
-	- **Relative:** relative-position
-	- **Absolute:** absolute-position
-	- **Fixed:** fixed-position
-- **Position**
-	- **Left:** left
-	- **Right:** right
-	- **Top:** top
-	- **Bottom:** bottom
-
 ###Display types
 
 - **Content**
 	- **Inline:** inline-content
 	- **Inline block:** inline-block-content
 	- **Block:** block-content
-	- **Table:** table-content
 - **Self**
 	- **Inline:** inline
 	- **Inline block:** inline-block
 	- **Block:** block
-	- **Table:** table
 
 ###Visibility
 
@@ -215,13 +171,13 @@ For *hide* and *visible* for landscape orientation use landscape selector
 	- **Medium device:** m-visible
 	- **Large device:** l-visible
 	- **Extra large device:** xl-visible
+	- Visible display types
+		- -inline
+		- -inline-block
+		- -flex
+		- **Example:** xs-visible-flex // visible with display: flex
 - **Opacity**
 	- **Transparent:** transparent
-	- **Opacity 0.1:** opacity-1
-	- **Opacity 0.2:** opacity-2
-	- ...
-	- **Opacity 0.8:** opacity-8
-	- **Opacity 0.9:** opacity-9
 	- **Opacity 1:** opaque
 
 
@@ -255,65 +211,11 @@ For *hide* and *visible* for landscape orientation use landscape selector
 - **Cutted text (dots at the end):** cutted-text
 - **Normal text (clear text):** text-normal
 
-###Scrollbar and overflow
 
-- **Scrollable**
-	- **X:** scrollable-x
-	- **Y:** scrollable-y
-	- **X+Y:** scrollable
-- **Scrollbar**
-	- **Visible X:** scrollbar-visible-x
-	- **Visible Y:** scrollbar-visible-y
-	- **Visible:** scrollbar-visible
-- **Overflow**
-	- **Hidden X:** overflow-hidden-x
-	- **Hidden Y:** overflow-hidden-y
-	- **Hidden:** overflow-hidden
-	- **Visible:** overflow-visible
-
-###Background formatting
-
-- **Repeat**
-	- **X:** bg-repeat-x
-	- **Y:** bg-repeat-y
-	- **Repeat:** bg-repeat
-	- **No repeat:** bg-norepeat
-- **Position**
-	- **Left**
-		- **Top:** bg-left-top
-		- **Center:** bg-left-center
-		- **Bottom:** bg-left-bottom
-	- **Center**
-		- **Top:** bg-center-top
-		- **Center:** bg-centered
-		- **Bottom:** bg-center-bottom
-	- **Right**
-		- **Top:** bg-right-top
-		- **Center:** bg-right-center
-		- **Bottom:** bg-right-bottom
-- **Position type**
-	- **Fixed:** bg-fixed
-	- **Scroll:** bg-scroll
-- **Sizes**
-	- **Cover:** bg-cover
-	- **100%:**	bg-100
-	- **75%:** bg-75
-	- **50%:** bg-50
-	- **25%:** bg-25
 
 ###Element radius
 
-- **No radius 1:** no-radius
-- **Radius 1:** radius-1
-- **Radius 2:** radius-2
-- **Radius 3:** radius-3
-- **Radius 4:** radius-4
-- **Radius 5:** radius-5
-- **Radius 6:** radius-6
-- **Radius 7:** radius-7
-- **Radius 8:** radius-8
-- **Radius 9:** radius-9
-- **Radius 10:** radius-10
+- **No radius 1:** square
 - **Circle:** circle
 
 ###Clearfix
