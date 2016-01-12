@@ -215,7 +215,7 @@ For *hide* and *visible* for landscape orientation use landscape selector
 
 ###Element radius
 
-- **No radius 1:** square
+- **No radius:** square
 - **Circle:** circle
 
 ###Clearfix
