@@ -1,5 +1,5 @@
 #Grid
-- Responsive Boilerplate based on flexbox
+- CSS framework based on Flexbox.
 - Contains: [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css) + Grid
 
 * Main
