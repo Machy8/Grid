@@ -195,7 +195,11 @@ body {
 	line-height: 1.5
 }
 
-.clearfix:before,.clearfix:after {
+* {
+	color: inherit;
+}
+
+.clearfix:before, .clearfix:after {
 	content: " ";
 	display: table
 }
@@ -334,6 +338,9 @@ body {
 
 .container {
 	width: 100%;
+}
+
+.border-box, .container {
 	box-sizing: border-box
 }
 
