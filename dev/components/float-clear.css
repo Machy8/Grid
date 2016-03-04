@@ -1,0 +1,19 @@
+.content-float-left > *,.float-left {
+	float: left
+}
+
+.content-float-right > *,.float-right {
+	float: right
+}
+
+.content-clear-right > *,.clear-right {
+	clear: right
+}
+
+.content-clear-left > *,.clear-left {
+	clear: left
+}
+
+.content-clear-both > *,.clear-both {
+	clear: both
+}
