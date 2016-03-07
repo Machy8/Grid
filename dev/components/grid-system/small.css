@@ -1,0 +1,254 @@
+/* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
+@media (min-width: 550px) {
+    .s-1c > * {
+	width: 100%
+    }
+
+    .s-2c > * {
+	width: 50%
+    }
+
+    .s-3c > * {
+	width: 33.3333333333%
+    }
+
+    .s-4c > * {
+	width: 25%
+    }
+
+    .s-5c > * {
+	width: 20%
+    }
+
+    .s-5 {
+	width: 5%
+    }
+
+    .s-10 {
+	width: 10%
+    }
+
+    .s-15 {
+	width: 15%
+    }
+
+    .s-20 {
+	width: 20%
+    }
+
+    .s-25 {
+	width: 25%
+    }
+
+    .s-30 {
+	width: 30%
+    }
+
+    .s-35 {
+	width: 35%
+    }
+
+    .s-40 {
+	width: 40%
+    }
+
+    .s-45 {
+	width: 45%
+    }
+
+    .s-50 {
+	width: 50%
+    }
+
+    .s-55 {
+	width: 55%
+    }
+
+    .s-60 {
+	width: 60%
+    }
+
+    .s-65 {
+	width: 65%
+    }
+
+    .s-70 {
+	width: 70%
+    }
+
+    .s-75 {
+	width: 75%
+    }
+
+    .s-80 {
+	width: 80%
+    }
+
+    .s-85 {
+	width: 85%
+    }
+
+    .s-90 {
+	width: 90%
+    }
+
+    .s-95 {
+	width: 95%
+    }
+
+    .s-100 {
+	width: 100%
+    }
+
+    .s-hidden {
+	display: none !important
+    }
+
+    .s-block {
+	display: block !important
+    }
+
+    .s-inline-block {
+	display: inline-block !important
+    }
+
+    .s-flex {
+	display: flex !important
+    }
+
+    .s-order-1 {
+	-webkit-box-ordinal-group: 2;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1
+    }
+
+    .s-order-2 {
+	-webkit-box-ordinal-group: 3;
+	-webkit-order: 2;
+	-ms-flex-order: 2;
+	order: 2
+    }
+
+    .s-order-3 {
+	-webkit-box-ordinal-group: 4;
+	-webkit-order: 3;
+	-ms-flex-order: 3;
+	order: 3
+    }
+
+    .s-order-4 {
+	-webkit-box-ordinal-group: 5;
+	-webkit-order: 4;
+	-ms-flex-order: 4;
+	order: 4
+    }
+
+    .s-order-5 {
+	-webkit-box-ordinal-group: 6;
+	-webkit-order: 5;
+	-ms-flex-order: 5;
+	order: 5
+    }
+
+    .s-order-6 {
+	-webkit-box-ordinal-group: 7;
+	-webkit-order: 6;
+	-ms-flex-order: 6;
+	order: 6
+    }
+
+    .s-order-7 {
+	-webkit-box-ordinal-group: 8;
+	-webkit-order: 7;
+	-ms-flex-order: 7;
+	order: 7
+    }
+
+    .s-order-8 {
+	-webkit-box-ordinal-group: 9;
+	-webkit-order: 8;
+	-ms-flex-order: 8;
+	order: 8
+    }
+
+    .s-order-9 {
+	-webkit-box-ordinal-group: 10;
+	-webkit-order: 9;
+	-ms-flex-order: 9;
+	order: 9
+    }
+
+    .s-order-10 {
+	-webkit-box-ordinal-group: 11;
+	-webkit-order: 10;
+	-ms-flex-order: 10;
+	order: 10
+    }
+
+    .s-row {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row
+    }
+
+    .s-reversed-row {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: row-reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse
+    }
+
+    .s-columns {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column
+    }
+
+    .s-reversed-columns {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: column-reverse;
+	-ms-flex-direction: column-reverse;
+	flex-direction: column-reverse
+    }
+
+    .s-content-centered {
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center
+    }
+
+    .s-content-left {
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start
+    }
+
+    .s-content-right {
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: end;
+	justify-content: flex-end
+    }
+
+    .s-content-wrapped {
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around
+    }
+
+    .s-content-apart {
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between
+    }
+}

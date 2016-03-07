@@ -1,19 +1,20 @@
+/* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
 .content-float-left > *,.float-left {
-	float: left
+    float: left
 }
 
 .content-float-right > *,.float-right {
-	float: right
+    float: right
 }
 
 .content-clear-right > *,.clear-right {
-	clear: right
+    clear: right
 }
 
 .content-clear-left > *,.clear-left {
-	clear: left
+    clear: left
 }
 
 .content-clear-both > *,.clear-both {
-	clear: both
+    clear: both
 }

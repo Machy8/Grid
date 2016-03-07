@@ -1,93 +1,94 @@
+/* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
 .text-centered {
-	text-align: center
+    text-align: center
 }
 
 .text-left {
-	text-align: left
+    text-align: left
 }
 
 .text-right {
-	text-align: right
+    text-align: right
 }
 
 .text-justify {
-	text-align: justify
+    text-align: justify
 }
 
 .text-normal-weight,.text-normal {
-	font-weight: normal;
+    font-weight: normal;
 }
 
 .text-lighter {
-	font-weight: lighter
+    font-weight: lighter
 }
 
 .text-bold {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .text-none-style,.text-normal {
-	font-style: normal
+    font-style: normal
 }
 
 .text-italic {
-	font-style: italic
+    font-style: italic
 }
 
 .text-oblique {
-	font-style: oblique
+    font-style: oblique
 }
 
 .text-none-decoration,.text-normal {
-	text-decoration: none
+    text-decoration: none
 }
 
 .text-underline {
-	text-decoration: underline
+    text-decoration: underline
 }
 
 .text-overline {
-	text-decoration: overline
+    text-decoration: overline
 }
 
 .text-baseline {
-	text-decoration: line-through
+    text-decoration: line-through
 }
 
 .text-none-transform,.text-normal {
-	text-transform: none
+    text-transform: none
 }
 
 .text-uppercase {
-	text-transform: uppercase
+    text-transform: uppercase
 }
 
 .text-lowercase {
-	text-transform: lowercase
+    text-transform: lowercase
 }
 
 .text-capitalize {
-	text-transform: capitalize
+    text-transform: capitalize
 }
 
 .cutted-text {
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden
 }
 
 .text-nowrap {
-	white-space: nowrap
+    white-space: nowrap
 }
 
 .break-words {
-	word-wrap: break-word
+    word-wrap: break-word
 }
 
 .break-all {
-	word-break: break-all
+    word-break: break-all
 }
 
 .keep-all {
-	word-break: keep-all
+    word-break: keep-all
 }

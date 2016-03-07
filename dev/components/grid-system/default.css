@@ -1,0 +1,202 @@
+/* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
+.d-content-centered {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.d-content-left {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+.d-content-right {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+.d-content-wrapped {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around
+}
+
+.d-content-apart {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.d-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row
+}
+
+.d-reversed-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse
+}
+
+.d-columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.d-reversed-columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse
+}
+
+.d-1c > * {
+    width: 100%
+}
+
+.d-2c > * {
+    width: 50%
+}
+
+.d-3c > * {
+    width: 33.3333333333%
+}
+
+.d-4c > * {
+    width: 25%
+}
+
+.d-5c > * {
+    width: 20%
+}
+
+.d-6c > * {
+    width: 16.6666666667%
+}
+
+.d-7c > * {
+    width: 14.2857142857%
+}
+
+.d-8c > * {
+    width: 12.5%
+}
+
+.d-9c > * {
+    width: 11.1111111111%
+}
+
+.d-10c > * {
+    width: 10%
+}
+
+.d-5 {
+    width: 5%
+}
+
+.d-10 {
+    width: 10%
+}
+
+.d-15 {
+    width: 15%
+}
+
+.d-20 {
+    width: 20%
+}
+
+.d-25 {
+    width: 25%
+}
+
+.d-30 {
+    width: 30%
+}
+
+.d-35 {
+    width: 35%
+}
+
+.d-40 {
+    width: 40%
+}
+
+.d-45 {
+    width: 45%
+}
+
+.d-50 {
+    width: 50%
+}
+
+.d-55 {
+    width: 55%
+}
+
+.d-60 {
+    width: 60%
+}
+
+.d-65 {
+    width: 65%
+}
+
+.d-70 {
+    width: 70%
+}
+
+.d-75 {
+    width: 75%
+}
+
+.d-80 {
+    width: 80%
+}
+
+.d-85 {
+    width: 85%
+}
+
+.d-90 {
+    width: 90%
+}
+
+.d-95 {
+    width: 95%
+}
+
+.d-100 {
+    width: 100%
+}
+
+.inline-content > *,.inline {
+    display: inline
+}
+
+.inline-block-content > *,.inline-block {
+    display: inline-block
+}
+
+.block-content > *,.block {
+    display: block
+}
+
+.d-hidden {
+    display: none !important;
+}

@@ -1,0 +1,25 @@
+/* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
+.transparent {
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+.transparency-1 {
+    opacity: 2;
+    filter: alpha(opacity=200)
+}
+.transparency-2 {
+    opacity: 4;
+    filter: alpha(opacity=400)
+}
+.transparency-3 {
+    opacity: 6;
+    filter: alpha(opacity=600)
+}
+.transparency-4 {
+    opacity: 8;
+    filter: alpha(opacity=800)
+}
+.opaque {
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
