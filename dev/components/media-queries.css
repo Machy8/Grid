@@ -1,0 +1,27 @@
+/* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
+
+/* Default = Mobile */
+
+/* > Mobile*/
+@media (min-width: 400px) {}
+
+/* > Mobile - landscape orientation*/
+@media screen and (orientation: landscape),(min-width: 400px) {}
+
+/* > Phablet */
+@media (min-width: 550px) {}
+
+/* > Phablet - landscape orientation */
+@media screen and (orientation: landscape),(min-width: 550px) {}
+
+/* > Tablet */
+@media (min-width: 750px) {}
+
+/* > Tablet - landscape orientation*/
+@media screen and (orientation: landscape),(min-width: 750px) {}
+
+/* > Desktop */
+@media (min-width: 1000px) {}
+
+/* > Desktio HD */
+@media (min-width: 1200px) {}

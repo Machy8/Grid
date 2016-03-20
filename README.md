@@ -2,20 +2,21 @@
 - CSS framework based on Flexbox.
 - Contains: [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css) + Grid
 
-* Main
-	* [Grid system](#grid-system)
-	* [Alignment](#alignment)
-	* [Ordering](#ordering)
-* Extra
-	* [Sizes](#sizes)
-	* [Display types](#display-types)
-	* [Visibility](#visibility)
-	* [Text formatting](#text-formatting)
-	* [Clearfix](#clearfix)
+**Navigation**
+
+* [Grid system](#grid-system)
+* [Alignment](#alignment)
+* [Ordering](#ordering)
+* [Sizes](#sizes)
+* [Display types](#display-types)
+* [Visibility](#visibility)
+* [Text formatting](#text-formatting)
+* [Clearfix](#clearfix)
 
 ##Grid system
 
 - Container - **container** class
+- Border box - **border-box** class
 - Flex - **flex** class
 - 6 sizes
 	- Default - **d** | < 400px | Phone
@@ -27,8 +28,9 @@
 - portrait orientation (default)
 - landscape orientation (optionable)
 	- selector - **ls-**
+	- only from default to medium size
 - 20 column fluid grid (affects self)
-	- sizes: 5, 10, 15... 85, 90, 95, 100
+	- sizes: 5, 10, 15..., 90, 95, 100
 	- each size means width in percentages
 - 10 inner columns fluid grid (affects children elements)
 	- suffix - **c**
@@ -88,8 +90,8 @@ add **ls-** selector for landscape orientation.
 	- Use prefixes for devices.
 	- **Row:** row
 	- **Reversed row:** reversed-row
-	- **Columns:** columns
-	- **Reversed columns:** reversed-columns
+	- **Column:** column
+	- **Reversed column:** reversed-column
 - **Wrap**
 	- **Wrap:** wrap
 	- **Reverse:** wrap-reverse
@@ -116,31 +118,14 @@ add **ls-** selector for landscape orientation.
 ##Ordering
 - Is available for all devices only for portrait orientation (portrait orientation also sets order in landscape orientation).
 - The parent element display property must be set to flex (use flex class)
-- Values from 1-20
+- Values from 1-10
 
 **Example:**
 
 - **xs-order-1:** Extra small, order 1
-- **l-order-17:** Large, order 17
+- **l-order-17:** Large, order 10
 
 ##Sizes
-###Viewport
-
-- **Total size**
-	- **100%:** viewport-100
-	- **75%:** viewport-75
-	- **50%:** viewport-50
-	- **25%:** viewport-25
-- **Only height**
-	- **100%:** vh-100
-	- **75%:** vh-75
-	- **50%:** vh-50
-	- **25%:** vh-25
-- **Only width**
-	- **100%:** vw-100
-	- **75%:** vw-75
-	- **50%:** vw-50
-	- **25%:** vw-25
 
 ##Extra
 ###Display types
@@ -178,6 +163,7 @@ For *hide* and *visible* for landscape orientation use landscape selector
 		- **Example:** xs-visible-flex // visible with display: flex
 - **Opacity**
 	- **Transparent:** transparent
+	- **Transparency:** transparency-(1-4 always increased by 0.2)
 	- **Opacity 1:** opaque
 
 
@@ -216,7 +202,8 @@ For *hide* and *visible* for landscape orientation use landscape selector
 ###Element radius
 
 - **No radius:** square
+- **Rounded:** rounded-(1-4 always increased by 2)
 - **Circle:** circle
 
 ###Clearfix
-Grid is using micro clearfix:  **clearfix** class.
+Grid contains micro clearfix:  **clearfix** class.

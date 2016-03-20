@@ -1,0 +1,170 @@
+/* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
+@media screen and (orientation: landscape),(min-width: 750px) {
+    .m-ls-1c > * {
+	width: 100%
+    }
+
+    .m-ls-2c > * {
+	width: 50%
+    }
+
+    .m-ls-3c > * {
+	width: 33.3333333333%
+    }
+
+    .m-ls-4c > * {
+	width: 25%
+    }
+
+    .m-ls-5c > * {
+	width: 20%
+    }
+
+    .m-ls-6c > * {
+	width: 16.6666666667%
+    }
+
+    .m-ls-7c > * {
+	width: 14.2857142857%
+    }
+
+    .m-ls-8c > * {
+	width: 12.5%
+    }
+
+    .m-ls-9c > * {
+	width: 11.1111111111%
+    }
+
+    .m-ls-10c > * {
+	width: 10%
+    }
+
+    .m-ls-5 {
+	width: 5%
+    }
+
+    .m-ls-10 {
+	width: 10%
+    }
+
+    .m-ls-15 {
+	width: 15%
+    }
+
+    .m-ls-20 {
+	width: 20%
+    }
+
+    .m-ls-25 {
+	width: 25%
+    }
+
+    .m-ls-30 {
+	width: 30%
+    }
+
+    .m-ls-35 {
+	width: 35%
+    }
+
+    .m-ls-40 {
+	width: 40%
+    }
+
+    .m-ls-45 {
+	width: 45%
+    }
+
+    .m-ls-50 {
+	width: 50%
+    }
+
+    .m-ls-55 {
+	width: 55%
+    }
+
+    .m-ls-60 {
+	width: 60%
+    }
+
+    .m-ls-65 {
+	width: 65%
+    }
+
+    .m-ls-70 {
+	width: 70%
+    }
+
+    .m-ls-75 {
+	width: 75%
+    }
+
+    .m-ls-80 {
+	width: 80%
+    }
+
+    .m-ls-85 {
+	width: 85%
+    }
+
+    .m-ls-90 {
+	width: 90%
+    }
+
+    .m-ls-95 {
+	width: 95%
+    }
+
+    .m-ls-100 {
+	width: 100%
+    }
+
+    .m-ls-hidden {
+	display: none !important
+    }
+
+    .m-ls-visible {
+	display: block !important
+    }
+
+    .m-ls-visible-inline {
+	display: inline-block !important
+    }
+
+    .m-ls-visible-flex {
+	display: flex !important
+    }
+
+    .m-ls-row {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row
+    }
+
+    .m-ls-reversed-row {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: row-reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse
+    }
+
+    .m-ls-column {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column
+    }
+
+    .m-ls-reversed-column {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: column-reverse;
+	-ms-flex-direction: column-reverse;
+	flex-direction: column-reverse
+    }
+}
