@@ -90,8 +90,8 @@ add **ls-** selector for landscape orientation.
 	- Use prefixes for devices.
 	- **Row:** row
 	- **Reversed row:** reversed-row
-	- **Columns:** columns
-	- **Reversed columns:** reversed-columns
+	- **Column:** column
+	- **Reversed column:** reversed-column
 - **Wrap**
 	- **Wrap:** wrap
 	- **Reverse:** wrap-reverse
