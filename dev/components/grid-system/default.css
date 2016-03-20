@@ -49,7 +49,7 @@
     flex-direction: row-reverse
 }
 
-.d-columns {
+.d-column {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -57,7 +57,7 @@
     flex-direction: column
 }
 
-.d-reversed-columns {
+.d-reversed-column {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;

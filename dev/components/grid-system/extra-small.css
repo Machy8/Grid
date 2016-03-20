@@ -202,7 +202,7 @@
 	flex-direction: row-reverse
     }
 
-    .xs-columns {
+    .xs-column {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: column;
@@ -210,7 +210,7 @@
 	flex-direction: column
     }
 
-    .xs-reversed-columns {
+    .xs-reversed-column {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: reverse;
 	-webkit-flex-direction: column-reverse;

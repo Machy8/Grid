@@ -651,7 +651,7 @@ body
     flex-direction:row-reverse
 }
 
-.d-columns
+.d-column
 {
     -webkit-box-orient:vertical;
     -webkit-box-direction:normal;
@@ -660,7 +660,7 @@ body
     flex-direction:column
 }
 
-.d-reversed-columns
+.d-reversed-column
 {
     -webkit-box-orient:vertical;
     -webkit-box-direction:reverse;
@@ -1083,7 +1083,7 @@ body
 	flex-direction:row-reverse
     }
 
-    .xs-columns
+    .xs-column
     {
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:normal;
@@ -1092,7 +1092,7 @@ body
 	flex-direction:column
     }
 
-    .xs-reversed-columns
+    .xs-reversed-column
     {
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:reverse;
@@ -1385,7 +1385,7 @@ body
 	flex-direction:row-reverse
     }
 
-    .s-columns
+    .s-column
     {
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:normal;
@@ -1394,7 +1394,7 @@ body
 	flex-direction:column
     }
 
-    .s-reversed-columns
+    .s-reversed-column
     {
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:reverse;
@@ -1687,7 +1687,7 @@ body
 	flex-direction:row-reverse
     }
 
-    .m-columns
+    .m-column
     {
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:normal;
@@ -1696,7 +1696,7 @@ body
 	flex-direction:column
     }
 
-    .m-reversed-columns
+    .m-reversed-column
     {
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:reverse;
@@ -1989,7 +1989,7 @@ body
 	flex-direction:row-reverse
     }
 
-    .l-columns
+    .l-column
     {
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:normal;
@@ -1998,7 +1998,7 @@ body
 	flex-direction:column
     }
 
-    .l-reversed-columns
+    .l-reversed-column
     {
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:reverse;
@@ -2291,7 +2291,7 @@ body
 	flex-direction:row-reverse
     }
 
-    .xl-columns
+    .xl-column
     {
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:normal;
@@ -2300,7 +2300,7 @@ body
 	flex-direction:column
     }
 
-    .xl-reversed-columns
+    .xl-reversed-column
     {
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:reverse;
@@ -2349,19 +2349,16 @@ body
     }
 }
 
-.wrap,.container,.lines-top,.lines-bottom,.lines-stretched,.lines-wrapped,.lines-apart,.lines-centered,.xl-1c,.xl-2c,.xl-3c,.xl-4c,.xl-5c,.xl-6c,.xl-7c,.xl-8c,.xl-9c,.xl-10c,.l-1c,.l-2c,.l-3c,.l-4c,.l-5c,.l-6c,.l-7c,.l-8c,.l-9c,.l-10c,.m-1c,.m-2c,.m-3c,.m-4c,.m-5c,.m-6c,.m-7c,.m-8c,.m-9c,.m-10c,.s-1c,.s-2c,.s-3c,.s-4c,.s-5c,.s-6c,.s-7c,.s-8c,.s-9c,.s-10c,.xs-1c,.xs-2c,.xs-3c,.xs-4c,.xs-5c,.xs-6c,.xs-7c,.xs-8c,.xs-9c,.xs-10c,.d-1c,.d-2c,.d-3c,.d-4c,.d-5c,.d-6c,.d-7c,.d-8c,.d-9c,.d-10c
-{
-    -webkit-flex-wrap:wrap;
-    -ms-flex-wrap:wrap;
-    flex-wrap:wrap
+.wrap,.container,.lines-top,.lines-bottom,.lines-stretched,.lines-wrapped,.lines-apart,.lines-centered,.xl-1c,.xl-2c,.xl-3c,.xl-4c,.xl-5c,.xl-6c,.xl-7c,.xl-8c,.xl-9c,.xl-10c,.l-1c,.l-2c,.l-3c,.l-4c,.l-5c,.l-6c,.l-7c,.l-8c,.l-9c,.l-10c,.m-1c,.m-2c,.m-3c,.m-4c,.m-5c,.m-6c,.m-7c,.m-8c,.m-9c,.m-10c,.s-1c,.s-2c,.s-3c,.s-4c,.s-5c,.s-6c,.s-7c,.s-8c,.s-9c,.s-10c,.xs-1c,.xs-2c,.xs-3c,.xs-4c,.xs-5c,.xs-6c,.xs-7c,.xs-8c,.xs-9c,.xs-10c,.d-1c,.d-2c,.d-3c,.d-4c,.d-5c,.d-6c,.d-7c,.d-8c,.d-9c,.d-10c {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
 }
-
-.xl-1c,.xl-2c,.xl-3c,.xl-4c,.xl-5c,.xl-6c,.xl-7c,.xl-8c,.xl-9c,.xl-10c,.l-1c,.l-2c,.l-3c,.l-4c,.l-5c,.l-6c,.l-7c,.l-8c,.l-9c,.l-10c,.m-1c,.m-2c,.m-3c,.m-4c,.m-5c,.m-6c,.m-7c,.m-8c,.m-9c,.m-10c,.s-1c,.s-2c,.s-3c,.s-4c,.s-5c,.s-6c,.s-7c,.s-8c,.s-9c,.s-10c,.xs-1c,.xs-2c,.xs-3c,.xs-4c,.xs-5c,.xs-6c,.xs-7c,.xs-8c,.xs-9c,.xs-10c,.d-1c,.d-2c,.d-3c,.d-4c,.d-5c,.d-6c,.d-7c,.d-8c,.d-9c,.d-10c,.self-top,.self-bottom,.self-centered,.self-baseline,.self-stretched,.items-top,.items-bottom,.items-centered,.items-baseline,.items-stretched,.lines-top,.lines-bottom,.lines-centered,.lines-stretched,.lines-wrapped,.lines-apart,.d-content-centered,.d-content-left,.d-content-right,.d-content-wrapped,.d-content-apart,.xs-content-centered,.xs-content-left,.xs-content-right,.xs-content-wrapped,.xs-content-apart,.s-content-centered,.s-content-left,.s-content-right,.s-content-wrapped,.s-content-apart,.m-content-centered,.m-content-left,.m-content-right,.m-content-wrapped,.m-content-apart,.l-content-centered,.l-content-left,.l-content-right,.l-content-wrapped,.l-content-apart,.xl-content-centered,.xl-content-left,.xl-content-right,.xl-content-wrapped,.xl-content-apart,.d-row,.d-reversed-row,.d-columns,.d-reversed-columns,.xs-row,.xs-reversed-row,.xs-columns,.xs-reversed-columns,.s-row,.s-reversed-row,.s-columns,.s-reversed-columns,.m-row,.m-reversed-row,.m-columns,.m-reversed-columns,.l-row,.l-reversed-row,.l-columns,.l-reversed-columns,.xl-row,.xl-reversed-row,.xl-columns,.xl-reversed-columns,.grow,.wrap,.wrap-reverse,.flex
-{
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex
+.xl-1c,.xl-2c,.xl-3c,.xl-4c,.xl-5c,.xl-6c,.xl-7c,.xl-8c,.xl-9c,.xl-10c,.l-1c,.l-2c,.l-3c,.l-4c,.l-5c,.l-6c,.l-7c,.l-8c,.l-9c,.l-10c,.m-1c,.m-2c,.m-3c,.m-4c,.m-5c,.m-6c,.m-7c,.m-8c,.m-9c,.m-10c,.s-1c,.s-2c,.s-3c,.s-4c,.s-5c,.s-6c,.s-7c,.s-8c,.s-9c,.s-10c,.xs-1c,.xs-2c,.xs-3c,.xs-4c,.xs-5c,.xs-6c,.xs-7c,.xs-8c,.xs-9c,.xs-10c,.d-1c,.d-2c,.d-3c,.d-4c,.d-5c,.d-6c,.d-7c,.d-8c,.d-9c,.d-10c,.self-top,.self-bottom,.self-centered,.self-baseline,.self-stretched,.items-top,.items-bottom,.items-centered,.items-baseline,.items-stretched,.lines-top,.lines-bottom,.lines-centered,.lines-stretched,.lines-wrapped,.lines-apart,.d-content-centered,.d-content-left,.d-content-right,.d-content-wrapped,.d-content-apart,.xs-content-centered,.xs-content-left,.xs-content-right,.xs-content-wrapped,.xs-content-apart,.s-content-centered,.s-content-left,.s-content-right,.s-content-wrapped,.s-content-apart,.m-content-centered,.m-content-left,.m-content-right,.m-content-wrapped,.m-content-apart,.l-content-centered,.l-content-left,.l-content-right,.l-content-wrapped,.l-content-apart,.xl-content-centered,.xl-content-left,.xl-content-right,.xl-content-wrapped,.xl-content-apart,.d-row,.d-reversed-row,.d-column,.d-reversed-column,.xs-row,.xs-reversed-row,.xs-column,.xs-reversed-column,.s-row,.s-reversed-row,.s-column,.s-reversed-column,.m-row,.m-reversed-row,.m-column,.m-reversed-column,.l-row,.l-reversed-row,.l-column,.l-reversed-column,.xl-row,.xl-reversed-row,.xl-column,.xl-reversed-column,.grow,.wrap,.wrap-reverse,.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
 }
 
 .clearfix:before,.clearfix:after

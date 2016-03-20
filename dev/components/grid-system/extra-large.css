@@ -202,7 +202,7 @@
 	flex-direction: row-reverse
     }
 
-    .xl-columns {
+    .xl-column {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: column;
@@ -210,7 +210,7 @@
 	flex-direction: column
     }
 
-    .xl-reversed-columns {
+    .xl-reversed-column {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: reverse;
 	-webkit-flex-direction: column-reverse;

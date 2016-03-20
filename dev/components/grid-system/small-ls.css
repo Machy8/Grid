@@ -152,7 +152,7 @@
 	flex-direction: row-reverse
     }
 
-    .s-ls-columns {
+    .s-ls-column {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: column;
@@ -160,7 +160,7 @@
 	flex-direction: column
     }
 
-    .s-ls-reversed-columns {
+    .s-ls-reversed-column {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: reverse;
 	-webkit-flex-direction: column-reverse;
