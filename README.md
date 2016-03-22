@@ -123,7 +123,7 @@ add **ls-** selector for landscape orientation.
 **Example:**
 
 - **xs-order-1:** Extra small, order 1
-- **l-order-17:** Large, order 10
+- **l-order-10:** Large, order 10
 
 ##Sizes
 
