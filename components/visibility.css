@@ -3,22 +3,27 @@
     opacity: 0;
     filter: alpha(opacity=0)
 }
+
 .transparency-1 {
     opacity: 2;
     filter: alpha(opacity=200)
 }
+
 .transparency-2 {
     opacity: 4;
     filter: alpha(opacity=400)
 }
+
 .transparency-3 {
     opacity: 6;
     filter: alpha(opacity=600)
 }
+
 .transparency-4 {
     opacity: 8;
     filter: alpha(opacity=800)
 }
+
 .opaque {
     opacity: 1;
     filter: alpha(opacity=100)

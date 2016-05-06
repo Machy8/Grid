@@ -15,7 +15,7 @@
     text-align: justify
 }
 
-.text-normal-weight,.text-normal {
+.text-normal-weight, .text-normal {
     font-weight: normal;
 }
 
@@ -27,7 +27,7 @@
     font-weight: bold;
 }
 
-.text-none-style,.text-normal {
+.text-none-style, .text-normal {
     font-style: normal
 }
 
@@ -39,7 +39,7 @@
     font-style: oblique
 }
 
-.text-none-decoration,.text-normal {
+.text-none-decoration, .text-normal {
     text-decoration: none
 }
 
@@ -55,7 +55,7 @@
     text-decoration: line-through
 }
 
-.text-none-transform,.text-normal {
+.text-none-transform, .text-normal {
     text-transform: none
 }
 

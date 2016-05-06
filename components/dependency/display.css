@@ -1,0 +1,7 @@
+/* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
+.self-top, .self-bottom, .self-centered, .self-baseline, .self-stretched, .items-top, .items-bottom, .items-centered, .items-baseline, .items-stretched, .lines-top, .lines-bottom, .lines-centered, .lines-stretched, .lines-wrapped, .lines-apart, .s-content-centered, .s-content-left, .s-content-right, .s-content-wrapped, .s-content-apart, .m-content-centered, .m-content-left, .m-content-right, .m-content-wrapped, .m-content-apart, .l-content-centered, .l-content-left, .l-content-right, .l-content-wrapped, .l-content-apart, .xl-content-centered, .xl-content-left, .xl-content-right, .xl-content-wrapped, .xl-content-apart, .s-row, .s-reversed-row, .s-column, .s-reversed-column, .m-row, .m-reversed-row, .m-column, .m-reversed-column, .l-row, .l-reversed-row, .l-column, .l-reversed-column, .xl-row, .xl-reversed-row, .xl-column, .xl-reversed-column, .grow, .wrap, .wrap-reverse, .flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
