@@ -1,15 +1,7 @@
 /* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
 
-/* Small landscape > Mobile*/
-@media screen and (orientation: landscape) {
-}
-
 /* Medium > Tablet */
 @media (min-width: 641px) {
-}
-
-/* Medium landscape > Tablet*/
-@media screen and (orientation: landscape),(min-width: 641px) {
 }
 
 /* Large > Desktop */
