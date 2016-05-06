@@ -18,36 +18,14 @@
 - Container - **container** class
 - Border box - **border-box** class
 - Flex - **flex** class
-- 6 sizes
-	- Default - **d** | < 400px | Phone
-	- Extra small - **xs** | > 400px | Phablet
-	- Small - **s** | > 550px | Tablet
-	- Medium - **m** | > 750px | Desktop
-	- Large - **l** | > 1000px | Desktop HD
-	- Extra large - **xl** | > 1200px | > Desktop HD
-- portrait orientation (default)
-- landscape orientation (optionable)
-	- selector - **ls-**
-	- only from default to medium size
+- 4 sizes
+	- Small - **s** | < 641px | Tablet
+	- Medium - **m** | > 641px | Desktop
+	- Large - **l** | > 1025px | Desktop HD
+	- Extra large - **xl** | > 1441px | > Desktop HD
 - 20 column fluid grid (affects self)
 	- sizes: 5, 10, 15..., 90, 95, 100
 	- each size means width in percentages
-- 10 inner columns fluid grid (affects children elements)
-	- suffix - **c**
-
-###Landscape orientation
-Is available for Default, Extra small, Small and Medium devices and all you need to do is
-add **ls-** selector for landscape orientation.
-
-###Examples
-
-- Inner columns fluid grid
-	- **xs-2c**  - Extra small, 2 columns inside, portrait
-	- **xs-ls-2c** -  Extra small, 2 columns inside, landscape
-- Self width definition
-	- **xs-5** - Extra small, width 5%, portrait
-	- **xs-ls-5** - Extra small, width 5%, landscape
-
 
 ##Alignment
 ###Self
@@ -78,9 +56,7 @@ add **ls-** selector for landscape orientation.
 	- **Both:** content-clear-both
 - **Justify content**
 	- Use prefixes for devices and for landscape. Portrait orientation affects the landscape orientation.
-	- Example: 
-		- xs-content-left // Extra small, content left, portrait
-		- xs-ls-content-left // Extra small, content left, landscape
+	- Example: s-content-left // Extra small, content left, portrait
 	- **Left:** content-left
 	- **Right:** content-right
 	- **Centered:** content-centered
@@ -122,7 +98,7 @@ add **ls-** selector for landscape orientation.
 
 **Example:**
 
-- **xs-order-1:** Extra small, order 1
+- **s-order-1:** Small, order 1
 - **l-order-10:** Large, order 10
 
 ##Sizes
@@ -144,14 +120,11 @@ add **ls-** selector for landscape orientation.
 For *hide* and *visible* for landscape orientation use landscape selector
 
 - **Hide**
-	- **Mobile:** hidden
-	- **Extra small device:** xs-hidden
 	- **Small device:** s-hidden
 	- **Medium device:** m-hidden
 	- **Large device:** l-hidden
 	- **Extra large device:** xl-hidden
 - **Visible**
-	- **Extra small device:** xs-visible
 	- **Small device:** s-visible
 	- **Medium device:** m-visible
 	- **Large device:** l-visible
@@ -160,7 +133,7 @@ For *hide* and *visible* for landscape orientation use landscape selector
 		- -inline
 		- -inline-block
 		- -flex
-		- **Example:** xs-visible-flex // visible with display: flex
+		- **Example:** s-visible-flex // visible with display: flex
 - **Opacity**
 	- **Transparent:** transparent
 	- **Transparency:** transparency-(1-4 always increased by 0.2)
