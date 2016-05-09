@@ -1,102 +1,82 @@
 /* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
 @media (min-width: 1441px) {
     .xl-5 {
-        flex-basis: 5%;
         max-width: 5%
     }
 
     .xl-10 {
-        flex-basis: 10%;
         max-width: 10%
     }
 
     .xl-15 {
-        flex-basis: 15%;
         max-width: 15%
     }
 
     .xl-20 {
-        flex-basis: 20%;
         max-width: 20%
     }
 
     .xl-25 {
-        flex-basis: 25%;
         max-width: 25%
     }
 
     .xl-30 {
-        flex-basis: 30%;
         max-width: 30%
     }
 
     .xl-35 {
-        flex-basis: 35%;
         max-width: 35%
     }
 
     .xl-40 {
-        flex-basis: 40%;
         max-width: 40%
     }
 
     .xl-45 {
-        flex-basis: 45%;
         max-width: 45%
     }
 
     .xl-50 {
-        flex-basis: 50%;
         max-width: 50%
     }
 
     .xl-55 {
-        flex-basis: 55%;
         max-width: 55%
     }
 
     .xl-60 {
-        flex-basis: 60%;
         max-width: 60%
     }
 
     .xl-65 {
-        flex-basis: 65%;
         max-width: 65%
     }
 
     .xl-70 {
-        flex-basis: 70%;
         max-width: 70%
     }
 
     .xl-75 {
-        flex-basis: 75%;
         max-width: 75%
     }
 
     .xl-80 {
-        flex-basis: 80%;
         max-width: 80%
     }
 
     .xl-85 {
-        flex-basis: 85%;
         max-width: 85%
     }
 
     .xl-90 {
-        flex-basis: 90%;
         max-width: 90%
     }
 
     .xl-95 {
-        flex-basis: 95%;
         max-width: 95%
     }
 
     .xl-100 {
-        flex-basis: 100%;
         max-width: 100%
     }
 
