@@ -93,6 +93,9 @@
     }
 
     .l-flex {
+        display: -webkit-box !important;
+        display: -webkit-flex !important;
+        display: -ms-flexbox !important;
         display: flex !important
     }
 
@@ -129,41 +132,6 @@
         -webkit-order: 5;
         -ms-flex-order: 5;
         order: 5
-    }
-
-    .l-order-6 {
-        -webkit-box-ordinal-group: 7;
-        -webkit-order: 6;
-        -ms-flex-order: 6;
-        order: 6
-    }
-
-    .l-order-7 {
-        -webkit-box-ordinal-group: 8;
-        -webkit-order: 7;
-        -ms-flex-order: 7;
-        order: 7
-    }
-
-    .l-order-8 {
-        -webkit-box-ordinal-group: 9;
-        -webkit-order: 8;
-        -ms-flex-order: 8;
-        order: 8
-    }
-
-    .l-order-9 {
-        -webkit-box-ordinal-group: 10;
-        -webkit-order: 9;
-        -ms-flex-order: 9;
-        order: 9
-    }
-
-    .l-order-10 {
-        -webkit-box-ordinal-group: 11;
-        -webkit-order: 10;
-        -ms-flex-order: 10;
-        order: 10
     }
 
     .l-row {

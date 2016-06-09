@@ -1,12 +1,15 @@
 @viewport {
     width: device-width
 }
+
 @-webkit-viewport {
     width: device-width
 }
+
 @-moz-viewport {
     width: device-width
 }
+
 @-ms-viewport {
     width: device-width
 }

@@ -1,8 +1,8 @@
 /* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
-.container {
-    width: 100%
+.overflow-auto {
+    overflow: auto
 }
 
-.border-box, .container {
-    box-sizing: border-box
+.overflow-hidden {
+    overflow: hidden
 }

@@ -1,16 +1,19 @@
 <?php
-
+/* Just a simple script for composing css components */
 $components = [
 	"normalize",
+	"dependency/viewport",
+	"dependency/border-box",
 	"html-body",
-	"container",
 	"float-clear",
-	"h-centered",
+	"x-centered",
 	"grow",
 	"wrap",
 	"text",
 	"shapes",
+	"list",
 	"visibility",
+	"cursor",
 	"alignment/align-self",
 	"alignment/align-items",
 	"alignment/align-content",
@@ -28,13 +31,13 @@ const HEADER = '/*! normalize.css v4.1.1 | MIT License | github.com/necolas/norm
 foreach ($components as $component) {
 	$composed .= getContent($component);
 }
-
 $composed = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $composed);
 $composed = trim(preg_replace('/\n+/', "\n", $composed));
 putContent($composed . "\n");
 $composed = preg_replace('/\n/', '', $composed);
 $composed = trim(preg_replace('/(?:  |\t)/', '', $composed));
 putContent($composed, TRUE);
+echo "Done ";
 
 function getContent($file)
 {
