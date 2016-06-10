@@ -378,6 +378,12 @@ body {
     opacity: 1;
     filter: alpha(opacity=100)
 }
+.overflow-auto {
+    overflow: auto
+}
+.overflow-hidden {
+    overflow: hidden
+}
 .cursor-auto {
     cursor: auto;
 }

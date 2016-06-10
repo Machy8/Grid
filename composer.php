@@ -13,6 +13,7 @@ $components = [
 	"shapes",
 	"list",
 	"visibility",
+	"overflow",
 	"cursor",
 	"alignment/align-self",
 	"alignment/align-items",
@@ -21,7 +22,7 @@ $components = [
 	"grid-system/medium",
 	"grid-system/large",
 	"grid-system/extra-large",
-	"dependency/display",
+	"dependency/flex-display",
 	"clearfix"
 ];
 
