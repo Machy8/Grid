@@ -11,12 +11,14 @@
 * [Display types](#display-types)
 * [Visibility](#visibility)
 * [Text formatting](#text-formatting)
+* [List formatting](#list-formatting)
+* [Element radius](#element-radius)
+* [Overflow](#overflow)
+* [Cursor](#cursor)
 * [Clearfix](#clearfix)
 
 ##Grid system
 
-- Container - **container** class
-- Border box - **border-box** class
 - Flex - **flex** class
 - 4 sizes
 	- Small - **s** | < 641px | Tablet
@@ -43,7 +45,7 @@
 	- **Center:** self-centered
 	- **Baseline:** self-baseline
 	- **Stretched:** self-stretched
-	- **Horizontally centered:** h-centered
+	- **Horizontally centered:** x-centered
 
 ###Content
 
@@ -55,19 +57,17 @@
 	- **Right:** content-clear-right
 	- **Both:** content-clear-both
 - **Justify content**
-	- Use prefixes for devices and for landscape. Portrait orientation affects the landscape orientation.
-	- Example: s-content-left // Extra small, content left, portrait
 	- **Left:** content-left
 	- **Right:** content-right
 	- **Centered:** content-centered
 	- **Space around:** content-wrapped
 	- **Space between:** content-apart
 - **Direction and orientation**
-	- Use prefixes for devices.
-	- **Row:** row
-	- **Reversed row:** reversed-row
-	- **Column:** column
-	- **Reversed column:** reversed-column
+	- Use prefixes - s, m, l, xl
+	- **Row:** *-row
+	- **Reversed row:** *-reversed-row
+	- **Column:** *-column
+	- **Reversed column:** *-reversed-column
 - **Wrap**
 	- **Wrap:** wrap
 	- **Reverse:** wrap-reverse
@@ -92,54 +92,29 @@
 - **Space between:** lines-apart
 
 ##Ordering
-- Is available for all devices only for portrait orientation (portrait orientation also sets order in landscape orientation).
 - The parent element display property must be set to flex (use flex class)
-- Values from 1-10
-
-**Example:**
-
-- **s-order-1:** Small, order 1
-- **l-order-10:** Large, order 10
+- Values from 1-5
 
 ##Sizes
 
 ##Extra
 ###Display types
 
-- **Content**
-	- **Inline:** inline-content
-	- **Inline block:** inline-block-content
-	- **Block:** block-content
-- **Self**
-	- **Inline:** inline
-	- **Inline block:** inline-block
-	- **Block:** block
+- Use prefixes - s, m, l, xl
+- **Inline:** *-inline
+- **Inline block:** *-inline-block
+- **Block:** *-block
 
 ###Visibility
 
-For *hide* and *visible* for landscape orientation use landscape selector
-
-- **Hide**
-	- **Small device:** s-hidden
-	- **Medium device:** m-hidden
-	- **Large device:** l-hidden
-	- **Extra large device:** xl-hidden
-- **Visible**
-	- **Small device:** s-visible
-	- **Medium device:** m-visible
-	- **Large device:** l-visible
-	- **Extra large device:** xl-visible
-	- Visible display types
-		- -inline
-		- -inline-block
-		- -flex
-		- **Example:** s-visible-flex // visible with display: flex
+- **Display**
+	- Use prefixes - s, m, l, xl
+	- **Show** - *-(inline | inline-block | flex)-show
+	- **Hide** - *-hidden
 - **Opacity**
 	- **Transparent:** transparent
 	- **Transparency:** transparency-(1-4 always increased by 0.2)
 	- **Opacity 1:** opaque
-
-
 
 ###Text formatting
 
@@ -170,13 +145,34 @@ For *hide* and *visible* for landscape orientation use landscape selector
 - **Cutted text (dots at the end):** cutted-text
 - **Normal text (clear text):** text-normal
 
+###List formatting
 
+- **Style**
+	- **No style:** list-none-style
+	- **Disc:** list-disc
+	- **Square:** list-square
+	- **Decimal:** list-decimal
+- **Position**
+	- **Inside:** list-inside
+	- **Outside:** list-outside
 
 ###Element radius
 
 - **No radius:** square
 - **Rounded:** rounded-(1-4 always increased by 2)
 - **Circle:** circle
+
+###Overflow
+
+- **Auto:** overflow-auto
+- **Hidden:** overflow-hidden
+
+###Cursor
+
+- **Auto:** cursor-auto
+- **Default:** cursor-default
+- **Pointer:** cursor-pointer
+- **Wait:** cursor-wait
 
 ###Clearfix
 Grid contains micro clearfix:  **clearfix** class.
