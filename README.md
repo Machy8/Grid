@@ -97,14 +97,14 @@
 - Use prefixes s, m, l, xl
 - *-order-(1-5)
 
-###Display types
+##Display types
 
 - Use prefixes - s, m, l, xl
 - **Inline:** *-inline
 - **Inline block:** *-inline-block
 - **Block:** *-block
 
-###Visibility
+##Visibility
 
 - **Display**
 	- Use prefixes - s, m, l, xl
@@ -115,7 +115,7 @@
 	- **Transparency:** transparency-(1-4 always increased by 0.2)
 	- **Opacity 1:** opaque
 
-###Text formatting
+##Text formatting
 
 - **Alignment**
 	- **Centered:** text-centered
@@ -144,7 +144,7 @@
 - **Cutted text (dots at the end):** cutted-text
 - **Normal text (clear text):** text-normal
 
-###List formatting
+##List formatting
 
 - **Style**
 	- **No style:** list-none-style
@@ -155,23 +155,23 @@
 	- **Inside:** list-inside
 	- **Outside:** list-outside
 
-###Element radius
+##Element radius
 
 - **No radius:** square
 - **Rounded:** rounded-(1-4 always increased by 2)
 - **Circle:** circle
 
-###Overflow
+##Overflow
 
 - **Auto:** overflow-auto
 - **Hidden:** overflow-hidden
 
-###Cursor
+##Cursor
 
 - **Auto:** cursor-auto
 - **Default:** cursor-default
 - **Pointer:** cursor-pointer
 - **Wait:** cursor-wait
 
-###Clearfix
+##Clearfix
 Grid contains micro clearfix:  **clearfix** class.
