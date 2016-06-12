@@ -94,9 +94,8 @@
 
 ##Ordering
 - The parent element display property must be set to flex (use flex class)
-- Values from 1-5
-
-##Sizes
+- Use prefixes s, m, l, xl
+- *-order-(1-5)
 
 ##Extra
 ###Display types
