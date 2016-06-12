@@ -97,7 +97,6 @@
 - Use prefixes s, m, l, xl
 - *-order-(1-5)
 
-##Extra
 ###Display types
 
 - Use prefixes - s, m, l, xl
