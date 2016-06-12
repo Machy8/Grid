@@ -27,6 +27,7 @@
 	- Extra large - **xl** | > 1441px | > Desktop HD
 - 20 column fluid grid (affects self)
 	- sizes: 5, 10, 15..., 90, 95, 100
+	- example: s-95, m-50
 	- each size means width in percentages
 
 ##Alignment
