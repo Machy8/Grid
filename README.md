@@ -1,4 +1,6 @@
 #Grid
+![version 1.4.0](https://img.shields.io/badge/version-1.4.0-blue.svg)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/Machy8/Macdom/blob/master/license.md)
 - CSS framework based on Flexbox.
 - Contains: [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css) + Grid
 
