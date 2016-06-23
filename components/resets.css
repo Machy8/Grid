@@ -1,16 +1,12 @@
 /* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
-.cursor-auto {
-    cursor: auto
+.margin-none {
+    margin: 0
 }
 
-.cursor-default {
-    cursor: default
+.padding-none {
+    padding: 0
 }
 
-.cursor-pointer {
-    cursor: pointer
-}
-
-.cursor-wait {
-    cursor: wait
+.border-none {
+    border: none;
 }

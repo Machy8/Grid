@@ -5,16 +5,17 @@ $components = [
 	"dependency/viewport",
 	"dependency/border-box",
 	"html-body",
-	"float-clear",
-	"x-centered",
-	"grow",
-	"wrap",
 	"text",
-	"shapes",
 	"list",
+	"shapes",
 	"visibility",
 	"overflow",
 	"cursor",
+	"float-clear",
+	"x-centered",
+	"vertical-align",
+	"grow",
+	"wrap",
 	"alignment/align-self",
 	"alignment/align-items",
 	"alignment/align-content",
@@ -23,7 +24,8 @@ $components = [
 	"grid-system/large",
 	"grid-system/extra-large",
 	"dependency/flex-display",
-	"clearfix"
+	"clearfix",
+	"resets"
 ];
 
 $composed = "";

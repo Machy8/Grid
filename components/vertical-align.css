@@ -1,16 +1,16 @@
 /* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
-.cursor-auto {
-    cursor: auto
+.valign-baseline {
+    vertical-align: baseline
 }
 
-.cursor-default {
-    cursor: default
+.valign-top {
+    vertical-align: top
 }
 
-.cursor-pointer {
-    cursor: pointer
+.valign-middle {
+    vertical-align: middle
 }
 
-.cursor-wait {
-    cursor: wait
+.valign-bottom {
+    vertical-align: bottom
 }
