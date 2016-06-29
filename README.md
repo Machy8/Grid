@@ -2,14 +2,13 @@
 ![version 1.4.0](https://img.shields.io/badge/version-1.4.0-blue.svg)
 [![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/Machy8/Macdom/blob/master/license.md)
 - CSS framework based on Flexbox.
-- Contains: [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css) + Grid
+- Contains [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css)
 
 **Navigation**
 
 * [Grid system](#grid-system)
 * [Alignment](#alignment)
 * [Ordering](#ordering)
-* [Sizes](#sizes)
 * [Display types](#display-types)
 * [Visibility](#visibility)
 * [Text formatting](#text-formatting)
@@ -17,6 +16,7 @@
 * [Element radius](#element-radius)
 * [Overflow](#overflow)
 * [Cursor](#cursor)
+* [Resets](#resets)
 * [Clearfix](#clearfix)
 
 ##Grid system
@@ -94,7 +94,15 @@
 - **Space around:** lines-wrapped
 - **Space between:** lines-apart
 
+###Vertical align
+
+- **Top** valign-top
+- **Bottom:** valign-bottom
+- **Middle:** valign-middle
+- **Baseline:** valign-baseline
+
 ##Ordering
+
 - The parent element display property must be set to flex (use flex class)
 - Use prefixes s, m, l, xl
 - *-order-(1-5)
@@ -167,6 +175,12 @@
 
 - **Auto:** overflow-auto
 - **Hidden:** overflow-hidden
+
+##Resets
+
+- **Border:** border-none
+- **Padding:** padding-none
+- **Margin:** margin-none
 
 ##Cursor
 
