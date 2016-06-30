@@ -29,6 +29,7 @@
 	- Extra large - **xl** | > 1441px | > Desktop HD
 - 20 column fluid grid (affects self)
 	- sizes: 5, 10, 15..., 90, 95, 100
+	- m, l, xl contains - *-auto class => max-width: auto
 	- example: s-95, m-50
 	- each size means width in percentages
 
@@ -75,6 +76,7 @@
 	- **Wrap:** wrap
 	- **Reverse:** wrap-reverse
 - **Grow:** grow
+- **Full width:** full-width
 
 
 ###Items
@@ -119,7 +121,7 @@
 - **Display**
 	- Use prefixes - s, m, l, xl
 	- **Show** - *-(inline | inline-block | flex)-show
-	- **Hide** - *-hidden
+	- **Hide** - hidden or *-hidden
 - **Opacity**
 	- **Transparent:** transparent
 	- **Transparency:** transparency-(1-4 always increased by 0.2)
@@ -181,6 +183,7 @@
 - **Border:** border-none
 - **Padding:** padding-none
 - **Margin:** margin-none
+- **Background:** background-none
 
 ##Cursor
 
