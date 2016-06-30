@@ -34,6 +34,7 @@ const HEADER = '/*! normalize.css v4.1.1 | MIT License | github.com/necolas/norm
 foreach ($components as $component) {
 	$composed .= getContent($component);
 }
+
 $composed = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $composed);
 $composed = trim(preg_replace('/\n+/', "\n", $composed));
 putContent($composed . "\n");

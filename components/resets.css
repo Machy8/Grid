@@ -8,5 +8,9 @@
 }
 
 .border-none {
-    border: none;
+    border: none
+}
+
+.background-none {
+    background: none
 }

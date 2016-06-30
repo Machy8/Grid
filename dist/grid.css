@@ -320,13 +320,16 @@ body {
 .circle {
     border-radius: 100%
 }
+.hidden {
+    display:none !important
+}
 .transparent {
     opacity: 0;
     filter: alpha(opacity=0)
 }
 .transparency-1 {
     opacity: 2;
-    filter: alpha(opacity=200)
+    filter: alpha(opacity=200);
 }
 .transparency-2 {
     opacity: 4;
@@ -397,6 +400,9 @@ body {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1
+}
+.full-width {
+    width: 100%
 }
 .wrap {
     -webkit-flex-wrap: wrap;
@@ -656,6 +662,9 @@ body {
     justify-content: space-between
 }
 @media (min-width: 641px) {
+    .m-auto {
+        max-width: none
+    }
     .m-5 {
         max-width: 5%
     }
@@ -820,6 +829,9 @@ body {
     }
 }
 @media (min-width: 1025px) {
+    .l-auto {
+        max-width: none
+    }
     .l-5 {
         max-width: 5%
     }
@@ -984,6 +996,9 @@ body {
     }
 }
 @media (min-width: 1441px) {
+    .xl-auto {
+        max-width: none
+    }
     .xl-5 {
         max-width: 5%
     }
@@ -1177,5 +1192,8 @@ body {
     padding: 0
 }
 .border-none {
-    border: none;
+    border: none
+}
+.background-none {
+    background: none
 }
