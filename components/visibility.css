@@ -10,7 +10,7 @@
 
 .transparency-1 {
     opacity: 2;
-    filter: alpha(opacity=200);
+    filter: alpha(opacity=200)
 }
 
 .transparency-2 {

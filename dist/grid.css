@@ -1,6 +1,7 @@
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css | Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
+/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css | Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
 html {
     font-family: sans-serif; 
+    line-height: 1.15; 
     -ms-text-size-adjust: 100%; 
     -webkit-text-size-adjust: 100%; 
 }
@@ -9,34 +10,32 @@ body {
 }
 article,
 aside,
-details, 
-figcaption,
-figure,
 footer,
 header,
-main, 
-menu,
 nav,
-section,
-summary { 
+section {
     display: block;
 }
-audio,
-canvas,
-progress,
-video {
-    display: inline-block;
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
 }
-audio:not([controls]) {
-    display: none;
-    height: 0;
+figcaption,
+figure,
+main { 
+    display: block;
 }
-progress {
-    vertical-align: baseline;
+figure {
+    margin: 1em 40px;
 }
-template, 
-[hidden] {
-    display: none;
+hr {
+    box-sizing: content-box; 
+    height: 0; 
+    overflow: visible; 
+}
+pre {
+    font-family: monospace, monospace; 
+    font-size: 1em; 
 }
 a {
     background-color: transparent; 
@@ -59,12 +58,14 @@ b,
 strong {
     font-weight: bolder;
 }
+code,
+kbd,
+samp {
+    font-family: monospace, monospace; 
+    font-size: 1em; 
+}
 dfn {
     font-style: italic;
-}
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
 }
 mark {
     background-color: #ff0;
@@ -86,29 +87,23 @@ sub {
 sup {
     top: -0.5em;
 }
+audio,
+video {
+    display: inline-block;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
 img {
     border-style: none;
 }
 svg:not(:root) {
     overflow: hidden;
 }
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, monospace; 
-    font-size: 1em; 
-}
-figure {
-    margin: 1em 40px;
-}
-hr {
-    box-sizing: content-box; 
-    height: 0; 
-    overflow: visible; 
-}
 button,
 input,
+optgroup,
 select,
 textarea {
     font: inherit; 
@@ -157,6 +152,10 @@ legend {
     padding: 0; 
     white-space: normal; 
 }
+progress {
+    display: inline-block; 
+    vertical-align: baseline; 
+}
 textarea {
     overflow: auto;
 }
@@ -177,13 +176,25 @@ textarea {
 [type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
-::-webkit-input-placeholder {
-    color: inherit;
-    opacity: 0.54;
-}
 ::-webkit-file-upload-button {
     -webkit-appearance: button; 
     font: inherit; 
+}
+details, 
+menu {
+    display: block;
+}
+summary {
+    display: list-item;
+}
+canvas {
+    display: inline-block;
+}
+template {
+    display: none;
+}
+[hidden] {
+    display: none;
 }
 @viewport {
     width: device-width
@@ -329,7 +340,7 @@ body {
 }
 .transparency-1 {
     opacity: 2;
-    filter: alpha(opacity=200);
+    filter: alpha(opacity=200)
 }
 .transparency-2 {
     opacity: 4;
