@@ -1,19 +1,19 @@
 {
   "name": "grid",
-  "description": "Mobile first CSS framework based on Flexbox.",
+  "description": "Intuitive, easy to use, mobile first CSS framework based on Flexbox.",
   "keywords": ["css", "framework", "front-end", "responsive", "mobile-first"],
   "homepage": "https://github.com/Machy8/Grid",
-  "version": "1.5.0",
   "license": "BSD-3-Clause",
-  "scripts": {
-    "compose": "node composer.js"
-  },
+  "main": [
+    "dist/grid.css",
+    "dist/grid.min.css",
+    "dist/media-queries.css"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Machy8/Grid.git"
   },
-  "author": {
-    "name": "Vladimír Macháček",
-    "email": "8machy@seznam.cz"
-  }
+  "authors": [
+    "Vladimír Macháček <8machy@seznam.cz>",
+  ]
 }

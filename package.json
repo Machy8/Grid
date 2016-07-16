@@ -1,12 +1,11 @@
 {
   "name": "grid",
-  "description": "Mobile first CSS framework based on Flexbox.",
+  "description": "Intuitive, easy to use, mobile first CSS framework based on Flexbox.",
   "keywords": ["css", "framework", "front-end", "responsive", "mobile-first"],
   "homepage": "https://github.com/Machy8/Grid",
   "version": "1.5.0",
   "license": "BSD-3-Clause",
   "scripts": {
-    "test": "node tests/bootstrap.js",
     "compose": "node composer.js"
   },
   "style": "dist/grid.css",
