@@ -4,7 +4,7 @@
 - Intuitive, easy to use, mobile first CSS framework based on Flexbox.
 - Contains [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css)
 
-##Instalation
+##Installation
 **Npm**
 ```
 npm i grid-css-framework
