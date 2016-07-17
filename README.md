@@ -1,5 +1,5 @@
 #Grid
-[![GitHub release](https://img.shields.io/github/release/machy8/grid.svg?maxAge=2592000)](https://github.com/Machy8/Grid)
+[![GitHub release](https://img.shields.io/github/release/machy8/Grid.svg?maxAge=2592000)](https://github.com/Machy8/Grid)
 [![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/Machy8/Macdom/blob/master/license.md)
 - Intuitive, easy to use, mobile first CSS framework based on Flexbox.
 - Contains [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css)
