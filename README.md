@@ -4,6 +4,17 @@
 - Intuitive, easy to use, mobile first CSS framework based on Flexbox.
 - Contains [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css)
 
+##Instalation
+**Npm**
+```
+npm i grid-css-framework
+```
+
+**Bower**
+```
+bower install grid-css-framework
+```
+
 **Navigation**
 
 * [Grid system](#grid-system)
@@ -29,6 +40,7 @@
 	- Extra large - **xl** | > 1441px | > Desktop HD
 - 20 column fluid grid (affects self)
 	- sizes: 5, 10, 15..., 90, 95, 100
+	- *-auto for auto max-width
 	- m, l, xl contains - *-auto class => max-width: auto
 	- example: s-95, m-50
 	- each size means width in percentages
