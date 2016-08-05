@@ -92,6 +92,10 @@
         display: block !important
     }
 
+    .l-inline {
+        display: inline !important
+    }
+
     .l-inline-block {
         display: inline-block !important
     }

@@ -92,6 +92,10 @@
         display: block !important
     }
 
+    .xl-inline {
+        display: inline !important
+    }
+
     .xl-inline-block {
         display: inline-block !important
     }

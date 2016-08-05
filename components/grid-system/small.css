@@ -83,11 +83,15 @@
     display: none !important
 }
 
-.s-block {
+.s-block, .display-block {
     display: block !important
 }
 
-.s-inline-block {
+.s-inline, .display-inline {
+    display: inline !important
+}
+
+.s-inline-block, .display-inline-block {
     display: inline-block !important
 }
 
