@@ -573,10 +573,13 @@ body {
 .s-hidden {
     display: none !important
 }
-.s-block {
+.s-block, .display-block {
     display: block !important
 }
-.s-inline-block {
+.s-inline, .display-inline {
+    display: inline !important
+}
+.s-inline-block, .display-inline-block {
     display: inline-block !important
 }
 .s-flex {
@@ -741,6 +744,9 @@ body {
     }
     .m-block {
         display: block !important
+    }
+    .m-inline {
+        display: inline !important
     }
     .m-inline-block {
         display: inline-block !important
@@ -909,6 +915,9 @@ body {
     .l-block {
         display: block !important
     }
+    .l-inline {
+        display: inline !important
+    }
     .l-inline-block {
         display: inline-block !important
     }
@@ -1075,6 +1084,9 @@ body {
     }
     .xl-block {
         display: block !important
+    }
+    .xl-inline {
+        display: inline !important
     }
     .xl-inline-block {
         display: inline-block !important
