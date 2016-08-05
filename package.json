@@ -6,7 +6,7 @@
   "version": "1.5.0",
   "license": "BSD-3-Clause",
   "scripts": {
-    "compose": "node composer.js"
+    "composer": "node composer.js"
   },
   "style": "dist/grid.css",
   "repository": {
