@@ -331,9 +331,6 @@ body {
 .circle {
     border-radius: 100%
 }
-.hidden {
-    display:none !important
-}
 .transparent {
     opacity: 0;
     filter: alpha(opacity=0)
@@ -570,7 +567,7 @@ body {
 .s-100 {
     max-width: 100%
 }
-.s-hidden {
+.s-hidden, .display-none, .hidden {
     display: none !important
 }
 .s-block, .display-block {
@@ -1192,7 +1189,7 @@ body {
 .m-content-centered, .m-content-left, .m-content-right, .m-content-wrapped, .m-content-apart, .m-row, .m-reversed-row, .m-column, .m-reversed-column, .m-order-1, .m-order-2, .m-order-3, .m-order-4, .m-order-5,
 .l-content-centered, .l-content-left, .l-content-right, .l-content-wrapped, .l-content-apart, .l-row, .l-reversed-row, .l-column, .l-reversed-column, .l-order-1, .l-order-2, .l-order-3, .l-order-4, .l-order-5,
 .xl-content-centered, .xl-content-left, .xl-content-right, .xl-content-wrapped, .xl-content-apart, .xl-row, .xl-reversed-row, .xl-column, .xl-reversed-column, .xl-order-1, .xl-order-2, .xl-order-3, .xl-order-4, .xl-order-5,
-.grow, .wrap, .wrap-reverse, .flex {
+.grow, .wrap, .wrap-reverse, .flex, .display-flex {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
