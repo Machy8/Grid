@@ -3,7 +3,7 @@
   "description": "Intuitive, easy to use, mobile first CSS framework based on Flexbox.",
   "keywords": ["css", "framework", "front-end", "responsive", "mobile-first"],
   "homepage": "https://github.com/Machy8/Grid",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "license": "BSD-3-Clause",
   "scripts": {
     "composer": "node composer.js"
