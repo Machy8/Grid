@@ -1,5 +1,7 @@
 #Grid
 [![GitHub release](https://img.shields.io/github/release/machy8/Grid.svg?maxAge=2592000)](https://github.com/Machy8/Grid)
+[![npm](https://img.shields.io/npm/v/grid-css-framework.svg?maxAge=2592000)](https://www.npmjs.com/package/grid-css-framework)
+[![Bower](https://img.shields.io/bower/v/grid-css-framework.svg?maxAge=2592000?style=plastic)]()
 [![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/Machy8/Macdom/blob/master/license.md)
 - Intuitive, easy to use, mobile first CSS framework based on Flexbox.
 - Contains [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css)
@@ -32,7 +34,7 @@ bower install grid-css-framework
 
 ##Grid system
 
-- Flex - **flex** class
+- Flex - **flex** or **display-flex** class
 - 4 sizes
 	- Small - **s** | < 641px | Tablet
 	- Medium - **m** | > 641px | Desktop
@@ -124,16 +126,22 @@ bower install grid-css-framework
 ##Display types
 
 - Use prefixes - s, m, l, xl
-- **Inline:** *-inline
-- **Inline block:** *-inline-block
-- **Block:** *-block
+	- **Inline:** *-inline
+	- **Inline block:** *-inline-block
+	- **Block:** *-block
+- Or use aliases
+	- **Block:** display-block
+	- **Inline:** display-inline
+	- **Inline block:** display-inline-block
+	- **None:** display-none
+	- **Flex:** display-flex
 
 ##Visibility
 
 - **Display**
 	- Use prefixes - s, m, l, xl
-	- **Show** - *-(inline | inline-block | flex)-show
-	- **Hide** - hidden or *-hidden
+	- **Show** - use [display types](#display-types)
+	- **Hide** - hidden | *-hidden | display-none
 - **Opacity**
 	- **Transparent:** transparent
 	- **Transparency:** transparency-(1-4 always increased by 0.2)
