@@ -96,7 +96,7 @@
     display: inline-block !important
 }
 
-.s-flex {
+.s-flex, .display-flex  {
     display: -webkit-box !important;
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
