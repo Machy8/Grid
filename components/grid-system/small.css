@@ -103,6 +103,22 @@
     display: flex !important
 }
 
+.s-static, .position-static {
+    position: static
+}
+
+.s-relative, .position-relative {
+    position: relative
+}
+
+.s-absolute, .position-absolute {
+    position: absolute
+}
+
+.s-fixed, .position-fixed {
+    position: fixed
+}
+
 .s-order-1 {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;

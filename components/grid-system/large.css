@@ -108,6 +108,22 @@
         display: flex !important
     }
 
+    .l-static {
+        position: static
+    }
+
+    .l-relative {
+        position: relative
+    }
+
+    .l-absolute {
+        position: absolute
+    }
+
+    .l-fixed {
+        position: fixed
+    }
+
     .l-order-1 {
         -webkit-box-ordinal-group: 2;
         -webkit-order: 1;
