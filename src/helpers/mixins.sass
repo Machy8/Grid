@@ -1,0 +1,92 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+@mixin visibility($opacity)
+  opacity: $opacity
+  filter: alpha(opacity=$opacity * 100)
+
+@mixin max-width($width)
+  @if type-of($width) == 'number'
+    max-width: $width * 1%
+  @else if type-of($width) == 'string'
+    max-width: $width
+
+@mixin position($position)
+  position: $position
+
+@mixin columns-count($count)
+  -webkit-column-count: $count
+  -moz-column-count: $count
+  column-count: $count
+
+// Flexbox
+@mixin flex-display
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+
+@mixin flexbox
+  @extend .#{$smallBreakpointPrefix}-flex
+
+@mixin flexbox-order($number)
+  -webkit-box-ordinal-group: $number + 1
+  -webkit-order: $number
+  -ms-flex-order: $number
+  order: $number
+
+@mixin flex-direction-row
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+  -webkit-flex-direction: row
+  -ms-flex-direction: row
+  flex-direction: row
+
+@mixin flex-direction-reversed-row
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: reverse
+  -webkit-flex-direction: row-reverse
+  -ms-flex-direction: row-reverse
+  flex-direction: row-reverse
+
+@mixin flex-direction-column
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -webkit-flex-direction: column
+  -ms-flex-direction: column
+  flex-direction: column
+
+@mixin flex-direction-reversed-column
+  -webkit-box-orient: vertical
+  -webkit-box-direction: reverse
+  -webkit-flex-direction: column-reverse
+  -ms-flex-direction: column-reverse
+  flex-direction: column-reverse
+
+@mixin flex-justify-content-center
+  -webkit-box-pack: center
+  -webkit-justify-content: center
+  -ms-flex-pack: center
+  justify-content: center
+
+@mixin flex-justify-content-flex-start
+  -webkit-box-pack: start
+  -webkit-justify-content: flex-start
+  -ms-flex-pack: start
+  justify-content: flex-start
+
+@mixin flex-justify-content-flex-end
+  -webkit-box-pack: end
+  -webkit-justify-content: flex-end
+  -ms-flex-pack: end
+  justify-content: flex-end
+
+@mixin flex-justify-content-space-around
+  -webkit-justify-content: space-around
+  -ms-flex-pack: distribute
+  justify-content: space-around
+
+@mixin flex-justify-content-space-between
+  -webkit-box-pack: justify
+  -webkit-justify-content: space-between
+  -ms-flex-pack: justify
+  justify-content: space-between
