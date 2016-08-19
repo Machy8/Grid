@@ -1,18 +1,5 @@
-/* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
-$label = auto default pointer
-.cursor-auto {
-    cursor: auto
-}
-
-.cursor-default {
-    cursor: default
-}
-
-.cursor-pointer {
-    cursor: pointer
-}
-
-.cursor-wait {
-    cursor: wait
-}
+@each $cursorType in $cursorTypes
+    .cursor-#{$cursorType}
+        cursor: #{$cursorType}

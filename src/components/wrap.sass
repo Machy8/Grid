@@ -1,19 +1,19 @@
-/* This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
-.nowrap {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-}
+.nowrap
+    @include flexbox
+    -webkit-flex-wrap: nowrap
+    -ms-flex-wrap: nowrap
+    flex-wrap: nowrap
 
-.wrap {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
+.wrap
+    @include flexbox
+    -webkit-flex-wrap: wrap
+    -ms-flex-wrap: wrap
     flex-wrap: wrap
-}
 
-.wrap-reverse {
-    -webkit-flex-wrap: wrap-reverse;
-    -ms-flex-wrap: wrap-reverse;
+.wrap-reverse
+    @include flexbox
+    -webkit-flex-wrap: wrap-reverse
+    -ms-flex-wrap: wrap-reverse
     flex-wrap: wrap-reverse
-}
