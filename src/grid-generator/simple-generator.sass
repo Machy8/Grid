@@ -1,9 +1,11 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+// Auto max width
 .#{$prefix}-auto
 	@include max-width(none)
 
 
+// Max width
 $widthCounter: $widthMin
 @while $widthCounter <= $widthMax
 	.#{$prefix}-#{$widthCounter}
@@ -11,6 +13,7 @@ $widthCounter: $widthMin
 	$widthCounter: $widthCounter + $widthIncreasedBy
 
 
+// Display types
 @each $displayType in $displayTypes
 	@if $displayType == none
 		.#{$prefix}-hidden
@@ -24,11 +27,14 @@ $widthCounter: $widthMin
 			@else
 				display: $displayType
 
+
+// Positions
 @each $position in $positions
 	.#{$prefix}-#{$position}
 		position: $position
 
 
+// Order
 $orderCounter: $orderMin
 @while $orderCounter <= $orderMax
 	.#{$prefix}-order-#{$orderCounter}
@@ -37,6 +43,7 @@ $orderCounter: $orderMin
 	$orderCounter: $orderCounter + $orderIncreasedBy
 
 
+// Columns
 $columnsCounter: $columnsMin
 @while $columnsCounter <= $columnsMax
 	.#{$prefix}-columns-#{$columnsCounter}
@@ -44,6 +51,7 @@ $columnsCounter: $columnsMin
 	$columnsCounter: $columnsCounter + $columnsIncreasedBy
 
 
+// Flex direction
 .#{$prefix}-row
 	@extend .#{$prefix}-flex
 	@include flex-direction-row
@@ -61,7 +69,7 @@ $columnsCounter: $columnsMin
 	@include flex-direction-reversed-column
 
 
-
+// Justify content
 .#{$prefix}-content-centered
 	@extend .#{$prefix}-flex
 	@include flex-justify-content-center
