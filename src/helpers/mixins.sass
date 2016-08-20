@@ -1,5 +1,6 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+// Global
 @mixin visibility($opacity)
   opacity: $opacity
   filter: alpha(opacity=$opacity * 100)
@@ -18,7 +19,8 @@
   -moz-column-count: $count
   column-count: $count
 
-// Flexbox
+
+// Global - flexbox
 @mixin flex-display
   display: -webkit-box
   display: -webkit-flex
@@ -87,6 +89,7 @@
   -webkit-justify-content: space-between
   -ms-flex-pack: justify
   justify-content: space-between
+
 
 // Specific mixins
 @mixin extendFlexbox
