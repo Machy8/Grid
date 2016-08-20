@@ -24,7 +24,6 @@ bower install grid-css-framework
 * [Ordering](#ordering)
 * [Display types](#display-types)
 * [Visibility](#visibility)
-* [Frames](#frames)
 * [Positioning](#positioning)
 * [Text formatting](#text-formatting)
 * [List formatting](#list-formatting)
@@ -149,18 +148,6 @@ bower install grid-css-framework
 	- **Transparent:** transparent
 	- **Transparency:** transparency-(1-4 always increased by 0.2)
 	- **Opacity 1:** opaque
-
-##Frames
-- Rules pays for margin and padding
-- Available range is from 5 to 20px
-- **All sides:** - padding-\*, margin-*
-- **Left:** - padding-left-\*, margin-left-*
-- **Right:** - padding-right-\*, margin-right-*
-- **Top:** - padding-top-\*, margin-top-*
-- **Bottom:** - padding-bottom-\*, margin-bottom-*
-- **Left & Right:** - padding-x-\*, margin-x-*
-- **Top & Bottom"** - padding-y-\*, margin-y-*
-- Example: padding-top-5, margin-y-20
 
 ##Positioning
 - **With prefixes** s, m, l, xl
