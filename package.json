@@ -9,7 +9,7 @@
     "mobile-first"
   ],
   "homepage": "https://github.com/Machy8/Grid",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "license": "BSD-3-Clause",
   "scripts": {
     "composer": "node composer.js"
