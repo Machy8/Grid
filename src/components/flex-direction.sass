@@ -1,15 +1,11 @@
 .direction-row
-  @extend .#{$smallBreakpointPrefix}-row
-  @include flexbox
+  @include extendFlexDirection(row)
 
 .direction-reversed-row
-  @extend .#{$smallBreakpointPrefix}-reversed-row
-  @include flexbox
+  @include extendFlexDirection(reversed-row)
 
 .direction-column
-  @extend .#{$smallBreakpointPrefix}-column
-  @include flexbox
+  @include extendFlexDirection(column)
 
 .direction-reversed-column
-  @extend .#{$smallBreakpointPrefix}-reversed-column
-  @include flexbox
+  @include extendFlexDirection(reversed-column)
