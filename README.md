@@ -30,6 +30,7 @@ bower install grid-css-framework
 * [List formatting](#list-formatting)
 * [Element radius](#element-radius)
 * [Overflow](#overflow)
+* [Resize](#resize)
 * [Cursor](#cursor)
 * [Resets](#resets)
 * [Clearfix](#clearfix)
@@ -222,7 +223,17 @@ bower install grid-css-framework
 ##Overflow
 
 - **Auto:** overflow-auto
+- **Y axis:** overflow-y-auto
+- **Y axis hidden:** overflow-y-hidden
+- **X axis:** overflow-x-auto
+- **X axis hidden:** overflow-x-hidden 
 - **Hidden:** overflow-hidden
+
+##Resize
+
+- **X axis:** resizable-x
+- **Y axis:** resizable-y
+- **Both axis:** resizable-both
 
 ##Resets
 
