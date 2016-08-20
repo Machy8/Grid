@@ -1,6 +1,6 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
-// Grid settings
+// grid-generator/simple-generator
 $smallBreakpointPrefix: 's'
 
 $mediumBreakpointPrefix: 'm'
@@ -12,32 +12,42 @@ $largeBreakpoint: 1025
 $extraLargeBreakpointPrefix: 'xl'
 $extraLargeBreakpoint: 1441
 
-// Blocks - max-width: *
 $widthMax: 100
 $widthMin: 5
 $widthIncreasedBy: 5
 
-// Display types - display: *
+
+// components/display-types, grid-generator/simple-generator
 $displayTypes: inline inline-block block flex none
 $positions: static relative absolute fixed
 
-// Order - order: *
+
+// components/order, grid-generator/simple-generator
 $orderMax: 5
 $orderMin: 1
 $orderIncreasedBy: 1
 
-// Columns - column-count: *
+
+// components/columns, grid-generator/simple-generator
 $columnsMax: $orderMax
 $columnsMin: $orderMin
 $columnsIncreasedBy: $orderIncreasedBy
 
+
+// components/cursor
 $cursorTypes: auto default pointer wait
 
+
+// components/list
 $listStyleTypes: disc square decimal
 $listPositions: inside outside
 
+
+// components/float-clear
 $floatTypes: left right
 $clearTypes: left right both
 
+
+// components/resize
 $resizableLabels: x y both
 $resizableValues: horizontal vertical both
