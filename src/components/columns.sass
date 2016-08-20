@@ -3,5 +3,5 @@
 $columnsCounter: $columnsMin
 @while $columnsCounter <= $columnsMax
   .columns-#{$columnsCounter}
-    @extend .#{$smallBreakpointPrefix}-columns-#{$columnsCounter}
+    @include extendColumns($columnsCounter)
   $columnsCounter: $columnsCounter + $columnsIncreasedBy
