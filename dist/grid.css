@@ -288,7 +288,7 @@ body {
   display: -ms-flexbox;
   display: flex; }
 
-.s-hidden, .display-hidden {
+.s-hidden, .display-hidden, .hidden {
   display: none; }
 
 .s-static, .position-static {
