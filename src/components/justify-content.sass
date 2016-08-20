@@ -1,19 +1,14 @@
 .content-centered
-  @extend .#{$smallBreakpointPrefix}-centered
-  @include flexbox
+  @include extendJustifyContent(centered)
 
 .content-left
-  @extend .#{$smallBreakpointPrefix}-left
-  @include flexbox
+  @include extendJustifyContent(left)
 
 .content-right
-  @extend .#{$smallBreakpointPrefix}-right
-  @include flexbox
+  @include extendJustifyContent(right)
 
 .content-wrapped
-  @extend .#{$smallBreakpointPrefix}-wrapped
-  @include flexbox
+  @include extendJustifyContent(wrapped)
 
 .content-apart
-  @extend .#{$smallBreakpointPrefix}-apart
-  @include flexbox
+  @include extendJustifyContent(apart)
