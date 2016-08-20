@@ -25,9 +25,6 @@
   display: -ms-flexbox
   display: flex
 
-@mixin flexbox
-  @extend .#{$smallBreakpointPrefix}-flex
-
 @mixin flexbox-order($number)
   -webkit-box-ordinal-group: $number + 1
   -webkit-order: $number
@@ -90,3 +87,28 @@
   -webkit-justify-content: space-between
   -ms-flex-pack: justify
   justify-content: space-between
+
+// Specific mixins
+@mixin extendFlexbox
+  @extend .#{$smallBreakpointPrefix}-flex
+
+@mixin extendJustifyContent($direction)
+  @include extendFlexbox
+  @extend .#{$smallBreakpointPrefix}-content-#{$direction}
+
+@mixin extendColumns($count)
+  @extend .#{$smallBreakpointPrefix}-columns-#{$count}
+
+@mixin extendDisplayType($type)
+  @extend .#{$smallBreakpointPrefix}-#{$type}
+
+@mixin extendFlexDirection($direction)
+  @include extendFlexbox
+  @extend .#{$smallBreakpointPrefix}-#{$direction}
+
+@mixin extendOrder($place)
+  @include extendFlexbox
+  @extend .#{$smallBreakpointPrefix}-order-#{$place}
+
+@mixin extendPosition($position)
+  @extend .#{$smallBreakpointPrefix}-#{$position}
