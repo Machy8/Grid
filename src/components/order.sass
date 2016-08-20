@@ -3,6 +3,5 @@
 $orderCounter: $orderMin
 @while $orderCounter <= $orderMax
   .order-#{$orderCounter}
-    @extend .#{$smallBreakpointPrefix}-order-#{$orderCounter}
-    @include flexbox
+    @include extendOrder($orderCounter)
   $orderCounter: $orderCounter + $orderIncreasedBy
