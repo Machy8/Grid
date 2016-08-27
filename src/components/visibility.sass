@@ -3,9 +3,9 @@
 .transparent
     @include visibility(0)
 
-@for $i from 1 through 4
+@for $i from 1 through 9
     .transparency-#{$i}
-        @include visibility($i * 0.1)
+        @include visibility($i)
 
 .opaque
-    @include visibility(1)
+    @include visibility(10)

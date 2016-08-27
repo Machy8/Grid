@@ -2,8 +2,8 @@
 
 // Global
 @mixin visibility($opacity)
-  opacity: $opacity
-  filter: alpha(opacity=$opacity * 100)
+  opacity: $opacity * 0.1
+  filter: alpha(opacity=$opacity * 10)
 
 @mixin max-width($width)
   @if type-of($width) == 'number'
