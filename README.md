@@ -17,7 +17,7 @@ npm i grid-css-framework
 bower install grid-css-framework
 ```
 
-##Navigation
+##Navigation - [see wiki](https://github.com/Machy8/Grid/wiki)
 
 - [Grid system](https://github.com/Machy8/Grid/wiki/Grid-system)
 
