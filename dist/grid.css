@@ -963,8 +963,12 @@ body {
 .keep-all {
   word-break: keep-all; }
 
-.list-none-style {
+.list-none-style, .list-none-clear {
   list-style: none; }
+
+.list-none-clear {
+  margin: 0;
+  padding: 0; }
 
 .list-disc {
   list-style-type: disc; }
