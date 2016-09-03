@@ -3,6 +3,11 @@
 .list-none-style
     list-style: none
 
+.list-none-clear
+    @extend .list-none-style
+    margin: 0
+    padding: 0
+
 @each $type in $listStyleTypes
     .list-#{$type}
         list-style-type: $type
