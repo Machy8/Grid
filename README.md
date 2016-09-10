@@ -1,4 +1,6 @@
 #Grid
+
+[![Join the chat at https://gitter.im/Machy8/Grid](https://badges.gitter.im/Machy8/Grid.svg)](https://gitter.im/Machy8/Grid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![GitHub release](https://img.shields.io/github/release/machy8/Grid.svg?maxAge=2592000)](https://github.com/Machy8/Grid)
 [![npm](https://img.shields.io/npm/v/grid-css-framework.svg?maxAge=2592000)](https://www.npmjs.com/package/grid-css-framework)
 [![Bower](https://img.shields.io/bower/v/grid-css-framework.svg?maxAge=2592000?style=plastic)](https://github.com/Machy8/Grid)
