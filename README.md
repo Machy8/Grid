@@ -17,226 +17,27 @@ npm i grid-css-framework
 bower install grid-css-framework
 ```
 
-**Navigation**
+##Navigation - [see wiki](https://github.com/Machy8/Grid/wiki)
 
-* [Grid system](#grid-system)
-* [Alignment](#alignment)
-* [Ordering](#ordering)
-* [Display types](#display-types)
-* [Visibility](#visibility)
-* [Frames](#frames)
-* [Positioning](#positioning)
-* [Text formatting](#text-formatting)
-* [List formatting](#list-formatting)
-* [Element radius](#element-radius)
-* [Overflow](#overflow)
-* [Cursor](#cursor)
-* [Resets](#resets)
-* [Clearfix](#clearfix)
+- [Grid system](https://github.com/Machy8/Grid/wiki/Grid-system)
 
-##Grid system
+**Alignment**
+- [Alignment](https://github.com/Machy8/Grid/wiki/Alignment)
+- [Positioning](https://github.com/Machy8/Grid/wiki/Positioning)
+- [Ordering](https://github.com/Machy8/Grid/wiki/Ordering)
 
-- Flex - **flex** or **display-flex** class
-- 4 sizes
-	- Small - **s** | < 641px | Tablet
-	- Medium - **m** | > 641px | Desktop
-	- Large - **l** | > 1025px | Desktop HD
-	- Extra large - **xl** | > 1441px | > Desktop HD
-- 20 column fluid grid (affects self)
-	- sizes: 5, 10, 15..., 90, 95, 100
-	- *-auto for auto max-width
-	- m, l, xl contains - *-auto class => max-width: auto
-	- example: s-95, m-50
-	- each size means width in percentages
+**Formatting**
+- [Text formatting](https://github.com/Machy8/Grid/wiki/Text-formatting)
+- [List formatting](https://github.com/Machy8/Grid/wiki/List-formatting)
+- [Element radius](https://github.com/Machy8/Grid/wiki/Element-radius)
+- [Display types](https://github.com/Machy8/Grid/wiki/Display-types)
+- [Visibility](https://github.com/Machy8/Grid/wiki/Visibility)
+- [Resize](https://github.com/Machy8/Grid/wiki/Resize)
+- [Overflow](https://github.com/Machy8/Grid/wiki/Overflow)
 
-##Alignment
-###Self
+**Resets**
+- [Resets](https://github.com/Machy8/Grid/wiki/Resets)
+- [Clearfix](https://github.com/Machy8/Grid/wiki/Clearfix)
 
-- **Float**
-	- **Left:** float-left
-	- **Right:** float-right
-- **Clear**
-	- **Left:** clear-left
-	- **Right:** clear-right
-	- **Both:** clear-both
-- **Align self**
-	- **Top:** self-top
-	- **Bottom:** self-bottom
-	- **Center:** self-centered
-	- **Baseline:** self-baseline
-	- **Stretched:** self-stretched
-	- **Horizontally centered:** x-centered
-
-###Content
-
-- **Float**
-	- **Left:** content-float-left
-	- **Right:** content-float-right
-- **Clear**
-	- **Left:** content-clear-left
-	- **Right:** content-clear-right
-	- **Both:** content-clear-both
-- **Justify content**
-	- **Left:** content-left
-	- **Right:** content-right
-	- **Centered:** content-centered
-	- **Space around:** content-wrapped
-	- **Space between:** content-apart
-- **Direction and orientation**
-	- Use prefixes - s, m, l, xl
-	- **Row:** *-row
-	- **Reversed row:** *-reversed-row
-	- **Column:** *-column
-	- **Reversed column:** *-reversed-column
-- **Wrap**
-	- **Wrap:** wrap
-	- **Reverse:** wrap-reverse
-- **Grow:** grow
-- **Full width:** full-width
-
-
-###Items
-
-- **Top:** items-top
-- **Bottom:** items-bottom
-- **Centered:** items-centered
-- **Baseline:** items-baseline
-- **Stretched:** items-stretched
-
-###Lines
-
-- **Top:** lines-top
-- **Bottom:** lines-bottom
-- **Centered:** lines-centered
-- **Stretched:** lines-stretched
-- **Space around:** lines-wrapped
-- **Space between:** lines-apart
-
-###Vertical align
-
-- **Top** valign-top
-- **Bottom:** valign-bottom
-- **Middle:** valign-middle
-- **Baseline:** valign-baseline
-
-##Ordering
-
-- The parent element display property must be set to flex (use flex class)
-- Use prefixes s, m, l, xl
-- *-order-(1-5)
-
-##Display types
-
-- Use prefixes - s, m, l, xl
-	- **Inline:** *-inline
-	- **Inline block:** *-inline-block
-	- **Block:** *-block
-- Or use aliases
-	- **Block:** display-block
-	- **Inline:** display-inline
-	- **Inline block:** display-inline-block
-	- **None:** display-none
-	- **Flex:** display-flex
-
-##Visibility
-
-- **Display**
-	- Use prefixes - s, m, l, xl
-	- **Show** - use [display types](#display-types)
-	- **Hide** - hidden | *-hidden | display-none
-- **Opacity**
-	- **Transparent:** transparent
-	- **Transparency:** transparency-(1-4 always increased by 0.2)
-	- **Opacity 1:** opaque
-
-##Frames
-- Rules pays for margin and padding
-- Available range is from 5 to 20px
-- **All sides:** - padding-\*, margin-*
-- **Left:** - padding-left-\*, margin-left-*
-- **Right:** - padding-right-\*, margin-right-*
-- **Top:** - padding-top-\*, margin-top-*
-- **Bottom:** - padding-bottom-\*, margin-bottom-*
-- **Left & Right:** - padding-x-\*, margin-x-*
-- **Top & Bottom"** - padding-y-\*, margin-y-*
-- Example: padding-top-5, margin-y-20
-
-##Positioning
-- **With prefixes** s, m, l, xl
-    - **Static:** - *-static
-    - **Relative:** - *-relative
-    - **Absolute:** - *-absolute
-    - **Fixed:** - *-fixed
-- **Without prefixes**
-    - **Static:** - position-static
-    - **Relative:** - position-relative
-    - **Absolute:** - position-absolute
-    - **Fixed:** - position-fixed
-
-##Text formatting
-
-- **Alignment**
-	- **Centered:** text-centered
-	- **Left:** text-left
-	- **Right:** text-right
-	- **Justify:** text-justify
-- **Weight**
-	- **Bold:** text-bold
-	- **Lighter:** text-lighter
-	- **Normal:** text-normal-weight
-- **Style**
-	- **Underline:** text-underline
-	- **Overline:** text-overline
-	- **Line through:** text-baseline
-	- **None:** text-none-decoration
-- **Transform**
-	- **Uppercase:** text-uppercase
-	- **Lowercase:** text-lowercase
-	- **Capitalize:** text-capitalize
-	- **None:** text-none-transform
-- **Words**
-	- **No wrap:** text-nowrap
-	- **Break:** break-words
-	- **Break all:** break-all
-	- **Keep all:** keep-all
-- **Cutted text (dots at the end):** cutted-text
-- **Normal text (clear text):** text-normal
-
-##List formatting
-
-- **Style**
-	- **No style:** list-none-style
-	- **Disc:** list-disc
-	- **Square:** list-square
-	- **Decimal:** list-decimal
-- **Position**
-	- **Inside:** list-inside
-	- **Outside:** list-outside
-
-##Element radius
-
-- **No radius:** square
-- **Rounded:** rounded-(1-4 always increased by 2)
-- **Circle:** circle
-
-##Overflow
-
-- **Auto:** overflow-auto
-- **Hidden:** overflow-hidden
-
-##Resets
-
-- **Border:** border-none
-- **Padding:** padding-none
-- **Margin:** margin-none
-- **Background:** background-none
-
-##Cursor
-
-- **Auto:** cursor-auto
-- **Default:** cursor-default
-- **Pointer:** cursor-pointer
-- **Wait:** cursor-wait
-
-##Clearfix
-Grid contains micro clearfix:  **clearfix** class.
+**Uncategorized**
+- [Cursor](https://github.com/Machy8/Grid/wiki/Cursor)
