@@ -1098,8 +1098,17 @@ body {
   -ms-flex-positive: 1;
   flex-grow: 1; }
 
+.full-window-width {
+  width: 100vw; }
+
 .full-width {
   width: 100%; }
+
+.full-vh-height {
+  height: 100vh; }
+
+.full-window-height {
+  height: 100%; }
 
 .nowrap {
   -webkit-flex-wrap: nowrap;
