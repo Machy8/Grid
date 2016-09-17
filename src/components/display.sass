@@ -2,7 +2,7 @@
 
 @each $displayType in $displayTypes
   @if $displayType == none
-    .display-hidden, .hidden
+    .display-none, .hidden
       @include extendDisplayType(hidden)
 
   @else if $displayType != none
