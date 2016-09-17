@@ -291,7 +291,7 @@ body {
   display: -ms-flexbox !important;
   display: flex !important; }
 
-.s-hidden, .display-hidden, .hidden {
+.s-hidden, .display-none, .hidden {
   display: none; }
 
 .s-static, .position-static {
