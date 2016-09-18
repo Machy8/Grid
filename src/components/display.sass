@@ -2,8 +2,10 @@
 
 @each $displayType in $displayTypes
   @if $displayType == none
-    .display-none, .hidden
+    .display-none
       @include extendDisplayType(hidden)
+    .hidden
+      display: none !important
 
   @else if $displayType != none
     .display-#{$displayType}
