@@ -291,7 +291,7 @@ body {
   display: -ms-flexbox !important;
   display: flex !important; }
 
-.s-hidden, .display-none, .hidden {
+.s-hidden, .display-none {
   display: none; }
 
 .s-static, .position-static {
@@ -1251,6 +1251,9 @@ body {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch; }
+
+.hidden {
+  display: none !important; }
 
 .clearfix:before, .clearfix:after {
   content: " ";
