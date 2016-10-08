@@ -1,9 +1,11 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+
 // Global
 @mixin visibility($opacity)
   opacity: $opacity * 0.1
   filter: alpha(opacity=$opacity * 10)
+
 
 @mixin max-width($width)
   @if type-of($width) == 'number'
@@ -11,13 +13,23 @@
   @else if type-of($width) == 'string'
     max-width: $width
 
+
 @mixin position($position)
   position: $position
+
 
 @mixin columns-count($count)
   -webkit-column-count: $count
   -moz-column-count: $count
   column-count: $count
+
+
+@mixin vertically-centered($position: relative)
+  position: $position !important
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
 
 
 // Global - flexbox
@@ -27,11 +39,13 @@
   display: -ms-flexbox !important
   display: flex !important
 
+
 @mixin flexbox-order($number)
   -webkit-box-ordinal-group: $number + 1
   -webkit-order: $number
   -ms-flex-order: $number
   order: $number
+
 
 @mixin flex-direction-row
   -webkit-box-orient: horizontal
@@ -40,12 +54,14 @@
   -ms-flex-direction: row
   flex-direction: row
 
+
 @mixin flex-direction-reversed-row
   -webkit-box-orient: horizontal
   -webkit-box-direction: reverse
   -webkit-flex-direction: row-reverse
   -ms-flex-direction: row-reverse
   flex-direction: row-reverse
+
 
 @mixin flex-direction-column
   -webkit-box-orient: vertical
@@ -54,6 +70,7 @@
   -ms-flex-direction: column
   flex-direction: column
 
+
 @mixin flex-direction-reversed-column
   -webkit-box-orient: vertical
   -webkit-box-direction: reverse
@@ -61,11 +78,13 @@
   -ms-flex-direction: column-reverse
   flex-direction: column-reverse
 
+
 @mixin flex-justify-content-center
   -webkit-box-pack: center
   -webkit-justify-content: center
   -ms-flex-pack: center
   justify-content: center
+
 
 @mixin flex-justify-content-flex-start
   -webkit-box-pack: start
@@ -73,16 +92,19 @@
   -ms-flex-pack: start
   justify-content: flex-start
 
+
 @mixin flex-justify-content-flex-end
   -webkit-box-pack: end
   -webkit-justify-content: flex-end
   -ms-flex-pack: end
   justify-content: flex-end
 
+
 @mixin flex-justify-content-space-around
   -webkit-justify-content: space-around
   -ms-flex-pack: distribute
   justify-content: space-around
+
 
 @mixin flex-justify-content-space-between
   -webkit-box-pack: justify
@@ -91,27 +113,33 @@
   justify-content: space-between
 
 
-// Specific mixins
+// Specific extending mixins
 @mixin extendFlexbox
   @extend .#{$smallBreakpointPrefix}-flex
+
 
 @mixin extendJustifyContent($direction)
   @include extendFlexbox
   @extend .#{$smallBreakpointPrefix}-content-#{$direction}
 
+
 @mixin extendColumns($count)
   @extend .#{$smallBreakpointPrefix}-columns-#{$count}
 
+
 @mixin extendDisplayType($type)
   @extend .#{$smallBreakpointPrefix}-#{$type}
+
 
 @mixin extendFlexDirection($direction)
   @include extendFlexbox
   @extend .#{$smallBreakpointPrefix}-#{$direction}
 
+
 @mixin extendOrder($place)
   @include extendFlexbox
   @extend .#{$smallBreakpointPrefix}-order-#{$place}
+
 
 @mixin extendPosition($position)
   @extend .#{$smallBreakpointPrefix}-#{$position}
