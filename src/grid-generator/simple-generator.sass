@@ -1,5 +1,6 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+
 // Auto max width
 .#{$prefix}-auto
 	@include max-width(none)
@@ -56,13 +57,16 @@ $columnsCounter: $columnsMin
 	@extend .#{$prefix}-flex
 	@include flex-direction-row
 
+
 .#{$prefix}-reversed-row
 	@extend .#{$prefix}-flex
 	@include flex-direction-reversed-row
 
+
 .#{$prefix}-column
 	@extend .#{$prefix}-flex
 	@include flex-direction-column
+
 
 .#{$prefix}-reversed-column
 	@extend .#{$prefix}-flex
@@ -74,17 +78,21 @@ $columnsCounter: $columnsMin
 	@extend .#{$prefix}-flex
 	@include flex-justify-content-center
 
+
 .#{$prefix}-content-left
 	@extend .#{$prefix}-flex
 	@include flex-justify-content-flex-start
+
 
 .#{$prefix}-content-right
 	@extend .#{$prefix}-flex
 	@include flex-justify-content-flex-end
 
+
 .#{$prefix}-content-wrapped
 	@extend .#{$prefix}-flex
 	@include flex-justify-content-space-around
+
 
 .#{$prefix}-content-apart
 	@extend .#{$prefix}-flex
