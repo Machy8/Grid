@@ -2,8 +2,9 @@
 
 
 // Auto max width
-.#{$prefix}-auto
-	@include max-width(none)
+@if $prefix != 's'
+	.#{$prefix}-auto
+		@include max-width(none)
 
 
 // Max width
