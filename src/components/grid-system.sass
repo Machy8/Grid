@@ -1,0 +1,104 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+@each $breakpoint in $breakpoints
+    $prefix: nth($breakpoint, 1)
+    $minWidth: nth($breakpoint, 2)
+    @include breakpoint($minWidth)
+
+        // Auto max width
+        @if $prefix != 's'
+            .#{$prefix}-auto
+                @include max-width(none)
+
+
+        // Max width
+        $widthCounter: $widthMin
+        @while $widthCounter <= $widthMax
+            .#{$prefix}-#{$widthCounter}
+                @include max-width($widthCounter)
+            $widthCounter: $widthCounter + $widthIncreasedBy
+
+
+        // Display types
+        @each $displayType in $displayTypes
+            @if $displayType == none
+                .#{$prefix}-hidden
+                    display: none
+
+            @else if $displayType != none
+                .#{$prefix}-#{$displayType}
+                    @if $displayType == 'flex'
+                        @include flex-display
+
+                    @else
+                        display: $displayType
+
+
+        // Positions
+        @each $position in $positions
+            .#{$prefix}-#{$position}
+                position: $position
+
+
+        // Order
+        $orderCounter: $orderMin
+        @while $orderCounter <= $orderMax
+            .#{$prefix}-order-#{$orderCounter}
+                @extend .#{$prefix}-flex
+                @include flexbox-order($orderCounter)
+            $orderCounter: $orderCounter + $orderIncreasedBy
+
+
+        // Columns
+        $columnsCounter: $columnsMin
+        @while $columnsCounter <= $columnsMax
+            .#{$prefix}-columns-#{$columnsCounter}
+                @include columns-count($columnsCounter)
+            $columnsCounter: $columnsCounter + $columnsIncreasedBy
+
+
+        // Flex direction
+        .#{$prefix}-row
+            @extend .#{$prefix}-flex
+            @include flex-direction-row
+
+
+        .#{$prefix}-reversed-row
+            @extend .#{$prefix}-flex
+            @include flex-direction-reversed-row
+
+
+        .#{$prefix}-column
+            @extend .#{$prefix}-flex
+            @include flex-direction-column
+
+
+        .#{$prefix}-reversed-column
+            @extend .#{$prefix}-flex
+            @include flex-direction-reversed-column
+
+
+        // Justify content
+        .#{$prefix}-content-centered
+            @extend .#{$prefix}-flex
+            @include flex-justify-content-center
+
+
+        .#{$prefix}-content-left
+            @extend .#{$prefix}-flex
+            @include flex-justify-content-flex-start
+
+
+        .#{$prefix}-content-right
+            @extend .#{$prefix}-flex
+            @include flex-justify-content-flex-end
+
+
+        .#{$prefix}-content-wrapped
+            @extend .#{$prefix}-flex
+            @include flex-justify-content-space-around
+
+
+        .#{$prefix}-content-apart
+            @extend .#{$prefix}-flex
+            @include flex-justify-content-space-between
