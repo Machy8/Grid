@@ -1,16 +1,10 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
 // grid-generator/simple-generator
-$smallBreakpointPrefix: 's'
+// s - phone, m - tablet, l - desktop, xl - > dekstop
+$breakpoints: s 0, m 641, l 1025, xl 1441
 
-$mediumBreakpointPrefix: 'm'
-$mediumBreakpoint: 641
-
-$largeBreakpointPrefix: 'l'
-$largeBreakpoint: 1025
-
-$extraLargeBreakpointPrefix: 'xl'
-$extraLargeBreakpoint: 1441
+$smallBreakpointPrefix: nth(nth($breakpoints, 1), 1)
 
 $widthMax: 100
 $widthMin: 5
