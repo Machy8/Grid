@@ -5,6 +5,7 @@
 @mixin breakpoint($minWidth)
     @if $minWidth == 0
         @content
+
     @else
         @media (min-width: $minWidth * 1px)
             @content
