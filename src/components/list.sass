@@ -16,6 +16,12 @@
         list-style-type: $type
 
 
+.list-dash
+    list-style-type: none
+    li::before
+        content: "-"
+
+
 @each $listPosition in $listPositions
     .list-#{$listPosition}
         list-style-position: $listPosition
