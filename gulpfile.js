@@ -7,10 +7,10 @@ var gulp  = require('gulp'),
 	rename = require('gulp-rename');
 
 // Setup
-var distDir 		= "./dist",
-	srcDir 		  = "./src",
+var distDir = "./dist",
+	srcDir 	= "./src",
 	targetFile = srcDir + '/grid.sass',
-	defaultTasks = ['sass', 'sass-min'];
+	gulpTasks = ['sass', 'sass-min'];
 
 // Tasks
 gulp.task('sass', function() {
@@ -35,4 +35,11 @@ gulp.task('sass-min', function() {
 		.pipe(gulp.dest(distDir))
 });
 
-gulp.task('default', defaultTasks);
+
+gulp.task('watch', function() {
+	gulp.watch(srcDir + '/**/*.sass', gulpTasks);
+});
+
+
+gulpTasks.push('watch');
+gulp.task('default', gulpTasks);
