@@ -1,3 +1,4 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
 // Modules
 var gulp  = require('gulp'),
@@ -35,11 +36,9 @@ gulp.task('sass-min', function() {
 		.pipe(gulp.dest(distDir))
 });
 
-
 gulp.task('watch', function() {
 	gulp.watch(srcDir + '/**/*.sass', gulpTasks);
 });
-
 
 gulpTasks.push('watch');
 gulp.task('default', gulpTasks);
