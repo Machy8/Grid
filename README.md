@@ -19,7 +19,7 @@ bower install grid-css-framework
 ##Browser compatibility
 | IE | Edge | Firefox | Chrome | Chrome for android | Safari | IOS Safari | Opera | Opera mini | Android browser |
 |:--:|:----:|:-------:|:------:|:------------------:|:------:|:----------:|:-----:|:----------:|:---------------:|
-|  9 |  13  |    47   |   49   |         53         |   9.1  |     9.3    |   40  |     All    |       4.4       |
+|  10 |  13  |    47   |   49   |         53         |   9.1  |     9.3    |   40  |     All    |       4.4       |
 
 ##Navigation - [see wiki](https://github.com/Machy8/Grid/wiki)
 
