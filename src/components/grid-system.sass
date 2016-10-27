@@ -45,7 +45,7 @@
         $orderCounter: $orderMin
         @while $orderCounter <= $orderMax
             .#{$prefix}-order-#{$orderCounter}
-                @extend .#{$prefix}-flex
+                @include extendFlexbox($prefix)
                 @include flexbox-order($orderCounter)
             $orderCounter: $orderCounter + $orderIncreasedBy
 
@@ -60,46 +60,46 @@
 
         // Flex direction
         .#{$prefix}-row
-            @extend .#{$prefix}-flex
+            @include extendFlexbox($prefix)
             @include flex-direction-row
 
 
         .#{$prefix}-reversed-row
-            @extend .#{$prefix}-flex
+            @include extendFlexbox($prefix)
             @include flex-direction-reversed-row
 
 
         .#{$prefix}-column
-            @extend .#{$prefix}-flex
+            @include extendFlexbox($prefix)
             @include flex-direction-column
 
 
         .#{$prefix}-reversed-column
-            @extend .#{$prefix}-flex
+            @include extendFlexbox($prefix)
             @include flex-direction-reversed-column
 
 
         // Justify content
         .#{$prefix}-content-centered
-            @extend .#{$prefix}-flex
+            @include extendFlexbox($prefix)
             @include flex-justify-content-center
 
 
         .#{$prefix}-content-left
-            @extend .#{$prefix}-flex
+            @include extendFlexbox($prefix)
             @include flex-justify-content-flex-start
 
 
         .#{$prefix}-content-right
-            @extend .#{$prefix}-flex
+            @include extendFlexbox($prefix)
             @include flex-justify-content-flex-end
 
 
         .#{$prefix}-content-wrapped
-            @extend .#{$prefix}-flex
+            @include extendFlexbox($prefix)
             @include flex-justify-content-space-around
 
 
         .#{$prefix}-content-apart
-            @extend .#{$prefix}-flex
+            @include extendFlexbox($prefix)
             @include flex-justify-content-space-between
