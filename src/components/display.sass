@@ -2,12 +2,12 @@
 
 
 @each $displayType in $displayTypes
-  @if $displayType == none
-    .display-none
-      @include extendDisplayType(hidden)
-    .hidden
-      display: none !important
+    @if $displayType == none
+        .display-none
+            @include extendDisplayType(hidden)
+        .hidden
+            display: none !important
 
-  @else if $displayType != none
-    .display-#{$displayType}
-      @include extendDisplayType($displayType)
+    @else if $displayType != none
+        .display-#{$displayType}
+            @include extendDisplayType($displayType)
