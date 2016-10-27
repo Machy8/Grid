@@ -4,7 +4,7 @@
 [![Bower](https://img.shields.io/bower/v/grid-css-framework.svg?maxAge=2592000?style=plastic)](https://github.com/Machy8/Grid)
 [![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/Machy8/Macdom/blob/master/license.md)
 - Intuitive, easy to use, mobile first CSS framework based on Flexbox.
-- Contains [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css)
+- Contains [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css) and [micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack)
 - Uses: [Sass](http://sass-lang.com) & [Gulp](http://gulpjs.com)
 
 <p align="center">
