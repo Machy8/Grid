@@ -83,31 +83,31 @@
 
 // Specific extending mixins
 @mixin extendFlexbox
-    @extend .#{$smallBreakpointPrefix}-flex
+    @extend .#{$firstBreakpointPrefix}-flex
 
 
 @mixin extendJustifyContent($direction)
     @include extendFlexbox
-    @extend .#{$smallBreakpointPrefix}-content-#{$direction}
+    @extend .#{$firstBreakpointPrefix}-content-#{$direction}
 
 
 @mixin extendColumns($count)
-    @extend .#{$smallBreakpointPrefix}-columns-#{$count}
+    @extend .#{$firstBreakpointPrefix}-columns-#{$count}
 
 
 @mixin extendDisplayType($type)
-    @extend .#{$smallBreakpointPrefix}-#{$type}
+    @extend .#{$firstBreakpointPrefix}-#{$type}
 
 
 @mixin extendFlexDirection($direction)
     @include extendFlexbox
-    @extend .#{$smallBreakpointPrefix}-#{$direction}
+    @extend .#{$firstBreakpointPrefix}-#{$direction}
 
 
 @mixin extendOrder($place)
     @include extendFlexbox
-    @extend .#{$smallBreakpointPrefix}-order-#{$place}
+    @extend .#{$firstBreakpointPrefix}-order-#{$place}
 
 
 @mixin extendPosition($position)
-    @extend .#{$smallBreakpointPrefix}-#{$position}
+    @extend .#{$firstBreakpointPrefix}-#{$position}

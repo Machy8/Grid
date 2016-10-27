@@ -3,6 +3,6 @@
 
 $orderCounter: $orderMin
 @while $orderCounter <= $orderMax
-  .order-#{$orderCounter}
-    @include extendOrder($orderCounter)
-  $orderCounter: $orderCounter + $orderIncreasedBy
+    .order-#{$orderCounter}
+        @include extendOrder($orderCounter)
+    $orderCounter: $orderCounter + $orderIncreasedBy

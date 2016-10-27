@@ -5,8 +5,9 @@
     $prefix: nth($breakpoint, 1)
     $minWidth: nth($breakpoint, 2)
     @include breakpoint($minWidth)
+
         // Auto max width
-        @if $prefix != 's'
+        @if $prefix != $firstBreakpointPrefix
             .#{$prefix}-auto
                 @include max-width(none)
 

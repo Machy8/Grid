@@ -2,37 +2,37 @@
 
 
 @each $position in $positions
-  .position-#{$position}
-    @include extendPosition($position)
+    .position-#{$position}
+        @include extendPosition($position)
 
 
 .position-top
-  top: 0
+    top: 0
 
 
 .position-left
-  left: 0
+    left: 0
 
 
 .position-right
-  right: 0
+    right: 0
 
 
 .position-bottom
-  bottom: 0
+    bottom: 0
 
 
 .top-left-corner
-  @extend .position-top, .position-left
+    @extend .position-top, .position-left
 
 
 .top-right-corner
-  @extend .position-top, .position-right
+    @extend .position-top, .position-right
 
 
 .bottom-left-corner
-  @extend .position-bottom, .position-left
+    @extend .position-bottom, .position-left
 
 
 .bottom-right-corner
-  @extend .position-bottom, .position-right
+    @extend .position-bottom, .position-right

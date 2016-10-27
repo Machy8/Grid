@@ -3,6 +3,6 @@
 
 $columnsCounter: $columnsMin
 @while $columnsCounter <= $columnsMax
-  .columns-#{$columnsCounter}
-    @include extendColumns($columnsCounter)
-  $columnsCounter: $columnsCounter + $columnsIncreasedBy
+    .columns-#{$columnsCounter}
+        @include extendColumns($columnsCounter)
+    $columnsCounter: $columnsCounter + $columnsIncreasedBy
