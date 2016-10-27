@@ -5,6 +5,22 @@
 [![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/Machy8/Macdom/blob/master/license.md)
 - Intuitive, easy to use, mobile first CSS framework based on Flexbox.
 - Contains [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css)
+- Uses: [Sass](http://sass-lang.com) & [Gulp](http://gulpjs.com)
+
+<p align="center">
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">
+    <img src="http://www.myiconfinder.com/uploads/iconsets/128-128-8b61de4c84033266e15317a6eb9fda2d-css3.png" width="100" height="100">
+  </a>
+  <a href="https://necolas.github.io/normalize.css">
+    <img src="https://necolas.github.io/normalize.css/logo.svg" width="100" height="100">
+  </a>
+  <a href="http://gulpjs.com"> 
+    <img src="http://pixxstudios.com/wp-content/uploads/2015/03/gulp-mygulpfile_s.png" width="100" height="100">
+  </a>
+  <a href="http://sass-lang.com">
+    <img src="http://justdevign.com.au/wp-content/uploads/2014/08/SASS_Logo_128.png" width="100" height="100">
+  </a>
+</p>
 
 ##Installation
 **Npm**
@@ -16,6 +32,10 @@ npm i grid-css-framework
 ```
 bower install grid-css-framework
 ```
+##Browser compatibility
+| IE | Edge | Firefox | Chrome | Chrome for android | Safari | IOS Safari | Opera | Opera mini | Android browser |
+|:--:|:----:|:-------:|:------:|:------------------:|:------:|:----------:|:-----:|:----------:|:---------------:|
+|  10 |  13  |    47   |   49   |         53         |   9.1  |     9.3    |   40  |     All    |       4.4       |
 
 ##Navigation - [see wiki](https://github.com/Machy8/Grid/wiki)
 
@@ -29,9 +49,8 @@ bower install grid-css-framework
 **Formatting**
 - [Text formatting](https://github.com/Machy8/Grid/wiki/Text-formatting)
 - [List formatting](https://github.com/Machy8/Grid/wiki/List-formatting)
-- [Element radius](https://github.com/Machy8/Grid/wiki/Element-radius)
-- [Display types](https://github.com/Machy8/Grid/wiki/Display-types)
-- [Visibility](https://github.com/Machy8/Grid/wiki/Visibility)
+
+**Resize & overflow**
 - [Resize](https://github.com/Machy8/Grid/wiki/Resize)
 - [Overflow](https://github.com/Machy8/Grid/wiki/Overflow)
 
@@ -41,3 +60,6 @@ bower install grid-css-framework
 
 **Uncategorized**
 - [Cursor](https://github.com/Machy8/Grid/wiki/Cursor)
+- [Display types](https://github.com/Machy8/Grid/wiki/Display-types)
+- [Element radius](https://github.com/Machy8/Grid/wiki/Element-radius)
+- [Visibility](https://github.com/Machy8/Grid/wiki/Visibility)
