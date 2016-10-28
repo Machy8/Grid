@@ -4,6 +4,8 @@
 [![Bower](https://img.shields.io/bower/v/grid-css-framework.svg?maxAge=2592000?style=plastic)](https://github.com/Machy8/Grid)
 [![npm](https://img.shields.io/npm/dm/grid-css-framework.svg)]()
 [![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/Machy8/Macdom/blob/master/license.md)
+[![Join the chat at https://gitter.im/Machy8/Grid](https://badges.gitter.im/Machy8/Grid.svg)](https://gitter.im/Machy8/Grid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 - Intuitive, easy to use, mobile first CSS framework based on Flexbox.
 - Contains [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css) and [micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack)
 - Uses: [Sass](http://sass-lang.com), [Gulp](http://gulpjs.com) & [Autoprefixer](https://github.com/postcss/autoprefixer)
@@ -27,15 +29,11 @@
 </p>
 
 ##Installation
-**Npm**
-```
-npm i grid-css-framework
-```
 
-**Bower**
-```
-bower install grid-css-framework
-```
+- **Npm:** ``npm i grid-css-framework``
+- **Bower:** ``bower install grid-css-framework``
+
+
 ##Browser compatibility
 | IE | Edge | Firefox | Chrome | Chrome for android | Safari | IOS Safari | Opera | Opera mini | Android browser |
 |:--:|:----:|:-------:|:------:|:------------------:|:------:|:----------:|:-----:|:----------:|:---------------:|
