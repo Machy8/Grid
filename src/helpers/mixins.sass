@@ -1,0 +1,118 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+
+// Global
+@mixin breakpoint($minWidth)
+    @if $minWidth == 0
+        @content
+
+    @else
+        @media (min-width: $minWidth * 1px)
+            @content
+
+
+@mixin visibility($opacity)
+    opacity: $opacity * 0.1
+
+
+@mixin max-width($width)
+    @if type-of($width) == 'number'
+        max-width: $width * 1%
+
+    @else if type-of($width) == 'string'
+        max-width: $width
+
+
+@mixin position($position)
+    position: $position
+
+
+@mixin columns-count($count)
+    column-count: $count
+
+
+@mixin vertically-centered($position: relative)
+    position: $position !important
+    top: 50%
+    transform: translateY(-50%)
+
+
+// Global - flexbox
+@mixin flex-display
+    display: flex !important
+
+
+@mixin flexbox-order($number)
+    order: $number
+
+
+@mixin flex-direction-row
+    flex-direction: row
+
+
+@mixin flex-direction-reversed-row
+    flex-direction: row-reverse
+
+
+@mixin flex-direction-column
+    flex-direction: column
+
+
+@mixin flex-direction-reversed-column
+    flex-direction: column-reverse
+
+
+@mixin flex-justify-content-center
+    justify-content: center
+
+
+@mixin flex-justify-content-flex-start
+    justify-content: flex-start
+
+
+@mixin flex-justify-content-flex-end
+    justify-content: flex-end
+
+
+@mixin flex-justify-content-space-around
+    justify-content: space-around
+
+
+@mixin flex-justify-content-space-between
+    justify-content: space-between
+
+
+// Specific extending mixins
+@mixin extendFlexbox($prefix: null)
+    @if $prefix
+        @extend .#{$prefix}-flex
+
+    @else
+        @extend .#{$firstBreakpointPrefix}-flex
+
+
+@mixin extendJustifyContent($direction)
+    @include extendFlexbox
+    @extend .#{$firstBreakpointPrefix}-content-#{$direction}
+
+
+@mixin extendColumns($count)
+    @extend .#{$firstBreakpointPrefix}-columns-#{$count}
+
+
+@mixin extendDisplayType($type)
+    @extend .#{$firstBreakpointPrefix}-#{$type}
+
+
+@mixin extendFlexDirection($direction)
+    @include extendFlexbox
+    @extend .#{$firstBreakpointPrefix}-#{$direction}
+
+
+@mixin extendOrder($place)
+    @include extendFlexbox
+    @extend .#{$firstBreakpointPrefix}-order-#{$place}
+
+
+@mixin extendPosition($position)
+    @extend .#{$firstBreakpointPrefix}-#{$position}

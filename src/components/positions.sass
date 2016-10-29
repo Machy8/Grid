@@ -1,0 +1,38 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+
+@each $position in $positions
+    .position-#{$position}
+        @include extendPosition($position)
+
+
+.position-top
+    top: 0
+
+
+.position-left
+    left: 0
+
+
+.position-right
+    right: 0
+
+
+.position-bottom
+    bottom: 0
+
+
+.top-left-corner
+    @extend .position-top, .position-left
+
+
+.top-right-corner
+    @extend .position-top, .position-right
+
+
+.bottom-left-corner
+    @extend .position-bottom, .position-left
+
+
+.bottom-right-corner
+    @extend .position-bottom, .position-right

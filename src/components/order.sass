@@ -1,0 +1,8 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+
+$orderCounter: $orderMin
+@while $orderCounter <= $orderMax
+    .order-#{$orderCounter}
+        @include extendOrder($orderCounter)
+    $orderCounter: $orderCounter + $orderIncreasedBy

@@ -1,0 +1,27 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+
+.list-none-style
+    list-style: none
+
+
+.list-none-clear
+    @extend .list-none-style
+    margin: 0
+    padding: 0
+
+
+@each $type in $listStyleTypes
+    .list-#{$type}
+        list-style-type: $type
+
+
+.list-dash
+    list-style-type: none
+    li::before
+        content: "-"
+
+
+@each $listPosition in $listPositions
+    .list-#{$listPosition}
+        list-style-position: $listPosition

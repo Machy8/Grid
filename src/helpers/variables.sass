@@ -1,0 +1,56 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+// components/grid-system
+// s - phone, m - tablet, l - desktop, xl - > desktop
+$breakpoints: s 0, m 641, l 1025, xl 1441
+
+$firstBreakpointPrefix: nth(nth($breakpoints, 1), 1)
+
+$widthMax: 100
+$widthMin: 5
+$widthIncreasedBy: 5
+
+
+// components/html-body
+$defaultFontSize: 16px
+$defaultLineHeight: 1.5
+
+
+// components/display-types, components/grid-system
+$displayTypes: inline inline-block block flex none
+$positions: static relative absolute fixed
+
+
+// components/order, components/grid-system
+$orderMax: 5
+$orderMin: 1
+$orderIncreasedBy: 1
+
+
+// components/columns, components/grid-system
+$columnsMax: $orderMax
+$columnsMin: $orderMin
+$columnsIncreasedBy: $orderIncreasedBy
+
+
+// components/cursor
+$cursorTypes: auto default pointer wait
+
+
+// components/list
+$listStyleTypes: disc square decimal
+$listPositions: inside outside
+
+
+// components/float-clear
+$floatTypes: left right
+$clearTypes: left right both
+
+
+// components/resize
+$resizableLabels: x y both
+$resizableValues: horizontal vertical both
+
+
+// components/vertical-align
+$valignTypes: baseline top middle bottom
