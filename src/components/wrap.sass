@@ -10,7 +10,7 @@
     @include extendFlexbox
     flex-wrap: wrap
 
-
-.wrap-reverse
-    @include extendFlexbox
-    flex-wrap: wrap-reverse
+    &-reverse
+        @include extendFlexbox
+        @extend .wrap
+        flex-wrap: wrap-reverse
