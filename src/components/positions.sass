@@ -6,33 +6,31 @@
         @include extendPosition($position)
 
 
-.position-top
-    top: 0
+.position
+    &-top
+        top: 0
+
+    &-left
+        left: 0
+
+    &-right
+        right: 0
+
+    &-bottom
+        bottom: 0
 
 
-.position-left
-    left: 0
+.top
+    &-left-corner
+        @extend .position-top, .position-left
+
+    &-right-corner
+        @extend .position-top, .position-right
 
 
-.position-right
-    right: 0
+.bottom
+    &-left-corner
+        @extend .position-bottom, .position-left
 
-
-.position-bottom
-    bottom: 0
-
-
-.top-left-corner
-    @extend .position-top, .position-left
-
-
-.top-right-corner
-    @extend .position-top, .position-right
-
-
-.bottom-left-corner
-    @extend .position-bottom, .position-left
-
-
-.bottom-right-corner
-    @extend .position-bottom, .position-right
+    &-right-corner
+        @extend .position-bottom, .position-right
