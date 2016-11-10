@@ -1,76 +1,77 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
 
-.text-centered
-    text-align: center
+.text
 
+    // Resets
+    &-none
+        &-decoration
+            text-decoration: none
 
-.text-left
-    text-align: left
+        &-transform
+            text-transform: none
 
+        &-style
+            font-style: normal
 
-.text-right
-    text-align: right
+    &-normal
+        @extend .text-none-decoration
+        @extend .text-none-transform
+        @extend .text-none-style
+        @extend .text-normal-weight
 
+    // Alignment
+    &-centered
+        text-align: center
 
-.text-justify
-    text-align: justify
+    &-left
+        text-align: left
 
+    &-right
+        text-align: right
 
-.text-normal-weight, .text-normal
-    font-weight: normal
+    &-justify
+        text-align: justify
 
+    // Weight
+    &-normal-weight
+        font-weight: normal
 
-.text-lighter
-    font-weight: lighter
+    &-lighter
+        font-weight: lighter
 
+    &-bold
+        font-weight: bold
 
-.text-bold
-    font-weight: bold
+    // Style
+    &-italic
+        font-style: italic
 
+    &-oblique
+        font-style: oblique
 
-.text-none-style, .text-normal
-    font-style: normal
+    // Decoration
+    &-underline
+        text-decoration: underline
 
+    &-overline
+        text-decoration: overline
 
-.text-italic
-    font-style: italic
+    &-baseline
+        text-decoration: line-through
 
+    // Transform
+    &-uppercase
+        text-transform: uppercase
 
-.text-oblique
-    font-style: oblique
+    &-lowercase
+        text-transform: lowercase
 
+    &-capitalize
+        text-transform: capitalize
 
-.text-none-decoration, .text-normal
-    text-decoration: none
-
-
-.text-underline
-    text-decoration: underline
-
-
-.text-overline
-    text-decoration: overline
-
-
-.text-baseline
-    text-decoration: line-through
-
-
-.text-none-transform, .text-normal
-    text-transform: none
-
-
-.text-uppercase
-    text-transform: uppercase
-
-
-.text-lowercase
-    text-transform: lowercase
-
-
-.text-capitalize
-    text-transform: capitalize
+    &-nowrap
+        white-space: nowrap
 
 
 .cutted-text
@@ -79,10 +80,7 @@
     overflow: hidden
 
 
-.text-nowrap
-    white-space: nowrap
-
-
+// Words
 .break-words
     word-wrap: break-word
 
