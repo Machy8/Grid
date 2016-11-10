@@ -1,31 +1,27 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
 
-.lines-top
-    @include extendFlexbox
-    align-content: flex-start
+.lines
+    &-top
+        @include extendFlexbox
+        align-content: flex-start
 
+    &-bottom
+        @include extendFlexbox
+        align-content: flex-end
 
-.lines-bottom
-    @include extendFlexbox
-    align-content: flex-end
+    &-centered
+        @include extendFlexbox
+        align-content: center
 
+    &-stretched
+        @include extendFlexbox
+        align-content: stretch
 
-.lines-centered
-    @include extendFlexbox
-    align-content: center
+    &-wrapped
+        @include extendFlexbox
+        align-content: space-around
 
-
-.lines-stretched
-    @include extendFlexbox
-    align-content: stretch
-
-
-.lines-wrapped
-    @include extendFlexbox
-    align-content: space-around
-
-
-.lines-apart
-    @include extendFlexbox
-    align-content: space-between
+    &-apart
+        @include extendFlexbox
+        align-content: space-between
