@@ -6,10 +6,12 @@
         vertical-align: $valignType
 
 
-.vertically-centered
-    @include vertically-centered()
+.vertically
+    &-centered
+        position: relative !important
+        top: 50%
+        transform: translateY(-50%)
 
-
-.vertically-centered-absolute
-    @extend .vertically-centered
-    position: absolute !important
+        &-absolute
+            @extend .vertically-centered
+            position: absolute !important
