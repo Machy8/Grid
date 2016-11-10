@@ -1,25 +1,23 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
 
-.overflow-y-hidden
-    overflow-y: hidden
+.overflow
+    &-x
+        &-hidden
+            overflow-x: hidden
 
+        &-auto
+            overflow-x: auto
 
-.overflow-y-auto
-    overflow-y: auto
+    &-y
+        &-hidden
+            overflow-y: hidden
 
+        &-auto
+            overflow-y: auto
 
-.overflow-x-hidden
-    overflow-x: hidden
+    &-auto
+        @extend .overflow-x-auto, .overflow-y-auto
 
-
-.overflow-x-auto
-    overflow-x: auto
-
-
-.overflow-auto
-    @extend .overflow-x-auto, .overflow-y-auto
-
-
-.overflow-hidden
-    @extend .overflow-x-hidden, .overflow-y-hidden
+    &-hidden
+        @extend .overflow-x-hidden, .overflow-y-hidden
