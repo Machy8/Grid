@@ -1,26 +1,23 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
 
-.self-top
-    @include extendFlexbox
-    align-self: flex-start
+.self
+    &-top
+        @include extendFlexbox
+        align-self: flex-start
 
+    &-bottom
+        @include extendFlexbox
+        align-self: flex-end
 
-.self-bottom
-    @include extendFlexbox
-    align-self: flex-end
+    &-centered
+        @include extendFlexbox
+        align-self: center
 
+    &-baseline
+        @include extendFlexbox
+        align-self: baseline
 
-.self-centered
-    @include extendFlexbox
-    align-self: center
-
-
-.self-baseline
-    @include extendFlexbox
-    align-self: baseline
-
-
-.self-stretched
-    @include extendFlexbox
-    align-self: stretch
+    &-stretched
+        @include extendFlexbox
+        align-self: stretch
