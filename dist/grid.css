@@ -976,6 +976,9 @@ body {
 .content-float-right > *, .float-right {
   float: right; }
 
+.content-float-none > *, .float-none {
+  float: none; }
+
 .content-clear-left > *, .clear-left {
   clear: left; }
 
@@ -984,6 +987,9 @@ body {
 
 .content-clear-both > *, .clear-both {
   clear: both; }
+
+.content-clear-none > *, .clear-none {
+  clear: none; }
 
 .x-centered, .horizontally-centered {
   margin: 0 auto; }
