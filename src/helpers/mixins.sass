@@ -7,20 +7,12 @@
         @content
 
     @else
-        @media (min-width: $minWidth * 1px)
+        @media (min-width: #{$minWidth}px)
             @content
 
 
 @mixin visibility($opacity)
     opacity: $opacity * 0.1
-
-
-@mixin max-width($width)
-    @if type-of($width) == 'number'
-        max-width: $width * 1%
-
-    @else if type-of($width) == 'string'
-        max-width: $width
 
 
 @mixin position($position)
