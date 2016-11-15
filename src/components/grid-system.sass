@@ -9,14 +9,14 @@
         // Auto max width
         @if $prefix != $firstBreakpointPrefix
             .#{$prefix}-auto
-                @include max-width(none)
+                max-width: none
 
 
         // Max width
         $widthCounter: $widthMin
         @while $widthCounter <= $widthMax
             .#{$prefix}-#{$widthCounter}
-                @include max-width($widthCounter)
+                max-width: $widthCounter * 1%
             $widthCounter: $widthCounter + $widthIncreasedBy
 
 
