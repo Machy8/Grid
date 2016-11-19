@@ -1,0 +1,18 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+//
+  @param $prefix string|null
+  @return string
+@function isFirstBreakpointPrefix($prefix)
+    @return $prefix == $firstBreakpointPrefix + '-'
+
+
+//
+  @param $prefix string|null
+  @param $connector string
+  @return string
+@function parsePrefix($prefix: null, $connector: '-')
+    @if $prefix and $prefix != ''
+        $prefix: $prefix + $connector
+
+    @return $prefix

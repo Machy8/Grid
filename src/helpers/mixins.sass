@@ -1,6 +1,5 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
-
 // Global
 @mixin breakpoint($minWidth)
     @if $minWidth == 0
@@ -11,94 +10,148 @@
             @content
 
 
-@mixin visibility($opacity)
-    opacity: $opacity * 0.1
+@mixin displayType($prefix, $type, $className: null)
+    @if $className == null
+        $className: display-#{$type}
 
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .#{$className}
 
-@mixin position($position)
-    position: $position
+    @elseif ($type == none and $className == hidden) or $type == flex
+        display: $type !important
 
-
-@mixin columns-count($count)
-    column-count: $count
-
-
-// Global - flexbox
-@mixin flex-display
-    display: flex !important
-
-
-@mixin flexbox-order($number)
-    order: $number
-
-
-@mixin flex-direction-row
-    flex-direction: row
-
-
-@mixin flex-direction-reversed-row
-    flex-direction: row-reverse
-
-
-@mixin flex-direction-column
-    flex-direction: column
-
-
-@mixin flex-direction-reversed-column
-    flex-direction: column-reverse
-
-
-@mixin flex-justify-content-center
-    justify-content: center
-
-
-@mixin flex-justify-content-flex-start
-    justify-content: flex-start
-
-
-@mixin flex-justify-content-flex-end
-    justify-content: flex-end
-
-
-@mixin flex-justify-content-space-around
-    justify-content: space-around
-
-
-@mixin flex-justify-content-space-between
-    justify-content: space-between
+    @else
+        display: $type
 
 
 // Specific extending mixins
 @mixin extendFlexbox($prefix: null)
-    @if $prefix
-        @extend .#{$prefix}-flex
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .display-flex
 
     @else
-        @extend .#{$firstBreakpointPrefix}-flex
+        @extend .#{$prefix}display-flex
 
 
-@mixin extendJustifyContent($direction)
-    @include extendFlexbox
-    @extend .#{$firstBreakpointPrefix}-content-#{$direction}
+@mixin extendPosition($prefix, $position)
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .position-#{$position}
+
+    @elseif $prefix != null
+        @extend .#{$prefix}position-#{$position}
 
 
-@mixin extendColumns($count)
-    @extend .#{$firstBreakpointPrefix}-columns-#{$count}
+@mixin flexDirection($prefix, $direction, $className: null)
+    @if $className == null
+        $className: $direction
+
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .direction-#{$className}
+
+    @else
+        @include extendFlexbox($prefix)
+        flex-direction: $direction
 
 
-@mixin extendDisplayType($type)
-    @extend .#{$firstBreakpointPrefix}-#{$type}
+@mixin flexWrap($prefix, $value)
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .#{$value}
+
+    @else
+        @include extendFlexbox($prefix)
+        flex-wrap: $value
 
 
-@mixin extendFlexDirection($direction)
-    @include extendFlexbox
-    @extend .#{$firstBreakpointPrefix}-#{$direction}
+@mixin floatClear($prefix, $attribute, $value, $extend: false)
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .#{$attribute}-#{$value}
+
+    @else
+        #{$attribute}: $value
 
 
-@mixin extendOrder($place)
-    @include extendFlexbox
-    @extend .#{$firstBreakpointPrefix}-order-#{$place}
+@mixin fullWidthHeight($prefix, $attribute, $window: false)
+    $className: full-#{$attribute}
+    $value: 100
+    $unit: %
+
+    @if $window == true
+        $className: full-window-#{$attribute}
+        $unit: vw
+
+        @if $attribute == height
+            $unit: vh
+
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .#{$className}
+
+    @else
+        #{$attribute}: $value + $unit
 
 
-@mixin extendPosition($position)
-    @extend .#{$firstBreakpointPrefix}-#{$position}
+@mixin itemsAlignment($prefix, $className, $position)
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .items-#{$className}
+
+    @else
+        @include extendFlexbox($prefix)
+        align-items: $position
+
+
+@mixin justifyContent($prefix, $direction, $className)
+    @if isFirstBreakpointPrefix($direction)
+        @extend .content-#{$className}
+
+    @else
+        @include extendFlexbox($prefix)
+        justify-content: $direction
+
+
+@mixin linesAlignment($prefix, $className, $position)
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .lines-#{$className}
+
+    @else
+        @include extendFlexbox($prefix)
+        align-content: $position
+
+
+@mixin order($prefix, $place)
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .order-#{$place}
+
+    @else
+        @include extendFlexbox($prefix)
+        @extend .#{$prefix}order-#{$place}
+
+
+@mixin position($prefix, $position)
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .position-#{$position}
+
+    @else
+        #{$position}: 0
+
+
+@mixin selfAlignment($prefix, $className, $position)
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .self-#{$className}
+
+    @else
+        @include extendFlexbox($prefix)
+        align-self: $position
+
+
+@mixin textAlignment($prefix, $value, $className: null)
+    @if $className == null
+        $className: $value
+
+    @if isFirstBreakpointPrefix($prefix)
+        @extend .text-#{$className}
+
+    @else
+        text-align: $value
+
+
+@mixin visibility($opacity)
+    opacity: $opacity * 0.1
