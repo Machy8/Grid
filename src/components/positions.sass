@@ -1,36 +1,47 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin positionsComponent($prefix: null)
 
-@each $position in $positions
-    .position-#{$position}
-        @include extendPosition($position)
+    $prefix: parsePrefix($prefix)
 
+    @each $position in $positions
+        .#{$prefix}position-#{$position}
+            @if isFirstBreakpointPrefix($prefix)
+                @extend .position-#{$position}
 
-.position
-    &-top
-        top: 0
-
-    &-left
-        left: 0
-
-    &-right
-        right: 0
-
-    &-bottom
-        bottom: 0
+            @else
+                position: $position
 
 
-.top
-    &-left-corner
-        @extend .position-top, .position-left
+    .#{$prefix}position
+        &-top
+            @include position($prefix, top)
 
-    &-right-corner
-        @extend .position-top, .position-right
+        &-left
+            @include position($prefix, left)
+
+        &-right
+            @include position($prefix, right)
+
+        &-bottom
+            @include position($prefix, bottom)
 
 
-.bottom
-    &-left-corner
-        @extend .position-bottom, .position-left
+    .#{$prefix}top
+        &-left-corner
+            @include extendPosition($prefix, top)
+            @include extendPosition($prefix, left)
 
-    &-right-corner
-        @extend .position-bottom, .position-right
+        &-right-corner
+            @include extendPosition($prefix, top)
+            @include extendPosition($prefix, right)
+
+
+    .#{$prefix}bottom
+        &-left-corner
+            @include extendPosition($prefix, bottom)
+            @include extendPosition($prefix, left)
+
+        &-right-corner
+            @include extendPosition($prefix, bottom)
+            @include extendPosition($prefix, right)

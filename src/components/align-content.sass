@@ -1,27 +1,24 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin alignContentComponent($prefix: null)
 
-.lines
-    &-top
-        @include extendFlexbox
-        align-content: flex-start
+    $prefix: parsePrefix($prefix)
 
-    &-bottom
-        @include extendFlexbox
-        align-content: flex-end
+    .#{$prefix}lines
+        &-top
+            @include linesAlignment($prefix, top, flex-start)
 
-    &-centered
-        @include extendFlexbox
-        align-content: center
+        &-bottom
+            @include linesAlignment($prefix, bottom, flex-end)
 
-    &-stretched
-        @include extendFlexbox
-        align-content: stretch
+        &-centered
+            @include linesAlignment($prefix, centered, center)
 
-    &-wrapped
-        @include extendFlexbox
-        align-content: space-around
+        &-stretched
+            @include linesAlignment($prefix, stretched, stretch)
 
-    &-apart
-        @include extendFlexbox
-        align-content: space-between
+        &-wrapped
+            @include linesAlignment($prefix, wrapped, space-around)
+
+        &-apart
+            @include linesAlignment($prefix, apart, space-between)

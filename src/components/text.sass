@@ -1,93 +1,96 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin textComponent($prefix: null)
 
-.text
+    $prefix: parsePrefix($prefix)
 
-    // Resets
-    &-none
-        &-decoration
-            text-decoration: none
+    .#{$prefix}text
+        @if $prefix == null
+            // Resets
+            &-none
+                &-decoration
+                    text-decoration: none
 
-        &-transform
-            text-transform: none
+                &-transform
+                    text-transform: none
 
-        &-style
-            font-style: normal
+                &-style
+                    font-style: normal
 
-    &-normal
-        @extend .text-none-decoration
-        @extend .text-none-transform
-        @extend .text-none-style
-        @extend .text-normal-weight
+            &-normal
+                @extend .text-none-decoration
+                @extend .text-none-transform
+                @extend .text-none-style
+                @extend .text-normal-weight
 
-    // Alignment
-    &-centered
-        text-align: center
+            // Weight
+            &-normal-weight
+                font-weight: normal
 
-    &-left
-        text-align: left
+            &-lighter
+                font-weight: lighter
 
-    &-right
-        text-align: right
+            &-bold
+                font-weight: bold
 
-    &-justify
-        text-align: justify
+            // Style
+            &-italic
+                font-style: italic
 
-    // Weight
-    &-normal-weight
-        font-weight: normal
+            &-oblique
+                font-style: oblique
 
-    &-lighter
-        font-weight: lighter
+            // Decoration
+            &-underline
+                text-decoration: underline
 
-    &-bold
-        font-weight: bold
+            &-overline
+                text-decoration: overline
 
-    // Style
-    &-italic
-        font-style: italic
+            &-baseline
+                text-decoration: line-through
 
-    &-oblique
-        font-style: oblique
+            // Transform
+            &-uppercase
+                text-transform: uppercase
 
-    // Decoration
-    &-underline
-        text-decoration: underline
+            &-lowercase
+                text-transform: lowercase
 
-    &-overline
-        text-decoration: overline
+            &-capitalize
+                text-transform: capitalize
 
-    &-baseline
-        text-decoration: line-through
+            &-nowrap
+                white-space: nowrap
 
-    // Transform
-    &-uppercase
-        text-transform: uppercase
+        // Alignment
+        &-centered
+            @include textAlignment($prefix, center, centered)
 
-    &-lowercase
-        text-transform: lowercase
+        &-left
+            @include textAlignment($prefix, left)
 
-    &-capitalize
-        text-transform: capitalize
+        &-right
+            @include textAlignment($prefix, right)
 
-    &-nowrap
-        white-space: nowrap
+        &-justify
+            @include textAlignment($prefix, justify)
 
-
-.cutted-text
-    text-overflow: ellipsis
-    white-space: nowrap
-    overflow: hidden
-
-
-// Words
-.break
-  &-words
-    word-wrap: break-word
-
-  &-all
-    word-break: break-all
+    @if $prefix == null
+        .cutted-text
+            text-overflow: ellipsis
+            white-space: nowrap
+            overflow: hidden
 
 
-.keep-all
-    word-break: keep-all
+        // Words
+        .break
+          &-words
+            word-wrap: break-word
+
+          &-all
+            word-break: break-all
+
+
+        .keep-all
+            word-break: keep-all

@@ -1,23 +1,26 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin overflowComponent($prefix: null)
 
-.overflow
-    &-x
-        &-hidden
-            overflow-x: hidden
+    $prefix: parsePrefix($prefix)
+
+    .#{$prefix}overflow
+        &-x
+            &-hidden
+                overflow-x: hidden
+
+            &-auto
+                overflow-x: auto
+
+        &-y
+            &-hidden
+                overflow-y: hidden
+
+            &-auto
+                overflow-y: auto
 
         &-auto
-            overflow-x: auto
+            @extend .#{$prefix}overflow-x-auto, .#{$prefix}overflow-y-auto
 
-    &-y
         &-hidden
-            overflow-y: hidden
-
-        &-auto
-            overflow-y: auto
-
-    &-auto
-        @extend .overflow-x-auto, .overflow-y-auto
-
-    &-hidden
-        @extend .overflow-x-hidden, .overflow-y-hidden
+            @extend .#{$prefix}overflow-x-hidden, .#{$prefix}overflow-y-hidden

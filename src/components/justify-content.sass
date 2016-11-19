@@ -1,18 +1,21 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin justifyContentComponent($prefix: null)
 
-.content
-    &-centered
-        @include extendJustifyContent(centered)
+    $prefix: parsePrefix($prefix)
 
-    &-left
-        @include extendJustifyContent(left)
+    .#{$prefix}content
+        &-centered
+            @include justifyContent($prefix, center, centered)
 
-    &-right
-        @include extendJustifyContent(right)
+        &-left
+            @include justifyContent($prefix, flex-start, left)
 
-    &-wrapped
-        @include extendJustifyContent(wrapped)
+        &-right
+            @include justifyContent($prefix, flex-end, right)
 
-    &-apart
-        @include extendJustifyContent(apart)
+        &-wrapped
+            @include justifyContent($prefix, space-around, wrapped)
+
+        &-apart
+            @include justifyContent($prefix, space-between, apart)

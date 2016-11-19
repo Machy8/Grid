@@ -1,0 +1,28 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+@mixin maxWidthComponent($prefix: null)
+
+    $defaultPrefix: w
+
+    @if $prefix == null
+        $prefix: $defaultPrefix
+
+    $prefix: parsePrefix($prefix)
+
+    .#{$prefix}auto
+        @if isFirstBreakpointPrefix($prefix)
+            @extend .#{$defaultPrefix}-auto
+
+        @else
+            max-width: none
+
+    $widthCounter: $widthMin
+    @while $widthCounter <= $widthMax
+        .#{$prefix}#{$widthCounter}
+            @if isFirstBreakpointPrefix($prefix)
+                @extend .#{$defaultPrefix}-#{$widthCounter}
+
+            @else
+                max-width: $widthCounter * 1%
+
+        $widthCounter: $widthCounter + $widthIncreasedBy

@@ -1,11 +1,19 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin floatClearComponent($prefix: null)
 
-@each $floatType in $floatTypes
-    .content-float-#{$floatType} > *, .float-#{$floatType}
-        float: $floatType
+    $prefix: parsePrefix($prefix)
 
+    @each $floatType in $floatTypes
+        .#{$prefix}float-#{$floatType}
+            @include floatClear($prefix, float, $floatType)
 
-@each $clearType in $clearTypes
-    .content-clear-#{$clearType} > *, .clear-#{$clearType}
-        clear: $clearType
+        .#{$prefix}content-float-#{$floatType} > *
+            @extend .#{$prefix}float-#{$floatType}
+
+    @each $clearType in $clearTypes
+        .#{$prefix}clear-#{$clearType}
+            @include floatClear($prefix, clear, $clearType)
+
+        .#{$prefix}content-clear-#{$clearType} > *
+            @extend .#{$prefix}clear-#{$clearType}

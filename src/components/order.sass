@@ -1,8 +1,17 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin orderComponent($prefix: null)
 
-$orderCounter: $orderMin
-@while $orderCounter <= $orderMax
-    .order-#{$orderCounter}
-        @include extendOrder($orderCounter)
-    $orderCounter: $orderCounter + $orderIncreasedBy
+    $prefix: parsePrefix($prefix)
+
+    $orderCounter: $orderMin
+    @while $orderCounter <= $orderMax
+        .#{$prefix}order-#{$orderCounter}
+            @if isFirstBreakpointPrefix($prefix)
+                @extend .order-#{$orderCounter}
+
+            @else
+                @include extendFlexbox($prefix)
+                @extend .#{$prefix}order-#{$orderCounter}
+
+        $orderCounter: $orderCounter + $orderIncreasedBy

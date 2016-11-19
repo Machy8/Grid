@@ -1,16 +1,19 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin flexDirectionComponent($prefix: null)
 
-.direction
-    &-row
-        @include extendFlexDirection(row)
+    $prefix: parsePrefix($prefix)
 
-    &-column
-        @include extendFlexDirection(column)
-
-    &-reversed
+    .#{$prefix}direction
         &-row
-            @include extendFlexDirection(reversed-row)
+            @include flexDirection($prefix, row)
 
         &-column
-            @include extendFlexDirection(reversed-column)
+            @include flexDirection($prefix, column)
+
+        &-reversed
+            &-row
+                @include flexDirection($prefix, row-reverse, reversed-row)
+
+            &-column
+                @include flexDirection($prefix, column-reverse, reversed-column)

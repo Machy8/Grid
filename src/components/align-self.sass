@@ -1,23 +1,21 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin alignSelfComponent($prefix: null)
 
-.self
-    &-top
-        @include extendFlexbox
-        align-self: flex-start
+    $prefix: parsePrefix($prefix)
 
-    &-bottom
-        @include extendFlexbox
-        align-self: flex-end
+    .#{$prefix}self
+        &-top
+            @include selfAlignment($prefix, top, flex-start)
 
-    &-centered
-        @include extendFlexbox
-        align-self: center
+        &-bottom
+            @include selfAlignment($prefix, bottom, flex-end)
 
-    &-baseline
-        @include extendFlexbox
-        align-self: baseline
+        &-centered
+            @include selfAlignment($prefix, centered, center)
 
-    &-stretched
-        @include extendFlexbox
-        align-self: stretch
+        &-baseline
+            @include selfAlignment($prefix, baseline, baseline)
+
+        &-stretched
+            @include selfAlignment($prefix, stretched, stretch)

@@ -1,13 +1,21 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin displayTypesComponent($prefix: null)
 
-@each $displayType in $displayTypes
-    @if $displayType == none
-        .display-none
-            @include extendDisplayType(hidden)
-        .hidden
-            display: none !important
+    $prefix: parsePrefix($prefix)
 
-    @else if $displayType != none
-        .display-#{$displayType}
-            @include extendDisplayType($displayType)
+    @each $displayType in $displayTypes
+        @if $displayType == none
+            .#{$prefix}display-none
+                @include displayType($prefix, $displayType)
+
+            .#{$prefix}hidden
+                @include displayType($prefix, $displayType, hidden)
+
+        @else if $displayType != none
+            .#{$prefix}display-#{$displayType}
+                @include displayType($prefix, $displayType)
+
+            @if $prefix
+                .#{$prefix}#{$displayType}
+                    @extend .#{$prefix}display-#{$displayType}

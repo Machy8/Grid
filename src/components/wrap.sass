@@ -1,15 +1,14 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin wrapComponent($prefix: null)
 
-.nowrap
-    @include extendFlexbox
-    flex-wrap: nowrap
+    $prefix: parsePrefix($prefix)
 
+    .#{$prefix}nowrap
+        @include flexWrap($prefix, nowrap)
 
-.wrap
-    @include extendFlexbox
-    flex-wrap: wrap
+    .#{$prefix}wrap
+        @include flexWrap($prefix, wrap)
 
-    &-reverse
-        @include extendFlexbox
-        flex-wrap: wrap-reverse
+    .#{$prefix}wrap-reverse
+        @include flexWrap($prefix, wrap-reverse)

@@ -1,23 +1,21 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin alignItemsComponent($prefix: null)
 
-.items
-    &-top
-        @include extendFlexbox
-        align-items: flex-start
+    $prefix: parsePrefix($prefix)
 
-    &-bottom
-        @include extendFlexbox
-        align-items: flex-end
+    .#{$prefix}items
+        &-top
+            @include itemsAlignment($prefix, top, flex-start)
 
-    &-centered
-        @include extendFlexbox
-        align-items: center
+        &-bottom
+            @include itemsAlignment($prefix, bottom, flex-end)
 
-    &-baseline
-        @include extendFlexbox
-        align-items: baseline
+        &-centered
+            @include itemsAlignment($prefix, centered, center)
 
-    &-stretched
-        @include extendFlexbox
-        align-items: stretch
+        &-baseline
+            @include itemsAlignment($prefix, baseline, baseline)
+
+        &-stretched
+            @include itemsAlignment($prefix, stretched, stretch)
