@@ -5,15 +5,20 @@
     $minWidth: nth($breakpoint, 2)
     @include breakpoint($minWidth)
 
-        // Auto max width
-        @if $prefix != $firstBreakpointPrefix
-            .#{$prefix}-auto
-                max-width: none
-
-
-        // Max width
-        $widthCounter: $widthMin
-        @while $widthCounter <= $widthMax
-            .#{$prefix}-#{$widthCounter}
-                max-width: $widthCounter * 1%
-            $widthCounter: $widthCounter + $widthIncreasedBy
+        @include maxWidthComponent($prefix)
+        @include textComponent($prefix)
+        // @include overflowComponent($prefix)
+        // @include growSizeComponent($prefix)
+        // @include wrapComponent($prefix)
+        @include columnsComponent($prefix)
+        // @include floatClearComponent($prefix)
+        // @include horizontalAlignmentComponent($prefix)
+        // @include verticalAlignmentComponent($prefix)
+        @include positionsComponent($prefix)
+        @include justifyContentComponent($prefix)
+        @include flexDirectionComponent($prefix)
+        // @include alignContentComponent($prefix)
+        // @include alignItemsComponent($prefix)
+        // @include alignSelfComponent($prefix)
+        @include orderComponent($prefix)
+        @include displayTypesComponent($prefix)
