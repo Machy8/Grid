@@ -1,0 +1,27 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+@mixin verticalAlignmentComponent($prefix: null)
+    $prefix: parsePrefix($prefix)
+
+    @each $valignType in $valignTypes
+        .#{$prefix}valign-#{$valignType}
+            vertical-align: $valignType
+
+
+    .#{$prefix}vertically, .#{$prefix}y
+        &-centered
+            @if isFirstBreakpointPrefix($prefix)
+                @extend .vertically-centered
+
+            @else
+                position: relative !important
+                top: 50%
+                transform: translateY(-50%)
+
+            &-absolute
+                @if isFirstBreakpointPrefix($prefix)
+                    @extend .vertically-centered-absolute
+
+                @else
+                    @extend .#{$prefix}vertically-centered
+                    position: absolute !important
