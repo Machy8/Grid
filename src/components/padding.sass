@@ -1,12 +1,16 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
 @mixin paddingComponent($prefix: null)
+
     $prefix: parsePrefix($prefix)
+    $isFirstBreakpoint: isFirstBreakpointPrefix($prefix)
 
     .#{$prefix}padding
 
         @each $side in $frameSides
             &-#{$side}
                 &-none
-                    @if isFirstBreakpointPrefix($prefix)
+                    @if $isFirstBreakpoint
                         @extend .padding-#{$side}-none
 
                     @else
@@ -15,7 +19,7 @@
                 $sizeCounter: $frameSizeIncreasedBy
                 @while $sizeCounter <= $frameMaxSize
                     &-#{$sizeCounter}
-                        @if isFirstBreakpointPrefix($prefix)
+                        @if $isFirstBreakpoint
                             @extend .padding-#{$side}-#{$sizeCounter} !optional
 
                         @else
@@ -24,13 +28,13 @@
 
         &-x
             &-none
-                @if isFirstBreakpointPrefix($prefix)
+                @if $isFirstBreakpoint
                     @extend .padding-left-none
                     @extend .padding-right-none
 
                 @else
-                    padding-left: 0 !important
-                    padding-right: 0 !important
+                    @extend .#{$prefix}padding-left-none
+                    @extend .#{$prefix}padding-right-none
 
             $sizeCounter: $frameSizeIncreasedBy
             @while $sizeCounter <= $frameMaxSize
@@ -41,13 +45,13 @@
 
         &-y
             &-none
-                @if isFirstBreakpointPrefix($prefix)
+                @if $isFirstBreakpoint
                     @extend .padding-top-none
                     @extend .padding-bottom-none
 
                 @else
-                    padding-top: 0 !important
-                    padding-bottom: 0 !important
+                    @extend .#{$prefix}padding-top-none
+                    @extend .#{$prefix}padding-bottom-none
 
             $sizeCounter: $frameSizeIncreasedBy
             @while $sizeCounter <= $frameMaxSize
@@ -57,7 +61,7 @@
                 $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
 
         &-none
-            @if isFirstBreakpointPrefix($prefix)
+            @if $isFirstBreakpoint
                 @extend .padding-top-none
                 @extend .padding-bottom-none
                 @extend .padding-left-none
@@ -72,7 +76,7 @@
         $sizeCounter: $frameSizeIncreasedBy
         @while $sizeCounter <= $frameMaxSize
             &-#{$sizeCounter}
-                @if isFirstBreakpointPrefix($prefix)
+                @if $isFirstBreakpoint
                     @extend .padding-x-#{$sizeCounter}
                     @extend .padding-y-#{$sizeCounter}
 
