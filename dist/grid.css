@@ -243,67 +243,76 @@ body {
 .background-none {
   background: none; }
 
-.w-auto, .s-auto {
+.outline-none {
+  outline: 0; }
+
+.shadow-none {
+  box-shadow: none; }
+
+.width-auto {
+  width: auto; }
+
+.mw-auto, .s-auto {
   max-width: none; }
 
-.w-5, .s-5 {
+.mw-5, .s-5 {
   max-width: 5%; }
 
-.w-10, .s-10 {
+.mw-10, .s-10 {
   max-width: 10%; }
 
-.w-15, .s-15 {
+.mw-15, .s-15 {
   max-width: 15%; }
 
-.w-20, .s-20 {
+.mw-20, .s-20 {
   max-width: 20%; }
 
-.w-25, .s-25 {
+.mw-25, .s-25 {
   max-width: 25%; }
 
-.w-30, .s-30 {
+.mw-30, .s-30 {
   max-width: 30%; }
 
-.w-35, .s-35 {
+.mw-35, .s-35 {
   max-width: 35%; }
 
-.w-40, .s-40 {
+.mw-40, .s-40 {
   max-width: 40%; }
 
-.w-45, .s-45 {
+.mw-45, .s-45 {
   max-width: 45%; }
 
-.w-50, .s-50 {
+.mw-50, .s-50 {
   max-width: 50%; }
 
-.w-55, .s-55 {
+.mw-55, .s-55 {
   max-width: 55%; }
 
-.w-60, .s-60 {
+.mw-60, .s-60 {
   max-width: 60%; }
 
-.w-65, .s-65 {
+.mw-65, .s-65 {
   max-width: 65%; }
 
-.w-70, .s-70 {
+.mw-70, .s-70 {
   max-width: 70%; }
 
-.w-75, .s-75 {
+.mw-75, .s-75 {
   max-width: 75%; }
 
-.w-80, .s-80 {
+.mw-80, .s-80 {
   max-width: 80%; }
 
-.w-85, .s-85 {
+.mw-85, .s-85 {
   max-width: 85%; }
 
-.w-90, .s-90 {
+.mw-90, .s-90 {
   max-width: 90%; }
 
-.w-95, .s-95 {
+.mw-95, .s-95 {
   max-width: 95%; }
 
-.w-100, .s-100 {
+.mw-100, .s-100 {
   max-width: 100%; }
 
 .text-none-decoration, .text-normal {
@@ -415,6 +424,9 @@ body {
 
 .cursor-wait {
   cursor: wait; }
+
+.cursor-help {
+  cursor: help; }
 
 .square, .none-radius {
   border-radius: 0; }
@@ -733,15 +745,13 @@ body {
 .hidden, .s-hidden {
   display: none !important; }
 
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: table; }
-
-.clearfix:after {
-  clear: both; }
-
 .clearfix {
   *zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
 
 .s-content-centered {
   -ms-flex-pack: center;
