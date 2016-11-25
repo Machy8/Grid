@@ -1,6 +1,9 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
 @mixin marginComponent($prefix: null)
-    $isFirstBreakpoint: $prefix == $firstBreakpointPrefix
+
     $prefix: parsePrefix($prefix)
+    $isFirstBreakpoint: isFirstBreakpointPrefix($prefix)
 
     .#{$prefix}margin
         @each $side in $frameSides
@@ -65,7 +68,6 @@
                         @extend .#{$prefix}margin-top-#{$sizeCounter}
                         @extend .#{$prefix}margin-bottom-#{$sizeCounter}
                 $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
-
 
         &-none
             @if $isFirstBreakpoint
