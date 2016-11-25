@@ -1,0 +1,93 @@
+@mixin marginComponent($prefix: null)
+    $isFirstBreakpoint: $prefix == $firstBreakpointPrefix
+    $prefix: parsePrefix($prefix)
+
+    .#{$prefix}margin
+        @each $side in $frameSides
+            &-#{$side}
+                &-none
+                    @if $isFirstBreakpoint
+                        @extend .margin-#{$side}-none
+
+                    @else
+                        margin-#{$side}: 0 !important
+
+                $sizeCounter: $frameSizeIncreasedBy
+                @while $sizeCounter <= $frameMaxSize
+                    &-#{$sizeCounter}
+                        @if $isFirstBreakpoint
+                            @extend .margin-#{$side}-#{$sizeCounter} !optional
+
+                        @else
+                            margin-#{$side}: $sizeCounter * 1px !important
+                    $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
+
+        &-x
+            &-none
+                @if $isFirstBreakpoint
+                    @extend .margin-left-none
+                    @extend .margin-right-none
+
+                @else
+                    @extend .#{$prefix}margin-left-none
+                    @extend .#{$prefix}margin-right-none
+
+            $sizeCounter: $frameSizeIncreasedBy
+            @while $sizeCounter <= $frameMaxSize
+                &-#{$sizeCounter}
+                    @if $isFirstBreakpoint
+                        @extend .margin-left-#{$sizeCounter}
+                        @extend .margin-right-#{$sizeCounter}
+
+                    @else
+                        @extend .#{$prefix}margin-left-#{$sizeCounter}
+                        @extend .#{$prefix}margin-right-#{$sizeCounter}
+                $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
+
+        &-y
+            &-none
+                @if $isFirstBreakpoint
+                    @extend .margin-top-none
+                    @extend .margin-bottom-none
+
+                @else
+                    @extend .#{$prefix}margin-top-none
+                    @extend .#{$prefix}margin-bottom-none
+
+            $sizeCounter: $frameSizeIncreasedBy
+            @while $sizeCounter <= $frameMaxSize
+                &-#{$sizeCounter}
+                    @if $isFirstBreakpoint
+                        @extend .margin-top-#{$sizeCounter}
+                        @extend .margin-bottom-#{$sizeCounter}
+
+                    @else
+                        @extend .#{$prefix}margin-top-#{$sizeCounter}
+                        @extend .#{$prefix}margin-bottom-#{$sizeCounter}
+                $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
+
+
+        &-none
+            @if $isFirstBreakpoint
+                @extend .margin-top-none
+                @extend .margin-bottom-none
+                @extend .margin-left-none
+                @extend .margin-right-none
+
+            @else
+                @extend .#{$prefix}margin-top-none
+                @extend .#{$prefix}margin-bottom-none
+                @extend .#{$prefix}margin-left-none
+                @extend .#{$prefix}margin-right-none
+
+        $sizeCounter: $frameSizeIncreasedBy
+        @while $sizeCounter <= $frameMaxSize
+            &-#{$sizeCounter}
+                @if $isFirstBreakpoint
+                    @extend .margin-x-#{$sizeCounter}
+                    @extend .margin-y-#{$sizeCounter}
+
+                @else
+                    @extend .#{$prefix}margin-x-#{$sizeCounter}
+                    @extend .#{$prefix}margin-y-#{$sizeCounter}
+            $sizeCounter: $sizeCounter + $frameSizeIncreasedBy

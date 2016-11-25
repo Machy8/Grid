@@ -1,0 +1,83 @@
+@mixin paddingComponent($prefix: null)
+    $prefix: parsePrefix($prefix)
+
+    .#{$prefix}padding
+
+        @each $side in $frameSides
+            &-#{$side}
+                &-none
+                    @if isFirstBreakpointPrefix($prefix)
+                        @extend .padding-#{$side}-none
+
+                    @else
+                        padding-#{$side}: 0 !important
+
+                $sizeCounter: $frameSizeIncreasedBy
+                @while $sizeCounter <= $frameMaxSize
+                    &-#{$sizeCounter}
+                        @if isFirstBreakpointPrefix($prefix)
+                            @extend .padding-#{$side}-#{$sizeCounter} !optional
+
+                        @else
+                            padding-#{$side}: $sizeCounter * 1px !important
+                    $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
+
+        &-x
+            &-none
+                @if isFirstBreakpointPrefix($prefix)
+                    @extend .padding-left-none
+                    @extend .padding-right-none
+
+                @else
+                    padding-left: 0 !important
+                    padding-right: 0 !important
+
+            $sizeCounter: $frameSizeIncreasedBy
+            @while $sizeCounter <= $frameMaxSize
+                &-#{$sizeCounter}
+                    @extend .#{$prefix}padding-left-#{$sizeCounter}
+                    @extend .#{$prefix}padding-right-#{$sizeCounter}
+                $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
+
+        &-y
+            &-none
+                @if isFirstBreakpointPrefix($prefix)
+                    @extend .padding-top-none
+                    @extend .padding-bottom-none
+
+                @else
+                    padding-top: 0 !important
+                    padding-bottom: 0 !important
+
+            $sizeCounter: $frameSizeIncreasedBy
+            @while $sizeCounter <= $frameMaxSize
+                &-#{$sizeCounter}
+                    @extend .#{$prefix}padding-top-#{$sizeCounter}
+                    @extend .#{$prefix}padding-bottom-#{$sizeCounter}
+                $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
+
+        &-none
+            @if isFirstBreakpointPrefix($prefix)
+                @extend .padding-top-none
+                @extend .padding-bottom-none
+                @extend .padding-left-none
+                @extend .padding-right-none
+
+            @else
+                @extend .#{$prefix}padding-top-none
+                @extend .#{$prefix}padding-bottom-none
+                @extend .#{$prefix}padding-left-none
+                @extend .#{$prefix}padding-right-none
+
+        $sizeCounter: $frameSizeIncreasedBy
+        @while $sizeCounter <= $frameMaxSize
+            &-#{$sizeCounter}
+                @if isFirstBreakpointPrefix($prefix)
+                    @extend .padding-x-#{$sizeCounter}
+                    @extend .padding-y-#{$sizeCounter}
+
+                @else
+                    @extend .#{$prefix}padding-x-#{$sizeCounter}
+                    @extend .#{$prefix}padding-y-#{$sizeCounter}
+
+            $sizeCounter: $sizeCounter + $frameSizeIncreasedBy

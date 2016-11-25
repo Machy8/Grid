@@ -2,15 +2,13 @@
 
 @mixin clearfixComponent
 
-    .clearfix:before
-        content: " "
-        display: table
-
-
-    .clearfix:after
-        @extend .clearfix:before
-        clear: both
-
-
     .clearfix
         *zoom: 1
+
+        &:before
+            content: " "
+            display: table
+
+        &:after
+            @extend .clearfix:before
+            clear: both
