@@ -2,15 +2,16 @@
 
 @mixin maxWidthComponent($prefix: null)
 
-    $defaultPrefix: w
+    $defaultPrefix: $defaultMaxWidthPrefix
 
     @if $prefix == null
         $prefix: $defaultPrefix
 
     $prefix: parsePrefix($prefix)
+    $isFirstBreakpoint: isFirstBreakpointPrefix($prefix)
 
     .#{$prefix}auto
-        @if isFirstBreakpointPrefix($prefix)
+        @if $isFirstBreakpoint
             @extend .#{$defaultPrefix}-auto
 
         @else
@@ -19,7 +20,7 @@
     $widthCounter: $widthMin
     @while $widthCounter <= $widthMax
         .#{$prefix}#{$widthCounter}
-            @if isFirstBreakpointPrefix($prefix)
+            @if $isFirstBreakpoint
                 @extend .#{$defaultPrefix}-#{$widthCounter}
 
             @else
