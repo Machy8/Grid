@@ -6,10 +6,16 @@ $breakpoints: s 0, m 641, l 1025, xl 1441
 
 $firstBreakpointPrefix: nth(nth($breakpoints, 1), 1)
 
+// components/max-width
+$defaultMaxWidthPrefix: mw
 $widthMax: 100
 $widthMin: 5
 $widthIncreasedBy: 5
 
+// components/margin
+$frameMaxSize: 50
+$frameSizeIncreasedBy: 5
+$frameSides: left right top bottom
 
 // components/html-body
 $defaultFontSize: 16px
@@ -34,7 +40,7 @@ $columnsIncreasedBy: $orderIncreasedBy
 
 
 // components/cursor
-$cursorTypes: auto default pointer wait
+$cursorTypes: auto default pointer wait help
 
 
 // components/list
