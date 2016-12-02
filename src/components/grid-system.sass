@@ -1,0 +1,27 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+@mixin gridSystemComponent
+    @each $breakpoint in $breakpoints
+        $prefix: nth($breakpoint, 1)
+        $minWidth: nth($breakpoint, 2)
+        @include breakpoint($minWidth)
+
+            @include maxWidthComponent($prefix)
+            // @include marginComponent($prefix)
+            // @include paddingComponent($prefix)
+            @include textComponent($prefix)
+            // @include overflowComponent($prefix)
+            // @include fullSizesComponent($prefix)
+            // @include wrapComponent($prefix)
+            @include columnsComponent($prefix)
+            // @include floatClearComponent($prefix)
+            // @include horizontalAlignmentComponent($prefix)
+            // @include verticalAlignmentComponent($prefix)
+            @include positionsComponent($prefix)
+            @include justifyContentComponent($prefix)
+            @include flexDirectionComponent($prefix)
+            // @include alignContentComponent($prefix)
+            // @include alignItemsComponent($prefix)
+            // @include alignSelfComponent($prefix)
+            @include orderComponent($prefix)
+            @include displayTypesComponent($prefix)

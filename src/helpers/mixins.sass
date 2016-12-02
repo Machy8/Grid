@@ -1,6 +1,9 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
-// Global
+
+///
+    @param {int} $minWidth
+    @output @media (min-width: #{$minWidth}px) {@content}
 @mixin breakpoint($minWidth)
     @if $minWidth == 0
         @content
@@ -10,6 +13,11 @@
             @content
 
 
+///
+    @param {string|null} $prefix
+    @param {string} $type
+    @param {string|null} $className
+    @output display: $type
 @mixin displayType($prefix, $type, $className: null)
     @if $className == null
         $className: display-#{$type}
@@ -24,7 +32,8 @@
         display: $type
 
 
-// Specific extending mixins
+///
+    @param {string|null} $prefix
 @mixin extendFlexbox($prefix: null)
     @if isFirstBreakpointPrefix($prefix)
         @extend .display-flex
@@ -33,6 +42,9 @@
         @extend .#{$prefix}display-flex
 
 
+///
+    @param {string} $prefix
+    @param {string} $position
 @mixin extendPosition($prefix, $position)
     @if isFirstBreakpointPrefix($prefix)
         @extend .position-#{$position}
@@ -40,7 +52,11 @@
     @elseif $prefix != null
         @extend .#{$prefix}position-#{$position}
 
-
+///
+    @param {string} $prefix
+    @param {string} $direction
+    @param {string|null} $className
+    @output flex-direction: $direction
 @mixin flexDirection($prefix, $direction, $className: null)
     @if $className == null
         $className: $direction
@@ -53,6 +69,10 @@
         flex-direction: $direction
 
 
+///
+    @param {string} $prefix
+    @param {string} $value
+    @output flex-wrap: $value
 @mixin flexWrap($prefix, $value)
     @if isFirstBreakpointPrefix($prefix)
         @extend .#{$value}
@@ -61,7 +81,12 @@
         @include extendFlexbox($prefix)
         flex-wrap: $value
 
-
+///
+    @param {string} $prefix
+    @param {string} $attribute
+    @param {string} $value
+    @param {bool} $extend
+    @output #{$attribute}: $value
 @mixin floatClear($prefix, $attribute, $value, $extend: false)
     @if isFirstBreakpointPrefix($prefix)
         @extend .#{$attribute}-#{$value}
@@ -70,6 +95,11 @@
         #{$attribute}: $value
 
 
+///
+    @param {string} $prefix
+    @param {string} $attribute
+    @param {bool} $window
+    @output #{$attribute}: $value + $unit
 @mixin fullWidthHeight($prefix, $attribute, $window: false)
     $className: full-#{$attribute}
     $value: 100
@@ -89,6 +119,11 @@
         #{$attribute}: $value + $unit
 
 
+///
+    @param {string} $prefix
+    @param {string} $className
+    @param {string} $position
+    @output align-items: $position
 @mixin itemsAlignment($prefix, $className, $position)
     @if isFirstBreakpointPrefix($prefix)
         @extend .items-#{$className}
@@ -98,6 +133,11 @@
         align-items: $position
 
 
+///
+    @param {string} $prefix
+    @param {string} $direction
+    @param {string} $className
+    @output justify-content: $direction
 @mixin justifyContent($prefix, $direction, $className)
     @if isFirstBreakpointPrefix($direction)
         @extend .content-#{$className}
@@ -107,6 +147,11 @@
         justify-content: $direction
 
 
+///
+    @param {string} $prefix
+    @param {string} $className
+    @param {string} $position
+    @output align-content: $position
 @mixin linesAlignment($prefix, $className, $position)
     @if isFirstBreakpointPrefix($prefix)
         @extend .lines-#{$className}
@@ -116,6 +161,9 @@
         align-content: $position
 
 
+///
+    @param {string} $prefix
+    @param {string} $place
 @mixin order($prefix, $place)
     @if isFirstBreakpointPrefix($prefix)
         @extend .order-#{$place}
@@ -125,6 +173,10 @@
         @extend .#{$prefix}order-#{$place}
 
 
+///
+    @param {string} $prefix
+    @param {string} $position
+    @output #{$position}: 0
 @mixin position($prefix, $position)
     @if isFirstBreakpointPrefix($prefix)
         @extend .position-#{$position}
@@ -133,6 +185,11 @@
         #{$position}: 0
 
 
+///
+    @param {string} $prefix
+    @param {string} $className
+    @param {string} $position
+    @output align-self: $position
 @mixin selfAlignment($prefix, $className, $position)
     @if isFirstBreakpointPrefix($prefix)
         @extend .self-#{$className}
@@ -142,6 +199,11 @@
         align-self: $position
 
 
+///
+    @param {string} $prefix
+    @param {string} $value
+    @param {string|null} $className
+    @output text-align: $value
 @mixin textAlignment($prefix, $value, $className: null)
     @if $className == null
         $className: $value
@@ -153,5 +215,8 @@
         text-align: $value
 
 
+///
+    @param {int} $opacity
+    @output opacity: $opacity * 0.1
 @mixin visibility($opacity)
     opacity: $opacity * 0.1
