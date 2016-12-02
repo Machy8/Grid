@@ -2,25 +2,35 @@
   "name": "grid-css-framework",
   "description": "Intuitive, easy to use, mobile first CSS framework based on Flexbox.",
   "keywords": [
-    "css",
+    "web",
     "framework",
     "front-end",
     "responsive",
-    "mobile-first"
+    "mobile-first",
+    "sass",
+    "css"
   ],
   "homepage": "https://github.com/Machy8/Grid",
   "version": "2.0.1",
   "license": "BSD-3-Clause",
-  "scripts": {
-    "composer": "node composer.js"
-  },
   "style": "dist/grid.css",
+  "sass": "src/grid.sass",
   "repository": {
     "type": "git",
     "url": "https://github.com/Machy8/Grid.git"
   },
+  "bugs": {
+    "url": "https://github.com/Machy8/Grid/issues"
+  },
   "author": {
     "name": "Vladimír Macháček",
     "email": "8machy@seznam.cz"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
   }
 }
