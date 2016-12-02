@@ -10,8 +10,7 @@ var gulp  = require('gulp'),
 	// Setup
 	distDir = "./dist",
 	srcDir 	= "./src",
-	targetFile = srcDir + '/grid.sass',
-	gulpTasks = ['sass', 'watch'];
+	targetFile = srcDir + '/grid.sass';
 
 // Tasks
 gulp
@@ -30,7 +29,7 @@ gulp
 	})
 
 	.task('watch', function() {
-		gulp.watch(srcDir + '/**/*.sass', gulpTasks);
+		gulp.watch(srcDir + '/**/*.sass', ['sass']);
 	})
 
-	.task('default', gulpTasks);
+	.task('default', ['sass', 'watch']);
