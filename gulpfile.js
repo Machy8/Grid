@@ -5,40 +5,32 @@ var gulp  = require('gulp'),
 	sass = require('gulp-sass'),
 	minifyCss = require('gulp-minify-css'),
 	autoprefixer  = require('gulp-autoprefixer'),
-	rename = require('gulp-rename');
+	rename = require('gulp-rename'),
 
-// Setup
-var distDir = "./dist",
+	// Setup
+	distDir = "./dist",
 	srcDir 	= "./src",
 	targetFile = srcDir + '/grid.sass',
-	gulpTasks = ['sass', 'sass-min'];
+	gulpTasks = ['sass', 'watch'];
 
 // Tasks
-gulp.task('sass', function() {
-	gulp.src(targetFile)
-		.pipe(sass())
-		.pipe(autoprefixer({
-			browsers: ['last 2 version']
-		}))
-		.pipe(gulp.dest(distDir))
-});
+gulp
+	.task('sass', function() {
+		gulp.src(targetFile)
+			.pipe(sass())
+			.pipe(autoprefixer({
+				browsers: ['> 5%', 'IE 8', 'IE 9']
+			}))
+			.pipe(gulp.dest(distDir))
+			.pipe(minifyCss())
+			.pipe(rename({
+				suffix: '.min'
+			}))
+			.pipe(gulp.dest(distDir))
+	})
 
-gulp.task('sass-min', function() {
-	gulp.src(targetFile)
-		.pipe(sass())
-		.pipe(autoprefixer({
-			browsers: ['last 2 version']
-		}))
-		.pipe(minifyCss())
-		.pipe(rename({
-			suffix: '.min'
-		}))
-		.pipe(gulp.dest(distDir))
-});
+	.task('watch', function() {
+		gulp.watch(srcDir + '/**/*.sass', gulpTasks);
+	})
 
-gulp.task('watch', function() {
-	gulp.watch(srcDir + '/**/*.sass', gulpTasks);
-});
-
-gulpTasks.push('watch');
-gulp.task('default', gulpTasks);
+	.task('default', gulpTasks);
