@@ -429,16 +429,16 @@ body {
   border-radius: 2px; }
 
 .rounded-2 {
-  border-radius: 3px; }
-
-.rounded-3 {
   border-radius: 4px; }
 
+.rounded-3 {
+  border-radius: 6px; }
+
 .rounded-4 {
-  border-radius: 5px; }
+  border-radius: 8px; }
 
 .rounded-5 {
-  border-radius: 6px; }
+  border-radius: 10px; }
 
 .circle {
   border-radius: 100%; }
