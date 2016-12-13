@@ -206,14 +206,14 @@ template {
 * {
   box-sizing: border-box; }
 
+.border-box {
+  box-sizing: border-box; }
+
 .content-box {
   box-sizing: content-box; }
 
 .padding-box {
   box-sizing: padding-box; }
-
-.border-box {
-  box-sizing: border-box; }
 
 html {
   width: 100%;
@@ -500,6 +500,10 @@ body {
 .resizable-both {
   resize: both; }
 
+.grow-none {
+  -webkit-box-flex: 0;
+          flex-grow: 0; }
+
 .grow {
   -webkit-box-flex: 1;
           flex-grow: 1; }
@@ -720,7 +724,7 @@ body {
 .display-block, .s-display-block, .s-block {
   display: block; }
 
-.display-flex, .grow, .nowrap, .wrap, .wrap-reverse, .content-centered, .content-left, .content-right, .content-wrapped, .content-apart, .direction-row, .s-direction-row, .direction-column, .s-direction-column, .direction-reversed-row, .s-direction-reversed-row, .direction-reversed-column, .s-direction-reversed-column, .lines-top, .lines-bottom, .lines-centered, .lines-stretched, .lines-wrapped, .lines-apart, .items-top, .items-bottom, .items-centered, .items-baseline, .items-stretched, .self-top, .self-bottom, .self-centered, .self-baseline, .self-stretched, .order-1, .s-order-1, .order-2, .s-order-2, .order-3, .s-order-3, .order-4, .s-order-4, .order-5, .s-order-5, .s-content-centered, .s-content-left, .s-content-right, .s-content-wrapped, .s-content-apart, .s-display-flex, .s-flex {
+.display-flex, .grow-none, .grow, .nowrap, .wrap, .wrap-reverse, .content-centered, .content-left, .content-right, .content-wrapped, .content-apart, .direction-row, .s-direction-row, .direction-column, .s-direction-column, .direction-reversed-row, .s-direction-reversed-row, .direction-reversed-column, .s-direction-reversed-column, .lines-top, .lines-bottom, .lines-centered, .lines-stretched, .lines-wrapped, .lines-apart, .items-top, .items-bottom, .items-centered, .items-baseline, .items-stretched, .self-top, .self-bottom, .self-centered, .self-baseline, .self-stretched, .order-1, .s-order-1, .order-2, .s-order-2, .order-3, .s-order-3, .order-4, .s-order-4, .order-5, .s-order-5, .s-content-centered, .s-content-left, .s-content-right, .s-content-wrapped, .s-content-apart, .s-display-flex, .s-flex {
   display: -webkit-box !important;
   display: flex !important; }
 

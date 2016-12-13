@@ -4,6 +4,15 @@
 
     $prefix: parsePrefix($prefix)
 
+    .#{$prefix}grow-none
+        @if isFirstBreakpointPrefix($prefix)
+            @extend .grow-none
+
+        @else
+            @include extendFlexbox($prefix)
+            flex-grow: 0
+
+
     .#{$prefix}grow
         @if isFirstBreakpointPrefix($prefix)
             @extend .grow
@@ -11,6 +20,7 @@
         @else
             @include extendFlexbox($prefix)
             flex-grow: 1
+
 
     .#{$prefix}full
         &-window
@@ -22,7 +32,6 @@
 
         &-width
             @include fullWidthHeight($prefix, width)
-
 
         &-height
             @include fullWidthHeight($prefix, height)

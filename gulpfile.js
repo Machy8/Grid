@@ -1,7 +1,8 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
 // Modules
-var gulp  = require('gulp'),
+var
+	gulp  = require('gulp'),
 	sass = require('gulp-sass'),
 	minifyCss = require('gulp-minify-css'),
 	autoprefixer  = require('gulp-autoprefixer'),

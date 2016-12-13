@@ -76,6 +76,7 @@
         &-justify
             @include textAlignment($prefix, justify)
 
+
     @if $prefix == null
         .cutted-text
             text-overflow: ellipsis
@@ -85,11 +86,11 @@
 
         // Words
         .break
-          &-words
-            word-wrap: break-word
+            &-words
+                word-wrap: break-word
 
-          &-all
-            word-break: break-all
+            &-all
+                word-break: break-all
 
 
         .keep-all

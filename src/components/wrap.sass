@@ -4,11 +4,6 @@
 
     $prefix: parsePrefix($prefix)
 
-    .#{$prefix}nowrap
-        @include flexWrap($prefix, nowrap)
-
-    .#{$prefix}wrap
-        @include flexWrap($prefix, wrap)
-
-    .#{$prefix}wrap-reverse
-        @include flexWrap($prefix, wrap-reverse)
+    @each $type in $wrapTypes
+        .#{$prefix}#{$type}
+            @include flexWrap($prefix, $type)
