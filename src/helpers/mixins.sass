@@ -111,6 +111,13 @@
 
 
 ///
+    @param {string|null} $newPrefix
+@mixin initPrefix($newPrefix: $prefix)
+    $prefix: parsePrefix($newPrefix) !global
+    $isFirstBreakpointPrefix: $prefix == parsePrefix($firstBreakpointPrefix) !global
+
+
+///
     @param {string} $className
     @param {string} $position
     @output align-items: $position

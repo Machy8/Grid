@@ -3,26 +3,27 @@
 @mixin gridSystemComponent
 
     @each $breakpoint in $breakpoints
-        $prefix: initPrefix(nth($breakpoint, 1), true)
         $minWidth: nth($breakpoint, 2)
+
+        @include initPrefix(nth($breakpoint, 1))
         @include breakpoint($minWidth)
 
-            @include maxWidthComponent($prefix)
-            // @include marginComponent($prefix)
-            // @include paddingComponent($prefix)
-            @include textComponent($prefix)
-            // @include overflowComponent($prefix)
-            // @include fullSizesComponent($prefix)
-            // @include wrapComponent($prefix)
-            @include columnsComponent($prefix)
-            // @include floatClearComponent($prefix)
-            // @include horizontalAlignmentComponent($prefix)
-            // @include verticalAlignmentComponent($prefix)
-            @include positionsComponent($prefix)
-            @include justifyContentComponent($prefix)
-            @include flexDirectionComponent($prefix)
-            // @include alignContentComponent($prefix)
-            // @include alignItemsComponent($prefix)
-            // @include alignSelfComponent($prefix)
-            @include orderComponent($prefix)
-            @include displayTypesComponent($prefix)
+            @include maxWidthComponent
+            // @include marginComponent
+            // @include paddingComponent
+            @include textComponent
+            // @include overflowComponent
+            // @include fullSizesComponent
+            // @include wrapComponent
+            @include columnsComponent
+            // @include floatClearComponent
+            // @include horizontalAlignmentComponent
+            // @include verticalAlignmentComponent
+            @include positionsComponent
+            @include justifyContentComponent
+            @include flexDirectionComponent
+            // @include alignContentComponent
+            // @include alignItemsComponent
+            // @include alignSelfComponent
+            @include orderComponent
+            @include displayTypesComponent

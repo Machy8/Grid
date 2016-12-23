@@ -10,16 +10,3 @@
         $prefix: $prefix + $connector
 
     @return $prefix
-
-///
-    @param {string|null} $newPrefix
-    @param {bool} $returnPrefix
-@function initPrefix($newPrefix: $prefix, $returnPrefix: false)
-    $newParsedPrefix: parsePrefix($newPrefix)
-    $isFirstBreakpointPrefix: $newParsedPrefix == parsePrefix($firstBreakpointPrefix)
-
-    @if $returnPrefix
-        @return $newParsedPrefix
-
-    @else
-        $prefix: $newParsedPrefix
