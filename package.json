@@ -11,7 +11,7 @@
     "css"
   ],
   "homepage": "https://github.com/Machy8/Grid",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "license": "BSD-3-Clause",
   "style": "dist/grid.css",
   "sass": "src/grid.sass",
