@@ -2,11 +2,9 @@
 
 @mixin floatClearComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     @each $floatType in $floatTypes
         .#{$prefix}float-#{$floatType}
-            @include floatClear($prefix, float, $floatType)
+            @include floatClear(float, $floatType)
 
         .#{$prefix}content-float-#{$floatType} > *
             @extend .#{$prefix}float-#{$floatType}
@@ -14,7 +12,7 @@
 
     @each $clearType in $clearTypes
         .#{$prefix}clear-#{$clearType}
-            @include floatClear($prefix, clear, $clearType)
+            @include floatClear(clear, $clearType)
 
         .#{$prefix}content-clear-#{$clearType} > *
             @extend .#{$prefix}clear-#{$clearType}

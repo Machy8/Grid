@@ -2,20 +2,18 @@
 
 @mixin alignItemsComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     .#{$prefix}items
         &-top
-            @include itemsAlignment($prefix, top, flex-start)
+            @include itemsAlignment(top, flex-start)
 
         &-bottom
-            @include itemsAlignment($prefix, bottom, flex-end)
+            @include itemsAlignment(bottom, flex-end)
 
         &-centered
-            @include itemsAlignment($prefix, centered, center)
+            @include itemsAlignment(centered, center)
 
         &-baseline
-            @include itemsAlignment($prefix, baseline, baseline)
+            @include itemsAlignment(baseline, baseline)
 
         &-stretched
-            @include itemsAlignment($prefix, stretched, stretch)
+            @include itemsAlignment(stretched, stretch)

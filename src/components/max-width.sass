@@ -5,13 +5,10 @@
     $defaultPrefix: $defaultMaxWidthPrefix
 
     @if $prefix == null
-        $prefix: $defaultPrefix
-
-    $prefix: parsePrefix($prefix)
-    $isFirstBreakpoint: isFirstBreakpointPrefix($prefix)
+        $prefix: parsePrefix($defaultPrefix)
 
     .#{$prefix}auto
-        @if $isFirstBreakpoint
+        @if $isFirstBreakpointPrefix
             @extend .#{$defaultPrefix}-auto
 
         @else
@@ -20,7 +17,7 @@
     $widthCounter: $widthMin
     @while $widthCounter <= $widthMax
         .#{$prefix}#{$widthCounter}
-            @if $isFirstBreakpoint
+            @if $isFirstBreakpointPrefix
                 @extend .#{$defaultPrefix}-#{$widthCounter}
 
             @else

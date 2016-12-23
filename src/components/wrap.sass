@@ -2,8 +2,6 @@
 
 @mixin wrapComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     @each $type in $wrapTypes
         .#{$prefix}#{$type}
-            @include flexWrap($prefix, $type)
+            @include flexWrap($type)

@@ -2,23 +2,21 @@
 
 @mixin alignContentComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     .#{$prefix}lines
         &-top
-            @include linesAlignment($prefix, top, flex-start)
+            @include linesAlignment(top, flex-start)
 
         &-bottom
-            @include linesAlignment($prefix, bottom, flex-end)
+            @include linesAlignment(bottom, flex-end)
 
         &-centered
-            @include linesAlignment($prefix, centered, center)
+            @include linesAlignment(centered, center)
 
         &-stretched
-            @include linesAlignment($prefix, stretched, stretch)
+            @include linesAlignment(stretched, stretch)
 
         &-wrapped
-            @include linesAlignment($prefix, wrapped, space-around)
+            @include linesAlignment(wrapped, space-around)
 
         &-apart
-            @include linesAlignment($prefix, apart, space-between)
+            @include linesAlignment(apart, space-between)

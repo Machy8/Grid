@@ -2,16 +2,14 @@
 
 @mixin orderComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     $orderCounter: $orderMin
     @while $orderCounter <= $orderMax
         .#{$prefix}order-#{$orderCounter}
-            @if isFirstBreakpointPrefix($prefix)
+            @if $isFirstBreakpointPrefix
                 @extend .order-#{$orderCounter}
 
             @else
-                @include extendFlexbox($prefix)
+                @include extendFlexbox
                 @extend .#{$prefix}order-#{$orderCounter}
 
         $orderCounter: $orderCounter + $orderIncreasedBy

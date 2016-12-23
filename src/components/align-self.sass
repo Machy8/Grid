@@ -2,20 +2,18 @@
 
 @mixin alignSelfComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     .#{$prefix}self
         &-top
-            @include selfAlignment($prefix, top, flex-start)
+            @include selfAlignment(top, flex-start)
 
         &-bottom
-            @include selfAlignment($prefix, bottom, flex-end)
+            @include selfAlignment(bottom, flex-end)
 
         &-centered
-            @include selfAlignment($prefix, centered, center)
+            @include selfAlignment(centered, center)
 
         &-baseline
-            @include selfAlignment($prefix, baseline, baseline)
+            @include selfAlignment(baseline, baseline)
 
         &-stretched
-            @include selfAlignment($prefix, stretched, stretch)
+            @include selfAlignment(stretched, stretch)

@@ -2,36 +2,40 @@
 
 @mixin fullSizesComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
-    .#{$prefix}grow-none
-        @if isFirstBreakpointPrefix($prefix)
-            @extend .grow-none
-
-        @else
-            @include extendFlexbox($prefix)
-            flex-grow: 0
-
-
     .#{$prefix}grow
-        @if isFirstBreakpointPrefix($prefix)
+        &-none
+            @if $isFirstBreakpointPrefix
+                @extend .grow-none
+
+            @else
+                @include extendFlexbox
+                flex-grow: 0
+
+        @if $isFirstBreakpointPrefix
             @extend .grow
 
         @else
-            @include extendFlexbox($prefix)
+            @include extendFlexbox
             flex-grow: 1
 
 
     .#{$prefix}full
         &-window
             &-width
-                @include fullWidthHeight($prefix, width, true)
+                @include fullWidthHeight(width, true)
 
             &-height
-                @include fullWidthHeight($prefix, height, true)
+                @include fullWidthHeight(height, true)
 
         &-width
-            @include fullWidthHeight($prefix, width)
+            @include fullWidthHeight(width)
 
         &-height
-            @include fullWidthHeight($prefix, height)
+            @include fullWidthHeight(height)
+
+    .#{$prefix}content-full
+        &-width > *
+            @extend .#{$prefix}full-width
+
+        &-height > *
+            @extend .#{$prefix}full-height

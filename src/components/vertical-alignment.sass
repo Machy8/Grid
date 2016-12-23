@@ -2,8 +2,6 @@
 
 @mixin verticalAlignmentComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     @each $valignType in $valignTypes
         .#{$prefix}valign-#{$valignType}
             vertical-align: $valignType
@@ -11,7 +9,7 @@
 
     .#{$prefix}vertically, .#{$prefix}y
         &-centered
-            @if isFirstBreakpointPrefix($prefix)
+            @if $isFirstBreakpointPrefix
                 @extend .vertically-centered
 
             @else
@@ -20,7 +18,7 @@
                 transform: translateY(-50%)
 
             &-absolute
-                @if isFirstBreakpointPrefix($prefix)
+                @if $isFirstBreakpointPrefix
                     @extend .vertically-centered-absolute
 
                 @else

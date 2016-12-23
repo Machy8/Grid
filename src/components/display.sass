@@ -2,19 +2,18 @@
 
 @mixin displayTypesComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     @each $displayType in $displayTypes
         @if $displayType == none
             .#{$prefix}display-none
-                @include displayType($prefix, $displayType)
+                @include displayType($displayType)
 
-            .#{$prefix}hidden
-                @include displayType($prefix, $displayType, hidden)
+            @if $prefix == null
+                .#{$prefix}hidden
+                    @include displayType($displayType, hidden)
 
         @else if $displayType != none
             .#{$prefix}display-#{$displayType}
-                @include displayType($prefix, $displayType)
+                @include displayType($displayType)
 
             @if $prefix
                 .#{$prefix}#{$displayType}

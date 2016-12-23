@@ -1,7 +1,7 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
-// Modules
 var
+	// Modules
 	gulp  = require('gulp'),
 	sass = require('gulp-sass'),
 	minifyCss = require('gulp-minify-css'),
@@ -11,7 +11,10 @@ var
 	// Setup
 	distDir = "./dist",
 	srcDir 	= "./src",
-	targetFile = srcDir + '/grid.sass';
+	gulpWatchDir = srcDir + '/**/*.sass',
+	targetFile = srcDir + '/grid.sass',
+	autoprefixerSettings =['> 5%', 'IE 8', 'IE 9'],
+	minVersionSuffix = '.min';
 
 // Tasks
 gulp
@@ -19,18 +22,20 @@ gulp
 		gulp.src(targetFile)
 			.pipe(sass())
 			.pipe(autoprefixer({
-				browsers: ['> 5%', 'IE 8', 'IE 9']
+				browsers: autoprefixerSettings
 			}))
 			.pipe(gulp.dest(distDir))
+
+			// Minified version
 			.pipe(minifyCss())
 			.pipe(rename({
-				suffix: '.min'
+				suffix: minVersionSuffix
 			}))
 			.pipe(gulp.dest(distDir))
 	})
 
 	.task('watch', function() {
-		gulp.watch(srcDir + '/**/*.sass', ['sass']);
+		gulp.watch(gulpWatchDir, ['sass']);
 	})
 
 	.task('default', ['sass', 'watch']);

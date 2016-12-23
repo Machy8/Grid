@@ -2,10 +2,8 @@
 
 @mixin horizontalAlignmentComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     .#{$prefix}x-centered, .#{$prefix}horizontally-centered
-        @if isFirstBreakpointPrefix($prefix)
+        @if $isFirstBreakpointPrefix
             @extend .x-centered
 
         @else

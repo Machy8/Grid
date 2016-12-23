@@ -13,15 +13,14 @@
 
 
 ///
-    @param {string|null} $prefix
     @param {string} $type
     @param {string|null} $className
     @output display: $type
-@mixin displayType($prefix, $type, $className: null)
+@mixin displayType($type, $className: null)
     @if $className == null
         $className: display-#{$type}
 
-    @if isFirstBreakpointPrefix($prefix)
+    @if $isFirstBreakpointPrefix
         @extend .#{$className}
 
     @elseif ($type == none and $className == hidden) or $type == flex
@@ -31,10 +30,8 @@
         display: $type
 
 
-///
-    @param {string|null} $prefix
-@mixin extendFlexbox($prefix: null)
-    @if isFirstBreakpointPrefix($prefix)
+@mixin extendFlexbox
+    @if $isFirstBreakpointPrefix
         @extend .display-flex
 
     @else
@@ -42,52 +39,48 @@
 
 
 ///
-    @param {string} $prefix
     @param {string} $position
-@mixin extendPosition($prefix, $position)
-    @if isFirstBreakpointPrefix($prefix)
+@mixin extendPosition($position)
+    @if $isFirstBreakpointPrefix
         @extend .position-#{$position}
 
     @elseif $prefix != null
         @extend .#{$prefix}position-#{$position}
 
 ///
-    @param {string} $prefix
     @param {string} $direction
     @param {string|null} $className
     @output flex-direction: $direction
-@mixin flexDirection($prefix, $direction, $className: null)
+@mixin flexDirection($direction, $className: null)
     @if $className == null
         $className: $direction
 
-    @if isFirstBreakpointPrefix($prefix)
+    @if $isFirstBreakpointPrefix
         @extend .direction-#{$className}
 
     @else
-        @include extendFlexbox($prefix)
+        @include extendFlexbox
         flex-direction: $direction
 
 
 ///
-    @param {string} $prefix
     @param {string} $value
     @output flex-wrap: $value
-@mixin flexWrap($prefix, $value)
-    @if isFirstBreakpointPrefix($prefix)
+@mixin flexWrap($value)
+    @if $isFirstBreakpointPrefix
         @extend .#{$value}
 
     @else
-        @include extendFlexbox($prefix)
+        @include extendFlexbox
         flex-wrap: $value
 
 ///
-    @param {string} $prefix
     @param {string} $attribute
     @param {string} $value
     @param {bool} $extend
     @output #{$attribute}: $value
-@mixin floatClear($prefix, $attribute, $value, $extend: false)
-    @if isFirstBreakpointPrefix($prefix)
+@mixin floatClear($attribute, $value, $extend: false)
+    @if $isFirstBreakpointPrefix
         @extend .#{$attribute}-#{$value}
 
     @else
@@ -95,11 +88,10 @@
 
 
 ///
-    @param {string} $prefix
     @param {string} $attribute
     @param {bool} $window
     @output #{$attribute}: $value + $unit
-@mixin fullWidthHeight($prefix, $attribute, $window: false)
+@mixin fullWidthHeight($attribute, $window: false)
     $className: full-#{$attribute}
     $value: 100
     $unit: %
@@ -111,7 +103,7 @@
         @if $attribute == height
             $unit: vh
 
-    @if isFirstBreakpointPrefix($prefix)
+    @if $isFirstBreakpointPrefix
         @extend .#{$className}
 
     @else
@@ -119,65 +111,60 @@
 
 
 ///
-    @param {string} $prefix
     @param {string} $className
     @param {string} $position
     @output align-items: $position
-@mixin itemsAlignment($prefix, $className, $position)
-    @if isFirstBreakpointPrefix($prefix)
+@mixin itemsAlignment($className, $position)
+    @if $isFirstBreakpointPrefix
         @extend .items-#{$className}
 
     @else
-        @include extendFlexbox($prefix)
+        @include extendFlexbox
         align-items: $position
 
 
 ///
-    @param {string} $prefix
     @param {string} $direction
     @param {string} $className
     @output justify-content: $direction
-@mixin justifyContent($prefix, $direction, $className)
-    @if isFirstBreakpointPrefix($direction)
+@mixin justifyContent($direction, $className)
+    @if $isFirstBreakpointPrefix
         @extend .content-#{$className}
 
     @else
-        @include extendFlexbox($prefix)
+        @include extendFlexbox
         justify-content: $direction
 
 
 ///
-    @param {string} $prefix
     @param {string} $className
     @param {string} $position
     @output align-content: $position
-@mixin linesAlignment($prefix, $className, $position)
-    @if isFirstBreakpointPrefix($prefix)
+@mixin linesAlignment($className, $position)
+    @if $isFirstBreakpointPrefix
         @extend .lines-#{$className}
 
     @else
-        @include extendFlexbox($prefix)
+        @include extendFlexbox
         align-content: $position
 
 
 ///
-    @param {string} $prefix
     @param {string} $place
-@mixin order($prefix, $place)
-    @if isFirstBreakpointPrefix($prefix)
+@mixin order($place)
+    @if $isFirstBreakpointPrefix
         @extend .order-#{$place}
 
     @else
-        @include extendFlexbox($prefix)
+        @include extendFlexbox
         @extend .#{$prefix}order-#{$place}
 
 
 ///
-    @param {string} $prefix
     @param {string} $position
     @output #{$position}: 0
-@mixin position($prefix, $position)
-    @if isFirstBreakpointPrefix($prefix)
+@mixin position($position)
+    @if $isFirstBreakpointPrefix
         @extend .position-#{$position}
 
     @else
@@ -185,29 +172,27 @@
 
 
 ///
-    @param {string} $prefix
     @param {string} $className
     @param {string} $position
     @output align-self: $position
-@mixin selfAlignment($prefix, $className, $position)
-    @if isFirstBreakpointPrefix($prefix)
+@mixin selfAlignment($className, $position)
+    @if $isFirstBreakpointPrefix
         @extend .self-#{$className}
 
     @else
-        @include extendFlexbox($prefix)
+        @include extendFlexbox
         align-self: $position
 
 
 ///
-    @param {string} $prefix
     @param {string} $value
     @param {string|null} $className
     @output text-align: $value
-@mixin textAlignment($prefix, $value, $className: null)
+@mixin textAlignment($value, $className: null)
     @if $className == null
         $className: $value
 
-    @if isFirstBreakpointPrefix($prefix)
+    @if $isFirstBreakpointPrefix
         @extend .text-#{$className}
 
     @else

@@ -2,15 +2,12 @@
 
 @mixin paddingComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-    $isFirstBreakpoint: isFirstBreakpointPrefix($prefix)
-
     .#{$prefix}padding
 
         @each $side in $frameSides
             &-#{$side}
                 &-none
-                    @if $isFirstBreakpoint
+                    @if $isFirstBreakpointPrefix
                         @extend .padding-#{$side}-none
 
                     @else
@@ -19,7 +16,7 @@
                 $sizeCounter: $frameSizeIncreasedBy
                 @while $sizeCounter <= $frameMaxSize
                     &-#{$sizeCounter}
-                        @if $isFirstBreakpoint
+                        @if $isFirstBreakpointPrefix
                             @extend .padding-#{$side}-#{$sizeCounter} !optional
 
                         @else
@@ -28,7 +25,7 @@
 
         &-x
             &-none
-                @if $isFirstBreakpoint
+                @if $isFirstBreakpointPrefix
                     @extend .padding-left-none
                     @extend .padding-right-none
 
@@ -45,7 +42,7 @@
 
         &-y
             &-none
-                @if $isFirstBreakpoint
+                @if $isFirstBreakpointPrefix
                     @extend .padding-top-none
                     @extend .padding-bottom-none
 
@@ -61,7 +58,7 @@
                 $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
 
         &-none
-            @if $isFirstBreakpoint
+            @if $isFirstBreakpointPrefix
                 @extend .padding-top-none
                 @extend .padding-bottom-none
                 @extend .padding-left-none
@@ -76,7 +73,7 @@
         $sizeCounter: $frameSizeIncreasedBy
         @while $sizeCounter <= $frameMaxSize
             &-#{$sizeCounter}
-                @if $isFirstBreakpoint
+                @if $isFirstBreakpointPrefix
                     @extend .padding-x-#{$sizeCounter}
                     @extend .padding-y-#{$sizeCounter}
 

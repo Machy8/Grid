@@ -2,12 +2,10 @@
 
 @mixin columnsComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     $columnsCounter: $columnsMin
     @while $columnsCounter <= $columnsMax
         .#{$prefix}columns-#{$columnsCounter}
-            @if isFirstBreakpointPrefix($prefix)
+            @if $isFirstBreakpointPrefix
                 @extend .columns-#{$columnsCounter}
 
             @else

@@ -2,11 +2,9 @@
 
 @mixin positionsComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     @each $position in $positions
         .#{$prefix}position-#{$position}
-            @if isFirstBreakpointPrefix($prefix)
+            @if $isFirstBreakpointPrefix
                 @extend .position-#{$position}
 
             @else
@@ -15,33 +13,33 @@
 
     .#{$prefix}position
         &-top
-            @include position($prefix, top)
+            @include position(top)
 
         &-left
-            @include position($prefix, left)
+            @include position(left)
 
         &-right
-            @include position($prefix, right)
+            @include position(right)
 
         &-bottom
-            @include position($prefix, bottom)
+            @include position(bottom)
 
 
     .#{$prefix}top
         &-left-corner
-            @include extendPosition($prefix, top)
-            @include extendPosition($prefix, left)
+            @include extendPosition(top)
+            @include extendPosition(left)
 
         &-right-corner
-            @include extendPosition($prefix, top)
-            @include extendPosition($prefix, right)
+            @include extendPosition(top)
+            @include extendPosition(right)
 
 
     .#{$prefix}bottom
         &-left-corner
-            @include extendPosition($prefix, bottom)
-            @include extendPosition($prefix, left)
+            @include extendPosition(bottom)
+            @include extendPosition(left)
 
         &-right-corner
-            @include extendPosition($prefix, bottom)
-            @include extendPosition($prefix, right)
+            @include extendPosition(bottom)
+            @include extendPosition(right)

@@ -2,18 +2,16 @@
 
 @mixin flexDirectionComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     .#{$prefix}direction
         &-row
-            @include flexDirection($prefix, row)
+            @include flexDirection(row)
 
         &-column
-            @include flexDirection($prefix, column)
+            @include flexDirection(column)
 
         &-reversed
             &-row
-                @include flexDirection($prefix, row-reverse, reversed-row)
+                @include flexDirection(row-reverse, reversed-row)
 
             &-column
-                @include flexDirection($prefix, column-reverse, reversed-column)
+                @include flexDirection(column-reverse, reversed-column)

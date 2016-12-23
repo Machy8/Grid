@@ -2,9 +2,8 @@
 
 @mixin textComponent($prefix: null)
 
-    $prefix: parsePrefix($prefix)
-
     .#{$prefix}text
+
         @if $prefix == null
             // Resets
             &-none
@@ -65,16 +64,16 @@
 
         // Alignment
         &-centered
-            @include textAlignment($prefix, center, centered)
+            @include textAlignment(center, centered)
 
         &-left
-            @include textAlignment($prefix, left)
+            @include textAlignment(left)
 
         &-right
-            @include textAlignment($prefix, right)
+            @include textAlignment(right)
 
         &-justify
-            @include textAlignment($prefix, justify)
+            @include textAlignment(justify)
 
 
     @if $prefix == null
