@@ -2,7 +2,7 @@
 
 @mixin fullSizesComponent
 
-    .#{$prefix}grow
+    .#{$breakpointPrefix}grow
         &-none
             @if $isFirstBreakpointPrefix
                 @extend .grow-none
@@ -19,7 +19,7 @@
             flex-grow: 1
 
 
-    .#{$prefix}full
+    .#{$breakpointPrefix}full
         &-window
             &-width
                 @include fullWidthHeight(width, true)
@@ -33,9 +33,9 @@
         &-height
             @include fullWidthHeight(height)
 
-    .#{$prefix}content-full
+    .#{$breakpointPrefix}content-full
         &-width > *
-            @extend .#{$prefix}full-width
+            @extend .#{$breakpointPrefix}full-width
 
         &-height > *
-            @extend .#{$prefix}full-height
+            @extend .#{$breakpointPrefix}full-height

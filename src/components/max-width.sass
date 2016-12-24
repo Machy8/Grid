@@ -5,14 +5,14 @@
     $defaultPrefix: $defaultMaxWidthPrefix
     $selectorPrefix: null
 
-    @if $prefix == null
+    @if $breakpointPrefix == null
         $selectorPrefix: parsePrefix($defaultPrefix)
 
     @else if $isFirstBreakpointPrefix
         $defaultPrefix: parsePrefix($defaultPrefix)
 
-    @if $prefix != null
-        $selectorPrefix: $prefix
+    @if $breakpointPrefix != null
+        $selectorPrefix: $breakpointPrefix
 
     .#{$selectorPrefix}auto
         @if $isFirstBreakpointPrefix

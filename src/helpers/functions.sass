@@ -2,11 +2,11 @@
 
 
 ///
-  @param {string|null} $prefix
+  @param {string|null} $breakpointPrefix
   @param {string} $connector
   @return {string}
-@function parsePrefix($prefix: null, $connector: '-')
-    @if $prefix and $prefix != ''
-        $prefix: $prefix + $connector
+@function parsePrefix($breakpointPrefix: null, $connector: '-')
+    @if $breakpointPrefix and $breakpointPrefix != ''
+        $breakpointPrefix: $breakpointPrefix + $connector
 
-    @return $prefix
+    @return $breakpointPrefix

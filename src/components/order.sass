@@ -4,12 +4,12 @@
 
     $orderCounter: $orderMin
     @while $orderCounter <= $orderMax
-        .#{$prefix}order-#{$orderCounter}
+        .#{$breakpointPrefix}order-#{$orderCounter}
             @if $isFirstBreakpointPrefix
                 @extend .order-#{$orderCounter}
 
             @else
                 @include extendFlexbox
-                @extend .#{$prefix}order-#{$orderCounter}
+                @extend .#{$breakpointPrefix}order-#{$orderCounter}
 
         $orderCounter: $orderCounter + $orderIncreasedBy

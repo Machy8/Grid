@@ -3,11 +3,11 @@
 @mixin verticalAlignmentComponent
 
     @each $valignType in $valignTypes
-        .#{$prefix}valign-#{$valignType}
+        .#{$breakpointPrefix}valign-#{$valignType}
             vertical-align: $valignType
 
 
-    .#{$prefix}vertically, .#{$prefix}y
+    .#{$breakpointPrefix}vertically, .#{$breakpointPrefix}y
         &-centered
             @if $isFirstBreakpointPrefix
                 @extend .vertically-centered
@@ -22,5 +22,5 @@
                     @extend .vertically-centered-absolute
 
                 @else
-                    @extend .#{$prefix}vertically-centered
+                    @extend .#{$breakpointPrefix}vertically-centered
                     position: absolute !important

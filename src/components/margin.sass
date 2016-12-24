@@ -2,7 +2,7 @@
 
 @mixin marginComponent
 
-    .#{$prefix}margin
+    .#{$breakpointPrefix}margin
         @each $side in $frameSides
             &-#{$side}
                 &-none
@@ -29,8 +29,8 @@
                     @extend .margin-right-none
 
                 @else
-                    @extend .#{$prefix}margin-left-none
-                    @extend .#{$prefix}margin-right-none
+                    @extend .#{$breakpointPrefix}margin-left-none
+                    @extend .#{$breakpointPrefix}margin-right-none
 
             $sizeCounter: $frameSizeIncreasedBy
             @while $sizeCounter <= $frameMaxSize
@@ -40,8 +40,8 @@
                         @extend .margin-right-#{$sizeCounter}
 
                     @else
-                        @extend .#{$prefix}margin-left-#{$sizeCounter}
-                        @extend .#{$prefix}margin-right-#{$sizeCounter}
+                        @extend .#{$breakpointPrefix}margin-left-#{$sizeCounter}
+                        @extend .#{$breakpointPrefix}margin-right-#{$sizeCounter}
                 $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
 
         &-y
@@ -51,8 +51,8 @@
                     @extend .margin-bottom-none
 
                 @else
-                    @extend .#{$prefix}margin-top-none
-                    @extend .#{$prefix}margin-bottom-none
+                    @extend .#{$breakpointPrefix}margin-top-none
+                    @extend .#{$breakpointPrefix}margin-bottom-none
 
             $sizeCounter: $frameSizeIncreasedBy
             @while $sizeCounter <= $frameMaxSize
@@ -62,8 +62,8 @@
                         @extend .margin-bottom-#{$sizeCounter}
 
                     @else
-                        @extend .#{$prefix}margin-top-#{$sizeCounter}
-                        @extend .#{$prefix}margin-bottom-#{$sizeCounter}
+                        @extend .#{$breakpointPrefix}margin-top-#{$sizeCounter}
+                        @extend .#{$breakpointPrefix}margin-bottom-#{$sizeCounter}
                 $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
 
         &-none
@@ -74,10 +74,10 @@
                 @extend .margin-right-none
 
             @else
-                @extend .#{$prefix}margin-top-none
-                @extend .#{$prefix}margin-bottom-none
-                @extend .#{$prefix}margin-left-none
-                @extend .#{$prefix}margin-right-none
+                @extend .#{$breakpointPrefix}margin-top-none
+                @extend .#{$breakpointPrefix}margin-bottom-none
+                @extend .#{$breakpointPrefix}margin-left-none
+                @extend .#{$breakpointPrefix}margin-right-none
 
         $sizeCounter: $frameSizeIncreasedBy
         @while $sizeCounter <= $frameMaxSize
@@ -87,6 +87,6 @@
                     @extend .margin-y-#{$sizeCounter}
 
                 @else
-                    @extend .#{$prefix}margin-x-#{$sizeCounter}
-                    @extend .#{$prefix}margin-y-#{$sizeCounter}
+                    @extend .#{$breakpointPrefix}margin-x-#{$sizeCounter}
+                    @extend .#{$breakpointPrefix}margin-y-#{$sizeCounter}
             $sizeCounter: $sizeCounter + $frameSizeIncreasedBy

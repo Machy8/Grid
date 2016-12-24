@@ -3,7 +3,7 @@
 @mixin positionsComponent
 
     @each $position in $positions
-        .#{$prefix}position-#{$position}
+        .#{$breakpointPrefix}position-#{$position}
             @if $isFirstBreakpointPrefix
                 @extend .position-#{$position}
 
@@ -11,7 +11,7 @@
                 position: $position
 
 
-    .#{$prefix}position
+    .#{$breakpointPrefix}position
         &-top
             @include position(top)
 
@@ -25,7 +25,7 @@
             @include position(bottom)
 
 
-    .#{$prefix}top
+    .#{$breakpointPrefix}top
         &-left-corner
             @include extendPosition(top)
             @include extendPosition(left)
@@ -35,7 +35,7 @@
             @include extendPosition(right)
 
 
-    .#{$prefix}bottom
+    .#{$breakpointPrefix}bottom
         &-left-corner
             @include extendPosition(bottom)
             @include extendPosition(left)

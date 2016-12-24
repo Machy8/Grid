@@ -4,17 +4,17 @@
 
     @each $displayType in $displayTypes
         @if $displayType == none
-            .#{$prefix}display-none
+            .#{$breakpointPrefix}display-none
                 @include displayType($displayType)
 
-            @if $prefix == null
-                .#{$prefix}hidden
+            @if $breakpointPrefix == null
+                .#{$breakpointPrefix}hidden
                     @include displayType($displayType, hidden)
 
         @else if $displayType != none
-            .#{$prefix}display-#{$displayType}
+            .#{$breakpointPrefix}display-#{$displayType}
                 @include displayType($displayType)
 
-            @if $prefix
-                .#{$prefix}#{$displayType}
-                    @extend .#{$prefix}display-#{$displayType}
+            @if $breakpointPrefix
+                .#{$breakpointPrefix}#{$displayType}
+                    @extend .#{$breakpointPrefix}display-#{$displayType}

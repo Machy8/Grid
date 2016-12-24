@@ -3,16 +3,16 @@
 @mixin floatClearComponent
 
     @each $floatType in $floatTypes
-        .#{$prefix}float-#{$floatType}
+        .#{$breakpointPrefix}float-#{$floatType}
             @include floatClear(float, $floatType)
 
-        .#{$prefix}content-float-#{$floatType} > *
-            @extend .#{$prefix}float-#{$floatType}
+        .#{$breakpointPrefix}content-float-#{$floatType} > *
+            @extend .#{$breakpointPrefix}float-#{$floatType}
 
 
     @each $clearType in $clearTypes
-        .#{$prefix}clear-#{$clearType}
+        .#{$breakpointPrefix}clear-#{$clearType}
             @include floatClear(clear, $clearType)
 
-        .#{$prefix}content-clear-#{$clearType} > *
-            @extend .#{$prefix}clear-#{$clearType}
+        .#{$breakpointPrefix}content-clear-#{$clearType} > *
+            @extend .#{$breakpointPrefix}clear-#{$clearType}

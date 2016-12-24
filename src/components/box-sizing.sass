@@ -2,10 +2,14 @@
 
 @mixin boxSizingComponent
 
-    *
+    *,
+    *:before,
+    *:after
         box-sizing: border-box
 
 
     @each $type in $boxSizingTypes
         .#{$type}
             box-sizing: $type
+            &:before, &:after
+                @extend .#{$type}

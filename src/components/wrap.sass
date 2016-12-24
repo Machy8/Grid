@@ -3,5 +3,5 @@
 @mixin wrapComponent
 
     @each $type in $wrapTypes
-        .#{$prefix}#{$type}
+        .#{$breakpointPrefix}#{$type}
             @include flexWrap($type)

@@ -4,7 +4,7 @@
 
     $columnsCounter: $columnsMin
     @while $columnsCounter <= $columnsMax
-        .#{$prefix}columns-#{$columnsCounter}
+        .#{$breakpointPrefix}columns-#{$columnsCounter}
             @if $isFirstBreakpointPrefix
                 @extend .columns-#{$columnsCounter}
 

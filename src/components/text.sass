@@ -2,9 +2,9 @@
 
 @mixin textComponent
 
-    .#{$prefix}text
+    .#{$breakpointPrefix}text
 
-        @if $prefix == null
+        @if $breakpointPrefix == null
             // Resets
             &-none
                 &-decoration
@@ -76,7 +76,7 @@
             @include textAlignment(justify)
 
 
-    @if $prefix == null
+    @if $breakpointPrefix == null
         .cutted-text
             text-overflow: ellipsis
             white-space: nowrap

@@ -2,7 +2,7 @@
 
 @mixin overflowComponent
 
-    .#{$prefix}overflow
+    .#{$breakpointPrefix}overflow
         &-x
             &-hidden
                 overflow-x: hidden
@@ -18,7 +18,7 @@
                 overflow-y: auto
 
         &-auto
-            @extend .#{$prefix}overflow-x-auto, .#{$prefix}overflow-y-auto
+            @extend .#{$breakpointPrefix}overflow-x-auto, .#{$breakpointPrefix}overflow-y-auto
 
         &-hidden
-            @extend .#{$prefix}overflow-x-hidden, .#{$prefix}overflow-y-hidden
+            @extend .#{$breakpointPrefix}overflow-x-hidden, .#{$breakpointPrefix}overflow-y-hidden

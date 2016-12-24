@@ -2,7 +2,7 @@
 
 @mixin paddingComponent
 
-    .#{$prefix}padding
+    .#{$breakpointPrefix}padding
 
         @each $side in $frameSides
             &-#{$side}
@@ -30,14 +30,14 @@
                     @extend .padding-right-none
 
                 @else
-                    @extend .#{$prefix}padding-left-none
-                    @extend .#{$prefix}padding-right-none
+                    @extend .#{$breakpointPrefix}padding-left-none
+                    @extend .#{$breakpointPrefix}padding-right-none
 
             $sizeCounter: $frameSizeIncreasedBy
             @while $sizeCounter <= $frameMaxSize
                 &-#{$sizeCounter}
-                    @extend .#{$prefix}padding-left-#{$sizeCounter}
-                    @extend .#{$prefix}padding-right-#{$sizeCounter}
+                    @extend .#{$breakpointPrefix}padding-left-#{$sizeCounter}
+                    @extend .#{$breakpointPrefix}padding-right-#{$sizeCounter}
                 $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
 
         &-y
@@ -47,14 +47,14 @@
                     @extend .padding-bottom-none
 
                 @else
-                    @extend .#{$prefix}padding-top-none
-                    @extend .#{$prefix}padding-bottom-none
+                    @extend .#{$breakpointPrefix}padding-top-none
+                    @extend .#{$breakpointPrefix}padding-bottom-none
 
             $sizeCounter: $frameSizeIncreasedBy
             @while $sizeCounter <= $frameMaxSize
                 &-#{$sizeCounter}
-                    @extend .#{$prefix}padding-top-#{$sizeCounter}
-                    @extend .#{$prefix}padding-bottom-#{$sizeCounter}
+                    @extend .#{$breakpointPrefix}padding-top-#{$sizeCounter}
+                    @extend .#{$breakpointPrefix}padding-bottom-#{$sizeCounter}
                 $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
 
         &-none
@@ -65,10 +65,10 @@
                 @extend .padding-right-none
 
             @else
-                @extend .#{$prefix}padding-top-none
-                @extend .#{$prefix}padding-bottom-none
-                @extend .#{$prefix}padding-left-none
-                @extend .#{$prefix}padding-right-none
+                @extend .#{$breakpointPrefix}padding-top-none
+                @extend .#{$breakpointPrefix}padding-bottom-none
+                @extend .#{$breakpointPrefix}padding-left-none
+                @extend .#{$breakpointPrefix}padding-right-none
 
         $sizeCounter: $frameSizeIncreasedBy
         @while $sizeCounter <= $frameMaxSize
@@ -78,7 +78,7 @@
                     @extend .padding-y-#{$sizeCounter}
 
                 @else
-                    @extend .#{$prefix}padding-x-#{$sizeCounter}
-                    @extend .#{$prefix}padding-y-#{$sizeCounter}
+                    @extend .#{$breakpointPrefix}padding-x-#{$sizeCounter}
+                    @extend .#{$breakpointPrefix}padding-y-#{$sizeCounter}
 
             $sizeCounter: $sizeCounter + $frameSizeIncreasedBy

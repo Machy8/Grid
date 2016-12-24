@@ -203,16 +203,18 @@ template {
 @viewport {
   width: device-width; }
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box; }
 
-.border-box {
+.border-box, .border-box:before, .border-box:after {
   box-sizing: border-box; }
 
-.content-box {
+.content-box, .content-box:before, .content-box:after {
   box-sizing: content-box; }
 
-.padding-box {
+.padding-box, .padding-box:before, .padding-box:after {
   box-sizing: padding-box; }
 
 html {
@@ -246,67 +248,67 @@ body {
 .width-auto {
   width: auto; }
 
-.mw-auto, .s-auto {
+.max-width-auto, .s-auto {
   max-width: none; }
 
-.mw-5, .s-5 {
+.max-width-5, .s-5 {
   max-width: 5%; }
 
-.mw-10, .s-10 {
+.max-width-10, .s-10 {
   max-width: 10%; }
 
-.mw-15, .s-15 {
+.max-width-15, .s-15 {
   max-width: 15%; }
 
-.mw-20, .s-20 {
+.max-width-20, .s-20 {
   max-width: 20%; }
 
-.mw-25, .s-25 {
+.max-width-25, .s-25 {
   max-width: 25%; }
 
-.mw-30, .s-30 {
+.max-width-30, .s-30 {
   max-width: 30%; }
 
-.mw-35, .s-35 {
+.max-width-35, .s-35 {
   max-width: 35%; }
 
-.mw-40, .s-40 {
+.max-width-40, .s-40 {
   max-width: 40%; }
 
-.mw-45, .s-45 {
+.max-width-45, .s-45 {
   max-width: 45%; }
 
-.mw-50, .s-50 {
+.max-width-50, .s-50 {
   max-width: 50%; }
 
-.mw-55, .s-55 {
+.max-width-55, .s-55 {
   max-width: 55%; }
 
-.mw-60, .s-60 {
+.max-width-60, .s-60 {
   max-width: 60%; }
 
-.mw-65, .s-65 {
+.max-width-65, .s-65 {
   max-width: 65%; }
 
-.mw-70, .s-70 {
+.max-width-70, .s-70 {
   max-width: 70%; }
 
-.mw-75, .s-75 {
+.max-width-75, .s-75 {
   max-width: 75%; }
 
-.mw-80, .s-80 {
+.max-width-80, .s-80 {
   max-width: 80%; }
 
-.mw-85, .s-85 {
+.max-width-85, .s-85 {
   max-width: 85%; }
 
-.mw-90, .s-90 {
+.max-width-90, .s-90 {
   max-width: 90%; }
 
-.mw-95, .s-95 {
+.max-width-95, .s-95 {
   max-width: 95%; }
 
-.mw-100, .s-100 {
+.max-width-100, .s-100 {
   max-width: 100%; }
 
 .text-none-decoration, .text-normal {

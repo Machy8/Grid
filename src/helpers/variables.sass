@@ -3,16 +3,16 @@
 //
   - components/grid-system
   - s - phone, m - tablet, l - desktop, xl - > desktop
-  - $prefix and $isFirstBreakpointPrefix are global variables that are changed during
+  - $breakpointPrefix and $isFirstBreakpointPrefix are global variables that are changed during
     compilation in the grid.sass and in the components/grid-system.sass; they are changed
     in the initPrefix mixin; they are used in components and in the mixins
 $breakpoints: s 0, m 641, l 1025, xl 1441
 $firstBreakpointPrefix: nth(nth($breakpoints, 1), 1)
-$prefix: null
+$breakpointPrefix: null
 $isFirstBreakpointPrefix: false
 
 // components/max-width
-$defaultMaxWidthPrefix: mw
+$defaultMaxWidthPrefix: max-width
 $widthMax: 100
 $widthMin: 5
 $widthIncreasedBy: 5

@@ -35,7 +35,7 @@
         @extend .display-flex
 
     @else
-        @extend .#{$prefix}display-flex
+        @extend .#{$breakpointPrefix}display-flex
 
 
 ///
@@ -44,8 +44,8 @@
     @if $isFirstBreakpointPrefix
         @extend .position-#{$position}
 
-    @elseif $prefix != null
-        @extend .#{$prefix}position-#{$position}
+    @elseif $breakpointPrefix != null
+        @extend .#{$breakpointPrefix}position-#{$position}
 
 ///
     @param {string} $direction
@@ -112,9 +112,9 @@
 
 ///
     @param {string|null} $newPrefix
-@mixin initPrefix($newPrefix: $prefix)
-    $prefix: parsePrefix($newPrefix) !global
-    $isFirstBreakpointPrefix: $prefix == parsePrefix($firstBreakpointPrefix) !global
+@mixin initPrefix($newPrefix: $breakpointPrefix)
+    $breakpointPrefix: parsePrefix($newPrefix) !global
+    $isFirstBreakpointPrefix: $breakpointPrefix == parsePrefix($firstBreakpointPrefix) !global
 
 
 ///
@@ -164,7 +164,7 @@
 
     @else
         @include extendFlexbox
-        @extend .#{$prefix}order-#{$place}
+        @extend .#{$breakpointPrefix}order-#{$place}
 
 
 ///
