@@ -113,13 +113,6 @@
 
 
 ///
-    @param {string|null} $newPrefix
-@mixin initPrefix($newPrefix: $breakpointPrefix)
-    $breakpointPrefix: parsePrefix($newPrefix) !global
-    $isFirstBreakpointPrefix: $breakpointPrefix == parsePrefix($firstBreakpointPrefix) !global
-
-
-///
     @param {string} $className
     @param {string} $position
     @output align-items: $position
@@ -159,6 +152,16 @@
 
 
 ///
+    @param {string|array} $omittedBreakpoints
+@mixin omitBreakpoints($omittedBreakpoints)
+    @if $omittedBreakpoints == all and $noneBreakpointPrefix
+        @content
+
+    @else if index($omittedBreakpoints, $breakpointPrefix) == false
+        @content
+
+
+///
     @param {string} $place
 @mixin order($place)
     @if $isFirstBreakpointPrefix
@@ -191,6 +194,14 @@
     @else
         @include extendFlexbox
         align-self: $position
+
+
+///
+    @param {string|null} $newPrefix
+@mixin setBreakpointPrefix($newPrefix: $breakpointPrefix)
+    $breakpointPrefix: parsePrefix($newPrefix) !global
+    $isFirstBreakpointPrefix: $breakpointPrefix == parsePrefix($firstBreakpointPrefix) !global
+    $noneBreakpointPrefix: $breakpointPrefix == null !global
 
 
 ///

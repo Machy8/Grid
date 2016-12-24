@@ -2,27 +2,26 @@
 
 @mixin listComponent
 
-    .list-none
-        &-style
-            list-style: none
+    .list
+        &-none
+            &-style
+                list-style: none
 
-        &-clear
-            @extend .list-none-style
-            margin: 0
-            padding: 0
+            &-clear
+                @extend .list-none-style
+                margin: 0
+                padding: 0
 
+        @each $type in $listStyleTypes
+            &-#{$type}
+                list-style-type: $type
 
-    @each $type in $listStyleTypes
-        .list-#{$type}
-            list-style-type: $type
+        &-dash
+            list-style-type: none
 
+            li::before
+                content: "-"
 
-    .list-dash
-        list-style-type: none
-        li::before
-            content: "-"
-
-
-    @each $listPosition in $listPositions
-        .list-#{$listPosition}
-            list-style-position: $listPosition
+        @each $listPosition in $listPositions
+            &-#{$listPosition}
+                list-style-position: $listPosition

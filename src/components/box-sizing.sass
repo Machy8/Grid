@@ -11,5 +11,6 @@
     @each $type in $boxSizingTypes
         .#{$type}
             box-sizing: $type
+
             &:before, &:after
                 @extend .#{$type}

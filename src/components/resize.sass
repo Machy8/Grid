@@ -2,11 +2,14 @@
 
 @mixin resizeComponent
 
-    .resizable-none, .not-resizable
-        resize: none
+    .resizable
+        &-none
+            resize: none
 
+        @each $resizableLabel in $resizableLabels
+            $i: index($resizableLabels, $resizableLabel)
+            &-#{$resizableLabel}
+                resize: nth($resizableValues, $i)
 
-    @each $resizableLabel in $resizableLabels
-        $i: index($resizableLabels, $resizableLabel)
-        .resizable-#{$resizableLabel}
-            resize: nth($resizableValues, $i)
+    .not-resizable
+        @extend .resizable-none

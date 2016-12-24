@@ -1,3 +1,5 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
 @charset "UTF-8"
 /*! Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
 
@@ -20,7 +22,6 @@
 @import "components/flex-direction"
 @import "components/float-clear"
 @import "components/full-sizes"
-@import "components/grid-system"
 @import "components/horizontal-alignment"
 @import "components/html-body"
 @import "components/justify-content"
@@ -41,38 +42,62 @@
 @import "components/wrap"
 
 // ------------------- COMPOSING PART -------------------
+@mixin componentsContainer
+    @include omitBreakpoints(all)
+        @include normalizeComponent
+        @include viewportComponent
+        @include boxSizingComponent
+        @include htmlBodyComponent
+        @include resetsComponent
 
-initPrefix()
+    @include maxWidthComponent
+    @include textComponent
 
-@include normalizeComponent
-@include viewportComponent
-@include boxSizingComponent
-@include htmlBodyComponent
-@include resetsComponent
-@include maxWidthComponent
-@include textComponent
-@include listComponent
-@include cursorComponent
-@include borderRadiusComponent
-// @include marginComponent
-// @include paddingComponent
-@include visibilityComponent
-@include overflowComponent
-@include resizeComponent
-@include fullSizesComponent
-@include wrapComponent
-@include columnsComponent
-@include floatClearComponent
-@include horizontalAlignmentComponent
-@include verticalAlignmentComponent
-@include positionsComponent
-@include justifyContentComponent
-@include flexDirectionComponent
-@include alignContentComponent
-@include alignItemsComponent
-@include alignSelfComponent
-@include orderComponent
-@include displayTypesComponent
-@include clearfixComponent
+    @include omitBreakpoints(all)
+        @include listComponent
+        @include cursorComponent
+        @include borderRadiusComponent
+        // @include marginComponent
+        // @include paddingComponent
+        @include visibilityComponent
+        @include overflowComponent
+        @include resizeComponent
 
-@include gridSystemComponent
+    @include omitBreakpoints(all)
+        @include fullSizesComponent
+        @include wrapComponent
+        @include floatClearComponent
+
+    @include columnsComponent
+
+    @include omitBreakpoints(all)
+        @include horizontalAlignmentComponent
+        @include verticalAlignmentComponent
+
+    @include positionsComponent
+    @include justifyContentComponent
+    @include flexDirectionComponent
+
+    @include omitBreakpoints(all)
+        @include alignContentComponent
+        @include alignItemsComponent
+        @include alignSelfComponent
+
+    @include orderComponent
+    @include displayTypesComponent
+
+    @include omitBreakpoints(all)
+        @include clearfixComponent
+
+
+// ------------------- GENERATING PART -------------------
+@include setBreakpointPrefix
+@include componentsContainer
+
+@each $breakpoint in $breakpoints
+    $prefix: nth($breakpoint, 1)
+    $minWidth: nth($breakpoint, 2)
+
+    @include breakpoint($minWidth)
+        @include setBreakpointPrefix($prefix)
+        @include componentsContainer
