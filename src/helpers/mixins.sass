@@ -47,6 +47,7 @@
     @elseif $breakpointPrefix != null
         @extend .#{$breakpointPrefix}position-#{$position}
 
+
 ///
     @param {string} $direction
     @param {string|null} $className
@@ -73,6 +74,7 @@
     @else
         @include extendFlexbox
         flex-wrap: $value
+
 
 ///
     @param {string} $attribute

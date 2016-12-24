@@ -3,9 +3,10 @@
 @mixin gridSystemComponent
 
     @each $breakpoint in $breakpoints
+        $prefix: nth($breakpoint, 1)
         $minWidth: nth($breakpoint, 2)
 
-        @include initPrefix(nth($breakpoint, 1))
+        @include initPrefix($prefix)
         @include breakpoint($minWidth)
 
             @include maxWidthComponent
