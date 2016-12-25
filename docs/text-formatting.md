@@ -1,6 +1,6 @@
 # Text formatting
 
-Shortcuts for the text formatting
+Classes for the text formatting.
 
 **Alignment**
 - **Centered:** text-centered

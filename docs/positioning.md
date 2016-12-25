@@ -1,6 +1,6 @@
 # Positioning
 
-Positions are available with or without prefixes
+Positions are available with or without prefixes.
 
 - **Static:** - position-static
 - **Relative:** - position-relative

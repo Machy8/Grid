@@ -1,6 +1,6 @@
 # Resets
 
-A few useful resets classes
+A few useful resets classes.
 
 - **Border:** border-none
 - **Padding:** padding-none

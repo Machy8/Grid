@@ -1,6 +1,6 @@
 # Visibility
 
-You can hide element using display types or by changing its opacity
+You can hide element using display types or by changing its opacity.
 
 - **Transparent:** transparent | transparency-0
 - **Transparency:** transparency-(0-10)

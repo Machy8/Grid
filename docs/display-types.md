@@ -1,10 +1,10 @@
 # Display types
-All display properties are available with and without prefixes
+All display properties are available with and without prefixes.
 
 - **Block:** display-block
 - **Inline:** display-inline
 - **Inline block:** display-inline-block
-- **None:** display-none | hidden |
+- **None:** display-none | hidden (only without breakpoint prefix)
 - **Flex:** display-flex
 
 ## Examples

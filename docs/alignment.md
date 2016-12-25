@@ -1,16 +1,15 @@
 # Alignment
+
 There are all possible features including flexbox. Some classes are available with prefixes so you can use different value for each device. If so, there is *(prefixes)* in the title of the section. If something is not clear, see the examples.
 
-## Self
-
 **Float**
-- **Left:** float-left
-- **Right:** float-right
+- **Left:** float-left | content-float-left
+- **Right:** float-right | content-float-right
  
 **Clear**
-- **Left:** clear-left
-- **Right:** clear-right
-- **Both:** clear-both
+- **Left:** clear-left | content-clear-left 
+- **Right:** clear-right | content-clear-right
+- **Both:** clear-both | content-clear-both
  
 **Align self**
 - **Top:** self-top
@@ -19,17 +18,6 @@ There are all possible features including flexbox. Some classes are available wi
 - **Baseline:** self-baseline
 - **Stretched:** self-stretched
 - **Horizontally centered:** x-centered
-
-## Content
-
-**Float**
-- **Left:** content-float-left
-- **Right:** content-float-right
-
-**Clear**
-- **Left:** content-clear-left
-- **Right:** content-clear-right
-- **Both:** content-clear-both
 
 **Justify content (prefixes)**
 - **Left:** content-left
@@ -44,32 +32,18 @@ There are all possible features including flexbox. Some classes are available wi
 - **Column:** direction-column
 - **Reversed column:** direction-reversed-column
 
-
 **Wrap**
 - **Wrap:** wrap
 - **Reverse:** wrap-reverse
 
-
-- **Grow:** grow
-- **Full width:** full-width
-
-
-**Vertical alignment**
-- **Top** content-valign-top
-- **Bottom:** content-valign-bottom
-- **Middle:** content-valign-middle
-- **Baseline:** content-valign-baseline
-
-## Items
-
+**Items**
 - **Top:** items-top
 - **Bottom:** items-bottom
 - **Centered:** items-centered
 - **Baseline:** items-baseline
 - **Stretched:** items-stretched
 
-## Lines
-
+**Lines**
 - **Top:** lines-top
 - **Bottom:** lines-bottom
 - **Centered:** lines-centered
@@ -77,18 +51,16 @@ There are all possible features including flexbox. Some classes are available wi
 - **Space around:** lines-wrapped
 - **Space between:** lines-apart
 
-## Vertical alignment
-
-- **Top** valign-top
-- **Bottom:** valign-bottom
-- **Middle:** valign-middle
-- **Baseline:** valign-baseline
+**Vertical alignment**
+- **Top** valign-top | content-valign-top
+- **Bottom:** valign-bottom | content-valign-bottom
+- **Middle:** valign-middle | content-valign-middle
+- **Baseline:** valign-baseline | content-valign-baseline
 - **Centered (relative pos.):** vertically-centered | y-centered
 - **Centered (absolute pos.):** vertically-centered-absolute | y-centered-absolute
 
 
 ## Examples
-
 ````Html
 <!-- Alias for s-content-left | Is better to use alias when there will be no change for other devices -->
 <div class="content-left">

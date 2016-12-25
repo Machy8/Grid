@@ -1,10 +1,9 @@
 # Full sizes
 
-- Element with one of the full size (width, height) class inherits the parent size
-- You can use the *content-* prefix in order to affect parent first children
+Element with one of the full size (width, height) class inherits the parent size. You can use the *content-* prefix in order to affect parent first children.
 
 - **Grow**: grow | content-grow
-- **Grow none (reset flexbox grow):** grow-none | content-grow-none
+- **Grow none (resets flexbox grow):** grow-none | content-grow-none
 - **Full window width:** full-window-width
 - **Full window height:** full-window-height
 - **Full element width:** full-width | content-full-width

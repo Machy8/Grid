@@ -1,6 +1,6 @@
 # List formatting
 
-Shortcuts for the list formatting
+Shortcuts for the list formatting.
 
 **Style**
 - **No style:** list-none-style

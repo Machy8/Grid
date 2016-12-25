@@ -1,7 +1,6 @@
 # Columns
 
-- In Grid you can create columns by using flexbox, max-width and alignment or by the css property columns-count.
-- The number of columns is given by columnsMax variable in variables.sass
+In Grid you can create columns by using flexbox, max-width and alignment or by the css property columns-count. The number of columns is given by columnsMax variable in variables.sass.
 
 ## Examples
 ````Html

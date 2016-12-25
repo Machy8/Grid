@@ -1,6 +1,6 @@
 # Element radius
 
-A few classes with which you can easily change the border-radius
+A few classes with which you can easily change the border-radius.
 
 - **No radius:** square
 - **Rounded:** rounded-(1-4 always increased by 2)
