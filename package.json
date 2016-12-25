@@ -15,6 +15,16 @@
   "license": "BSD-3-Clause",
   "style": "dist/grid.css",
   "sass": "src/grid.sass",
+  "scripts": {
+    "test": {
+      "cwd": "node_modules/backstopjs",
+      "run": "test"
+    },
+    "reference": {
+      "cwd": "node_modules/backstopjs",
+      "run": "reference"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Machy8/Grid.git"
@@ -27,6 +37,7 @@
     "email": "8machy@seznam.cz"
   },
   "devDependencies": {
+    "backstopjs": "^2.3.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-minify-css": "^1.2.4",

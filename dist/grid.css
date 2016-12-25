@@ -396,7 +396,8 @@ body {
 .list-dash {
   list-style-type: none; }
   .list-dash li::before {
-    content: "-"; }
+    content: "-";
+    margin-right: 10px; }
 
 .list-inside {
   list-style-position: inside; }
@@ -419,22 +420,22 @@ body {
 .cursor-help {
   cursor: help; }
 
-.square, .none-radius {
+.square, .radius-none {
   border-radius: 0; }
 
-.rounded-1 {
+.rounded-1, .radius-1 {
   border-radius: 2px; }
 
-.rounded-2 {
+.rounded-2, .radius-2 {
   border-radius: 4px; }
 
-.rounded-3 {
+.rounded-3, .radius-3 {
   border-radius: 6px; }
 
-.rounded-4 {
+.rounded-4, .radius-4 {
   border-radius: 8px; }
 
-.rounded-5 {
+.rounded-5, .radius-5 {
   border-radius: 10px; }
 
 .circle {
@@ -546,6 +547,26 @@ body {
 .clear-none, .content-clear-none > * {
   clear: none; }
 
+.columns-none-gap {
+  -webkit-column-gap: 0;
+     -moz-column-gap: 0;
+          column-gap: 0; }
+
+.columns-rule-solid {
+  -webkit-column-rule-style: solid;
+     -moz-column-rule-style: solid;
+          column-rule-style: solid; }
+
+.columns-rule-dashed {
+  -webkit-column-rule-style: dashed;
+     -moz-column-rule-style: dashed;
+          column-rule-style: dashed; }
+
+.columns-rule-dotted {
+  -webkit-column-rule-style: dotted;
+     -moz-column-rule-style: dotted;
+          column-rule-style: dotted; }
+
 .columns-1, .s-columns-1 {
   -webkit-column-count: 1;
      -moz-column-count: 1;
@@ -612,16 +633,16 @@ body {
 .position-fixed, .s-position-fixed {
   position: fixed; }
 
-.position-top, .s-position-top, .s-top-left-corner, .s-top-right-corner {
+.position-top, .top-left-corner, .top-right-corner, .s-position-top, .s-top-left-corner, .s-top-right-corner {
   top: 0; }
 
-.position-left, .s-position-left, .s-top-left-corner, .s-bottom-left-corner {
+.position-left, .top-left-corner, .bottom-left-corner, .s-position-left, .s-top-left-corner, .s-bottom-left-corner {
   left: 0; }
 
-.position-right, .s-position-right, .s-top-right-corner, .s-bottom-right-corner {
+.position-right, .top-right-corner, .bottom-right-corner, .s-position-right, .s-top-right-corner, .s-bottom-right-corner {
   right: 0; }
 
-.position-bottom, .s-position-bottom, .s-bottom-left-corner, .s-bottom-right-corner {
+.position-bottom, .bottom-left-corner, .bottom-right-corner, .s-position-bottom, .s-bottom-left-corner, .s-bottom-right-corner {
   bottom: 0; }
 
 .content-centered, .s-content-centered {
