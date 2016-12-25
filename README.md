@@ -39,29 +39,33 @@
 |:--:|:----:|:-------:|:------:|:------------------:|:------:|:----------:|:-----:|:----------:|:---------------:|
 |  10 |  13  |    47   |   49   |         53         |   9.1  |     9.3    |   40  |     All    |       4.4       |
 
-##Navigation - [see wiki](https://github.com/Machy8/Grid/wiki)
+##Navigation (see [documentation](https://github.com/Machy8/Grid/tree/master/docs))
 
-- [Grid system](https://github.com/Machy8/Grid/wiki/Grid-system)
+- [Grid system](https://github.com/Machy8/Grid/blob/master/docs/grid-system.md)
 
 **Alignment**
-- [Alignment](https://github.com/Machy8/Grid/wiki/Alignment)
-- [Positioning](https://github.com/Machy8/Grid/wiki/Positioning)
-- [Ordering](https://github.com/Machy8/Grid/wiki/Ordering)
+- [Alignment](https://github.com/Machy8/Grid/blob/master/docs/alignment.md)
+- [Positioning](https://github.com/Machy8/Grid/blob/master/docs/positioning.md)
+- [Ordering](https://github.com/Machy8/Grid/blob/master/docs/ordering.md)
+- [Columns](https://github.com/Machy8/Grid/blob/master/docs/columns.md)
 
 **Formatting**
-- [Text formatting](https://github.com/Machy8/Grid/wiki/Text-formatting)
-- [List formatting](https://github.com/Machy8/Grid/wiki/List-formatting)
+- [Text formatting](https://github.com/Machy8/Grid/blob/master/docs/text-formatting.md)
+- [List formatting](https://github.com/Machy8/Grid/blob/master/docs/list-formatting.md)
 
 **Resize & overflow**
-- [Resize](https://github.com/Machy8/Grid/wiki/Resize)
-- [Overflow](https://github.com/Machy8/Grid/wiki/Overflow)
+- [Resize](https://github.com/Machy8/Grid/blob/master/docs/resize.md)
+- [Overflow](https://github.com/Machy8/Grid/blob/master/docs/overflow.md)
 
 **Resets**
-- [Resets](https://github.com/Machy8/Grid/wiki/Resets)
-- [Clearfix](https://github.com/Machy8/Grid/wiki/Clearfix)
+- [Resets](https://github.com/Machy8/Grid/blob/master/docs/resets.md)
+- [Clearfix](https://github.com/Machy8/Grid/blob/master/docs/clearfix.md)
 
 **Uncategorized**
-- [Cursor](https://github.com/Machy8/Grid/wiki/Cursor)
-- [Display types](https://github.com/Machy8/Grid/wiki/Display-types)
-- [Element radius](https://github.com/Machy8/Grid/wiki/Element-radius)
-- [Visibility](https://github.com/Machy8/Grid/wiki/Visibility)
+- [Box sizing](https://github.com/Machy8/Grid/blob/master/docs/box-sizing.md)
+- [Cursor](https://github.com/Machy8/Grid/blob/master/docs/cursor.md)
+- [Display types](https://github.com/Machy8/Grid/blob/master/docs/display-types.md)
+- [Element radius](https://github.com/Machy8/Grid/blob/master/docs/element-radius.md)
+- [Full sizes](https://github.com/Machy8/Grid/blob/master/docs/full-sizes.md)
+- [Margin & padding](https://github.com/Machy8/Grid/blob/master/docs/margin-padding.md)
+- [Visibility](https://github.com/Machy8/Grid/blob/master/docs/visibility.md)
