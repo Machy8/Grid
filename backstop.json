@@ -73,7 +73,7 @@
     "ci_report": "backstop_data/ci_report"
   },
   "casperFlags": [],
-  "engine": "slimerjs",
+  "engine": "phantomjs",
   "report": ["CLI"],
   "cliExitOnFail": false,
   "debug": false
