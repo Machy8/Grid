@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_Border_radius_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Border_radius_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Border_radius_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_Border_radius_0_document_0_Default.png",
         "label": "Border radius",
@@ -16,7 +16,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 128,
+          "analysisTime": 106,
           "getDiffImage": null
         }
       },
@@ -25,7 +25,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_Columns_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Columns_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Columns_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_Columns_0_document_0_Default.png",
         "label": "Columns",
@@ -37,7 +37,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 110,
+          "analysisTime": 111,
           "getDiffImage": null
         }
       },
@@ -46,7 +46,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_Display_types_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Display_types_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Display_types_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_Display_types_0_document_0_Default.png",
         "label": "Display types",
@@ -58,7 +58,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 90,
+          "analysisTime": 87,
           "getDiffImage": null
         }
       },
@@ -67,7 +67,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_List_positions_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_List_positions_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_List_positions_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_List_positions_0_document_0_Default.png",
         "label": "List positions",
@@ -79,7 +79,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 120,
+          "analysisTime": 155,
           "getDiffImage": null
         }
       },
@@ -88,7 +88,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_List_style_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_List_style_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_List_style_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_List_style_0_document_0_Default.png",
         "label": "List style",
@@ -100,7 +100,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 117,
+          "analysisTime": 125,
           "getDiffImage": null
         }
       },
@@ -109,7 +109,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_Positions_1_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Positions_1_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Positions_1_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_Positions_1_0_document_0_Default.png",
         "label": "Positions 1",
@@ -121,7 +121,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 123,
+          "analysisTime": 91,
           "getDiffImage": null
         }
       },
@@ -130,7 +130,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_Positions_2_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Positions_2_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Positions_2_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_Positions_2_0_document_0_Default.png",
         "label": "Positions 2",
@@ -142,7 +142,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 142,
+          "analysisTime": 153,
           "getDiffImage": null
         }
       },
@@ -151,7 +151,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_Resets_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Resets_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Resets_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_Resets_0_document_0_Default.png",
         "label": "Resets",
@@ -163,7 +163,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 144,
+          "analysisTime": 140,
           "getDiffImage": null
         }
       },
@@ -172,7 +172,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_Text_alignment_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Text_alignment_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Text_alignment_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_Text_alignment_0_document_0_Default.png",
         "label": "Text alignment",
@@ -184,7 +184,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 143,
+          "analysisTime": 116,
           "getDiffImage": null
         }
       },
@@ -193,7 +193,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_Text_decoration_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Text_decoration_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Text_decoration_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_Text_decoration_0_document_0_Default.png",
         "label": "Text decoration",
@@ -205,7 +205,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 122,
+          "analysisTime": 134,
           "getDiffImage": null
         }
       },
@@ -214,31 +214,10 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_Text_style_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Text_style_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Text_style_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_Text_style_0_document_0_Default.png",
         "label": "Text style",
-        "misMatchThreshold": 0.1,
-        "diff": {
-          "isSameDimensions": true,
-          "dimensionDifference": {
-            "width": 0,
-            "height": 0
-          },
-          "misMatchPercentage": "0.00",
-          "analysisTime": 127,
-          "getDiffImage": null
-        }
-      },
-      "status": "pass"
-    },
-    {
-      "pair": {
-        "reference": "../bitmaps_reference/Gridtest_Text_transform_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Text_transform_0_document_0_Default.png",
-        "selector": "document",
-        "fileName": "Gridtest_Text_transform_0_document_0_Default.png",
-        "label": "Text transform",
         "misMatchThreshold": 0.1,
         "diff": {
           "isSameDimensions": true,
@@ -255,8 +234,29 @@ report({
     },
     {
       "pair": {
+        "reference": "../bitmaps_reference/Gridtest_Text_transform_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Text_transform_0_document_0_Default.png",
+        "selector": "document",
+        "fileName": "Gridtest_Text_transform_0_document_0_Default.png",
+        "label": "Text transform",
+        "misMatchThreshold": 0.1,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 131,
+          "getDiffImage": null
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
         "reference": "../bitmaps_reference/Gridtest_Text_words_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Text_words_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Text_words_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_Text_words_0_document_0_Default.png",
         "label": "Text words",
@@ -268,7 +268,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 730,
+          "analysisTime": 156,
           "getDiffImage": null
         }
       },
@@ -277,7 +277,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Gridtest_Visibility_0_document_0_Default.png",
-        "test": "../bitmaps_test/20161225-234408/Gridtest_Visibility_0_document_0_Default.png",
+        "test": "../bitmaps_test/20161225-235430/Gridtest_Visibility_0_document_0_Default.png",
         "selector": "document",
         "fileName": "Gridtest_Visibility_0_document_0_Default.png",
         "label": "Visibility",
@@ -289,7 +289,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 111,
+          "analysisTime": 116,
           "getDiffImage": null
         }
       },
