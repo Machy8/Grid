@@ -1,14 +1,29 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
-// components/grid-system
-// s - phone, m - tablet, l - desktop, xl - > desktop
+//
+  - components/grid-system
+  - s - phone, m - tablet, l - desktop, xl - > desktop
+  - $breakpointPrefix and $isFirstBreakpointPrefix are global variables that are changed during
+    compilation in the grid.sass and in the components/grid-system.sass; they are changed
+    in the initPrefix mixin; they are used in components and in the mixins
 $breakpoints: s 0, m 641, l 1025, xl 1441
-
 $firstBreakpointPrefix: nth(nth($breakpoints, 1), 1)
+$breakpointPrefix: null
+$noneBreakpointPrefix: true
+$isFirstBreakpointPrefix: false
 
+
+// components/max-width
+$defaultMaxWidthPrefix: max-width
 $widthMax: 100
 $widthMin: 5
 $widthIncreasedBy: 5
+
+
+// components/margin, components/padding
+$frameMaxSize: 50
+$frameSizeIncreasedBy: 5
+$frameSides: left right top bottom
 
 
 // components/html-body
@@ -22,7 +37,7 @@ $positions: static relative absolute fixed
 
 
 // components/order, components/grid-system
-$orderMax: 5
+$orderMax: 6
 $orderMin: 1
 $orderIncreasedBy: 1
 
@@ -34,7 +49,7 @@ $columnsIncreasedBy: $orderIncreasedBy
 
 
 // components/cursor
-$cursorTypes: auto default pointer wait
+$cursorTypes: auto default pointer wait help
 
 
 // components/list
@@ -43,8 +58,8 @@ $listPositions: inside outside
 
 
 // components/float-clear
-$floatTypes: left right
-$clearTypes: left right both
+$floatTypes: left right none
+$clearTypes: left right both none
 
 
 // components/resize
@@ -54,3 +69,12 @@ $resizableValues: horizontal vertical both
 
 // components/vertical-align
 $valignTypes: baseline top middle bottom
+
+
+// components/wrap
+$wrapTypes: nowrap wrap wrap-reverse
+
+
+// components/box-sizing
+$boxSizingTypes: border-box content-box padding-box
+$defaultBoxSizingProperty: nth($boxSizingTypes, 1)

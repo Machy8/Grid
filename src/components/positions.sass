@@ -1,38 +1,45 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin positionsComponent
 
-@each $position in $positions
-    .position-#{$position}
-        @include extendPosition($position)
+    @each $position in $positions
+        .#{$breakpointPrefix}position-#{$position}
+            @if $isFirstBreakpointPrefix
+                @extend .position-#{$position}
 
-
-.position-top
-    top: 0
-
-
-.position-left
-    left: 0
+            @else
+                position: $position
 
 
-.position-right
-    right: 0
+    .#{$breakpointPrefix}position
+        &-top
+            @include position(top)
+
+        &-left
+            @include position(left)
+
+        &-right
+            @include position(right)
+
+        &-bottom
+            @include position(bottom)
 
 
-.position-bottom
-    bottom: 0
+    .#{$breakpointPrefix}top
+        &-left-corner
+            @include extendPosition(top)
+            @include extendPosition(left)
+
+        &-right-corner
+            @include extendPosition(top)
+            @include extendPosition(right)
 
 
-.top-left-corner
-    @extend .position-top, .position-left
+    .#{$breakpointPrefix}bottom
+        &-left-corner
+            @include extendPosition(bottom)
+            @include extendPosition(left)
 
-
-.top-right-corner
-    @extend .position-top, .position-right
-
-
-.bottom-left-corner
-    @extend .position-bottom, .position-left
-
-
-.bottom-right-corner
-    @extend .position-bottom, .position-right
+        &-right-corner
+            @include extendPosition(bottom)
+            @include extendPosition(right)

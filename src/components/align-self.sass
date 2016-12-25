@@ -1,26 +1,19 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin alignSelfComponent
 
-.self-top
-    @include extendFlexbox
-    align-self: flex-start
+    .#{$breakpointPrefix}self
+        &-top
+            @include selfAlignment(top, flex-start)
 
+        &-bottom
+            @include selfAlignment(bottom, flex-end)
 
-.self-bottom
-    @include extendFlexbox
-    align-self: flex-end
+        &-centered
+            @include selfAlignment(centered, center)
 
+        &-baseline
+            @include selfAlignment(baseline, baseline)
 
-.self-centered
-    @include extendFlexbox
-    align-self: center
-
-
-.self-baseline
-    @include extendFlexbox
-    align-self: baseline
-
-
-.self-stretched
-    @include extendFlexbox
-    align-self: stretch
+        &-stretched
+            @include selfAlignment(stretched, stretch)

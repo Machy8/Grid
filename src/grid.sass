@@ -1,36 +1,103 @@
+// This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
 @charset "UTF-8"
 /*! Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
 
+// ------------------- IMPORT PART -------------------
 // Helpers
 @import "helpers/variables"
+@import "helpers/functions"
 @import "helpers/mixins"
 
 // Components
-@import "components/normalize"
-@import "components/viewport"
-@import "components/border-box"
-@import "components/html-body"
-@import "components/grid-system"
-@import "components/text"
-@import "components/list"
-@import "components/cursor"
-@import "components/border-radius"
-@import "components/visibility"
-@import "components/overflow"
-@import "components/resize"
-@import "components/grow"
-@import "components/wrap"
-@import "components/columns"
-@import "components/float-clear"
-@import "components/x-centered"
-@import "components/positions"
-@import "components/vertical-align"
-@import "components/justify-content"
-@import "components/flex-direction"
 @import "components/align-content"
 @import "components/align-items"
 @import "components/align-self"
-@import "components/order"
-@import "components/display"
+@import "components/box-sizing"
+@import "components/border-radius"
 @import "components/clearfix"
+@import "components/columns"
+@import "components/cursor"
+@import "components/display"
+@import "components/flex-direction"
+@import "components/float-clear"
+@import "components/full-sizes"
+@import "components/horizontal-alignment"
+@import "components/html-body"
+@import "components/justify-content"
+@import "components/list"
+@import "components/margin"
+@import "components/max-width"
+@import "components/normalize"
+@import "components/order"
+@import "components/overflow"
+@import "components/padding"
+@import "components/positions"
 @import "components/resets"
+@import "components/resize"
+@import "components/text"
+@import "components/vertical-alignment"
+@import "components/viewport"
+@import "components/visibility"
+@import "components/wrap"
+
+// ------------------- COMPOSING PART -------------------
+@mixin componentsContainer
+    @include omitBreakpoints(all)
+        @include normalizeComponent
+        @include viewportComponent
+        @include boxSizingComponent
+        @include htmlBodyComponent
+        @include resetsComponent
+
+    @include maxWidthComponent
+    @include textComponent
+
+    @include omitBreakpoints(all)
+        @include listComponent
+        @include cursorComponent
+        @include borderRadiusComponent
+        // @include marginComponent
+        // @include paddingComponent
+        @include visibilityComponent
+        @include overflowComponent
+        @include resizeComponent
+
+    @include omitBreakpoints(all)
+        @include fullSizesComponent
+        @include wrapComponent
+        @include floatClearComponent
+
+    @include columnsComponent
+
+    @include omitBreakpoints(all)
+        @include horizontalAlignmentComponent
+        @include verticalAlignmentComponent
+
+    @include positionsComponent
+    @include justifyContentComponent
+    @include flexDirectionComponent
+
+    @include omitBreakpoints(all)
+        @include alignContentComponent
+        @include alignItemsComponent
+        @include alignSelfComponent
+
+    @include orderComponent
+    @include displayTypesComponent
+
+    @include omitBreakpoints(all)
+        @include clearfixComponent
+
+
+// ------------------- GENERATING PART -------------------
+@include setBreakpointPrefix
+@include componentsContainer
+
+@each $breakpoint in $breakpoints
+    $prefix: nth($breakpoint, 1)
+    $minWidth: nth($breakpoint, 2)
+
+    @include breakpoint($minWidth)
+        @include setBreakpointPrefix($prefix)
+        @include componentsContainer

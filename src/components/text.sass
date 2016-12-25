@@ -1,95 +1,96 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin textComponent
 
-.text-centered
-    text-align: center
+    .#{$breakpointPrefix}text
 
+        @if $breakpointPrefix == null
+            // Resets
+            &-none
+                &-decoration
+                    text-decoration: none
 
-.text-left
-    text-align: left
+                &-transform
+                    text-transform: none
 
+                &-style
+                    font-style: normal
 
-.text-right
-    text-align: right
+            &-normal
+                @extend .text-none-decoration
+                @extend .text-none-transform
+                @extend .text-none-style
+                @extend .text-normal-weight
 
+            // Weight
+            &-normal-weight
+                font-weight: normal
 
-.text-justify
-    text-align: justify
+            &-lighter
+                font-weight: lighter
 
+            &-bold
+                font-weight: bold
 
-.text-normal-weight, .text-normal
-    font-weight: normal
+            // Style
+            &-italic
+                font-style: italic
 
+            &-oblique
+                font-style: oblique
 
-.text-lighter
-    font-weight: lighter
+            // Decoration
+            &-underline
+                text-decoration: underline
 
+            &-overline
+                text-decoration: overline
 
-.text-bold
-    font-weight: bold
+            &-baseline
+                text-decoration: line-through
 
+            // Transform
+            &-uppercase
+                text-transform: uppercase
 
-.text-none-style, .text-normal
-    font-style: normal
+            &-lowercase
+                text-transform: lowercase
 
+            &-capitalize
+                text-transform: capitalize
 
-.text-italic
-    font-style: italic
+            &-nowrap
+                white-space: nowrap
 
+        // Alignment
+        &-centered
+            @include textAlignment(center, centered)
 
-.text-oblique
-    font-style: oblique
+        &-left
+            @include textAlignment(left)
 
+        &-right
+            @include textAlignment(right)
 
-.text-none-decoration, .text-normal
-    text-decoration: none
-
-
-.text-underline
-    text-decoration: underline
-
-
-.text-overline
-    text-decoration: overline
-
-
-.text-baseline
-    text-decoration: line-through
-
-
-.text-none-transform, .text-normal
-    text-transform: none
-
-
-.text-uppercase
-    text-transform: uppercase
-
-
-.text-lowercase
-    text-transform: lowercase
-
-
-.text-capitalize
-    text-transform: capitalize
-
-
-.cutted-text
-    text-overflow: ellipsis
-    white-space: nowrap
-    overflow: hidden
+        &-justify
+            @include textAlignment(justify)
 
 
-.text-nowrap
-    white-space: nowrap
+    @if $breakpointPrefix == null
+        .cutted-text
+            text-overflow: ellipsis
+            white-space: nowrap
+            overflow: hidden
 
 
-.break-words
-    word-wrap: break-word
+        // Words
+        .break
+            &-words
+                word-wrap: break-word
+
+            &-all
+                word-break: break-all
 
 
-.break-all
-    word-break: break-all
-
-
-.keep-all
-    word-break: keep-all
+        .keep-all
+            word-break: keep-all

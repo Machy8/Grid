@@ -1,11 +1,15 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+@mixin resizeComponent
 
-.resizable-none, .not-resizable
-    resize: none
+    .resizable
+        &-none
+            resize: none
 
+        @each $resizableLabel in $resizableLabels
+            $i: index($resizableLabels, $resizableLabel)
+            &-#{$resizableLabel}
+                resize: nth($resizableValues, $i)
 
-@each $resizableLabel in $resizableLabels
-    $i: index($resizableLabels, $resizableLabel)
-    .resizable-#{$resizableLabel}
-        resize: nth($resizableValues, $i)
+    .not-resizable
+        @extend .resizable-none
