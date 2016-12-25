@@ -1,0 +1,80 @@
+{
+  "id": "Grid test",
+  "viewports": [
+    {
+      "name": "Default",
+      "width": 1024,
+      "height": 800
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Border radius",
+      "url": "tests/border-radius.html"
+    },
+    {
+      "label": "Columns",
+      "url": "tests/columns.html"
+    },
+    {
+      "label": "Display types",
+      "url": "tests/display-types.html"
+    },
+    {
+      "label": "List positions",
+      "url": "tests/list.position.html"
+    },
+    {
+      "label": "List style",
+      "url": "tests/list.style.html"
+    },
+    {
+      "label": "Positions 1",
+      "url": "tests/positions-1.html"
+    },
+    {
+      "label": "Positions 2",
+      "url": "tests/positions-2.html"
+    },
+    {
+      "label": "Resets",
+      "url": "tests/resets.html"
+    },
+    {
+      "label": "Text alignment",
+      "url": "tests/text.alignment.html"
+    },
+    {
+      "label": "Text decoration",
+      "url": "tests/text.decoration.html"
+    },
+    {
+      "label": "Text style",
+      "url": "tests/text.style.html"
+    },
+    {
+      "label": "Text transform",
+      "url": "tests/text.transform.html"
+    },
+    {
+      "label": "Text words",
+      "url": "tests/text.words.html"
+    },
+    {
+      "label": "Visibility",
+      "url": "tests/visibility.html"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "casper_scripts": "backstop_data/casper_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "casperFlags": [],
+  "engine": "phantomjs",
+  "report": ["CLI"],
+  "cliExitOnFail": false,
+  "debug": false
+}
