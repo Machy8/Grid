@@ -17,7 +17,7 @@ There are all possible features including flexbox. Some classes are available wi
 - **Center:** self-centered
 - **Baseline:** self-baseline
 - **Stretched:** self-stretched
-- **Horizontally centered:** x-centered
+- **Horizontally centered:** horizontally-centered | x-centered
 
 **Justify content (prefixes)**
 - **Left:** content-left
