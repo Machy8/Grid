@@ -3,6 +3,13 @@
 @mixin fullSizesComponent
 
     .#{$breakpointPrefix}grow
+        @if $isFirstBreakpointPrefix
+            @extend .grow
+
+        @else
+            @include extendFlexbox
+            flex-grow: 1
+
         &-none
             @if $isFirstBreakpointPrefix
                 @extend .grow-none
@@ -11,13 +18,13 @@
                 @include extendFlexbox
                 flex-grow: 0
 
-        @if $isFirstBreakpointPrefix
-            @extend .grow
+    .#{$breakpointPrefix}content
+        &-grow
+            > *
+                @extend .#{$breakpointPrefix}grow
 
-        @else
-            @include extendFlexbox
-            flex-grow: 1
-
+            &-none > *
+                @extend .#{$breakpointPrefix}grow-none
 
     .#{$breakpointPrefix}full
         &-window

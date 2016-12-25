@@ -3,7 +3,7 @@
 @mixin verticalAlignmentComponent
 
     @each $valignType in $valignTypes
-        .#{$breakpointPrefix}valign-#{$valignType}
+        .#{$breakpointPrefix}valign-#{$valignType}, .#{$breakpointPrefix}content-valign-#{$valignType} > *
             vertical-align: $valignType
 
 
