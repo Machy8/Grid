@@ -72,9 +72,12 @@
     "html_report": "backstop_data/html_report",
     "ci_report": "backstop_data/ci_report"
   },
-  "casperFlags": [],
+  "casperFlags": {
+    "engine": "slimerjs",
+    "debug": true
+  },
   "engine": "slimerjs",
-  "report": ["CI"],
+  "report": ["CI", "CLI"],
   "cliExitOnFail": false,
   "debug": true
 }
