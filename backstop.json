@@ -74,10 +74,11 @@
   },
   "casperFlags": [
     "--verbose",
-    "--debug=true"
+    "--debug=true",
+    "--log-level=debug"
   ],
   "engine": "slimerjs",
-  "report": ["CI", "CLI"],
+  "report": ["CI"],
   "cliExitOnFail": false,
   "debug": true
 }
