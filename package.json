@@ -16,14 +16,8 @@
   "style": "dist/grid.css",
   "sass": "src/grid.sass",
   "scripts": {
-    "test": {
-      "cwd": "node_modules/backstopjs",
-      "run": "test"
-    },
-    "reference": {
-      "cwd": "node_modules/backstopjs",
-      "run": "reference"
-    }
+    "test": "cd node_modules/backstopjs && npm run test",
+    "reference": "cd node_modules/backstopjs && npm run reference"
   },
   "repository": {
     "type": "git",
