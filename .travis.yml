@@ -9,5 +9,6 @@ addons:
 sudo: required
 before_script:
   - npm install -g backstopjs
+  - npm install -g slimerjs
   - cd node_modules/backstopjs
 script: npm test
