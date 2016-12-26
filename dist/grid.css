@@ -612,6 +612,12 @@ body {
 .valign-bottom, .content-valign-bottom > * {
   vertical-align: bottom; }
 
+.valign-super, .content-valign-super > * {
+  vertical-align: super; }
+
+.valign-sub, .content-valign-sub > * {
+  vertical-align: sub; }
+
 .vertically-centered, .vertically-centered-absolute, .y-centered-absolute, .y-centered {
   position: relative !important;
   top: 50%;

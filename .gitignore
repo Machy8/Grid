@@ -2,4 +2,7 @@
 grid.iml
 .DS_Store
 node_modules/
-backstop_data/bitmaps_test/
+tests/actual/
+tests/casper_scripts/
+tests/html_report/
+tests/ci_report/
