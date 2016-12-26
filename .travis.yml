@@ -1,14 +1,13 @@
 language: node_js
+
 node_js:
   - "6"
 
 os:
   - osx
-addons:
-  firefox: "49.0"
-sudo: required
+
 before_script:
   - npm install -g backstopjs
-  - npm install -g slimerjs
   - cd node_modules/backstopjs
+
 script: npm test

@@ -77,7 +77,7 @@
     "--debug=true",
     "--log-level=debug"
   ],
-  "engine": "slimerjs",
+  "engine": "phantomjs",
   "report": ["CI"],
   "cliExitOnFail": false,
   "debug": true
