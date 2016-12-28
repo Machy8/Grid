@@ -12,6 +12,12 @@
                 margin: 0
                 padding: 0
 
+        &-unstyled
+            @extend .list-none-style
+
+            &-clear
+                @extend .list-none-clear
+
         @each $type in $listStyleTypes
             &-#{$type}
                 list-style-type: $type
@@ -21,6 +27,7 @@
 
             li::before
                 content: "-"
+                margin-right: 10px
 
         @each $listPosition in $listPositions
             &-#{$listPosition}

@@ -1,0 +1,115 @@
+{
+  "id": "Grid test",
+  "viewports": [
+    {
+      "name": "Default",
+      "width": 1024,
+      "height": 800
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Align content",
+      "url": "tests/align-content.html"
+    },
+    {
+      "label": "Align items",
+      "url": "tests/align-items.html"
+    },
+    {
+      "label": "Align self",
+      "url": "tests/align-self.html"
+    },
+    {
+      "label": "Border radius",
+      "url": "tests/border-radius.html"
+    },
+    {
+      "label": "Columns",
+      "url": "tests/columns.html"
+    },
+    {
+      "label": "Display types",
+      "url": "tests/display-types.html"
+    },
+    {
+      "label": "Flex direction",
+      "url": "tests/flex-direction.html"
+    },
+    {
+      "label": "Float clear",
+      "url": "tests/float-clear.html"
+    },
+    {
+      "label": "Full sizes 1",
+      "url": "tests/full-sizes-1.html"
+    },
+    {
+      "label": "Full sizes 2",
+      "url": "tests/full-sizes-2.html"
+    },
+    {
+      "label": "Justify content",
+      "url": "tests/justify-content.html"
+    },
+    {
+      "label": "List position",
+      "url": "tests/list.position.html"
+    },
+    {
+      "label": "List style",
+      "url": "tests/list.style.html"
+    },
+    {
+      "label": "Max width",
+      "url": "tests/max-width.html"
+    },
+    {
+      "label": "Positions 1",
+      "url": "tests/positions-1.html"
+    },
+    {
+      "label": "Positions 2",
+      "url": "tests/positions-2.html"
+    },
+    {
+      "label": "Resets",
+      "url": "tests/resets.html"
+    },
+    {
+      "label": "Text alignment",
+      "url": "tests/text.alignment.html"
+    },
+    {
+      "label": "Text decoration",
+      "url": "tests/text.decoration.html"
+    },
+    {
+      "label": "Text words",
+      "url": "tests/text.words.html"
+    },
+    {
+      "label": "Vertical alignment",
+      "url": "tests/vertical.alignment.html"
+    },
+    {
+      "label": "Visibility",
+      "url": "tests/visibility.html"
+    },
+    {
+      "label": "Wrap",
+      "url": "tests/wrap.html"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "tests/expected",
+    "bitmaps_test": "tests/actual",
+    "casper_scripts": "tests/casper_scripts",
+    "html_report": "tests/html_report",
+    "ci_report": "tests/ci_report"
+  },
+  "engine": "phantomjs",
+  "report": ["CI"],
+  "cliExitOnFail": false,
+  "debug": false
+}

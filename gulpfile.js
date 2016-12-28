@@ -4,7 +4,7 @@ var
 	// Modules
 	gulp  = require('gulp'),
 	sass = require('gulp-sass'),
-	minifyCss = require('gulp-minify-css'),
+	cleanCss = require('gulp-clean-css'),
 	autoprefixer  = require('gulp-autoprefixer'),
 	rename = require('gulp-rename'),
 
@@ -13,7 +13,7 @@ var
 	srcDir 	= "./src",
 	gulpWatchDir = srcDir + '/**/*.sass',
 	targetFile = srcDir + '/grid.sass',
-	autoprefixerSettings =['> 5%', 'IE 8', 'IE 9'],
+	autoprefixerSettings =['> 5%', 'IE 8', 'IE 9', 'Safari >= 4'],
 	minVersionSuffix = '.min';
 
 // Tasks
@@ -27,7 +27,7 @@ gulp
 			.pipe(gulp.dest(distDir))
 
 			// Minified version
-			.pipe(minifyCss())
+			.pipe(cleanCss())
 			.pipe(rename({
 				suffix: minVersionSuffix
 			}))

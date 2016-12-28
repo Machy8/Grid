@@ -44,7 +44,7 @@
     @if $isFirstBreakpointPrefix
         @extend .position-#{$position}
 
-    @elseif $breakpointPrefix != null
+    @else
         @extend .#{$breakpointPrefix}position-#{$position}
 
 

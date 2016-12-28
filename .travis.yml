@@ -1,0 +1,13 @@
+language: node_js
+
+node_js:
+  - "6"
+
+os:
+  - osx
+
+before_script:
+  - npm install -g backstopjs
+  - cd node_modules/backstopjs
+
+script: npm test
