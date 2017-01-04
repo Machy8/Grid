@@ -3,15 +3,17 @@
 If you want to edit the css you will need to install.
 
 - gulp
-- gulp-sass
-- gulp-minify-css (if you want to minify the output css)
 - gulp-autoprefixer
+- gulp-clean-css (if you want to minify the output css)
 - gulp-rename (if you want to minify the output css)
+- gulp-sass
+- gulp-sourcemaps
+- backstopjs (if would want to send pull request)
 - and is good to have support of the sass syntax in your editor
 
 To run the preprocessor, open console, go into the directory with the *grid-css-framework* repository and run "gulp" task. This will run the gulp watch task and the first compilation.
 
-## Contributing - coding standart
+## Contributing - coding standard
 - The file must be indented by 4 spaces
 - There must a blank line on the end of the file
 - There must be one blank line before each definition of selector derived from **&** or before the first one after component mixin
