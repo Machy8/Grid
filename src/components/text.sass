@@ -10,15 +10,24 @@
                 &-decoration
                     text-decoration: none
 
-                &-transform
+                &-transformation
                     text-transform: none
 
                 &-style
                     font-style: normal
 
+            &-undecorated
+                @extend .text-none-decoration
+
+            &-untransformed
+                @extend .text-none-transformation
+
+            &-unstyled
+                @extend .text-none-style
+
             &-normal
                 @extend .text-none-decoration
-                @extend .text-none-transform
+                @extend .text-none-transformation
                 @extend .text-none-style
                 @extend .text-normal-weight
 
