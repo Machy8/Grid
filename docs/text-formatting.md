@@ -13,24 +13,29 @@ Classes for the text formatting.
 - **Lighter:** text-lighter
 - **Normal:** text-normal-weight
 
-**Style**
+**Decoration**
 - **Underline:** text-underline
 - **Overline:** text-overline
 - **Line through:** text-baseline
-- **None:** text-none-decoration
+- **None:** text-none-decoration, text-undecorated
+
+**Style**
+- **Italic:** text-italic
+- **Oblique:** text-oblique
+- **Bold:** text-bold
+- **Normal:** text-none-style, text-unstyled
 
 **Transform**
 - **Uppercase:** text-uppercase
 - **Lowercase:** text-lowercase
 - **Capitalize:** text-capitalize
-- **None:** text-none-transform
+- **None:** text-none-transformation, text-untransformed
 
 **Words**
 - **No wrap:** text-nowrap
 - **Break:** break-words
 - **Break all:** break-all
 - **Keep all:** keep-all
-
 
 **Cutted text (dots at the end):** cutted-text
 

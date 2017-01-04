@@ -66,7 +66,7 @@
 - [Box sizing](https://github.com/Machy8/Grid/blob/master/docs/box-sizing.md)
 - [Cursor](https://github.com/Machy8/Grid/blob/master/docs/cursor.md)
 - [Display types](https://github.com/Machy8/Grid/blob/master/docs/display-types.md)
-- [Element radius](https://github.com/Machy8/Grid/blob/master/docs/element-radius.md)
+- [Border radius](https://github.com/Machy8/Grid/blob/master/docs/border-radius.md)
 - [Full sizes](https://github.com/Machy8/Grid/blob/master/docs/full-sizes.md)
 - [Margin & padding](https://github.com/Machy8/Grid/blob/master/docs/margin-padding.md)
 - [Visibility](https://github.com/Machy8/Grid/blob/master/docs/visibility.md)

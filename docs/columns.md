@@ -1,6 +1,17 @@
 # Columns
 
-In Grid you can create columns by using flexbox, max-width and alignment or by the css property columns-count. The number of columns is given by columnsMax variable in variables.sass.
+**Rules**
+- **Solid:** columns-rule-solid
+- **Dashed:** columns-rule-dashed
+- **Dotted:** columns-rule-dotted
+
+**Gap**
+- **None** columns-none-gap
+
+**Columns**
+- Can be created in the range from 1-6
+- is possible to use breakpoint prefixes
+- **columns-(1-6)**
 
 ## Examples
 ````Html
@@ -8,7 +19,7 @@ In Grid you can create columns by using flexbox, max-width and alignment or by t
 Some content
 </div>
  
-<div class="s-columns-2 m-columns-4 l-columns-6">
+<div class="s-columns-2 m-columns-4 l-columns-6 columns-rule-dotted">
 Some content
 </div>
 ````

@@ -2,8 +2,8 @@
 
 A few classes with which you can easily change the border-radius.
 
-- **No radius:** square
-- **Rounded:** rounded-(1-4 always increased by 2)
+- **No radius:** square, radius-none
+- **Rounded:** rounded|radius-(1-5 always increased by 2)
 - **Circle:** circle
 
 ## Examples
