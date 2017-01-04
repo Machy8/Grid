@@ -10,6 +10,8 @@ There are all possible features including flexbox. Some classes are available wi
 - **Left:** clear-left | content-clear-left 
 - **Right:** clear-right | content-clear-right
 - **Both:** clear-both | content-clear-both
+- **None:** clear-none | content-clear-none
+
  
 **Align self**
 - **Top:** self-top
@@ -56,6 +58,9 @@ There are all possible features including flexbox. Some classes are available wi
 - **Bottom:** valign-bottom | content-valign-bottom
 - **Middle:** valign-middle | content-valign-middle
 - **Baseline:** valign-baseline | content-valign-baseline
+- **Super:** valign-super | content-valign-super
+- **Sub:** valign-sub | content-valign-sub
+
 - **Centered (relative pos.):** vertically-centered | y-centered
 - **Centered (absolute pos.):** vertically-centered-absolute | y-centered-absolute
 

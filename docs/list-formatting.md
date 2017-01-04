@@ -3,8 +3,8 @@
 Shortcuts for the list formatting.
 
 **Style**
-- **No style:** list-none-style
-- **No style, no frames (margin & padding):** list-none-clear
+- **No style:** list-none-style, list-unstyled
+- **No style, no frames (margin & padding):** list-none-clear, list-unstyled-clear
 - **Disc:** list-disc
 - **Square:** list-square
 - **Decimal:** list-decimal
