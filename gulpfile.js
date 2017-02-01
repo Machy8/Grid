@@ -5,6 +5,8 @@ var
 	autoprefixer  = require('gulp-autoprefixer'),
 	cleanCss = require('gulp-clean-css'),
 	gulp  = require('gulp'),
+	pipe_if = require('gulp-if'),
+	plumber = require('gulp-plumber'),
 	rename = require('gulp-rename'),
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
@@ -15,41 +17,42 @@ var
 	gulpWatchDir = srcDir + '/**/*.sass',
 	targetFile = srcDir + '/grid.sass',
 	sourcemapsDir = '/',
-	autoprefixerSettings = ['> 5%', 'IE 8', 'IE 9', 'Safari >= 4'],
-	gulpTasks = ['sass', 'sass-min'],
+	autoprefixerSettings = ['> 5%', 'last 2 versions', 'IE 8', 'IE 9', 'Safari >= 4'],
+	defaultTasks = ['grid', 'grid.min', 'gridWatch'],
 	minVersionSuffix = '.min';
+
+/**
+ * @param {boolean} minify
+ * @returns {*}
+ */
+function compileCss(minify){
+
+	minify = typeof minify !== 'undefined' && minify;
+
+	return gulp.src(targetFile)
+		.pipe(plumber())
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.pipe(autoprefixer({
+			browsers: autoprefixerSettings
+		}))
+		.pipe(pipe_if(minify, cleanCss()))
+		.pipe(pipe_if(minify, rename({
+			suffix: minVersionSuffix
+		})))
+		.pipe(sourcemaps.write(sourcemapsDir))
+		.pipe(gulp.dest(distDir));
+}
 
 // Tasks
 gulp
-	.task('sass', function() {
-		return gulp.src(targetFile)
-			.pipe(sourcemaps.init())
-				.pipe(sass())
-				.pipe(autoprefixer({
-					browsers: autoprefixerSettings
-				}))
-			.pipe(sourcemaps.write(sourcemapsDir))
-			.pipe(gulp.dest(distDir));
+	.task('grid', function(){
+		compileCss();
 	})
-
-	.task('sass-min', function() {
-		return gulp.src(targetFile)
-			.pipe(sourcemaps.init())
-				.pipe(sass())
-				.pipe(autoprefixer({
-					browsers: autoprefixerSettings
-				}))
-				.pipe(cleanCss())
-			.pipe(rename({
-					suffix: minVersionSuffix
-				}))
-			.pipe(sourcemaps.write(sourcemapsDir))
-			.pipe(gulp.dest(distDir));
+	.task('grid.min', function(){
+		compileCss(true);
 	})
-
-	.task('watch', function() {
-		gulp.watch(gulpWatchDir, gulpTasks);
-	});
-
-gulpTasks.push('watch');
-gulp.task('default', gulpTasks);
+	.task('gridWatch', function() {
+		gulp.watch(gulpWatchDir, ['grid', 'grid.min']);
+	})
+	.task('default', defaultTasks);

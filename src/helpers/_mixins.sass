@@ -157,7 +157,7 @@
     @if $omittedBreakpoints == all and $noneBreakpointPrefix
         @content
 
-    @else if index($omittedBreakpoints, $breakpointPrefix) == false
+    @else if index($omittedBreakpoints, $breakpointPrefix) == null and $omittedBreakpoints != all
         @content
 
 
