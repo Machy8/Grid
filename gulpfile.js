@@ -1,6 +1,7 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
 var
+
 	// Modules
 	autoprefixer  = require('gulp-autoprefixer'),
 	cleanCss = require('gulp-clean-css'),
@@ -12,37 +13,73 @@ var
 	sourcemaps = require('gulp-sourcemaps'),
 
 	// Setup
-	distDir = "./dist",
-	srcDir 	= "./src",
+	distDir = './dist',
+	srcDir 	= './src',
+	testDir = './tests',
 	gulpWatchDir = srcDir + '/**/*.sass',
 	targetFile = srcDir + '/grid.sass',
 	sourcemapsDir = '/',
-	autoprefixerSettings = ['> 5%', 'last 2 versions', 'IE 8', 'IE 9', 'Safari >= 4'],
-	defaultTasks = ['grid', 'grid.min', 'gridWatch'],
-	minVersionSuffix = '.min';
+	autoprefixerSettings = ['> 5%', 'last 2 versions', 'IE 9'],
+	defaultTasks = ['grid', 'grid.min', 'grid.dev', 'grid.test', 'watch'],
+	minVersionSuffix = 'min',
+	defaultFileType = 'css';
+
 
 /**
- * @param {boolean} minify
+ * @param {object} settings
+ * @param {string} settingsOption
+ * @param {string} settingsType
+ * @returns {boolean}
+ */
+function settingsExist(settings, settingsOption, settingsType) {
+	return settingsOption in settings && typeof settings[settingsOption] === settingsType;
+}
+
+
+/**
+ * @param {object} settings
  * @returns {*}
  */
-function compileCss(minify){
+function compileCss(settings){
 
-	minify = typeof minify !== 'undefined' && minify;
+	var minify = false,
+		prefixes = autoprefixerSettings,
+		prefixesAllowed = true,
+		fileType = defaultFileType,
+		fileSuffix = minVersionSuffix,
+		outputDir = distDir,
+		cssMap = true;
+
+	if (typeof settings === 'object') {
+		if (settingsExist(settings, 'minify', 'boolean')) minify = settings.minify;
+		if (settingsExist(settings, 'cssMap', 'boolean')) cssMap = settings.cssMap;
+		if (settingsExist(settings, 'fileType', 'string')) fileType = settings.fileType;
+		if (settingsExist(settings, 'noPrefixes', 'boolean')) prefixesAllowed = ! settings.noPrefixes;
+		if (settingsExist(settings, 'prefixes', 'object')) prefixes = settings.prefixes;
+		if (settingsExist(settings, 'outputDir', 'string')) outputDir = settings.outputDir;
+	}
 
 	return gulp.src(targetFile)
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sass())
-		.pipe(autoprefixer({
-			browsers: autoprefixerSettings
-		}))
+		.pipe(pipe_if(prefixesAllowed, autoprefixer({
+				browsers: prefixes
+			})
+		))
 		.pipe(pipe_if(minify, cleanCss()))
 		.pipe(pipe_if(minify, rename({
-			suffix: minVersionSuffix
-		})))
-		.pipe(sourcemaps.write(sourcemapsDir))
-		.pipe(gulp.dest(distDir));
+				suffix: '.' + fileSuffix
+			})
+		))
+		.pipe(rename({
+				extname: '.' + fileType
+			})
+		)
+		.pipe(pipe_if(cssMap, sourcemaps.write(sourcemapsDir)))
+		.pipe(gulp.dest(outputDir));
 }
+
 
 // Tasks
 gulp
@@ -50,9 +87,26 @@ gulp
 		compileCss();
 	})
 	.task('grid.min', function(){
-		compileCss(true);
+		compileCss({
+			minify: true
+		});
 	})
-	.task('gridWatch', function() {
-		gulp.watch(gulpWatchDir, ['grid', 'grid.min']);
+	.task('grid.dev', function(){
+		compileCss({
+			noPrefixes: true,
+			cssMap: false,
+			fileType: 'scss',
+		});
+	})
+	.task('grid.test', function(){
+		compileCss({
+			prefixes: ['> 5%', 'last 2 versions', 'IE 9', 'Safari >= 4'],
+			outputDir: testDir,
+			cssMap: false
+		});
+	})
+
+	.task('watch', function() {
+		gulp.watch(gulpWatchDir, ['grid', 'grid.min', 'grid.dev', 'grid.test']);
 	})
 	.task('default', defaultTasks);
