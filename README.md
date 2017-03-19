@@ -1,4 +1,4 @@
-#Grid
+# Grid
 [![Travis](https://travis-ci.org/Machy8/Grid.svg?branch=master)](https://travis-ci.org/Machy8/Grid)
 [![David](https://img.shields.io/david/dev/machy8/grid.svg)]()
 [![GitHub release](https://img.shields.io/github/release/machy8/grid.svg)]()
@@ -31,18 +31,18 @@
   </a>
 </p>
 
-##Installation
+## Installation
 
 - **Npm:** ``npm i grid-css-framework``
 - **Bower:** ``bower install grid-css-framework``
 
 
-##Browser compatibility
+## Browser compatibility
 | IE | Edge | Firefox | Chrome | Chrome for android | Safari | IOS Safari | Opera | Opera mini | Android browser |
 |:--:|:----:|:-------:|:------:|:------------------:|:------:|:----------:|:-----:|:----------:|:---------------:|
 |  10 |  13  |    47   |   49   |         53         |   9.1  |     9.3    |   40  |     All    |       4.4       |
 
-##Navigation (see [documentation](https://github.com/Machy8/Grid/tree/master/docs))
+## Navigation (see [documentation](https://github.com/Machy8/Grid/tree/master/docs))
 
 - [Grid system](https://github.com/Machy8/Grid/blob/master/docs/grid-system.md)
 
