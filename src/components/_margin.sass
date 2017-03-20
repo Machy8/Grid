@@ -10,7 +10,7 @@
                         @extend .margin-#{$side}-none
 
                     @else
-                        margin-#{$side}: 0 !important
+                        margin-#{$side}: 0
 
                 $sizeCounter: $frameSizeIncreasedBy
                 @while $sizeCounter <= $frameMaxSize
@@ -19,7 +19,7 @@
                             @extend .margin-#{$side}-#{$sizeCounter} !optional
 
                         @else
-                            margin-#{$side}: $sizeCounter * 1px !important
+                            margin-#{$side}: $sizeCounter * 1px
                     $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
 
         &-x
