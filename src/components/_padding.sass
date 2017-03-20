@@ -11,7 +11,7 @@
                         @extend .padding-#{$side}-none
 
                     @else
-                        padding-#{$side}: 0 !important
+                        padding-#{$side}: 0
 
                 $sizeCounter: $frameSizeIncreasedBy
                 @while $sizeCounter <= $frameMaxSize
@@ -20,7 +20,7 @@
                             @extend .padding-#{$side}-#{$sizeCounter} !optional
 
                         @else
-                            padding-#{$side}: $sizeCounter * 1px !important
+                            padding-#{$side}: $sizeCounter * 1px
                     $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
 
         &-x
