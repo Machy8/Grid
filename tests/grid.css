@@ -218,13 +218,12 @@ template {
   -webkit-box-sizing: padding-box;
           box-sizing: padding-box; }
 
-html {
-  width: 100%;
-  height: 100%; }
+html,
+body {
+  min-width: 100%;
+  min-height: 100vh; }
 
 body {
-  min-height: 100%;
-  min-width: 100%;
   font-size: 16px;
   line-height: 1.5; }
 
@@ -636,13 +635,13 @@ body {
   vertical-align: sub; }
 
 .vertically-centered, .vertically-centered-absolute, .y-centered-absolute, .y-centered {
-  position: relative !important;
+  position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
   .vertically-centered-absolute, .y-centered-absolute {
-    position: absolute !important; }
+    position: absolute; }
 
 .position-static, .s-position-static {
   position: static; }
@@ -822,16 +821,16 @@ body {
   display: block; }
 
 .display-flex, .grow, .content-grow > *, .grow-none, .content-grow-none > *, .nowrap, .wrap, .wrap-reverse, .content-centered, .s-content-centered, .content-left, .s-content-left, .content-right, .s-content-right, .content-wrapped, .s-content-wrapped, .content-apart, .s-content-apart, .direction-row, .s-direction-row, .direction-column, .s-direction-column, .direction-reversed-row, .s-direction-reversed-row, .direction-reversed-column, .s-direction-reversed-column, .lines-top, .lines-bottom, .lines-centered, .lines-stretched, .lines-wrapped, .lines-apart, .items-top, .items-bottom, .items-centered, .items-baseline, .items-stretched, .self-top, .self-bottom, .self-centered, .self-baseline, .self-stretched, .order-1, .s-order-1, .order-2, .s-order-2, .order-3, .s-order-3, .order-4, .s-order-4, .order-5, .s-order-5, .order-6, .s-order-6, .s-display-flex, .s-flex {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .display-none, .s-display-none {
   display: none; }
 
 .hidden {
-  display: none !important; }
+  display: none; }
 
 .clearfix:before, .clearfix:after {
   content: " ";
@@ -980,10 +979,10 @@ body {
   .m-display-block, .m-block {
     display: block; }
   .m-display-flex, .m-content-centered, .m-content-left, .m-content-right, .m-content-wrapped, .m-content-apart, .m-direction-row, .m-direction-column, .m-direction-reversed-row, .m-direction-reversed-column, .m-order-1, .m-order-2, .m-order-3, .m-order-4, .m-order-5, .m-order-6, .m-flex {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .m-display-none {
     display: none; } }
 
@@ -1127,10 +1126,10 @@ body {
   .l-display-block, .l-block {
     display: block; }
   .l-display-flex, .l-content-centered, .l-content-left, .l-content-right, .l-content-wrapped, .l-content-apart, .l-direction-row, .l-direction-column, .l-direction-reversed-row, .l-direction-reversed-column, .l-order-1, .l-order-2, .l-order-3, .l-order-4, .l-order-5, .l-order-6, .l-flex {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .l-display-none {
     display: none; } }
 
@@ -1274,9 +1273,9 @@ body {
   .xl-display-block, .xl-block {
     display: block; }
   .xl-display-flex, .xl-content-centered, .xl-content-left, .xl-content-right, .xl-content-wrapped, .xl-content-apart, .xl-direction-row, .xl-direction-column, .xl-direction-reversed-row, .xl-direction-reversed-column, .xl-order-1, .xl-order-2, .xl-order-3, .xl-order-4, .xl-order-5, .xl-order-6, .xl-flex {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .xl-display-none {
     display: none; } }

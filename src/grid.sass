@@ -4,13 +4,16 @@
 
 // ------------------- IMPORT PART -------------------
 @import "parts/grid.import"
+@import "parts/grid.theme.import"
 
 // ------------------- COMPOSING PART -------------------
 @import "parts/grid.container"
+@import "parts/grid.theme.container"
 
 // ------------------- GENERATING PART -------------------
 @include setBreakpointPrefix
 @include gridComponentsContainer
+@include gridThemeComponentsContainer
 
 @each $breakpoint in $breakpoints
     $prefix: nth($breakpoint, 1)
@@ -19,3 +22,4 @@
     @include breakpoint($minWidth)
         @include setBreakpointPrefix($prefix)
         @include gridComponentsContainer
+        @include gridThemeComponentsContainer

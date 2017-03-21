@@ -1,6 +1,6 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
-var
+const
 
 	// Modules
 	autoprefixer  = require('gulp-autoprefixer'),
@@ -18,17 +18,56 @@ var
 	testDir = './tests',
 	gulpWatchDir = srcDir + '/**/*.sass',
 	gridTargetFile = srcDir + '/grid.sass',
-	gridThemeTargetFile = srcDir + '/grid.themed.sass',
 	sourcemapsDir = '/',
 	autoprefixerSettings = ['> 5%', 'last 2 versions', 'IE 9'],
 	defaultTasks = [
 		'grid', 'grid.min', 'grid.dev',
-		'grid.themed', 'grid.themed.min', 'grid.themed.dev',
 		'grid.test',
 		'watch'
 	],
 	minVersionSuffix = 'min',
 	defaultFileType = 'css';
+
+
+// Tasks
+gulp
+
+	// Clear version
+	.task('grid', function(){
+		compileCss();
+	})
+	.task('grid.min', function(){
+		compileCss({
+			minify: true
+		});
+	})
+	.task('grid.dev', function(){
+		compileCss({
+			noPrefixes: true,
+			cssMap: false,
+			fileType: 'scss',
+		});
+	})
+
+	// Version for tests
+	.task('grid.test', function(){
+		compileCss({
+			targetFile: gridTargetFile,
+			prefixes: ['> 5%', 'last 2 versions', 'IE 9', 'Safari >= 4'],
+			outputDir: testDir,
+			cssMap: false
+		});
+	})
+
+	// Watch and default tasks
+	.task('watch', function() {
+		gulp.watch(gulpWatchDir, [
+			'grid', 'grid.min', 'grid.dev',
+			'grid.themed', 'grid.themed.min', 'grid.themed.dev',
+			'grid.test'
+		]);
+	})
+	.task('default', defaultTasks);
 
 
 /**
@@ -87,65 +126,3 @@ function compileCss(settings){
 		.pipe(pipe_if(cssMap, sourcemaps.write(sourcemapsDir)))
 		.pipe(gulp.dest(outputDir));
 }
-
-
-// Tasks
-gulp
-
-	// Clear version
-	.task('grid', function(){
-		compileCss();
-	})
-	.task('grid.min', function(){
-		compileCss({
-			minify: true
-		});
-	})
-	.task('grid.dev', function(){
-		compileCss({
-			noPrefixes: true,
-			cssMap: false,
-			fileType: 'scss',
-		});
-	})
-
-	// With theme
-	.task('grid.themed', function(){
-		compileCss({
-			targetFile: gridThemeTargetFile
-		});
-	})
-	.task('grid.themed.min', function(){
-		compileCss({
-			targetFile: gridThemeTargetFile,
-			minify: true
-		});
-	})
-	.task('grid.themed.dev', function(){
-		compileCss({
-			targetFile: gridThemeTargetFile,
-			noPrefixes: true,
-			cssMap: false,
-			fileType: 'scss',
-		});
-	})
-
-	// Version for tests
-	.task('grid.test', function(){
-		compileCss({
-			targetFile: gridThemeTargetFile,
-			prefixes: ['> 5%', 'last 2 versions', 'IE 9', 'Safari >= 4'],
-			outputDir: testDir,
-			cssMap: false
-		});
-	})
-
-	// Watch and default tasks
-	.task('watch', function() {
-		gulp.watch(gulpWatchDir, [
-			'grid', 'grid.min', 'grid.dev',
-			'grid.themed', 'grid.themed.min', 'grid.themed.dev',
-			'grid.test'
-		]);
-	})
-	.task('default', defaultTasks);
