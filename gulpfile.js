@@ -18,10 +18,14 @@ const
 	testDir = './tests',
 	gulpWatchDir = srcDir + '/**/*.sass',
 	gridTargetFile = srcDir + '/grid.sass',
+	gridMobileTargetFile = srcDir + '/grid.mobile.sass',
 	sourcemapsDir = '/',
-	autoprefixerSettings = ['> 5%', 'last 2 versions', 'IE 10'],
+	autoprefixerMobilePrefixes = ['iOS >= 6', 'Android >= 4.1', 'UCAndroid >= 11', 'ExplorerMobile >= 11'],
+	autoprefixerDesktopPrefixes = ['> 5%', 'last 2 versions', 'IE 10'],
+	autoprefixerSettings = autoprefixerDesktopPrefixes.concat(autoprefixerMobilePrefixes),
 	defaultTasks = [
 		'grid', 'grid.min', 'grid.dev',
+		'grid.mobile', 'grid.mobile.min', 'grid.mobile.dev',
 		'grid.test',
 		'watch'
 	],
@@ -43,6 +47,28 @@ gulp
 	})
 	.task('grid.dev', function(){
 		compileCss({
+			noPrefixes: true,
+			cssMap: false,
+			fileType: 'scss',
+		});
+	})
+
+	// Clear version
+	.task('grid.mobile', function(){
+		compileCss({
+			targetFile: gridMobileTargetFile,
+			prefixes:  autoprefixerMobilePrefixes
+		});
+	})
+	.task('grid.mobile.min', function(){
+		compileCss({
+			targetFile: gridMobileTargetFile,
+			minify: true
+		});
+	})
+	.task('grid.mobile.dev', function(){
+		compileCss({
+			targetFile: gridMobileTargetFile,
 			noPrefixes: true,
 			cssMap: false,
 			fileType: 'scss',
