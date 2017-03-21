@@ -19,7 +19,7 @@ const
 	gulpWatchDir = srcDir + '/**/*.sass',
 	gridTargetFile = srcDir + '/grid.sass',
 	sourcemapsDir = '/',
-	autoprefixerSettings = ['> 5%', 'last 2 versions', 'IE 9'],
+	autoprefixerSettings = ['> 5%', 'last 2 versions', 'IE 10'],
 	defaultTasks = [
 		'grid', 'grid.min', 'grid.dev',
 		'grid.test',
@@ -53,7 +53,7 @@ gulp
 	.task('grid.test', function(){
 		compileCss({
 			targetFile: gridTargetFile,
-			prefixes: ['> 5%', 'last 2 versions', 'IE 9', 'Safari >= 4'],
+			prefixes: autoprefixerSettings.concat(['Safari >= 4']),
 			outputDir: testDir,
 			cssMap: false
 		});
@@ -61,13 +61,9 @@ gulp
 
 	// Watch and default tasks
 	.task('watch', function() {
-		gulp.watch(gulpWatchDir, [
-			'grid', 'grid.min', 'grid.dev',
-			'grid.themed', 'grid.themed.min', 'grid.themed.dev',
-			'grid.test'
-		]);
+		gulp.watch(gulpWatchDir, defaultTasks);
 	})
-	.task('default', defaultTasks);
+	.task('default', defaultTasks.concat(['watch']));
 
 
 /**
