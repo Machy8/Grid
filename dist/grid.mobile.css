@@ -197,12 +197,6 @@ template {
 [hidden] {
   display: none; }
 
-@-ms-viewport {
-  width: device-width; }
-
-@viewport {
-  width: device-width; }
-
 .border-box, *, *:before, *:after, .border-box:before, .border-box:after {
   box-sizing: border-box; }
 

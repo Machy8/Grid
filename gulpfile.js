@@ -1,5 +1,7 @@
 // This file is a part of Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
 
+"use strict";
+
 const
 
 	// Modules
@@ -13,83 +15,75 @@ const
 	sourcemaps = require('gulp-sourcemaps'),
 
 	// Setup
-	distDir = './dist',
-	srcDir 	= './src',
-	testDir = './tests',
-	gulpWatchDir = srcDir + '/**/*.sass',
-	gridTargetFile = srcDir + '/grid.sass',
-	gridMobileTargetFile = srcDir + '/grid.mobile.sass',
-	sourcemapsDir = '/',
-	autoprefixerMobilePrefixes = ['iOS >= 6', 'Android >= 4.1', 'UCAndroid >= 11', 'ExplorerMobile >= 11'],
-	autoprefixerDesktopPrefixes = ['> 5%', 'last 2 versions', 'IE 10'],
-	autoprefixerSettings = autoprefixerDesktopPrefixes.concat(autoprefixerMobilePrefixes),
-	defaultTasks = [
-		'grid', 'grid.min', 'grid.dev',
-		'grid.mobile', 'grid.mobile.min', 'grid.mobile.dev',
-		'grid.test',
-		'watch'
-	],
+	directories = {
+		dist: './dist',
+		src: './src',
+		test: './tests',
+		watch: './src/**/*.sass',
+		sourcemaps: '/'
+	},
+
+	targetFiles = {
+		grid: directories.src + '/grid.sass',
+		gridMobile: directories.src + '/grid.mobile.sass'
+	},
+
+	autoprefixerPrefixes = {
+		mobile: ['iOS >= 6', 'Android >= 4.1', 'UCAndroid >= 11', 'ExplorerMobile >= 11'],
+		desktop: ['> 5%', 'last 2 versions', 'IE 10'],
+	},
+
+	autoprefixerSettings = autoprefixerPrefixes.desktop.concat(autoprefixerPrefixes.desktop),
 	minVersionSuffix = 'min',
-	defaultFileType = 'css';
+	defaultFileType = 'css',
 
+	tasks = {
+		grid: null,
 
-// Tasks
-gulp
-
-	// Clear version
-	.task('grid', function(){
-		compileCss();
-	})
-	.task('grid.min', function(){
-		compileCss({
+		gridMin: {
 			minify: true
-		});
-	})
-	.task('grid.dev', function(){
-		compileCss({
+		},
+
+		gridDev: {
 			noPrefixes: true,
 			cssMap: false,
 			fileType: 'scss',
-		});
-	})
+		},
 
-	// Clear version
-	.task('grid.mobile', function(){
-		compileCss({
-			targetFile: gridMobileTargetFile,
-			prefixes:  autoprefixerMobilePrefixes
-		});
-	})
-	.task('grid.mobile.min', function(){
-		compileCss({
-			targetFile: gridMobileTargetFile,
+		gridMobile: {
+			targetFile: targetFiles.gridMobile,
+			prefixes:  autoprefixerPrefixes.mobile
+		},
+
+		gridMobileMin: {
+			targetFile: targetFiles.gridMobile,
 			minify: true
-		});
-	})
-	.task('grid.mobile.dev', function(){
-		compileCss({
-			targetFile: gridMobileTargetFile,
+		},
+
+		gridMobileDev: {
+			targetFile: targetFiles.gridMobile,
 			noPrefixes: true,
 			cssMap: false,
 			fileType: 'scss',
-		});
-	})
+		},
 
-	// Version for tests
-	.task('grid.test', function(){
-		compileCss({
-			targetFile: gridTargetFile,
+		gridTestable: {
+			targetFile: targetFiles.grid,
 			prefixes: autoprefixerSettings.concat(['Safari >= 4']),
-			outputDir: testDir,
+			outputDir: directories.test,
 			cssMap: false
-		});
+		}
+	};
+
+// Watch and default tasks
+gulp
+	.task('compile', compile)
+
+	.task('watch', function() {
+		gulp.watch(directories.watch, ['compile']);
 	})
 
-	// Watch and default tasks
-	.task('watch', function() {
-		gulp.watch(gulpWatchDir, defaultTasks);
-	})
-	.task('default', defaultTasks.concat(['watch']));
+	.task('default', ['compile', 'watch']);
 
 
 /**
@@ -103,48 +97,49 @@ function settingsExist(settings, settingsOption, settingsType) {
 }
 
 
-/**
- * @param {object} settings
- * @returns {*}
- */
-function compileCss(settings){
+function compile() {
 
-	var minify = false,
-		targetFile = gridTargetFile,
-		prefixes = autoprefixerSettings,
-		prefixesAllowed = true,
-		fileType = defaultFileType,
-		fileSuffix = minVersionSuffix,
-		outputDir = distDir,
-		cssMap = true;
+	for (var task in tasks) {
+		var minify = false,
+			targetFile = targetFiles.grid,
+			prefixes = autoprefixerSettings,
+			prefixesAllowed = true,
+			fileType = defaultFileType,
+			fileSuffix = minVersionSuffix,
+			outputDir = directories.dist,
+			cssMap = true,
 
-	if (typeof settings === 'object') {
-		if (settingsExist(settings, 'minify', 'boolean')) minify = settings.minify;
-		if (settingsExist(settings, 'targetFile', 'string')) targetFile = settings.targetFile;
-		if (settingsExist(settings, 'cssMap', 'boolean')) cssMap = settings.cssMap;
-		if (settingsExist(settings, 'fileType', 'string')) fileType = settings.fileType;
-		if (settingsExist(settings, 'noPrefixes', 'boolean')) prefixesAllowed = ! settings.noPrefixes;
-		if (settingsExist(settings, 'prefixes', 'object')) prefixes = settings.prefixes;
-		if (settingsExist(settings, 'outputDir', 'string')) outputDir = settings.outputDir;
+			taskSettings = tasks[task];
+
+		if (taskSettings && typeof taskSettings === 'object') {
+			if (settingsExist(taskSettings, 'minify', 'boolean')) minify = taskSettings.minify;
+			if (settingsExist(taskSettings, 'targetFile', 'string')) targetFile = taskSettings.targetFile;
+			if (settingsExist(taskSettings, 'cssMap', 'boolean')) cssMap = taskSettings.cssMap;
+			if (settingsExist(taskSettings, 'fileType', 'string')) fileType = taskSettings.fileType;
+			if (settingsExist(taskSettings, 'noPrefixes', 'boolean')) prefixesAllowed = ! taskSettings.noPrefixes;
+			if (settingsExist(taskSettings, 'prefixes', 'object')) prefixes = taskSettings.prefixes;
+			if (settingsExist(taskSettings, 'outputDir', 'string')) outputDir = taskSettings.outputDir;
+		}
+
+		gulp.src(targetFile)
+			.pipe(plumber())
+			.pipe(sourcemaps.init())
+			.pipe(sass())
+			.pipe(pipe_if(prefixesAllowed, autoprefixer({
+					browsers: prefixes
+				})
+			))
+			.pipe(pipe_if(minify, cleanCss()))
+			.pipe(pipe_if(minify, rename({
+					suffix: '.' + fileSuffix
+				})
+			))
+			.pipe(rename({
+					extname: '.' + fileType
+				})
+			)
+			.pipe(pipe_if(cssMap, sourcemaps.write(directories.sourcemaps)))
+			.pipe(gulp.dest(outputDir));
 	}
 
-	return gulp.src(targetFile)
-		.pipe(plumber())
-		.pipe(sourcemaps.init())
-		.pipe(sass())
-		.pipe(pipe_if(prefixesAllowed, autoprefixer({
-				browsers: prefixes
-			})
-		))
-		.pipe(pipe_if(minify, cleanCss()))
-		.pipe(pipe_if(minify, rename({
-				suffix: '.' + fileSuffix
-			})
-		))
-		.pipe(rename({
-				extname: '.' + fileType
-			})
-		)
-		.pipe(pipe_if(cssMap, sourcemaps.write(sourcemapsDir)))
-		.pipe(gulp.dest(outputDir));
 }
