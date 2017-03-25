@@ -17,12 +17,12 @@ const
 
 	// Setup
 	directories = {
-		dist: __dirname + '/dist',
-		src: __dirname + '/src',
-		tests: __dirname + '/tests',
-		watch: __dirname + '/src/**/*.sass',
-		sourcemaps: __dirname + '/',
-		ampTestParts: __dirname + '/tests/amp-test-parts'
+		dist: 'dist',
+		src: 'src',
+		tests: 'tests',
+		watch: 'src/**/*.sass',
+		sourcemaps: '/',
+		ampTestParts: 'tests/amp-test-parts'
 	},
 
 	targetFiles = {
@@ -163,5 +163,7 @@ function generateAmpTestFile() {
 		gridMobileCss = fs.readFileSync(directories.dist + "/grid.mobile.css", 'utf8'),
 		fileContent = partBeforeStyle + gridMobileCss + partAfterStyle;
 
-	fs.writeFile(directories.tests + '/amp-test.html', fileContent);
+	fs.writeFile(directories.tests + '/amp-test.html', fileContent, function () {
+		console.log ('Amp test file successfully generated')
+	});
 }
