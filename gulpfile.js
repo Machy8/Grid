@@ -157,7 +157,6 @@ function compile() {
 }
 
 function generateAmpTestFile() {
-	console.log(__dirname);
 	var
 		partBeforeStyle = fs.readFileSync(directories.ampTestParts + "/before-style.txt", 'utf8'),
 		partAfterStyle = fs.readFileSync(directories.ampTestParts + "/after-style.txt", 'utf8'),

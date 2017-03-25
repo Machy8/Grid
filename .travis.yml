@@ -8,5 +8,5 @@ os:
 
 script:
   - npm run css-tests
-  - gulp generate-amp-test-file
+  - npm run generate-amp-test-file
   - npm run amp-validation
