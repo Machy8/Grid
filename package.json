@@ -17,7 +17,7 @@
   "sass": "src/grid.sass",
   "scripts": {
     "css-tests": "node_modules/.bin/backstop test",
-    "amp-validation": "node_modules/.bin/amp-validator http://localhost/tests/amp.php",
+    "amp-validation": "node_modules/.bin/amp-validator http://localhost:3000/tests/amp.php",
     "reference": "cd node_modules/backstop && npm run reference"
   },
   "repository": {
