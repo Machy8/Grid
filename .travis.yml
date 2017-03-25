@@ -1,13 +1,18 @@
 language: node_js
 
 node_js:
-  - "6"
+  - '6'
+
+php:
+  - '7.1'
 
 os:
   - osx
 
-before_script:
-  - npm install -g backstopjs
-  - cd node_modules/backstopjs
+#before_script:
+#  - npm install -g backstopjs
+#  - cd node_modules/backstopjs
 
-script: npm test
+script:
+  - npm run css-tests
+  - npm run amp-validation
