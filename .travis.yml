@@ -6,9 +6,7 @@ node_js:
 os:
   - osx
 
-before_script:
-  - npm run generate-amp-test-file
-
 script:
   - npm run css-tests
+  - npm run generate-amp-test-file
   - npm run amp-validation
