@@ -16,8 +16,9 @@
   "style": "dist/grid.css",
   "sass": "src/grid.sass",
   "scripts": {
-    "test": "cd node_modules/backstopjs && npm run test",
-    "reference": "cd node_modules/backstopjs && npm run reference"
+    "css-tests": "node_modules/.bin/backstop test",
+    "amp-validation": "node_modules/.bin/amp-validator http://localhost/Grid/tests/amp.php",
+    "reference": "cd node_modules/backstop && npm run reference"
   },
   "repository": {
     "type": "git",

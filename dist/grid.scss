@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/*! Grid - Copyright (c) 2016 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.*/
+/*! Grid css framework v 2.2.0 | BSD 3-clause | https://github.com/Machy8/Grid */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -393,7 +392,8 @@ body {
   list-style-type: none; }
   .list-dash li::before {
     content: "-";
-    margin-right: 10px; }
+    margin-right: 10px;
+    font-weight: bold; }
 
 .list-inside {
   list-style-position: inside; }
