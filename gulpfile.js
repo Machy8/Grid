@@ -17,12 +17,12 @@ const
 
 	// Setup
 	directories = {
-		dist: 'dist',
-		src: 'src',
-		tests: 'tests',
-		watch: 'src/**/*.sass',
-		sourcemaps: '/',
-		ampTestParts: 'tests/amp-test-parts'
+		dist: './dist',
+		src: './src',
+		tests: './tests',
+		watch: './src/**/*.sass',
+		sourcemaps: './',
+		ampTestParts: './tests/amp-test-parts'
 	},
 
 	targetFiles = {
@@ -157,6 +157,7 @@ function compile() {
 }
 
 function generateAmpTestFile() {
+	console.log(__dirname);
 	var
 		partBeforeStyle = fs.readFileSync(directories.ampTestParts + "/before-style.txt", 'utf8'),
 		partAfterStyle = fs.readFileSync(directories.ampTestParts + "/after-style.txt", 'utf8'),
