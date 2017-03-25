@@ -13,6 +13,7 @@ const
 	rename = require('gulp-rename'),
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
+	fs = require('fs'),
 
 	// Setup
 	directories = {
@@ -20,7 +21,8 @@ const
 		src: './src',
 		tests: './tests',
 		watch: './src/**/*.sass',
-		sourcemaps: '/'
+		sourcemaps: '/',
+		ampTestParts: './tests/amp-test-parts'
 	},
 
 	targetFiles = {
@@ -91,7 +93,9 @@ gulp
 		gulp.watch(directories.watch, ['compile']);
 	})
 
-	.task('default', ['compile', 'watch']);
+	.task('default', ['compile', 'watch'])
+
+	.task ('generate-amp-test-file', generateAmpTestFile);
 
 
 /**
@@ -150,4 +154,14 @@ function compile() {
 			.pipe(gulp.dest(outputDir));
 	}
 
+}
+
+function generateAmpTestFile() {
+	var
+		partBeforeStyle = fs.readFileSync( directories.ampTestParts + "/before-style.txt", 'utf8'),
+		partAfterStyle = fs.readFileSync( directories.ampTestParts + "/after-style.txt", 'utf8'),
+		gridMobileCss = fs.readFileSync( directories.dist + "/grid.mobile.css", 'utf8');
+
+	var fileContent = partBeforeStyle + gridMobileCss + partAfterStyle;
+	fs.writeFile(directories.tests + '/amp-test.html', fileContent);
 }
