@@ -18,14 +18,15 @@ const
 	directories = {
 		dist: './dist',
 		src: './src',
-		test: './tests',
+		tests: './tests',
 		watch: './src/**/*.sass',
 		sourcemaps: '/'
 	},
 
 	targetFiles = {
 		grid: directories.src + '/grid.sass',
-		gridMobile: directories.src + '/grid.mobile.sass'
+		gridMobile: directories.src + '/grid.mobile.sass',
+		testsHelpers: directories.tests + '/helpers/tests-helpers.sass'
 	},
 
 	autoprefixerPrefixes = {
@@ -70,7 +71,14 @@ const
 		gridTestable: {
 			targetFile: targetFiles.grid,
 			prefixes: autoprefixerSettings.concat(['Safari >= 4']),
-			outputDir: directories.test,
+			outputDir: directories.tests,
+			cssMap: false
+		},
+
+		testsHelpers: {
+			minify: true,
+			targetFile: targetFiles.testsHelpers,
+			outputDir: directories.tests,
 			cssMap: false
 		}
 	};

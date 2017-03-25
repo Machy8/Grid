@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="tests-helpers.min.css">
     <link rel="stylesheet" href="grid.css">
     <meta charset="UTF-8">
     <title>Full sizes 2</title>
 </head>
 <body>
 
-    <div class="x-centered" style="width: 200px; height: 100px; border: 1px solid red; margin-bottom: 10px">
-        <div class="full-width display-inline-block" style="background: blue; height: 50px">Full width</div>
+    <div class="test-wrapper">
+        <div class="full-width display-inline-block test-box-dark-blue">Full width</div>
     </div>
 
-    <div class="x-centered" style="width: 200px; height: 100px; border: 1px solid red; margin-bottom: 10px">
-        <div class="full-height" style="background: blue; width: 50px">Full height</div>
+    <div class="test-wrapper" style="height: 400px">
+        <div class="full-height test-box-orange">Full height</div>
     </div>
 
-    <div class="x-centered display-flex" style="width: 200px; height: 100px; border: 1px solid red; margin-bottom: 10px">
-        <div class="grow" style="background: blue;">Grow</div>
+    <div class="display-flex test-wrapper">
+        <div class="grow test-box-fuchsia" style="height: auto">Grow</div>
     </div>
 
 </body>

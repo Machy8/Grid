@@ -6,3 +6,4 @@ tests/actual/
 tests/casper_scripts/
 tests/html_report/
 tests/ci_report/
+!/tests/vertical-alignment.html
