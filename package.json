@@ -17,8 +17,10 @@
   "sass": "src/grid.sass",
   "scripts": {
     "css-tests": "node_modules/.bin/backstop test",
-    "amp-validation": "node_modules/.bin/amp-validator tests/amp.php",
-    "reference": "cd node_modules/backstop && npm run reference"
+    "amp-validation": "node_modules/.bin/amp-validator tests/amp-test.html",
+    "compile-sass": "gulp compile-sass",
+    "generate-amp-test-file": "gulp generate-amp-test-file",
+    "generate-backstop-references": "node_modules/.bin/backstop reference"
   },
   "repository": {
     "type": "git",
