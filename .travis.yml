@@ -9,10 +9,6 @@ php:
 os:
   - osx
 
-#before_script:
-#  - npm install -g backstopjs
-#  - cd node_modules/backstopjs
-
 script:
   - npm run css-tests
   - npm run amp-validation
