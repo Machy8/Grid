@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="tests-helpers.min.css">
     <meta charset="UTF-8">
     <title>Align self</title>
 </head>
 <body>
 
-    <div class="x-centered display-flex" style="width: 500px; height: 200px; border: 1px solid red; margin-bottom: 10px">
-        <div class="self-bottom" style="width: 50px; background: blue; height: 50px"></div>
-        <div class="self-centered" style="width: 50px; background: orange; height: 50px"></div>
-        <div class="self-baseline" style="width: 50px; background: green; height: 50px"></div>
-        <div class="self-baseline" style="width: 50px; background: gray; height: 40px"></div>
-        <div class="self-baseline" style="width: 50px; background: purple; height: 60px"></div>
-        <div class="self-stretched" style="width: 50px; background: black;"></div>
+    <div class="x-centered display-flex test-wrapper">
+        <div class="self-bottom test-box-blue"></div>
+        <div class="self-centered test-box-dark-blue"></div>
+        <div class="self-baseline test-box-blue"></div>
+        <div class="self-baseline test-box-dark-blue" style="height: 40px"></div>
+        <div class="self-baseline test-box-blue" style="height: 60px"></div>
+        <div class="self-stretched test-box-dark-blue" style="height: auto"></div>
     </div>
 
 </body>
