@@ -3,9 +3,6 @@ language: node_js
 node_js:
   - '6'
 
-php:
-  - '7.1'
-
 os:
   - osx
 

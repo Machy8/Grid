@@ -17,12 +17,12 @@ const
 
 	// Setup
 	directories = {
-		dist: './dist',
-		src: './src',
-		tests: './tests',
-		watch: './src/**/*.sass',
-		sourcemaps: '/',
-		ampTestParts: './tests/amp-test-parts'
+		dist: __dirname + '/dist',
+		src: __dirname + '/src',
+		tests: __dirname + '/tests',
+		watch: __dirname + '/src/**/*.sass',
+		sourcemaps: __dirname + '/',
+		ampTestParts: __dirname + '/tests/amp-test-parts'
 	},
 
 	targetFiles = {
@@ -158,10 +158,10 @@ function compile() {
 
 function generateAmpTestFile() {
 	var
-		partBeforeStyle = fs.readFileSync( directories.ampTestParts + "/before-style.txt", 'utf8'),
-		partAfterStyle = fs.readFileSync( directories.ampTestParts + "/after-style.txt", 'utf8'),
-		gridMobileCss = fs.readFileSync( directories.dist + "/grid.mobile.css", 'utf8');
+		partBeforeStyle = fs.readFileSync(directories.ampTestParts + "/before-style.txt", 'utf8'),
+		partAfterStyle = fs.readFileSync(directories.ampTestParts + "/after-style.txt", 'utf8'),
+		gridMobileCss = fs.readFileSync(directories.dist + "/grid.mobile.css", 'utf8'),
+		fileContent = partBeforeStyle + gridMobileCss + partAfterStyle;
 
-	var fileContent = partBeforeStyle + gridMobileCss + partAfterStyle;
 	fs.writeFile(directories.tests + '/amp-test.html', fileContent);
 }
