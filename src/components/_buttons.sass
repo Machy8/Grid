@@ -1,0 +1,56 @@
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+@mixin buttonsComponent
+
+	.button
+		@extend .display-inline-block
+		@extend .outline-none
+		@extend .selection-disabled
+		@extend .text-normal-weight
+		@extend .cursor-pointer
+		@extend .text-centered
+		@extend .text-undecorated
+		@extend .text-nowrap
+		@extend .border-none
+		@extend .background-none
+		padding: 10px 15px
+		line-height: normal
+
+		&-wide
+			padding: 10px 30px
+
+		&-small
+			padding: 5px 10px
+
+			&-wide
+				padding: 5px 25px
+
+		&-large
+			padding: 15px 25px
+
+			&-wide
+				padding: 15px 35px
+
+		&-green
+			@extend .button
+			@extend .color-white
+			@extend .background-green
+
+			&:hover
+				background-color: $color-9
+
+		&-orange
+			@extend .button
+			@extend .color-white
+			@extend .background-orange
+
+			&:hover
+				background-color: $color-7
+
+		&-red
+			@extend .button
+			@extend .color-white
+			@extend .background-red
+
+			&:hover
+				background-color: $color-5
