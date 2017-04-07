@@ -1,4 +1,4 @@
-@mixin gridComponentsContainer
+@mixin componentsContainer
 	@include omitBreakpoints(all)
 		@include normalizeComponent
 		@include boxSizingComponent
@@ -43,3 +43,7 @@
 
 	@include omitBreakpoints(all)
 		@include clearfixComponent
+
+		@include backgroundComponent
+		@include colorComponent
+		@include buttonsComponent

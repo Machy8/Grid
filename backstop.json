@@ -21,8 +21,20 @@
       "url": "tests/align-self.html"
     },
     {
+      "label": "Background",
+      "url": "tests/background.html"
+    },
+    {
       "label": "Border radius",
       "url": "tests/border-radius.html"
+    },
+    {
+      "label": "Buttons",
+      "url": "tests/buttons.html"
+    },
+    {
+      "label": "Color",
+      "url": "tests/color.html"
     },
     {
       "label": "Columns",

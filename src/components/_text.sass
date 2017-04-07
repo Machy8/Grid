@@ -5,30 +5,20 @@
     .#{$breakpointPrefix}text
 
         @if $breakpointPrefix == null
-            // Resets
-            &-none
-                &-decoration
-                    text-decoration: none
-
-                &-transformation
-                    text-transform: none
-
-                &-style
-                    font-style: normal
 
             &-undecorated
-                @extend .text-none-decoration
+                text-decoration: none
 
             &-untransformed
-                @extend .text-none-transformation
+                text-transform: none
 
             &-unstyled
-                @extend .text-none-style
+                font-style: normal
 
             &-normal
-                @extend .text-none-decoration
-                @extend .text-none-transformation
-                @extend .text-none-style
+                @extend .text-undecorated
+                @extend .text-untransformed
+                @extend .text-unstyled
                 @extend .text-normal-weight
 
             // Weight
@@ -55,7 +45,7 @@
             &-overline
                 text-decoration: overline
 
-            &-baseline
+            &-strikethrough
                 text-decoration: line-through
 
             // Transform
