@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "amphtml-validator": "^1.0.20",
-    "backstopjs": "^2.6.11",
+    "backstopjs": "^2.7.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^3.0.4",
@@ -43,6 +43,6 @@
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.11.1"
+    "gulp-sourcemaps": "^1.12.0"
   }
 }
