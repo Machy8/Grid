@@ -223,7 +223,7 @@ body {
 .border-none, .button, .button-green, .button-orange, .button-red {
   border: none; }
 
-.outline-none, .button, .button-green, .button-orange, .button-red {
+.outline-none, .button, .button-green, .button-orange, .button-red, .field {
   outline: 0; }
 
 .shadow-none {
@@ -424,7 +424,7 @@ body {
 .rounded-1, .radius-1 {
   border-radius: 2px; }
 
-.rounded-2, .radius-2 {
+.rounded-2, .note, .note-green, .note-orange, .note-red, .radius-2 {
   border-radius: 4px; }
 
 .rounded-3, .radius-3 {
@@ -725,7 +725,7 @@ body {
   -webkit-align-items: flex-end;
           align-items: flex-end; }
 
-.items-centered {
+.items-centered, .field-button-pair, .field-button-pair-rounded {
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center; }
@@ -757,7 +757,7 @@ body {
   -webkit-align-self: baseline;
           align-self: baseline; }
 
-.self-stretched {
+.self-stretched, .field-button-pair .field, .field-button-pair-rounded .field {
   -webkit-align-self: stretch;
               -ms-grid-row-align: stretch;
           align-self: stretch; }
@@ -765,13 +765,13 @@ body {
 .display-inline, .s-display-inline, .s-inline {
   display: inline; }
 
-.display-inline-block, .button, .button-green, .button-orange, .button-red, .s-display-inline-block, .s-inline-block {
+.display-inline-block, .button, .button-green, .button-orange, .button-red, .field, .s-display-inline-block, .s-inline-block {
   display: inline-block; }
 
-.display-block, .s-display-block, .s-block {
+.display-block, .note, .note-green, .note-orange, .note-red, .s-display-block, .s-block {
   display: block; }
 
-.display-flex, .grow, .content-grow > *, .grow-none, .content-grow-none > *, .nowrap, .wrap, .wrap-reverse, .content-centered, .s-content-centered, .content-left, .s-content-left, .content-right, .s-content-right, .content-wrapped, .s-content-wrapped, .content-apart, .s-content-apart, .direction-row, .s-direction-row, .direction-column, .s-direction-column, .direction-reversed-row, .s-direction-reversed-row, .direction-reversed-column, .s-direction-reversed-column, .lines-top, .lines-bottom, .lines-centered, .lines-stretched, .lines-wrapped, .lines-apart, .items-top, .items-bottom, .items-centered, .items-baseline, .items-stretched, .self-top, .self-bottom, .self-centered, .self-baseline, .self-stretched, .order-1, .s-order-1, .order-2, .s-order-2, .order-3, .s-order-3, .order-4, .s-order-4, .order-5, .s-order-5, .order-6, .s-order-6, .s-display-flex, .s-flex {
+.display-flex, .grow, .content-grow > *, .grow-none, .content-grow-none > *, .nowrap, .wrap, .wrap-reverse, .content-centered, .s-content-centered, .content-left, .s-content-left, .content-right, .s-content-right, .content-wrapped, .s-content-wrapped, .content-apart, .s-content-apart, .direction-row, .s-direction-row, .direction-column, .s-direction-column, .direction-reversed-row, .s-direction-reversed-row, .direction-reversed-column, .s-direction-reversed-column, .lines-top, .lines-bottom, .lines-centered, .lines-stretched, .lines-wrapped, .lines-apart, .items-top, .items-bottom, .items-centered, .field-button-pair, .field-button-pair-rounded, .items-baseline, .items-stretched, .self-top, .self-bottom, .self-centered, .self-baseline, .self-stretched, .field-button-pair .field, .field-button-pair-rounded .field, .order-1, .s-order-1, .order-2, .s-order-2, .order-3, .s-order-3, .order-4, .s-order-4, .order-5, .s-order-5, .order-6, .s-order-6, .s-display-flex, .s-flex {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex; }
@@ -825,13 +825,13 @@ body {
 .color-black {
   color: #0f0909; }
 
-.color-green {
+.color-green, .note-green .note-title, .note-green h2, .note-green h3, .note-green h4, .note-green h5, .note-green h6, .note-green .note-orange h2, .note-orange .note-green h2, .note-green .note-orange h3, .note-orange .note-green h3, .note-green .note-orange h4, .note-orange .note-green h4, .note-green .note-orange h5, .note-orange .note-green h5, .note-green .note-orange h6, .note-orange .note-green h6, .note-green .note-red h2, .note-red .note-green h2, .note-green .note-red h3, .note-red .note-green h3, .note-green .note-red h4, .note-red .note-green h4, .note-green .note-red h5, .note-red .note-green h5, .note-green .note-red h6, .note-red .note-green h6 {
   color: #00a80b; }
 
-.color-orange {
+.color-orange, .note-orange .note-green h2, .note-green .note-orange h2, .note-orange .note-green h3, .note-green .note-orange h3, .note-orange .note-green h4, .note-green .note-orange h4, .note-orange .note-green h5, .note-green .note-orange h5, .note-orange .note-green h6, .note-green .note-orange h6, .note-orange .note-title, .note-orange h2, .note-orange h3, .note-orange h4, .note-orange h5, .note-orange h6, .note-orange .note-red h2, .note-red .note-orange h2, .note-orange .note-red h3, .note-red .note-orange h3, .note-orange .note-red h4, .note-red .note-orange h4, .note-orange .note-red h5, .note-red .note-orange h5, .note-orange .note-red h6, .note-red .note-orange h6 {
   color: #ff9400; }
 
-.color-red {
+.color-red, .note-red .note-green h2, .note-green .note-red h2, .note-red .note-green h3, .note-green .note-red h3, .note-red .note-green h4, .note-green .note-red h4, .note-red .note-green h5, .note-green .note-red h5, .note-red .note-green h6, .note-green .note-red h6, .note-red .note-orange h2, .note-orange .note-red h2, .note-red .note-orange h3, .note-orange .note-red h3, .note-red .note-orange h4, .note-orange .note-red h4, .note-red .note-orange h5, .note-orange .note-red h5, .note-red .note-orange h6, .note-orange .note-red h6, .note-red .note-title, .note-red h2, .note-red h3, .note-red h4, .note-red h5, .note-red h6 {
   color: #ef0f00; }
 
 .button, .button-green, .button-orange, .button-red {
@@ -853,6 +853,40 @@ body {
     background-color: #eb8000; }
   .button-red:hover {
     background-color: #d10000; }
+
+.note, .note-green, .note-orange, .note-red {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #dddddd;
+  border-left: 5px solid;
+  padding: 16px; }
+  .note > p:first-of-type, .note-green > p:first-of-type, .note-orange > p:first-of-type, .note-red > p:first-of-type {
+    margin-top: 0; }
+  .note > p:last-of-type, .note-green > p:last-of-type, .note-orange > p:last-of-type, .note-red > p:last-of-type {
+    margin-bottom: 0; }
+  .note-title, .note-green .note-title, .note-green h2, .note-green h3, .note-green h4, .note-green h5, .note-green h6, .note-orange .note-title, .note-orange h2, .note-orange h3, .note-orange h4, .note-orange h5, .note-orange h6, .note-red .note-title, .note-red h2, .note-red h3, .note-red h4, .note-red h5, .note-red h6, .note h2, .note-green h2, .note-orange h2, .note-red h2, .note h3, .note-green h3, .note-orange h3, .note-red h3, .note h4, .note-green h4, .note-orange h4, .note-red h4, .note h5, .note-green h5, .note-orange h5, .note-red h5, .note h6, .note-green h6, .note-orange h6, .note-red h6 {
+    margin: 0 0 5px; }
+  .note-green {
+    border-left-color: #00a80b; }
+  .note-orange {
+    border-left-color: #ff9400; }
+  .note-red {
+    border-left-color: #ef0f00; }
+
+.field {
+  border: 1px solid #dddddd;
+  padding: 5px; }
+  .field-large {
+    padding: 10px; }
+  .field-button-pair .field {
+    border-right: none; }
+  .field-button-pair-rounded .field {
+    border-right: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
+  .field-button-pair-rounded .button, .field-button-pair-rounded .button-green, .field-button-pair-rounded .button-orange, .field-button-pair-rounded .button-red {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px; }
 
 @media (min-width: 641px) {
   .m-auto {
