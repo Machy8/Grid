@@ -34,7 +34,6 @@
 - **Npm:** ``npm i grid-css-framework``
 - **Bower:** ``bower install grid-css-framework``
 
-
 ## Browser compatibility
 | IE | Edge | Firefox | Chrome | Chrome for android | Safari | IOS Safari | Opera | Opera mini | Android browser |
 |:--:|:----:|:-------:|:------:|:------------------:|:------:|:----------:|:-----:|:----------:|:---------------:|
@@ -70,3 +69,6 @@
 - [Full sizes](https://github.com/Machy8/Grid/blob/master/docs/full-sizes.md)
 - [Margin & padding](https://github.com/Machy8/Grid/blob/master/docs/margin-padding.md)
 - [Visibility](https://github.com/Machy8/Grid/blob/master/docs/visibility.md)
+- [Buttons](https://github.com/Machy8/Grid/blob/master/docs/buttons.md)
+- [Notes](https://github.com/Machy8/Grid/blob/master/docs/notes.md)
+- [Forms](https://github.com/Machy8/Grid/blob/master/docs/forms.md)
