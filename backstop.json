@@ -37,10 +37,6 @@
       "url": "tests/color.html"
     },
     {
-      "label": "Columns",
-      "url": "tests/columns.html"
-    },
-    {
       "label": "Display types",
       "url": "tests/display-types.html"
     },
@@ -51,6 +47,10 @@
     {
       "label": "Float clear",
       "url": "tests/float-clear.html"
+    },
+    {
+      "label": "Forms",
+      "url": "tests/forms.html"
     },
     {
       "label": "Full sizes 1",
@@ -75,6 +75,10 @@
     {
       "label": "Max width",
       "url": "tests/max-width.html"
+    },
+    {
+      "label": "Notes",
+      "url": "tests/notes.html"
     },
     {
       "label": "Positions 1",
@@ -102,7 +106,7 @@
     },
     {
       "label": "Vertical alignment",
-      "url": "tests/vertical.alignment.html"
+      "url": "tests/vertical-alignment.html"
     },
     {
       "label": "Visibility",
