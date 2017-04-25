@@ -1,0 +1,51 @@
+@mixin componentsContainer
+	@include omitBreakpoints(all)
+		@include normalizeComponent
+		@include boxSizingComponent
+		@include htmlBodyComponent
+		@include resetsComponent
+
+	@include maxWidthComponent
+	@include textComponent
+
+	@include omitBreakpoints(all)
+		@include listComponent
+		@include cursorComponent
+		@include borderRadiusComponent
+		// @include marginComponent
+		// @include paddingComponent
+		@include visibilityComponent
+		@include overflowComponent
+		@include resizeComponent
+
+	@include omitBreakpoints(all)
+		@include fullSizesComponent
+		@include wrapComponent
+		@include floatClearComponent
+
+	@include columnsComponent
+
+	@include omitBreakpoints(all)
+		@include horizontalAlignmentComponent
+		@include verticalAlignmentComponent
+
+	@include positionsComponent
+	@include justifyContentComponent
+	@include flexDirectionComponent
+
+	@include omitBreakpoints(all)
+		@include alignContentComponent
+		@include alignItemsComponent
+		@include alignSelfComponent
+
+	@include orderComponent
+	@include displayTypesComponent
+
+	@include omitBreakpoints(all)
+		@include clearfixComponent
+
+		@include backgroundComponent
+		@include colorComponent
+		@include buttonsComponent
+		@include notesComponent
+		@include formsComponent

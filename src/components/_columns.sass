@@ -1,0 +1,23 @@
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+@mixin columnsComponent
+    .#{$breakpointPrefix}columns
+        @if $noneBreakpointPrefix
+            &-none-gap
+                column-gap: 0
+
+            &-rule
+                @each $type in $columnsRuleTypes
+                    &-#{$type}
+                        column-rule-style: $type
+
+        $columnsCounter: $columnsMin
+        @while $columnsCounter <= $columnsMax
+            &-#{$columnsCounter}
+                @if $isFirstBreakpointPrefix
+                    @extend .columns-#{$columnsCounter}
+
+                @else
+                    column-count: $columnsCounter
+
+            $columnsCounter: $columnsCounter + $columnsIncreasedBy

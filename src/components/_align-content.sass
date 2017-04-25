@@ -1,0 +1,22 @@
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+@mixin alignContentComponent
+
+    .#{$breakpointPrefix}lines
+        &-top
+            @include linesAlignment(top, flex-start)
+
+        &-bottom
+            @include linesAlignment(bottom, flex-end)
+
+        &-centered
+            @include linesAlignment(centered, center)
+
+        &-stretched
+            @include linesAlignment(stretched, stretch)
+
+        &-wrapped
+            @include linesAlignment(wrapped, space-around)
+
+        &-apart
+            @include linesAlignment(apart, space-between)

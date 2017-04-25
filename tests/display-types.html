@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../dist/grid.css">
+    <link rel="stylesheet" href="tests-helpers.min.css">
+    <link rel="stylesheet" href="grid.css">
     <meta charset="UTF-8">
     <title>Display types</title>
 </head>
 <body>
 
-    <div class="x-centered" style="width: 300px; margin-bottom: 10px">
-        <div class="display-inline-block" style="width: 50px; height: 50px; background: red; margin-right: 5px"></div>
-        <div class="display-inline-block" style="width: 50px; height: 50px; background: blue; margin-right: 5px"></div>
-        <div class="display-inline-block" style="width: 50px; height: 50px; background: green;"></div>
+    <div class="test-wrapper">
+        <div class="display-inline-block test-box-blue"></div>
+        <div class="display-inline-block test-box-dark-blue"></div>
+        <div class="display-inline-block test-box-green"></div>
     </div>
 
-    <div class="x-centered" style="width: 300px; margin-bottom: 10px">
-        <span class="display-block" style="height: 50px; background: red; margin-bottom: 5px"></span>
-        <span class="display-block" style="height: 50px; background: blue; margin-bottom: 5px"></span>
+    <div class="test-wrapper">
+        <span class="display-block width-auto test-box-blue"></span>
+        <span class="display-block width-auto test-box-dark-blue"></span>
     </div>
 
-    <div class="x-centered" style="width: 300px; margin-bottom: 10px">
-        <div class="display-inline" style="height:50px; background: red; margin-bottom: 5px">Inline element</div>
+    <div class="test-wrapper">
+        <div class="display-inline test-box-dark-blue">Inline element</div>
     </div>
 
 </body>

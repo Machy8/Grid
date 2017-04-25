@@ -21,12 +21,20 @@
       "url": "tests/align-self.html"
     },
     {
+      "label": "Background colors",
+      "url": "tests/background-colors.html"
+    },
+    {
       "label": "Border radius",
       "url": "tests/border-radius.html"
     },
     {
-      "label": "Columns",
-      "url": "tests/columns.html"
+      "label": "Buttons",
+      "url": "tests/buttons.html"
+    },
+    {
+      "label": "Text color",
+      "url": "tests/text.colors.html"
     },
     {
       "label": "Display types",
@@ -39,6 +47,10 @@
     {
       "label": "Float clear",
       "url": "tests/float-clear.html"
+    },
+    {
+      "label": "Forms",
+      "url": "tests/forms.html"
     },
     {
       "label": "Full sizes 1",
@@ -63,6 +75,10 @@
     {
       "label": "Max width",
       "url": "tests/max-width.html"
+    },
+    {
+      "label": "Notes",
+      "url": "tests/notes.html"
     },
     {
       "label": "Positions 1",
@@ -90,7 +106,7 @@
     },
     {
       "label": "Vertical alignment",
-      "url": "tests/vertical.alignment.html"
+      "url": "tests/vertical-alignment.html"
     },
     {
       "label": "Visibility",

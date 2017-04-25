@@ -1,0 +1,15 @@
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+@mixin visibilityComponent
+
+    .transparent, .transparency-0
+        @include visibility(0)
+
+
+    @for $i from 1 through 9
+        .transparency-#{$i}
+            @include visibility($i)
+
+
+    .opaque, .transparency-10
+        @include visibility(10)

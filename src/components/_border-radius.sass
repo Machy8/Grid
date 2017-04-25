@@ -1,0 +1,15 @@
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+@mixin borderRadiusComponent
+
+    .square, .radius-none
+        border-radius: 0
+
+
+    @for $i from 1 through 5
+        .rounded-#{$i}, .radius-#{$i}
+            border-radius: $i * 2px
+
+
+    .circle
+        border-radius: 100%

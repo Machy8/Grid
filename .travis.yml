@@ -1,13 +1,12 @@
 language: node_js
 
 node_js:
-  - "6"
+  - '6'
 
 os:
   - osx
 
-before_script:
-  - npm install -g backstopjs
-  - cd node_modules/backstopjs
-
-script: npm test
+script:
+  - npm run css-tests
+  - npm run generate-amp-test-file
+  - npm run amp-validation

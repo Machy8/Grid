@@ -1,0 +1,92 @@
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+
+@mixin marginComponent
+
+    .#{$breakpointPrefix}margin
+        @each $side in $frameSides
+            &-#{$side}
+                &-none
+                    @if $isFirstBreakpointPrefix
+                        @extend .margin-#{$side}-none
+
+                    @else
+                        margin-#{$side}: 0
+
+                $sizeCounter: $frameSizeIncreasedBy
+                @while $sizeCounter <= $frameMaxSize
+                    &-#{$sizeCounter}
+                        @if $isFirstBreakpointPrefix
+                            @extend .margin-#{$side}-#{$sizeCounter} !optional
+
+                        @else
+                            margin-#{$side}: $sizeCounter * 1px
+                    $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
+
+        &-x
+            &-none
+                @if $isFirstBreakpointPrefix
+                    @extend .margin-left-none
+                    @extend .margin-right-none
+
+                @else
+                    @extend .#{$breakpointPrefix}margin-left-none
+                    @extend .#{$breakpointPrefix}margin-right-none
+
+            $sizeCounter: $frameSizeIncreasedBy
+            @while $sizeCounter <= $frameMaxSize
+                &-#{$sizeCounter}
+                    @if $isFirstBreakpointPrefix
+                        @extend .margin-left-#{$sizeCounter}
+                        @extend .margin-right-#{$sizeCounter}
+
+                    @else
+                        @extend .#{$breakpointPrefix}margin-left-#{$sizeCounter}
+                        @extend .#{$breakpointPrefix}margin-right-#{$sizeCounter}
+                $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
+
+        &-y
+            &-none
+                @if $isFirstBreakpointPrefix
+                    @extend .margin-top-none
+                    @extend .margin-bottom-none
+
+                @else
+                    @extend .#{$breakpointPrefix}margin-top-none
+                    @extend .#{$breakpointPrefix}margin-bottom-none
+
+            $sizeCounter: $frameSizeIncreasedBy
+            @while $sizeCounter <= $frameMaxSize
+                &-#{$sizeCounter}
+                    @if $isFirstBreakpointPrefix
+                        @extend .margin-top-#{$sizeCounter}
+                        @extend .margin-bottom-#{$sizeCounter}
+
+                    @else
+                        @extend .#{$breakpointPrefix}margin-top-#{$sizeCounter}
+                        @extend .#{$breakpointPrefix}margin-bottom-#{$sizeCounter}
+                $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
+
+        &-none
+            @if $isFirstBreakpointPrefix
+                @extend .margin-top-none
+                @extend .margin-bottom-none
+                @extend .margin-left-none
+                @extend .margin-right-none
+
+            @else
+                @extend .#{$breakpointPrefix}margin-top-none
+                @extend .#{$breakpointPrefix}margin-bottom-none
+                @extend .#{$breakpointPrefix}margin-left-none
+                @extend .#{$breakpointPrefix}margin-right-none
+
+        $sizeCounter: $frameSizeIncreasedBy
+        @while $sizeCounter <= $frameMaxSize
+            &-#{$sizeCounter}
+                @if $isFirstBreakpointPrefix
+                    @extend .margin-x-#{$sizeCounter}
+                    @extend .margin-y-#{$sizeCounter}
+
+                @else
+                    @extend .#{$breakpointPrefix}margin-x-#{$sizeCounter}
+                    @extend .#{$breakpointPrefix}margin-y-#{$sizeCounter}
+            $sizeCounter: $sizeCounter + $frameSizeIncreasedBy
