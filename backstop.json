@@ -21,8 +21,8 @@
       "url": "tests/align-self.html"
     },
     {
-      "label": "Background",
-      "url": "tests/background.html"
+      "label": "Background colors",
+      "url": "tests/background-colors.html"
     },
     {
       "label": "Border radius",
@@ -33,8 +33,8 @@
       "url": "tests/buttons.html"
     },
     {
-      "label": "Color",
-      "url": "tests/color.html"
+      "label": "Text color",
+      "url": "tests/text.colors.html"
     },
     {
       "label": "Display types",
