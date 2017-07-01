@@ -1,48 +1,48 @@
 {
-  "name": "grid-css-framework",
-  "description": "Intuitive, easy to use, mobile first CSS framework based on Flexbox.",
-  "keywords": [
-    "web",
-    "framework",
-    "front-end",
-    "responsive",
-    "mobile-first",
-    "sass",
-    "css"
-  ],
-  "homepage": "https://github.com/Machy8/Grid",
-  "version": "2.2.0",
-  "license": "BSD-3-Clause",
-  "style": "dist/grid.css",
-  "sass": "src/grid.sass",
-  "scripts": {
-    "css-tests": "node_modules/.bin/backstop test",
-    "amp-validation": "node_modules/.bin/amphtml-validator tests/amp-test.html",
-    "compile-sass": "gulp compile-sass",
-    "generate-amp-test-file": "gulp generate-amp-test-file",
-    "generate-backstop-references": "node_modules/.bin/backstop reference"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Machy8/Grid.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Machy8/Grid/issues"
-  },
-  "author": {
-    "name": "Vladimír Macháček",
-    "email": "8machy@seznam.cz"
-  },
-  "devDependencies": {
-    "amphtml-validator": "^1.0.20",
-    "backstopjs": "^2.7.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.3.1",
-    "gulp-if": "^2.0.2",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0"
-  }
+	"name": "grid-css-framework",
+	"description": "Intuitive, easy to use, mobile first CSS framework based on Flexbox.",
+	"keywords": [
+		"web",
+		"framework",
+		"front-end",
+		"responsive",
+		"mobile-first",
+		"sass",
+		"css"
+	],
+	"homepage": "https://github.com/Machy8/Grid",
+	"version": "2.2.0",
+	"license": "BSD-3-Clause",
+	"style": "dist/grid.css",
+	"sass": "src/grid.sass",
+	"scripts": {
+		"css-tests": "node_modules/.bin/backstop test",
+		"amp-validation": "node_modules/.bin/amphtml-validator tests/amp-test.html",
+		"compile-sass": "gulp compile-sass",
+		"generate-amp-test-file": "gulp generate-amp-test-file",
+		"generate-backstop-references": "node_modules/.bin/backstop reference"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Machy8/Grid.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Machy8/Grid/issues"
+	},
+	"author": {
+		"name": "Vladimír Macháček",
+		"email": "8machy@seznam.cz"
+	},
+	"devDependencies": {
+		"amphtml-validator": "^1.0.20",
+		"backstopjs": "^2.7.0",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^4.0.0",
+		"gulp-clean-css": "^3.3.1",
+		"gulp-if": "^2.0.2",
+		"gulp-plumber": "^1.1.0",
+		"gulp-rename": "^1.2.2",
+		"gulp-sass": "^3.1.0",
+		"gulp-sourcemaps": "^2.6.0"
+	}
 }
