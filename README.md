@@ -71,7 +71,7 @@
 - [Margin & padding](https://github.com/Machy8/Grid/blob/master/docs/margin-padding.md)
 - [Visibility](https://github.com/Machy8/Grid/blob/master/docs/visibility.md)
 - [Background colors](https://github.com/Machy8/Grid/blob/master/docs/background-colors.md)
-- [Text colors](https://github.com/Machy8/Grid/blob/master/docs/text-colors.md)
+- [Text colors](https://github.com/Machy8/Grid/blob/master/docs/text-color.md)
 - [Buttons](https://github.com/Machy8/Grid/blob/master/docs/buttons.md)
 - [Notes](https://github.com/Machy8/Grid/blob/master/docs/notes.md)
 - [Forms](https://github.com/Machy8/Grid/blob/master/docs/forms.md)
