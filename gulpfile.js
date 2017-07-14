@@ -14,6 +14,7 @@ const
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
 	fs = require('fs'),
+    sassLint = require('gulp-sass-lint'),
 
 	// Setup
 	directories = {
@@ -110,6 +111,11 @@ function settingsExist(settings, settingsOption, settingsType) {
 
 
 function compile() {
+
+    gulp.src(directories.watch)
+        .pipe(sassLint())
+        .pipe(sassLint.format())
+        .pipe(sassLint.failOnError());
 
 	for (var task in tasks) {
 		var minify = false,
