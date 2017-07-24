@@ -12,6 +12,7 @@ const
 	plumber = require('gulp-plumber'),
 	rename = require('gulp-rename'),
 	sass = require('gulp-sass'),
+	sassLint = require('gulp-sass-lint'),
 	sourcemaps = require('gulp-sourcemaps'),
 	fs = require('fs'),
 
@@ -110,6 +111,11 @@ function settingsExist(settings, settingsOption, settingsType) {
 
 
 function compile() {
+
+    gulp.src(directories.watch)
+        .pipe(sassLint())
+        .pipe(sassLint.format())
+        .pipe(sassLint.failOnError());
 
 	for (var task in tasks) {
 		var minify = false,
