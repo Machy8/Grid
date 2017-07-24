@@ -51,7 +51,7 @@ const
 		gridDev: {
 			noPrefixes: true,
 			cssMap: false,
-			fileType: 'scss',
+			fileType: 'scss'
 		},
 
 		gridMobile: {
@@ -68,21 +68,7 @@ const
 			targetFile: targetFiles.gridMobile,
 			noPrefixes: true,
 			cssMap: false,
-			fileType: 'scss',
-		},
-
-		gridTestable: {
-			targetFile: targetFiles.grid,
-			prefixes: autoprefixerSettings.concat(['Safari >= 4']),
-			outputDir: directories.tests,
-			cssMap: false
-		},
-
-		testsHelpers: {
-			minify: true,
-			targetFile: targetFiles.testsHelpers,
-			outputDir: directories.tests,
-			cssMap: false
+			fileType: 'scss'
 		}
 	};
 
@@ -96,7 +82,9 @@ gulp
 
 	.task('default', ['compile', 'watch'])
 
-	.task ('generate-amp-test-file', generateAmpTestFile);
+	.task('generateAmpTestFile', generateAmpTestFile)
+
+	.task('checkSassCodingStandard', checkSassCodingStandard);
 
 
 /**
@@ -112,10 +100,7 @@ function settingsExist(settings, settingsOption, settingsType) {
 
 function compile() {
 
-    gulp.src(directories.watch)
-        .pipe(sassLint())
-        .pipe(sassLint.format())
-        .pipe(sassLint.failOnError());
+   checkSassCodingStandard();
 
 	for (var task in tasks) {
 		var minify = false,
@@ -160,6 +145,14 @@ function compile() {
 			.pipe(gulp.dest(outputDir));
 	}
 
+}
+
+
+function checkSassCodingStandard() {
+	gulp.src(directories.watch)
+		.pipe(sassLint())
+		.pipe(sassLint.format())
+		.pipe(sassLint.failOnError());
 }
 
 
