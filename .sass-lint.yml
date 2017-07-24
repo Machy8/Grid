@@ -5,7 +5,9 @@ options:
 # Rule Configuration
 rules:
     max-line-length:
-        length: 120
+        - 1
+        -
+            length: 120
 	class-name-format:
         - 1
         -
