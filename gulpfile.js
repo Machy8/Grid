@@ -12,9 +12,9 @@ const
 	plumber = require('gulp-plumber'),
 	rename = require('gulp-rename'),
 	sass = require('gulp-sass'),
+	sassLint = require('gulp-sass-lint'),
 	sourcemaps = require('gulp-sourcemaps'),
 	fs = require('fs'),
-    sassLint = require('gulp-sass-lint'),
 
 	// Setup
 	directories = {
