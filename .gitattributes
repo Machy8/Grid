@@ -3,5 +3,5 @@
 .github export-ignore
 .travis.yml export-ignore
 .sass-lint.yml export-ignore
-tests/ export-ignore
+tests export-ignore
 *.sh eol=lf
