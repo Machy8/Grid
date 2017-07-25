@@ -1,12 +1,12 @@
 language: node_js
 
 node_js:
-  - '6'
+    - '6'
 
 os:
-  - osx
+    - osx
 
 script:
-  - npm run checkSassCodingStandard
-  - npm run generateAmpTestFile
-  - npm run ampValidation
+    - npm run checkSassCodingStandard
+    - npm run generateAmpTestFile
+    - npm run ampValidation

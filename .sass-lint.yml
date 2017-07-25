@@ -1,6 +1,6 @@
 # Linter Options
 options:
-	merge-default-rules: true
+    merge-default-rules: true
 
 # Rule Configuration
 rules:
@@ -8,48 +8,48 @@ rules:
         - 1
         -
             length: 120
-	class-name-format:
+    class-name-format:
         - 1
         -
             convention: 'hyphenatedlowercase'
-	mixin-name-format:
-		- 1
-		-
-			convention: 'camelcase'
-	variable-name-format:
-		- 1
-		-
-			convention: 'camelcase'
-	function-name-format:
-		- 1
-		-
-			convention: 'camelcase'
-	quotes:
-		- 1
-		-
-			style: 'double'
-	indentation:
-		- 1
-		-
-			size: 4
-	hex-notation:
-		- 1
-		-
-			style: 'uppercase'
-	hex-length:
-		- 1
-		-
-			style: 'long'
-	single-line-per-selector:
-		- 0
-	placeholder-in-extend:
-		- 0
-	empty-line-between-blocks:
-		- 1
-		-
-			include: true
-			allow-single-line-rulesets: false
-	property-sort-order:
-		- 1
-		-
-			order: 'concentric'
+    mixin-name-format:
+        - 1
+        -
+            convention: 'camelcase'
+    variable-name-format:
+        - 1
+        -
+            convention: 'camelcase'
+    function-name-format:
+        - 1
+        -
+            convention: 'camelcase'
+    quotes:
+        - 1
+        -
+            style: 'double'
+    indentation:
+        - 1
+        -
+            size: 4
+    hex-notation:
+        - 1
+        -
+            style: 'uppercase'
+    hex-length:
+        - 1
+        -
+            style: 'long'
+    single-line-per-selector:
+        - 0
+    placeholder-in-extend:
+        - 0
+    empty-line-between-blocks:
+        - 1
+        -
+            include: true
+            allow-single-line-rulesets: false
+    property-sort-order:
+        - 1
+        -
+            order: 'concentric'
