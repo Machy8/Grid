@@ -1,7 +1,6 @@
 /*! Grid css framework v 2.2.0 | BSD-3-Clause | https://github.com/Machy8/Grid */
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -42,14 +41,11 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
 
-a:active,
-a:hover {
-  outline-width: 0; }
-
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted; }
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; }
 
 b,
 strong {
@@ -140,9 +136,7 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText; }
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: 0.35em 0.75em 0.625em; }
 
 legend {
   box-sizing: border-box;
@@ -196,13 +190,13 @@ template {
 [hidden] {
   display: none; }
 
-.border-box, *, *:before, *:after, .border-box:before, .border-box:after {
+.border-box, .border-box::before, ::before, .border-box::after, ::after {
   box-sizing: border-box; }
 
-.content-box, .content-box:before, .content-box:after {
+.content-box, .content-box::before, .content-box::after {
   box-sizing: content-box; }
 
-.padding-box, .padding-box:before, .padding-box:after {
+.padding-box, .padding-box::before, .padding-box::after {
   box-sizing: padding-box; }
 
 html,
@@ -211,8 +205,8 @@ body {
   min-height: 100vh; }
 
 body {
-  font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-size: 16px; }
 
 .margin-none {
   margin: 0; }
@@ -221,7 +215,7 @@ body {
   padding: 0; }
 
 .border-none, .button, .button-green, .button-orange, .button-red {
-  border: none; }
+  border: 0; }
 
 .outline-none, .button, .button-green, .button-orange, .button-red, .field {
   outline: 0; }
@@ -361,9 +355,9 @@ body {
   text-align: justify; }
 
 .cutted-text {
+  overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden; }
+  white-space: nowrap; }
 
 .break-words {
   word-wrap: break-word; }
@@ -393,9 +387,9 @@ body {
 .list-dash {
   list-style-type: none; }
   .list-dash li::before {
-    content: "-";
     margin-right: 10px;
-    font-weight: bold; }
+    font-weight: bold;
+    content: "-"; }
 
 .list-inside {
   list-style-position: inside; }
@@ -418,28 +412,35 @@ body {
 .cursor-help {
   cursor: help; }
 
-.square, .radius-none {
+.square,
+.radius-none {
   border-radius: 0; }
 
-.rounded-1, .radius-1 {
+.rounded-1,
+.radius-1 {
   border-radius: 2px; }
 
-.rounded-2, .note, .note-green, .note-orange, .note-red, .radius-2 {
+.rounded-2, .note, .note-green, .note-orange, .note-red,
+.radius-2 {
   border-radius: 4px; }
 
-.rounded-3, .radius-3 {
+.rounded-3,
+.radius-3 {
   border-radius: 6px; }
 
-.rounded-4, .radius-4 {
+.rounded-4,
+.radius-4 {
   border-radius: 8px; }
 
-.rounded-5, .radius-5 {
+.rounded-5,
+.radius-5 {
   border-radius: 10px; }
 
 .circle {
   border-radius: 100%; }
 
-.transparent, .transparency-0 {
+.transparent,
+.transparency-0 {
   opacity: 0; }
 
 .transparency-1 {
@@ -469,7 +470,8 @@ body {
 .transparency-9 {
   opacity: 0.9; }
 
-.opaque, .transparency-10 {
+.opaque,
+.transparency-10 {
   opacity: 1; }
 
 .overflow-x-hidden, .overflow-hidden {
@@ -590,33 +592,43 @@ body {
   -webkit-column-count: 6;
           column-count: 6; }
 
-.x-centered, .horizontally-centered {
+.x-centered,
+.horizontally-centered {
   margin: 0 auto; }
 
-.valign-baseline, .content-valign-baseline > * {
+.valign-baseline,
+.content-valign-baseline > * {
   vertical-align: baseline; }
 
-.valign-top, .content-valign-top > * {
+.valign-top,
+.content-valign-top > * {
   vertical-align: top; }
 
-.valign-middle, .content-valign-middle > * {
+.valign-middle,
+.content-valign-middle > * {
   vertical-align: middle; }
 
-.valign-bottom, .content-valign-bottom > * {
+.valign-bottom,
+.content-valign-bottom > * {
   vertical-align: bottom; }
 
-.valign-super, .content-valign-super > * {
+.valign-super,
+.content-valign-super > * {
   vertical-align: super; }
 
-.valign-sub, .content-valign-sub > * {
+.valign-sub,
+.content-valign-sub > * {
   vertical-align: sub; }
 
-.vertically-centered, .vertically-centered-absolute, .y-centered-absolute, .y-centered {
+.vertically-centered, .vertically-centered-absolute,
+.y-centered-absolute,
+.y-centered {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
-  .vertically-centered-absolute, .y-centered-absolute {
+  .vertically-centered-absolute,
+  .y-centered-absolute {
     position: absolute; }
 
 .position-static, .s-position-static {
@@ -750,7 +762,6 @@ body {
 
 .self-centered {
   -webkit-align-self: center;
-              -ms-grid-row-align: center;
           align-self: center; }
 
 .self-baseline {
@@ -759,7 +770,6 @@ body {
 
 .self-stretched, .field-button-pair .field, .field-button-pair-rounded .field {
   -webkit-align-self: stretch;
-              -ms-grid-row-align: stretch;
           align-self: stretch; }
 
 .display-inline, .s-display-inline, .s-inline {
@@ -782,11 +792,11 @@ body {
 .hidden {
   display: none; }
 
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: table; }
+.clearfix::before, .clearfix::after {
+  display: table;
+  content: " "; }
 
-.clearfix:after {
+.clearfix::after {
   clear: both; }
 
 .background-none, .button, .button-green, .button-orange, .button-red {
@@ -799,19 +809,19 @@ body {
   background-color: #FFFFFF; }
 
 .background-gray {
-  background-color: #f7f7f7; }
+  background-color: #F7F7F7; }
 
 .background-black {
-  background-color: #0f0909; }
+  background-color: #0F0909; }
 
 .background-green, .button-green {
-  background-color: #00a80b; }
+  background-color: #00A80B; }
 
 .background-orange, .button-orange {
-  background-color: #ff9400; }
+  background-color: #FF9400; }
 
 .background-red, .button-red {
-  background-color: #ef0f00; }
+  background-color: #EF0F00; }
 
 .color-inherit {
   color: inherit; }
@@ -820,19 +830,79 @@ body {
   color: #FFFFFF; }
 
 .color-gray {
-  color: #f7f7f7; }
+  color: #F7F7F7; }
 
 .color-black {
-  color: #0f0909; }
+  color: #0F0909; }
 
-.color-green, .note-green .note-title, .note-green h2, .note-green h3, .note-green h4, .note-green h5, .note-green h6, .note-green .note-orange h2, .note-orange .note-green h2, .note-green .note-orange h3, .note-orange .note-green h3, .note-green .note-orange h4, .note-orange .note-green h4, .note-green .note-orange h5, .note-orange .note-green h5, .note-green .note-orange h6, .note-orange .note-green h6, .note-green .note-red h2, .note-red .note-green h2, .note-green .note-red h3, .note-red .note-green h3, .note-green .note-red h4, .note-red .note-green h4, .note-green .note-red h5, .note-red .note-green h5, .note-green .note-red h6, .note-red .note-green h6 {
-  color: #00a80b; }
+.color-green, .note-green .note-title, .note-green h2, .note-green h3, .note-green h4, .note-green h5, .note-green h6, .note-green
+.note-orange h2,
+.note-orange .note-green h2, .note-green
+.note-orange h3,
+.note-orange .note-green h3, .note-green
+.note-orange h4,
+.note-orange .note-green h4, .note-green
+.note-orange h5,
+.note-orange .note-green h5, .note-green
+.note-orange h6,
+.note-orange .note-green h6, .note-green
+.note-red h2,
+.note-red .note-green h2, .note-green
+.note-red h3,
+.note-red .note-green h3, .note-green
+.note-red h4,
+.note-red .note-green h4, .note-green
+.note-red h5,
+.note-red .note-green h5, .note-green
+.note-red h6,
+.note-red .note-green h6 {
+  color: #00A80B; }
 
-.color-orange, .note-orange .note-green h2, .note-green .note-orange h2, .note-orange .note-green h3, .note-green .note-orange h3, .note-orange .note-green h4, .note-green .note-orange h4, .note-orange .note-green h5, .note-green .note-orange h5, .note-orange .note-green h6, .note-green .note-orange h6, .note-orange .note-title, .note-orange h2, .note-orange h3, .note-orange h4, .note-orange h5, .note-orange h6, .note-orange .note-red h2, .note-red .note-orange h2, .note-orange .note-red h3, .note-red .note-orange h3, .note-orange .note-red h4, .note-red .note-orange h4, .note-orange .note-red h5, .note-red .note-orange h5, .note-orange .note-red h6, .note-red .note-orange h6 {
-  color: #ff9400; }
+.color-orange, .note-orange
+.note-green h2,
+.note-green .note-orange h2, .note-orange
+.note-green h3,
+.note-green .note-orange h3, .note-orange
+.note-green h4,
+.note-green .note-orange h4, .note-orange
+.note-green h5,
+.note-green .note-orange h5, .note-orange
+.note-green h6,
+.note-green .note-orange h6, .note-orange .note-title, .note-orange h2, .note-orange h3, .note-orange h4, .note-orange h5, .note-orange h6, .note-orange
+.note-red h2,
+.note-red .note-orange h2, .note-orange
+.note-red h3,
+.note-red .note-orange h3, .note-orange
+.note-red h4,
+.note-red .note-orange h4, .note-orange
+.note-red h5,
+.note-red .note-orange h5, .note-orange
+.note-red h6,
+.note-red .note-orange h6 {
+  color: #FF9400; }
 
-.color-red, .note-red .note-green h2, .note-green .note-red h2, .note-red .note-green h3, .note-green .note-red h3, .note-red .note-green h4, .note-green .note-red h4, .note-red .note-green h5, .note-green .note-red h5, .note-red .note-green h6, .note-green .note-red h6, .note-red .note-orange h2, .note-orange .note-red h2, .note-red .note-orange h3, .note-orange .note-red h3, .note-red .note-orange h4, .note-orange .note-red h4, .note-red .note-orange h5, .note-orange .note-red h5, .note-red .note-orange h6, .note-orange .note-red h6, .note-red .note-title, .note-red h2, .note-red h3, .note-red h4, .note-red h5, .note-red h6 {
-  color: #ef0f00; }
+.color-red, .note-red
+.note-green h2,
+.note-green .note-red h2, .note-red
+.note-green h3,
+.note-green .note-red h3, .note-red
+.note-green h4,
+.note-green .note-red h4, .note-red
+.note-green h5,
+.note-green .note-red h5, .note-red
+.note-green h6,
+.note-green .note-red h6, .note-red
+.note-orange h2,
+.note-orange .note-red h2, .note-red
+.note-orange h3,
+.note-orange .note-red h3, .note-red
+.note-orange h4,
+.note-orange .note-red h4, .note-red
+.note-orange h5,
+.note-orange .note-red h5, .note-red
+.note-orange h6,
+.note-orange .note-red h6, .note-red .note-title, .note-red h2, .note-red h3, .note-red h4, .note-red h5, .note-red h6 {
+  color: #EF0F00; }
 
 .button, .button-green, .button-orange, .button-red {
   padding: 10px 15px;
@@ -850,38 +920,58 @@ body {
   .button-green:hover {
     background-color: #009400; }
   .button-orange:hover {
-    background-color: #eb8000; }
+    background-color: #EB8000; }
   .button-red:hover {
-    background-color: #d10000; }
+    background-color: #D10000; }
 
 .note, .note-green, .note-orange, .note-red {
   margin-top: 16px;
   margin-bottom: 16px;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDDDDD;
   border-left: 5px solid;
   padding: 16px; }
   .note > p:first-of-type, .note-green > p:first-of-type, .note-orange > p:first-of-type, .note-red > p:first-of-type {
     margin-top: 0; }
   .note > p:last-of-type, .note-green > p:last-of-type, .note-orange > p:last-of-type, .note-red > p:last-of-type {
     margin-bottom: 0; }
-  .note-title, .note-green .note-title, .note-green h2, .note-green h3, .note-green h4, .note-green h5, .note-green h6, .note-orange .note-title, .note-orange h2, .note-orange h3, .note-orange h4, .note-orange h5, .note-orange h6, .note-red .note-title, .note-red h2, .note-red h3, .note-red h4, .note-red h5, .note-red h6, .note h2, .note-green h2, .note-orange h2, .note-red h2, .note h3, .note-green h3, .note-orange h3, .note-red h3, .note h4, .note-green h4, .note-orange h4, .note-red h4, .note h5, .note-green h5, .note-orange h5, .note-red h5, .note h6, .note-green h6, .note-orange h6, .note-red h6 {
+  .note-title, .note-green .note-title,
+  .note-green h2,
+  .note-green h3,
+  .note-green h4,
+  .note-green h5,
+  .note-green h6, .note-orange .note-title,
+  .note-orange h2,
+  .note-orange h3,
+  .note-orange h4,
+  .note-orange h5,
+  .note-orange h6, .note-red .note-title,
+  .note-red h2,
+  .note-red h3,
+  .note-red h4,
+  .note-red h5,
+  .note-red h6,
+  .note h2, .note-green h2, .note-orange h2, .note-red h2,
+  .note h3, .note-green h3, .note-orange h3, .note-red h3,
+  .note h4, .note-green h4, .note-orange h4, .note-red h4,
+  .note h5, .note-green h5, .note-orange h5, .note-red h5,
+  .note h6, .note-green h6, .note-orange h6, .note-red h6 {
     margin: 0 0 5px; }
   .note-green {
-    border-left-color: #00a80b; }
+    border-left-color: #00A80B; }
   .note-orange {
-    border-left-color: #ff9400; }
+    border-left-color: #FF9400; }
   .note-red {
-    border-left-color: #ef0f00; }
+    border-left-color: #EF0F00; }
 
 .field {
-  border: 1px solid #dddddd;
+  border: 1px solid #DDDDDD;
   padding: 5px; }
   .field-large {
     padding: 10px; }
   .field-button-pair .field {
-    border-right: none; }
+    border-right: 0; }
   .field-button-pair-rounded .field {
-    border-right: none;
+    border-right: 0;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px; }
   .field-button-pair-rounded .button, .field-button-pair-rounded .button-green, .field-button-pair-rounded .button-orange, .field-button-pair-rounded .button-red {
