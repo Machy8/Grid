@@ -1,26 +1,30 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
 @mixin verticalAlignmentComponent
 
-    @each $valignType in $valignTypes
-        .#{$breakpointPrefix}valign-#{$valignType}, .#{$breakpointPrefix}content-valign-#{$valignType} > *
-            vertical-align: $valignType
+	@each $valignType in $valignTypes
+		.#{$breakpointPrefix}valign-#{$valignType},
+		.#{$breakpointPrefix}content-valign-#{$valignType} > *
+			vertical-align: $valignType
 
 
-    .#{$breakpointPrefix}vertically, .#{$breakpointPrefix}y
-        &-centered
-            @if $isFirstBreakpointPrefix
-                @extend .vertically-centered
+	.#{$breakpointPrefix}vertically,
+	.#{$breakpointPrefix}y
+		&-centered
+			@if $isFirstBreakpointPrefix
+				@extend .vertically-centered
 
-            @else
-                position: relative
-                top: 50%
-                transform: translateY(-50%)
+			@else
+				position: relative
+				top: 50%
+				transform: translateY(-50%)
 
-            &-absolute
-                @if $isFirstBreakpointPrefix
-                    @extend .vertically-centered-absolute
+			&-absolute
+				@if $isFirstBreakpointPrefix
+					@extend .vertically-centered-absolute
 
-                @else
-                    @extend .#{$breakpointPrefix}vertically-centered
-                    position: absolute
+				@else
+					@extend .#{$breakpointPrefix}vertically-centered
+					position: absolute

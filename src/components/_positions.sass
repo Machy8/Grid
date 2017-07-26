@@ -1,45 +1,44 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
 @mixin positionsComponent
 
-    @each $position in $positions
-        .#{$breakpointPrefix}position-#{$position}
-            @if $isFirstBreakpointPrefix
-                @extend .position-#{$position}
+	@each $position in $positions
+		.#{$breakpointPrefix}position-#{$position}
+			@if $isFirstBreakpointPrefix
+				@extend .position-#{$position}
 
-            @else
-                position: $position
+			@else
+				position: $position
 
+	.#{$breakpointPrefix}position
+		&-top
+			@include position(top)
 
-    .#{$breakpointPrefix}position
-        &-top
-            @include position(top)
+		&-left
+			@include position(left)
 
-        &-left
-            @include position(left)
+		&-right
+			@include position(right)
 
-        &-right
-            @include position(right)
+		&-bottom
+			@include position(bottom)
 
-        &-bottom
-            @include position(bottom)
+	.#{$breakpointPrefix}top
+		&-left-corner
+			@include extendPosition(top)
+			@include extendPosition(left)
 
+		&-right-corner
+			@include extendPosition(top)
+			@include extendPosition(right)
 
-    .#{$breakpointPrefix}top
-        &-left-corner
-            @include extendPosition(top)
-            @include extendPosition(left)
+	.#{$breakpointPrefix}bottom
+		&-left-corner
+			@include extendPosition(bottom)
+			@include extendPosition(left)
 
-        &-right-corner
-            @include extendPosition(top)
-            @include extendPosition(right)
-
-
-    .#{$breakpointPrefix}bottom
-        &-left-corner
-            @include extendPosition(bottom)
-            @include extendPosition(left)
-
-        &-right-corner
-            @include extendPosition(bottom)
-            @include extendPosition(right)
+		&-right-corner
+			@include extendPosition(bottom)
+			@include extendPosition(right)

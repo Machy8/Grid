@@ -1,19 +1,21 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
 @mixin alignItemsComponent
 
-    .#{$breakpointPrefix}items
-        &-top
-            @include itemsAlignment(top, flex-start)
+	.#{$breakpointPrefix}items
+		&-top
+			@include itemsAlignment(top, flex-start)
 
-        &-bottom
-            @include itemsAlignment(bottom, flex-end)
+		&-bottom
+			@include itemsAlignment(bottom, flex-end)
 
-        &-centered
-            @include itemsAlignment(centered, center)
+		&-centered
+			@include itemsAlignment(centered, center)
 
-        &-baseline
-            @include itemsAlignment(baseline, baseline)
+		&-baseline
+			@include itemsAlignment(baseline, baseline)
 
-        &-stretched
-            @include itemsAlignment(stretched, stretch)
+		&-stretched
+			@include itemsAlignment(stretched, stretch)

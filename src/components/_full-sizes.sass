@@ -1,48 +1,50 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
 @mixin fullSizesComponent
 
-    .#{$breakpointPrefix}grow
-        @if $isFirstBreakpointPrefix
-            @extend .grow
+	.#{$breakpointPrefix}grow
+		@if $isFirstBreakpointPrefix
+			@extend .grow
 
-        @else
-            @include extendFlexbox
-            flex-grow: 1
+		@else
+			@include extendFlexbox
+			flex-grow: 1
 
-        &-none
-            @if $isFirstBreakpointPrefix
-                @extend .grow-none
+		&-none
+			@if $isFirstBreakpointPrefix
+				@extend .grow-none
 
-            @else
-                @include extendFlexbox
-                flex-grow: 0
+			@else
+				@include extendFlexbox
+				flex-grow: 0
 
-    .#{$breakpointPrefix}content
-        &-grow
-            > *
-                @extend .#{$breakpointPrefix}grow
+	.#{$breakpointPrefix}content
+		&-grow
+			> *
+				@extend .#{$breakpointPrefix}grow
 
-            &-none > *
-                @extend .#{$breakpointPrefix}grow-none
+			&-none > *
+				@extend .#{$breakpointPrefix}grow-none
 
-    .#{$breakpointPrefix}full
-        &-window
-            &-width
-                @include fullWidthHeight(width, true)
+	.#{$breakpointPrefix}full
+		&-window
+			&-width
+				@include fullWidthHeight(width, true)
 
-            &-height
-                @include fullWidthHeight(height, true)
+			&-height
+				@include fullWidthHeight(height, true)
 
-        &-width
-            @include fullWidthHeight(width)
+		&-width
+			@include fullWidthHeight(width)
 
-        &-height
-            @include fullWidthHeight(height)
+		&-height
+			@include fullWidthHeight(height)
 
-    .#{$breakpointPrefix}content-full
-        &-width > *
-            @extend .#{$breakpointPrefix}full-width
+	.#{$breakpointPrefix}content-full
+		&-width > *
+			@extend .#{$breakpointPrefix}full-width
 
-        &-height > *
-            @extend .#{$breakpointPrefix}full-height
+		&-height > *
+			@extend .#{$breakpointPrefix}full-height

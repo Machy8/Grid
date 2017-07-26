@@ -5,9 +5,9 @@
 const
 
 	// Modules
-	autoprefixer  = require('gulp-autoprefixer'),
+	autoprefixer = require('gulp-autoprefixer'),
 	cleanCss = require('gulp-clean-css'),
-	gulp  = require('gulp'),
+	gulp = require('gulp'),
 	pipe_if = require('gulp-if'),
 	plumber = require('gulp-plumber'),
 	rename = require('gulp-rename'),
@@ -56,7 +56,7 @@ const
 
 		gridMobile: {
 			targetFile: targetFiles.gridMobile,
-			prefixes:  autoprefixerPrefixes.mobile
+			prefixes: autoprefixerPrefixes.mobile
 		},
 
 		gridMobileMin: {
@@ -99,9 +99,6 @@ function settingsExist(settings, settingsOption, settingsType) {
 
 
 function compile() {
-
-   checkSassCodingStandard();
-
 	for (var task in tasks) {
 		var minify = false,
 			targetFile = targetFiles.grid,

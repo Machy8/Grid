@@ -1,28 +1,28 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
-$color-1: #FFFFFF
-$color-2: #f7f7f7
-$color-3: #0f0909
-$color-4: #ef0f00
-$color-5: #d10000
-$color-6: #ff9400
-$color-7: #eb8000
-$color-8: #00a80b
-$color-9: #009400
-$color-10: #dddddd
+$color_1: #FFFFFF
+$color_2: #F7F7F7
+$color_3: #0F0909
+$color_4: #EF0F00
+$color_5: #D10000
+$color_6: #FF9400
+$color_7: #EB8000
+$color_8: #00A80B
+$color_9: #009400
+$color_10: #DDDDDD
 
-//
-  - components/grid-system
-  - s - phone, m - tablet, l - desktop, xl - > desktop
-  - $breakpointPrefix and $isFirstBreakpointPrefix are global variables that are changed during
-    compilation in the grid.sass and in the components/grid-system.sass; they are changed
-    in the initPrefix mixin; they are used in components and in the mixins
+// components/grid-system
+// s - phone, m - tablet, l - desktop, xl - > desktop
+// $breakpointPrefix and $isFirstBreakpointPrefix are global variables that are changed during
+// compilation in the grid.sass and in the components/grid-system.sass; they are changed
+// in the initPrefix mixin; they are used in components and in the mixins
 $breakpoints: s 0, m 641, l 1025, xl 1441
 $firstBreakpointPrefix: nth(nth($breakpoints, 1), 1)
 $breakpointPrefix: null
 $noneBreakpointPrefix: true
 $isFirstBreakpointPrefix: false
-
 
 // components/max-width
 $defaultMaxWidthPrefix: max-width
