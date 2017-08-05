@@ -1,92 +1,92 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
-$color-1: #FFFFFF
-$color-2: #f7f7f7
-$color-3: #0f0909
-$color-4: #ef0f00
-$color-5: #d10000
-$color-6: #ff9400
-$color-7: #eb8000
-$color-8: #00a80b
-$color-9: #009400
-$color-10: #dddddd
+$color_1: #FFFFFF !default
+$color_2: #F7F7F7 !default
+$color_3: #0F0909 !default
+$color_4: #EF0F00 !default
+$color_5: #D10000 !default
+$color_6: #FF9400 !default
+$color_7: #EB8000 !default
+$color_8: #00A80B !default
+$color_9: #009400 !default
+$color_10: #DDDDDD !default
 
-//
-  - components/grid-system
-  - s - phone, m - tablet, l - desktop, xl - > desktop
-  - $breakpointPrefix and $isFirstBreakpointPrefix are global variables that are changed during
-    compilation in the grid.sass and in the components/grid-system.sass; they are changed
-    in the initPrefix mixin; they are used in components and in the mixins
-$breakpoints: s 0, m 641, l 1025, xl 1441
-$firstBreakpointPrefix: nth(nth($breakpoints, 1), 1)
-$breakpointPrefix: null
-$noneBreakpointPrefix: true
-$isFirstBreakpointPrefix: false
-
+// components/grid-system
+// s - phone, m - tablet, l - desktop, xl - > desktop
+// $breakpointPrefix and $isFirstBreakpointPrefix are global variables that are changed during
+// compilation in the grid.sass and in the components/grid-system.sass; they are changed
+// in the initPrefix mixin; they are used in components and in the mixins
+$breakpoints: s 0, m 641, l 1025, xl 1441 !default
+$firstBreakpointPrefix: nth(nth($breakpoints, 1), 1) !default
+$breakpointPrefix: null !default
+$noneBreakpointPrefix: true !default
+$isFirstBreakpointPrefix: false !default
 
 // components/max-width
-$defaultMaxWidthPrefix: max-width
-$widthMax: 100
-$widthMin: 5
-$widthIncreasedBy: 5
+$defaultMaxWidthPrefix: max-width !default
+$widthMax: 100 !default
+$widthMin: 5 !default
+$widthIncreasedBy: 5 !default
 
 
 // components/margin, components/padding
-$frameMaxSize: 50
-$frameSizeIncreasedBy: 5
-$frameSides: left right top bottom
+$frameMaxSize: 50 !default
+$frameSizeIncreasedBy: 5 !default
+$frameSides: left right top bottom !default
 
 
 // components/html-body
-$defaultFontSize: 16px
-$defaultLineHeight: 1.5
+$defaultFontSize: 16px !default
+$defaultLineHeight: 1.5 !default
 
 
 // components/display-types, components/grid-system
-$displayTypes: inline inline-block block flex none
-$positions: static relative absolute fixed
+$displayTypes: inline inline-block block flex none !default
+$positions: static relative absolute fixed !default
 
 
 // components/order, components/grid-system
-$orderMax: 6
-$orderMin: 1
-$orderIncreasedBy: 1
+$orderMax: 6 !default
+$orderMin: 1 !default
+$orderIncreasedBy: 1 !default
 
 
 // components/columns, components/grid-system
-$columnsMax: $orderMax
-$columnsMin: $orderMin
-$columnsIncreasedBy: $orderIncreasedBy
-$columnsRuleTypes: solid dashed dotted
+$columnsMax: $orderMax !default
+$columnsMin: $orderMin !default
+$columnsIncreasedBy: $orderIncreasedBy !default
+$columnsRuleTypes: solid dashed dotted !default
 
 
 // components/cursor
-$cursorTypes: auto default pointer wait help
+$cursorTypes: auto default pointer wait help !default
 
 
 // components/list
-$listStyleTypes: disc square decimal
-$listPositions: inside outside
+$listStyleTypes: disc square decimal !default
+$listPositions: inside outside !default
 
 
 // components/float-clear
-$floatTypes: left right none
-$clearTypes: left right both none
+$floatTypes: left right none !default
+$clearTypes: left right both none !default
 
 
 // components/resize
-$resizableLabels: x y both
-$resizableValues: horizontal vertical both
+$resizableLabels: x y both !default
+$resizableValues: horizontal vertical both !default
 
 
 // components/vertical-align
-$valignTypes: baseline top middle bottom super sub
+$valignTypes: baseline top middle bottom super sub !default
 
 
 // components/wrap
-$wrapTypes: nowrap wrap wrap-reverse
+$wrapTypes: nowrap wrap wrap-reverse !default
 
 
 // components/box-sizing
-$boxSizingTypes: border-box content-box padding-box
-$defaultBoxSizingProperty: nth($boxSizingTypes, 1)
+$boxSizingTypes: border-box content-box padding-box !default
+$defaultBoxSizingProperty: nth($boxSizingTypes, 1) !default

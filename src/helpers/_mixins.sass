@@ -1,226 +1,211 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
-///
-    @param {int} $minWidth
-    @output @media (min-width: #{$minWidth}px) {@content}
+// @param {int} $minWidth
+// @output @media (min-width: #{$minWidth}px) {@content}
 @mixin breakpoint($minWidth)
-    @if $minWidth == 0
-        @content
+	@if $minWidth == 0
+		@content
 
-    @else
-        @media (min-width: #{$minWidth}px)
-            @content
+	@else
+		@media (min-width: #{$minWidth}px)
+			@content
 
 
-///
-    @param {string} $type
-    @param {string|null} $className
-    @output display: $type
+// @param {string} $type
+// @param {string|null} $className
+// @output display: $type
 @mixin displayType($type, $className: null)
-    @if $className == null
-        $className: display-#{$type}
+	@if $className == null
+		$className: display-#{$type}
 
-    @if $isFirstBreakpointPrefix
-        @extend .#{$className}
+	@if $isFirstBreakpointPrefix
+		@extend .#{$className}
 
-    @elseif ($type == none and $className == hidden) or $type == flex
-        display: $type
+	@elseif ($type == none and $className == hidden) or $type == flex
+		display: $type
 
-    @else
-        display: $type
+	@else
+		display: $type
 
 
 @mixin extendFlexbox
-    @if $isFirstBreakpointPrefix
-        @extend .display-flex
+	@if $isFirstBreakpointPrefix
+		@extend .display-flex
 
-    @else
-        @extend .#{$breakpointPrefix}display-flex
+	@else
+		@extend .#{$breakpointPrefix}display-flex
 
 
-///
-    @param {string} $position
+// @param {string} $position
 @mixin extendPosition($position)
-    @if $isFirstBreakpointPrefix
-        @extend .position-#{$position}
+	@if $isFirstBreakpointPrefix
+		@extend .position-#{$position}
 
-    @else
-        @extend .#{$breakpointPrefix}position-#{$position}
+	@else
+		@extend .#{$breakpointPrefix}position-#{$position}
 
 
-///
-    @param {string} $direction
-    @param {string|null} $className
-    @output flex-direction: $direction
+// @param {string} $direction
+// @param {string|null} $className
+// @output flex-direction: $direction
 @mixin flexDirection($direction, $className: null)
-    @if $className == null
-        $className: $direction
+	@if $className == null
+		$className: $direction
 
-    @if $isFirstBreakpointPrefix
-        @extend .direction-#{$className}
+	@if $isFirstBreakpointPrefix
+		@extend .direction-#{$className}
 
-    @else
-        @include extendFlexbox
-        flex-direction: $direction
+	@else
+		@include extendFlexbox
+		flex-direction: $direction
 
 
-///
-    @param {string} $value
-    @output flex-wrap: $value
+// @param {string} $value
+// @output flex-wrap: $value
 @mixin flexWrap($value)
-    @if $isFirstBreakpointPrefix
-        @extend .#{$value}
+	@if $isFirstBreakpointPrefix
+		@extend .#{$value}
 
-    @else
-        @include extendFlexbox
-        flex-wrap: $value
+	@else
+		@include extendFlexbox
+		flex-wrap: $value
 
 
-///
-    @param {string} $attribute
-    @param {string} $value
-    @param {bool} $extend
-    @output #{$attribute}: $value
+// @param {string} $attribute
+// @param {string} $value
+// @param {bool} $extend
+// @output #{$attribute}: $value
 @mixin floatClear($attribute, $value, $extend: false)
-    @if $isFirstBreakpointPrefix
-        @extend .#{$attribute}-#{$value}
+	@if $isFirstBreakpointPrefix
+		@extend .#{$attribute}-#{$value}
 
-    @else
-        #{$attribute}: $value
+	@else
+		#{$attribute}: $value
 
 
-///
-    @param {string} $attribute
-    @param {bool} $window
-    @output #{$attribute}: $value + $unit
+// @param {string} $attribute
+// @param {bool} $window
+// @output #{$attribute}: $value + $unit
 @mixin fullWidthHeight($attribute, $window: false)
-    $className: full-#{$attribute}
-    $value: 100
-    $unit: %
+	$className: full-#{$attribute}
+	$value: 100
+	$unit: %
 
-    @if $window == true
-        $className: full-window-#{$attribute}
-        $unit: vw
+	@if $window == true
+		$className: full-window-#{$attribute}
+		$unit: vw
 
-        @if $attribute == height
-            $unit: vh
+		@if $attribute == height
+			$unit: vh
 
-    @if $isFirstBreakpointPrefix
-        @extend .#{$className}
+	@if $isFirstBreakpointPrefix
+		@extend .#{$className}
 
-    @else
-        #{$attribute}: $value + $unit
+	@else
+		#{$attribute}: $value + $unit
 
 
-///
-    @param {string} $className
-    @param {string} $position
-    @output align-items: $position
+// @param {string} $className
+// @param {string} $position
+// @output align-items: $position
 @mixin itemsAlignment($className, $position)
-    @if $isFirstBreakpointPrefix
-        @extend .items-#{$className}
+	@if $isFirstBreakpointPrefix
+		@extend .items-#{$className}
 
-    @else
-        @include extendFlexbox
-        align-items: $position
+	@else
+		@include extendFlexbox
+		align-items: $position
 
 
-///
-    @param {string} $direction
-    @param {string} $className
-    @output justify-content: $direction
+// @param {string} $direction
+// @param {string} $className
+// @output justify-content: $direction
 @mixin justifyContent($direction, $className)
-    @if $isFirstBreakpointPrefix
-        @extend .content-#{$className}
+	@if $isFirstBreakpointPrefix
+		@extend .content-#{$className}
 
-    @else
-        @include extendFlexbox
-        justify-content: $direction
+	@else
+		@include extendFlexbox
+		justify-content: $direction
 
 
-///
-    @param {string} $className
-    @param {string} $position
-    @output align-content: $position
+// @param {string} $className
+// @param {string} $position
+// @output align-content: $position
 @mixin linesAlignment($className, $position)
-    @if $isFirstBreakpointPrefix
-        @extend .lines-#{$className}
+	@if $isFirstBreakpointPrefix
+		@extend .lines-#{$className}
 
-    @else
-        @include extendFlexbox
-        align-content: $position
+	@else
+		@include extendFlexbox
+		align-content: $position
 
 
-///
-    @param {string|array} $omittedBreakpoints
+// @param {string|array} $omittedBreakpoints
 @mixin omitBreakpoints($omittedBreakpoints)
-    @if $omittedBreakpoints == all and $noneBreakpointPrefix
-        @content
+	@if $omittedBreakpoints == all and $noneBreakpointPrefix
+		@content
 
-    @else if index($omittedBreakpoints, $breakpointPrefix) == null and $omittedBreakpoints != all
-        @content
+	@else if index($omittedBreakpoints, $breakpointPrefix) == null and $omittedBreakpoints != all
+		@content
 
 
-///
-    @param {string} $place
+// @param {string} $place
 @mixin order($place)
-    @if $isFirstBreakpointPrefix
-        @extend .order-#{$place}
+	@if $isFirstBreakpointPrefix
+		@extend .order-#{$place}
 
-    @else
-        @include extendFlexbox
-        @extend .#{$breakpointPrefix}order-#{$place}
+	@else
+		@include extendFlexbox
+		@extend .#{$breakpointPrefix}order-#{$place}
 
 
-///
-    @param {string} $position
-    @output #{$position}: 0
+// @param {string} $position
+// @output #{$position}: 0
 @mixin position($position)
-    @if $isFirstBreakpointPrefix
-        @extend .position-#{$position}
+	@if $isFirstBreakpointPrefix
+		@extend .position-#{$position}
 
-    @else
-        #{$position}: 0
+	@else
+		#{$position}: 0
 
 
-///
-    @param {string} $className
-    @param {string} $position
-    @output align-self: $position
+// @param {string} $className
+// @param {string} $position
+// @output align-self: $position
 @mixin selfAlignment($className, $position)
-    @if $isFirstBreakpointPrefix
-        @extend .self-#{$className}
+	@if $isFirstBreakpointPrefix
+		@extend .self-#{$className}
 
-    @else
-        @include extendFlexbox
-        align-self: $position
+	@else
+		@include extendFlexbox
+		align-self: $position
 
 
-///
-    @param {string|null} $newPrefix
+// @param {string|null} $newPrefix
 @mixin setBreakpointPrefix($newPrefix: $breakpointPrefix)
-    $breakpointPrefix: parsePrefix($newPrefix) !global
-    $isFirstBreakpointPrefix: $breakpointPrefix == parsePrefix($firstBreakpointPrefix) !global
-    $noneBreakpointPrefix: $breakpointPrefix == null !global
+	$breakpointPrefix: parsePrefix($newPrefix) !global
+	$isFirstBreakpointPrefix: $breakpointPrefix == parsePrefix($firstBreakpointPrefix) !global
+	$noneBreakpointPrefix: $breakpointPrefix == null !global
 
 
-///
-    @param {string} $value
-    @param {string|null} $className
-    @output text-align: $value
+// @param {string} $value
+// @param {string|null} $className
+// @output text-align: $value
 @mixin textAlignment($value, $className: null)
-    @if $className == null
-        $className: $value
+	@if $className == null
+		$className: $value
 
-    @if $isFirstBreakpointPrefix
-        @extend .text-#{$className}
+	@if $isFirstBreakpointPrefix
+		@extend .text-#{$className}
 
-    @else
-        text-align: $value
+	@else
+		text-align: $value
 
 
-///
-    @param {int} $opacity
-    @output opacity: $opacity * 0.1
+// @param {int} $opacity
+// @output opacity: $opacity * 0.1
 @mixin visibility($opacity)
-    opacity: $opacity * 0.1
+	opacity: $opacity * 0.1

@@ -1,33 +1,35 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
 @mixin maxWidthComponent
 
-    $defaultPrefix: $defaultMaxWidthPrefix
-    $selectorPrefix: null
+	$defaultPrefix: $defaultMaxWidthPrefix
+	$selectorPrefix: null
 
-    @if $breakpointPrefix == null
-        $selectorPrefix: parsePrefix($defaultPrefix)
+	@if $breakpointPrefix == null
+		$selectorPrefix: parsePrefix($defaultPrefix)
 
-    @else if $isFirstBreakpointPrefix
-        $defaultPrefix: parsePrefix($defaultPrefix)
+	@else if $isFirstBreakpointPrefix
+		$defaultPrefix: parsePrefix($defaultPrefix)
 
-    @if $breakpointPrefix != null
-        $selectorPrefix: $breakpointPrefix
+	@if $breakpointPrefix != null
+		$selectorPrefix: $breakpointPrefix
 
-    .#{$selectorPrefix}auto
-        @if $isFirstBreakpointPrefix
-            @extend .#{$defaultPrefix}auto
+	.#{$selectorPrefix}auto
+		@if $isFirstBreakpointPrefix
+			@extend .#{$defaultPrefix}auto
 
-        @else
-            max-width: none
+		@else
+			max-width: none
 
-    $widthCounter: $widthMin
-    @while $widthCounter <= $widthMax
-        .#{$selectorPrefix}#{$widthCounter}
-            @if $isFirstBreakpointPrefix
-                @extend .#{$defaultPrefix}#{$widthCounter}
+	$widthCounter: $widthMin
+	@while $widthCounter <= $widthMax
+		.#{$selectorPrefix}#{$widthCounter}
+			@if $isFirstBreakpointPrefix
+				@extend .#{$defaultPrefix}#{$widthCounter}
 
-            @else
-                max-width: $widthCounter * 1%
+			@else
+				max-width: $widthCounter * 1%
 
-        $widthCounter: $widthCounter + $widthIncreasedBy
+		$widthCounter: $widthCounter + $widthIncreasedBy

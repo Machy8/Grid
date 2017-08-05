@@ -1,19 +1,21 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
 @mixin justifyContentComponent
 
-    .#{$breakpointPrefix}content
-        &-centered
-            @include justifyContent(center, centered)
+	.#{$breakpointPrefix}content
+		&-centered
+			@include justifyContent(center, centered)
 
-        &-left
-            @include justifyContent(flex-start, left)
+		&-left
+			@include justifyContent(flex-start, left)
 
-        &-right
-            @include justifyContent(flex-end, right)
+		&-right
+			@include justifyContent(flex-end, right)
 
-        &-wrapped
-            @include justifyContent(space-around, wrapped)
+		&-wrapped
+			@include justifyContent(space-around, wrapped)
 
-        &-apart
-            @include justifyContent(space-between, apart)
+		&-apart
+			@include justifyContent(space-between, apart)

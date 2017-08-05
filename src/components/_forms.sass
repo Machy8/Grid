@@ -1,11 +1,13 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
 @mixin formsComponent
 
 	.field
 		@extend .display-inline-block
 		@extend .outline-none
-		border: 1px solid $color-10
+		border: 1px solid $color_10
 		padding: 5px
 
 		&-large
@@ -16,14 +18,14 @@
 
 			.field
 				@extend .self-stretched
-				border-right: none
+				border-right: 0
 
 			&-rounded
 				@extend .items-centered
 
 				.field
 					@extend .self-stretched
-					border-right: none
+					border-right: 0
 					border-top-left-radius: 4px
 					border-bottom-left-radius: 4px
 

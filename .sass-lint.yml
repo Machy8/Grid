@@ -1,51 +1,102 @@
 # Linter Options
 options:
-  merge-default-rules: true
+    merge-default-rules: true
 
 # Rule Configuration
 rules:
-  class-name-format:
-  - 1
-  -
-    convention: 'hyphenatedlowercase'
-  mixin-name-format:
-    - 1
-    -
-      convention: 'camelcase'
-  variable-name-format:
-    - 1
-    -
-      convention: 'camelcase'
-  function-name-format:
-    - 1
-    -
-      convention: 'camelcase'
-  quotes:
-    - 1
-    -
-      style: 'double'
-  indentation:
-    - 1
-    -
-      size: 4
-  hex-notation:
-    - 1
-    -
-      style: 'uppercase'
-  hex-length:
-    - 1
-    -
-      style: 'long'
-  single-line-per-selector:
-    - 0
-  placeholder-in-extend:
-    - 0
-  empty-line-between-blocks:
-    - 1
-    -
-      include: true
-      allow-single-line-rulesets: false
-  property-sort-order:
-    - 1
-    -
-      order: 'concentric'
+    attribute-quotes:
+        - 2
+    class-name-format:
+        - 2
+        -
+            convention: 'hyphenatedlowercase'
+    declarations-before-nesting:
+        - 2
+    empty-line-between-blocks:
+        - 0
+        -
+            include: true
+            allow-single-line-rulesets: false
+    extends-before-declarations:
+        - 2
+    extends-before-mixins:
+        - 0
+    final-newline:
+        - 2
+    force-pseudo-nesting:
+        - 0
+    function-name-format:
+        - 2
+        -
+            convention: 'camelcase'
+    hex-length:
+        - 2
+        -
+            style: 'long'
+    hex-notation:
+        - 2
+        -
+            style: 'uppercase'
+    indentation:
+        - 1
+        -
+            size: 'tab'
+    leading-zero:
+        - 2
+        -
+            include: true
+    max-line-length:
+        - 2
+        -
+            length: 120
+    mixin-name-format:
+        - 2
+        -
+            convention: 'camelcase'
+    mixins-before-declarations:
+        - 2
+    no-important:
+        - 2
+    no-mergeable-selectors:
+        - 2
+    no-trailing-whitespace:
+        - 2
+    no-trailing-zero:
+        - 2
+    no-transition-all:
+        - 2
+    one-declaration-per-line:
+        - 2
+    placeholder-name-format:
+        - 2
+        -
+            convention: 'camelcase'
+    placeholder-in-extend:
+        - 0
+    property-sort-order:
+        - 2
+        -
+            order: 'concentric'
+    quotes:
+        - 2
+        -
+            style: 'double'
+    space-after-colon:
+        - 2
+    space-after-comma:
+        - 2
+    space-around-operator:
+        - 2
+    space-before-brace:
+        - 2
+        -
+            include: false
+    space-between-parens:
+        - 2
+        -
+            include: false
+    variable-name-format:
+        - 1
+        -
+            allow-leading-underscore: true
+            convention: 'camelcase'

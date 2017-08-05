@@ -1,95 +1,93 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
 @mixin textComponent
 
-    .#{$breakpointPrefix}text
+	.#{$breakpointPrefix}text
+		@if $breakpointPrefix == null
 
-        @if $breakpointPrefix == null
+			&-undecorated
+				text-decoration: none
 
-            &-undecorated
-                text-decoration: none
+			&-untransformed
+				text-transform: none
 
-            &-untransformed
-                text-transform: none
+			&-unstyled
+				font-style: normal
 
-            &-unstyled
-                font-style: normal
+			&-normal
+				@extend .text-undecorated
+				@extend .text-untransformed
+				@extend .text-unstyled
+				@extend .text-normal-weight
 
-            &-normal
-                @extend .text-undecorated
-                @extend .text-untransformed
-                @extend .text-unstyled
-                @extend .text-normal-weight
+			// Weight
+			&-normal-weight
+				font-weight: normal
 
-            // Weight
-            &-normal-weight
-                font-weight: normal
+			&-lighter
+				font-weight: lighter
 
-            &-lighter
-                font-weight: lighter
+			&-bold
+				font-weight: bold
 
-            &-bold
-                font-weight: bold
+			// Style
+			&-italic
+				font-style: italic
 
-            // Style
-            &-italic
-                font-style: italic
+			&-oblique
+				font-style: oblique
 
-            &-oblique
-                font-style: oblique
+			// Decoration
+			&-underline
+				text-decoration: underline
 
-            // Decoration
-            &-underline
-                text-decoration: underline
+			&-overline
+				text-decoration: overline
 
-            &-overline
-                text-decoration: overline
+			&-strikethrough
+				text-decoration: line-through
 
-            &-strikethrough
-                text-decoration: line-through
+			// Transform
+			&-uppercase
+				text-transform: uppercase
 
-            // Transform
-            &-uppercase
-                text-transform: uppercase
+			&-lowercase
+				text-transform: lowercase
 
-            &-lowercase
-                text-transform: lowercase
+			&-capitalize
+				text-transform: capitalize
 
-            &-capitalize
-                text-transform: capitalize
+			&-nowrap
+				white-space: nowrap
 
-            &-nowrap
-                white-space: nowrap
+		// Alignment
+		&-centered
+			@include textAlignment(center, centered)
 
-        // Alignment
-        &-centered
-            @include textAlignment(center, centered)
+		&-left
+			@include textAlignment(left)
 
-        &-left
-            @include textAlignment(left)
+		&-right
+			@include textAlignment(right)
 
-        &-right
-            @include textAlignment(right)
+		&-justify
+			@include textAlignment(justify)
 
-        &-justify
-            @include textAlignment(justify)
+	@if $breakpointPrefix == null
+		.cutted-text
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
 
+		// Words
+		.break
+			&-words
+				word-wrap: break-word
 
-    @if $breakpointPrefix == null
-        .cutted-text
-            text-overflow: ellipsis
-            white-space: nowrap
-            overflow: hidden
+			&-all
+				word-break: break-all
 
-
-        // Words
-        .break
-            &-words
-                word-wrap: break-word
-
-            &-all
-                word-break: break-all
-
-
-        .keep-all
-            word-break: keep-all
+		.keep-all
+			word-break: keep-all

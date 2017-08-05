@@ -10,7 +10,6 @@
 - Intuitive, easy to use, mobile first CSS framework based on Flexbox.
 - Contains [Normalize](https://github.com/necolas/normalize.css/blob/master/normalize.css) and [micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack)
 - Uses: [Sass](http://sass-lang.com), [Gulp](http://gulpjs.com) & [Autoprefixer](https://github.com/postcss/autoprefixer)
-- Visual regression tests are done by [BackstopJS](https://github.com/garris/BackstopJS)
 
 <p align="center">
   <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">

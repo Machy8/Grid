@@ -5,9 +5,9 @@
 const
 
 	// Modules
-	autoprefixer  = require('gulp-autoprefixer'),
+	autoprefixer = require('gulp-autoprefixer'),
 	cleanCss = require('gulp-clean-css'),
-	gulp  = require('gulp'),
+	gulp = require('gulp'),
 	pipe_if = require('gulp-if'),
 	plumber = require('gulp-plumber'),
 	rename = require('gulp-rename'),
@@ -51,12 +51,12 @@ const
 		gridDev: {
 			noPrefixes: true,
 			cssMap: false,
-			fileType: 'scss',
+			fileType: 'scss'
 		},
 
 		gridMobile: {
 			targetFile: targetFiles.gridMobile,
-			prefixes:  autoprefixerPrefixes.mobile
+			prefixes: autoprefixerPrefixes.mobile
 		},
 
 		gridMobileMin: {
@@ -68,21 +68,7 @@ const
 			targetFile: targetFiles.gridMobile,
 			noPrefixes: true,
 			cssMap: false,
-			fileType: 'scss',
-		},
-
-		gridTestable: {
-			targetFile: targetFiles.grid,
-			prefixes: autoprefixerSettings.concat(['Safari >= 4']),
-			outputDir: directories.tests,
-			cssMap: false
-		},
-
-		testsHelpers: {
-			minify: true,
-			targetFile: targetFiles.testsHelpers,
-			outputDir: directories.tests,
-			cssMap: false
+			fileType: 'scss'
 		}
 	};
 
@@ -96,7 +82,9 @@ gulp
 
 	.task('default', ['compile', 'watch'])
 
-	.task ('generate-amp-test-file', generateAmpTestFile);
+	.task('generateAmpTestFile', generateAmpTestFile)
+
+	.task('checkSassCodingStandard', checkSassCodingStandard);
 
 
 /**
@@ -111,12 +99,6 @@ function settingsExist(settings, settingsOption, settingsType) {
 
 
 function compile() {
-
-    gulp.src(directories.watch)
-        .pipe(sassLint())
-        .pipe(sassLint.format())
-        .pipe(sassLint.failOnError());
-
 	for (var task in tasks) {
 		var minify = false,
 			targetFile = targetFiles.grid,
@@ -160,6 +142,14 @@ function compile() {
 			.pipe(gulp.dest(outputDir));
 	}
 
+}
+
+
+function checkSassCodingStandard() {
+	gulp.src(directories.watch)
+		.pipe(sassLint())
+		.pipe(sassLint.format())
+		.pipe(sassLint.failOnError());
 }
 
 

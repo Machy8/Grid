@@ -1,18 +1,19 @@
-// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček | For the full copyright and license information, please view the file license.md that was distributed with this source code.
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
 
 @mixin floatClearComponent
 
-    @each $floatType in $floatTypes
-        .#{$breakpointPrefix}float-#{$floatType}
-            @include floatClear(float, $floatType)
+	@each $floatType in $floatTypes
+		.#{$breakpointPrefix}float-#{$floatType}
+			@include floatClear(float, $floatType)
 
-        .#{$breakpointPrefix}content-float-#{$floatType} > *
-            @extend .#{$breakpointPrefix}float-#{$floatType}
+		.#{$breakpointPrefix}content-float-#{$floatType} > *
+			@extend .#{$breakpointPrefix}float-#{$floatType}
 
+	@each $clearType in $clearTypes
+		.#{$breakpointPrefix}clear-#{$clearType}
+			@include floatClear(clear, $clearType)
 
-    @each $clearType in $clearTypes
-        .#{$breakpointPrefix}clear-#{$clearType}
-            @include floatClear(clear, $clearType)
-
-        .#{$breakpointPrefix}content-clear-#{$clearType} > *
-            @extend .#{$breakpointPrefix}clear-#{$clearType}
+		.#{$breakpointPrefix}content-clear-#{$clearType} > *
+			@extend .#{$breakpointPrefix}clear-#{$clearType}
