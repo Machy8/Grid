@@ -5,14 +5,14 @@
 @mixin justifyContentComponent
 
 	.#{$breakpointPrefix}content
-		&-centered
-			@include justifyContent(center, centered)
-
 		&-left
 			@include justifyContent(flex-start, left)
 
 		&-right
 			@include justifyContent(flex-end, right)
+
+		&-centered
+			@include justifyContent(center, centered)
 
 		&-wrapped
 			@include justifyContent(space-around, wrapped)

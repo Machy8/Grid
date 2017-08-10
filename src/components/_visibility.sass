@@ -4,14 +4,12 @@
 
 @mixin visibilityComponent
 
-	.transparent,
-	.transparency-0
+	.transparent
 		@include visibility(0)
 
 	@for $i from 1 through 9
 		.transparency-#{$i}
 			@include visibility($i)
 
-	.opaque,
-	.transparency-10
+	.opaque
 		@include visibility(10)

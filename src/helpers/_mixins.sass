@@ -23,9 +23,6 @@
 	@if $isFirstBreakpointPrefix
 		@extend .#{$className}
 
-	@elseif ($type == none and $className == hidden) or $type == flex
-		display: $type
-
 	@else
 		display: $type
 
