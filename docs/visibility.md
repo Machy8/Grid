@@ -2,9 +2,9 @@
 
 You can hide element using display types or by changing its opacity.
 
-- **Transparent:** transparent | transparency-0
-- **Transparency:** transparency-(0-10)
-- **Opacity 1:** opaque | transparency-10
+- **Transparent:** transparent
+- **Transparency:** transparency-(1-10)
+- **Opacity 1:** opaque
 
 ##Examples
 ````Html

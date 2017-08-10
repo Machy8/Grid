@@ -3,12 +3,13 @@
 A few useful resets classes.
 
 - **Border:** border-none
-- **Padding:** padding-none
 - **Margin:** margin-none
-- **Background:** background-none
+- **Padding:** padding-none
 - **Outline:** outline-none
 - **Shadow:** shadow-none
 - **Width:** width-auto
+- **Unset min width** min-width-unset
+- **Selection disabled** selection-disabled
 
 ## Examples
 ````Html

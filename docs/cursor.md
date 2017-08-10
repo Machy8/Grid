@@ -10,5 +10,5 @@ Sometime is useful to have class with which you can change the cursor icon. For 
 
 ## Example
 ````Html
-<a role=button class="cursor-pointer">Some link</a>
+<a role="button" class="cursor-pointer">Some link</a>
 ````

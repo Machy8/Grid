@@ -5,15 +5,15 @@ There are all possible features including flexbox. Some classes are available wi
 **Float**
 - **Left:** float-left | content-float-left
 - **Right:** float-right | content-float-right
+- **Right:** float-none | content-float-none
  
 **Clear**
 - **Left:** clear-left | content-clear-left 
 - **Right:** clear-right | content-clear-right
 - **Both:** clear-both | content-clear-both
 - **None:** clear-none | content-clear-none
-
  
-**Align self**
+**Flexbox align self**
 - **Top:** self-top
 - **Bottom:** self-bottom
 - **Center:** self-centered
@@ -21,31 +21,32 @@ There are all possible features including flexbox. Some classes are available wi
 - **Stretched:** self-stretched
 - **Horizontally centered:** horizontally-centered | x-centered
 
-**Justify content (prefixes)**
+**Flex justify content (prefixes)**
 - **Left:** content-left
 - **Right:** content-right
 - **Centered:** content-centered
 - **Space around:** content-wrapped
 - **Space between:** content-apart
 
-**Direction and orientation (prefixes)**
+**Flexbox direction and orientation (prefixes)**
 - **Row:** direction-row
 - **Reversed row:** direction-reversed-row
 - **Column:** direction-column
 - **Reversed column:** direction-reversed-column
 
-**Wrap**
+**Flexbox wrap**
 - **Wrap:** wrap
 - **Reverse:** wrap-reverse
+- **Nowrap:** nowrap
 
-**Items**
+**Flexbox items**
 - **Top:** items-top
 - **Bottom:** items-bottom
 - **Centered:** items-centered
 - **Baseline:** items-baseline
 - **Stretched:** items-stretched
 
-**Lines**
+**Flexbox lines**
 - **Top:** lines-top
 - **Bottom:** lines-bottom
 - **Centered:** lines-centered

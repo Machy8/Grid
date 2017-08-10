@@ -9,6 +9,6 @@ In Grid the default box-sizing property for all elements is border-box. You can 
 ## Examples
 ````Html
 <div class="content-box">
-Some content
+    Some content
 </div>
 ````

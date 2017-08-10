@@ -6,8 +6,8 @@ Element with one of the full size (width, height) class inherits the parent size
 - **Grow none (resets flexbox grow):** grow-none | content-grow-none
 - **Full window width:** full-window-width
 - **Full window height:** full-window-height
-- **Full element width:** full-width | content-full-width
-- **Full element height:** full-height | content-full-height
+- **Full parent width:** full-width | content-full-width
+- **Full parent height:** full-height | content-full-height
 
 ## Example
 ````Html
