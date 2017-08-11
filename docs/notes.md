@@ -1,6 +1,8 @@
 # Notes
-- **Green** - note-green
-- **Orange** - note-orange
-- **Red** - note-red
+- **Green theme** - note-green
+- **Orange theme** - note-orange
+- **Red theme** - note-red
 
-Notes title can have class *note-title*.
+# Notes title
+- Notes title can have class *note-title*.
+- h2 to h6 are styled automatically

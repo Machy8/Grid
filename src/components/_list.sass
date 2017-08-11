@@ -5,20 +5,13 @@
 @mixin listComponent
 
 	.list
-		&-none
-			&-style
-				list-style: none
+		&-unstyled
+			list-style: none
 
 			&-clear
-				@extend .list-none-style
+				@extend .list-unstyled
 				margin: 0
 				padding: 0
-
-		&-unstyled
-			@extend .list-none-style
-
-			&-clear
-				@extend .list-none-clear
 
 		@each $type in $listStyleTypes
 			&-#{$type}

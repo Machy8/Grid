@@ -10,8 +10,8 @@
 				@include displayType($displayType)
 
 			@if $breakpointPrefix == null
-				.#{$breakpointPrefix}hidden
-					@include displayType($displayType, hidden)
+				.hidden
+					@extend .display-none
 
 		@else if $displayType != none
 			.#{$breakpointPrefix}display-#{$displayType}

@@ -1,8 +1,8 @@
 version: "3"
 services:
-	grid:
-		container_name: grid-css-framework
-		build: .
-		working_dir: /var/www/html
-		volumes:
-			- ./grid:/var/www/html
+    grid:
+        container_name: grid-css-framework
+        build: .
+        working_dir: /var/www/html
+        volumes:
+            - .:/var/www/html
