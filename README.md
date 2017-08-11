@@ -45,8 +45,8 @@
 
 **Alignment**
 - [Alignment](https://github.com/Machy8/Grid/blob/master/docs/alignment.md)
-- [Positioning](https://github.com/Machy8/Grid/blob/master/docs/positioning.md)
-- [Ordering](https://github.com/Machy8/Grid/blob/master/docs/ordering.md)
+- [Positioning](https://github.com/Machy8/Grid/blob/master/docs/positions.md)
+- [Ordering](https://github.com/Machy8/Grid/blob/master/docs/order.md)
 - [Columns](https://github.com/Machy8/Grid/blob/master/docs/columns.md)
 
 **Formatting**
@@ -64,13 +64,13 @@
 **Uncategorized**
 - [Box sizing](https://github.com/Machy8/Grid/blob/master/docs/box-sizing.md)
 - [Cursor](https://github.com/Machy8/Grid/blob/master/docs/cursor.md)
-- [Display types](https://github.com/Machy8/Grid/blob/master/docs/display-types.md)
+- [Display types](https://github.com/Machy8/Grid/blob/master/docs/display.md)
 - [Border radius](https://github.com/Machy8/Grid/blob/master/docs/border-radius.md)
 - [Full sizes](https://github.com/Machy8/Grid/blob/master/docs/full-sizes.md)
 - [Margin & padding](https://github.com/Machy8/Grid/blob/master/docs/margin-padding.md)
 - [Visibility](https://github.com/Machy8/Grid/blob/master/docs/visibility.md)
-- [Background colors](https://github.com/Machy8/Grid/blob/master/docs/background-colors.md)
-- [Text colors](https://github.com/Machy8/Grid/blob/master/docs/text-color.md)
+- [Background colors](https://github.com/Machy8/Grid/blob/master/docs/background.md)
+- [Text colors](https://github.com/Machy8/Grid/blob/master/docs/text-colors.md)
 - [Buttons](https://github.com/Machy8/Grid/blob/master/docs/buttons.md)
 - [Notes](https://github.com/Machy8/Grid/blob/master/docs/notes.md)
 - [Forms](https://github.com/Machy8/Grid/blob/master/docs/forms.md)
