@@ -2,7 +2,7 @@
 // For the full copyright and license information, please view the file license.md
 // that was distributed with this source code.
 
-@mixin htmlBodyComponent
+@mixin globalSetupComponent
 
 	html,
 	body
@@ -12,3 +12,15 @@
 	body
 		line-height: $defaultLineHeight
 		font-size: $defaultFontSize
+
+	p, ul, ol, dl, table,
+	blockquote, pre, figure,
+	hr
+		padding-top: 0
+		padding-bottom: 0
+		margin-top: 0
+		margin-bottom: 1rem
+
+	h1, h2, h3, h4, h5, h6
+		margin-top: 0
+		margin-bottom: .5rem

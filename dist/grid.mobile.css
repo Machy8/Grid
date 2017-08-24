@@ -206,7 +206,19 @@ body {
 
 body {
   line-height: 1.5;
-  font-size: 16px; }
+  font-size: 1rem; }
+
+p, ul, ol, dl, table,
+blockquote, pre, figure,
+hr {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem; }
 
 .border-none, .button, .button-green, .button-orange, .button-red {
   border: 0; }
