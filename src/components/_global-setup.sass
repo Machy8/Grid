@@ -4,6 +4,11 @@
 
 @mixin globalSetupComponent
 
+	*,
+	*::before,
+	*::after
+		box-sizing: border-box
+
 	html,
 	body
 		min-width: 100%

@@ -62,7 +62,6 @@
 - [Clearfix](https://github.com/Machy8/Grid/blob/master/docs/clearfix.md)
 
 **Uncategorized**
-- [Box sizing](https://github.com/Machy8/Grid/blob/master/docs/box-sizing.md)
 - [Cursor](https://github.com/Machy8/Grid/blob/master/docs/cursor.md)
 - [Display types](https://github.com/Machy8/Grid/blob/master/docs/display-types.md)
 - [Border radius](https://github.com/Machy8/Grid/blob/master/docs/border-radius.md)
