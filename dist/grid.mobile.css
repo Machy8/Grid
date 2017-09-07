@@ -200,10 +200,6 @@ body {
   min-width: 100%;
   min-height: 100vh; }
 
-body {
-  line-height: 1.5;
-  font-size: 125%; }
-
 p, ul, ol, dl, table,
 blockquote, pre, figure,
 hr {
