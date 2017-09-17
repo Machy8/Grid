@@ -4,10 +4,10 @@ Grid system is mobile first. Thanks to *SASS* you can modify the variables *$wid
  
 | Screen      | Prefix |   Size   |   Device  |
 |-------------|:------:|:--------:|:---------:|
-|    Small    |    s   |  < 641px |   Phone   |
-|    Medium   |    m   |  > 641px |   Tablet  |
-|    Large    |    l   | > 1025px |  Desktop  |
-| Extra large |   xl   | > 1441px | > Desktop |
+|    Small    |    s   |  < 640px |   Phone   |
+|    Medium   |    m   |  > 640px |   Tablet  |
+|    Large    |    l   | > 1024px |  Desktop  |
+| Extra large |   xl   | > 1440px | > Desktop |
 
 ## Columns
 **There are columns with fixed size where each size means max-width in percentages**
