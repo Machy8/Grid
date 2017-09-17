@@ -20,3 +20,16 @@
 			@if $breakpointPrefix
 				.#{$breakpointPrefix}#{$displayType}
 					@extend .#{$breakpointPrefix}display-#{$displayType}
+
+	@if $breakpointPrefix == null
+		.s-hidden
+			@include breakpoint($mediumBreakpoint, "max-width")
+				display: none
+
+		.m-and-down-hidden
+			@include breakpoint ($largeBreakpoint, "max-width")
+				display: none
+
+		.l-and-down-hidden
+			@include breakpoint ($extraLargeBreakpoint, "max-width")
+				display: none

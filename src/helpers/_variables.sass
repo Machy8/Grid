@@ -13,33 +13,40 @@ $color_8: #00A80B !default
 $color_9: #009400 !default
 $color_10: #DDDDDD !default
 
-// components/grid-system
+
+// To set the min body width
+// Better UI when the user have small screen and you dont care about devices < 320px
+$minBodyWidth: 320px
+
+
 // s - phone, m - tablet, l - desktop, xl - > desktop
 // $breakpointPrefix and $isFirstBreakpointPrefix are global variables that are changed during
 // compilation in the grid.sass and in the components/grid-system.sass; they are changed
 // in the initPrefix mixin; they are used in components and in the mixins
-$breakpoints: s 0, m 641, l 1025, xl 1441 !default
+$smallBreakpoint: 0
+$mediumBreakpoint: 640
+$largeBreakpoint: 1024
+$extraLargeBreakpoint: 1440
+$breakpoints: s $smallBreakpoint, m $mediumBreakpoint, l $largeBreakpoint, xl $extraLargeBreakpoint !default
 $firstBreakpointPrefix: nth(nth($breakpoints, 1), 1) !default
 $breakpointPrefix: null !default
 $noneBreakpointPrefix: true !default
 $isFirstBreakpointPrefix: false !default
 
+// components/global-setup
+$fontFamily: Arial, Helvetica, sans-serif
+
 // components/max-width
-$defaultMaxWidthPrefix: max-width !default
+$maxWidthPrefix: max-width !default
 $widthMax: 100 !default
 $widthMin: 5 !default
 $widthIncreasedBy: 5 !default
 
 
 // components/margin, components/padding
-$frameMaxSize: 50 !default
-$frameSizeIncreasedBy: 5 !default
+$frameMaxSize: 10 !default
+$frameSizeIncreasedBy: 1 !default
 $frameSides: left right top bottom !default
-
-
-// components/html-body
-$defaultFontSize: 16px !default
-$defaultLineHeight: 1.5 !default
 
 
 // components/display-types, components/grid-system
@@ -89,7 +96,7 @@ $wrapTypes: nowrap wrap wrap-reverse !default
 
 // components/box-sizing
 $boxSizingTypes: border-box content-box padding-box !default
-$defaultBoxSizingProperty: nth($boxSizingTypes, 1) !default
+$boxSizingProperty: nth($boxSizingTypes, 1) !default
 
 
 // components/border-radius

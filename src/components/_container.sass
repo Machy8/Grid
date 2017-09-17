@@ -1,0 +1,20 @@
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
+
+@mixin containerComponent
+
+	.container
+		@extend .full-width
+		@extend .x-centered
+		@extend .padding-left-1
+		@extend .padding-right-1
+
+		&-inner
+			@extend .full-width
+			@extend .x-centered
+			max-width: #{$largeBreakpoint}px
+
+			&-xl
+				@extend .container-inner
+				max-width: #{$extraLargeBreakpoint}px

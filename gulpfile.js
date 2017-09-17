@@ -157,7 +157,7 @@ function generateAmpTestFile() {
 	var
 		partBeforeStyle = fs.readFileSync(directories.ampTestParts + "/before-style.txt", 'utf8'),
 		partAfterStyle = fs.readFileSync(directories.ampTestParts + "/after-style.txt", 'utf8'),
-		gridCss = fs.readFileSync(directories.dist + "/grid.css", 'utf8'),
+		gridCss = fs.readFileSync(directories.dist + "/grid.mobile.css", 'utf8'),
 		fileContent = partBeforeStyle + gridCss + partAfterStyle;
 
 	fs.writeFile(directories.tests + '/amp-test.html', fileContent, function () {

@@ -1,0 +1,32 @@
+// This file is a part of Grid - Copyright (c) 2017 Vladimír Macháček
+// For the full copyright and license information, please view the file license.md
+// that was distributed with this source code.
+
+@mixin globalSetupComponent
+
+	*,
+	*::before,
+	*::after
+		box-sizing: border-box
+
+	html,
+	body
+		min-width: 100%
+		min-height: 100vh
+		font-family: $fontFamily
+		font-size: 1rem
+
+	body
+		min-width: $minBodyWidth
+
+	p, ul, ol, dl, table,
+	blockquote, pre, figure,
+	hr
+		margin-top: 0
+		margin-bottom: 1rem
+		padding-top: 0
+		padding-bottom: 0
+
+	h1, h2, h3, h4, h5, h6
+		margin-top: 0
+		margin-bottom: 0.5rem

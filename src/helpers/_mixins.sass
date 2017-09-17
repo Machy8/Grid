@@ -4,12 +4,15 @@
 
 // @param {int} $minWidth
 // @output @media (min-width: #{$minWidth}px) {@content}
-@mixin breakpoint($minWidth)
-	@if $minWidth == 0
+@mixin breakpoint($width, $type: "min-width")
+	@if $width == 0
 		@content
 
 	@else
-		@media (min-width: #{$minWidth}px)
+		@if $type == "max-width"
+			$width: $width - 1
+
+		@media ($type: #{$width}px)
 			@content
 
 
