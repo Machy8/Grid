@@ -197,7 +197,16 @@ template {
 html,
 body {
   min-width: 100%;
-  min-height: 100vh; }
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif; }
+  @media (min-width: 640px) {
+    html,
+    body {
+      font-size: 125%; } }
+
+body {
+  min-width: 320px; }
 
 p, ul, ol, dl, table,
 blockquote, pre, figure,
@@ -569,7 +578,7 @@ h1, h2, h3, h4, h5, h6 {
 .padding-left-none, .padding-x-none, .padding-none {
   padding-left: 0; }
 
-.padding-left-1, .padding-x-1, .padding-1 {
+.padding-left-1, .padding-x-1, .padding-1, .container {
   padding-left: 1rem; }
 
 .padding-left-2, .padding-x-2, .padding-2 {
@@ -602,7 +611,7 @@ h1, h2, h3, h4, h5, h6 {
 .padding-right-none, .padding-x-none, .padding-none {
   padding-right: 0; }
 
-.padding-right-1, .padding-x-1, .padding-1 {
+.padding-right-1, .padding-x-1, .padding-1, .container {
   padding-right: 1rem; }
 
 .padding-right-2, .padding-x-2, .padding-2 {
@@ -766,7 +775,7 @@ h1, h2, h3, h4, h5, h6 {
 .full-window-height {
   height: 100vh; }
 
-.full-width, .content-full-width > *, .full-block {
+.full-width, .content-full-width > *, .full-block, .container, .container-inner, .container-inner-xl {
   width: 100%; }
 
 .full-height, .content-full-height > * {
@@ -832,7 +841,7 @@ h1, h2, h3, h4, h5, h6 {
 .columns-6, .s-columns-6 {
   column-count: 6; }
 
-.x-centered,
+.x-centered, .container, .container-inner, .container-inner-xl,
 .horizontally-centered {
   margin: 0 auto; }
 
@@ -983,6 +992,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .display-none, .hidden, .s-display-none {
   display: none; }
+
+@media (max-width: 639px) {
+  .s-hidden {
+    display: none; } }
+
+@media (max-width: 1023px) {
+  .m-and-down-hidden {
+    display: none; } }
+
+@media (max-width: 1439px) {
+  .l-and-down-hidden {
+    display: none; } }
 
 .clearfix::before, .clearfix::after {
   display: table;
@@ -1170,7 +1191,12 @@ h1, h2, h3, h4, h5, h6 {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px; }
 
-@media (min-width: 641px) {
+.container-inner, .container-inner-xl {
+  max-width: 1024px; }
+  .container-inner-xl {
+    max-width: 1440px; }
+
+@media (min-width: 640px) {
   .m-auto {
     max-width: none; }
   .m-5 {
