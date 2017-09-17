@@ -13,6 +13,11 @@
 	body
 		min-width: 100%
 		min-height: 100vh
+		font-size: 100%
+		font-family: $defaultFontFamily
+
+		@include breakpoint($mediumBreakpoint)
+			font-size: 125%
 
 	p, ul, ol, dl, table,
 	blockquote, pre, figure,
