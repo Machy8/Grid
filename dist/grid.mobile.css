@@ -199,8 +199,8 @@ html,
 body {
   min-width: 100%;
   min-height: 100vh;
-  font-size: 100%;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%; }
   @media (min-width: 640px) {
     html,
     body {
@@ -212,14 +212,14 @@ body {
 p, ul, ol, dl, table,
 blockquote, pre, figure,
 hr {
-  padding-top: 0;
-  padding-bottom: 0;
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  padding-top: 0;
+  padding-bottom: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: .5rem; }
+  margin-bottom: 0.5rem; }
 
 .border-none, .button, .button-green, .button-orange, .button-red {
   border: 0; }
