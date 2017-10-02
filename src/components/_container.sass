@@ -10,11 +10,14 @@
 		@extend .padding-left-1
 		@extend .padding-right-1
 
-		&-inner
-			@extend .full-width
-			@extend .x-centered
+		&-medium
+			@extend .container
+			max-width: #{$mediumBreakpoint}px
+
+		&-large
+			@extend .container
 			max-width: #{$largeBreakpoint}px
 
-			&-xl
-				@extend .container-inner
-				max-width: #{$extraLargeBreakpoint}px
+		&-extra-large
+			@extend .container
+			max-width: #{$extraLargeBreakpoint}px

@@ -509,7 +509,7 @@ h1, h2, h3, h4, h5, h6 {
 .padding-left-none, .padding-x-none, .padding-none, .s-padding-left-none, .s-padding-x-none, .s-padding-none {
   padding-left: 0; }
 
-.padding-left-1, .padding-x-1, .padding-1, .s-padding-1, .container, .s-padding-left-1, .s-padding-x-1 {
+.padding-left-1, .padding-x-1, .padding-1, .s-padding-1, .container, .container-medium, .container-large, .container-extra-large, .s-padding-left-1, .s-padding-x-1 {
   padding-left: 1rem; }
 
 .padding-left-2, .padding-x-2, .padding-2, .s-padding-2, .s-padding-left-2, .s-padding-x-2 {
@@ -542,7 +542,7 @@ h1, h2, h3, h4, h5, h6 {
 .padding-right-none, .padding-x-none, .padding-none, .s-padding-right-none, .s-padding-x-none, .s-padding-none {
   padding-right: 0; }
 
-.padding-right-1, .padding-x-1, .padding-1, .s-padding-1, .container, .s-padding-right-1, .s-padding-x-1 {
+.padding-right-1, .padding-x-1, .padding-1, .s-padding-1, .container, .container-medium, .container-large, .container-extra-large, .s-padding-right-1, .s-padding-x-1 {
   padding-right: 1rem; }
 
 .padding-right-2, .padding-x-2, .padding-2, .s-padding-2, .s-padding-right-2, .s-padding-x-2 {
@@ -771,7 +771,7 @@ h1, h2, h3, h4, h5, h6 {
 .full-window-height, .full-window-sizes {
   height: 100vh; }
 
-.full-width, .full-block, .full-parent-sizes, .content-full-width > *, .container, .container-inner, .container-inner-xl {
+.full-width, .full-block, .full-parent-sizes, .content-full-width > *, .container, .container-medium, .container-large, .container-extra-large {
   width: 100%; }
 
 .full-height, .full-parent-sizes, .content-full-height > * {
@@ -837,7 +837,7 @@ h1, h2, h3, h4, h5, h6 {
 .columns-6, .s-columns-6 {
   column-count: 6; }
 
-.x-centered, .container, .container-inner, .container-inner-xl,
+.x-centered, .container, .container-medium, .container-large, .container-extra-large,
 .horizontally-centered {
   margin: 0 auto; }
 
@@ -1187,10 +1187,14 @@ h1, h2, h3, h4, h5, h6 {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px; }
 
-.container-inner, .container-inner-xl {
+.container-medium {
+  max-width: 640px; }
+
+.container-large {
   max-width: 1024px; }
-  .container-inner-xl {
-    max-width: 1440px; }
+
+.container-extra-large {
+  max-width: 1440px; }
 
 @media (min-width: 640px) {
   .m-auto {
