@@ -33,6 +33,14 @@
 
 - **Npm:** ``npm i grid-css-framework``
 - **Bower:** ``bower install grid-css-framework``
+- **CDN full version:**
+````
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/grid-css-framework@2.4.0/dist/grid.min.css">
+````
+- **CDN mobile version:**
+````
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/grid-css-framework@2.4.0/dist/grid.mobile.min.css">
+````
 
 ## Browser compatibility
 | IE | Edge | Firefox | Chrome | Chrome for android | Safari | IOS Safari | Opera | Opera mini | Android browser |
