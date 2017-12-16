@@ -4,6 +4,7 @@
 [![npm](https://img.shields.io/npm/v/grid-css-framework.svg?maxAge=2592000)](https://www.npmjs.com/package/grid-css-framework)
 [![Bower](https://img.shields.io/bower/v/grid-css-framework.svg?maxAge=2592000?style=plastic)](https://github.com/Machy8/Grid)
 [![npm](https://img.shields.io/npm/dm/grid-css-framework.svg)]()
+[![npm](https://img.shields.io/npm/dt/grid-css-framework.svg)](https://www.npmjs.com/package/grid-css-framework)
 [![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/Machy8/Macdom/blob/master/license.md)
 [![Join the chat at https://gitter.im/Machy8/Grid](https://badges.gitter.im/Machy8/Grid.svg)](https://gitter.im/Machy8/Grid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
