@@ -42,13 +42,21 @@
 		&-height
 			@include fullWidthHeight(height)
 
+		&-block
+			@extend .#{$breakpointPrefix}full-width
+			@extend .#{$breakpointPrefix}display-block
+
+		&-parent-sizes
+			@extend .#{$breakpointPrefix}full-width
+			@extend .#{$breakpointPrefix}full-height
+
+		&-window-sizes
+			@extend .#{$breakpointPrefix}full-window-width
+			@extend .#{$breakpointPrefix}full-window-height
+
 	.#{$breakpointPrefix}content-full
 		&-width > *
 			@extend .#{$breakpointPrefix}full-width
 
 		&-height > *
 			@extend .#{$breakpointPrefix}full-height
-
-	.#{$breakpointPrefix}full-block
-		@extend .#{$breakpointPrefix}full-width
-		@extend .#{$breakpointPrefix}display-block

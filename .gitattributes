@@ -3,6 +3,7 @@
 .github export-ignore
 .travis.yml export-ignore
 .sass-lint.yml export-ignore
+index.html export-ignore
 docker-compose.yml export-ignore
 Dockerfile export-ignore
 tests export-ignore

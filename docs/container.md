@@ -1,6 +1,8 @@
 # Container
 - *Basic container* - container
-- *Inner container extra large* - container-inner-xl
+- *Medium container* - container-large (max width 640px)
+- *Large container* - container-large (max-width 1024px)
+- *Extra large container* - container-extra-large (max-width 1440px)
 
 **Example**
 ````html
@@ -8,15 +10,7 @@
     <div>Full width div, padding on left & right</div>
 </div>
 
-<div class="container">
-    <div class="container-inner">
-        <div>The same as previous but centered, and 1024px max width</div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="container-inner-xl">
-        <div>The same as previous but 1440px max width</div>
-    </div>
+<div class="container-large">
+    <strong>The same as previous but 1440px max width</strong>
 </div>
 ````
