@@ -14,7 +14,7 @@ Some content
 </div>
 
 <!-- opacity: 1 -->
-<div class="Opaque">
+<div class="opaque">
 Some content
 </div>
 ````
